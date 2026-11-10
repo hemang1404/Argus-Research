@@ -176,3 +176,12 @@ Report negative results as results. If Argus's loop doesn't beat matched-compute
 
 ### Revision 3 amendment (2026-11-11)
 Generation and Docker grading for the issue-only run are DROPPED (owner decision; wrong-file edits almost never resolve, so the spend would confirm the obvious). Only localization recall is reported. Results: `data/loc/candidates.jsonl`, `data/loc/recall_summary.json`, `scripts/localize.py`, `scripts/loc_recall.py`. Gold file used only for scoring. The target-map output of `loc_recall.py` is not used for generation.
+
+
+## Revision 4 (2026-11-11): temperature-1.0, 3-draw re-baseline (pre-registered before any call)
+
+**Why.** The Pilot-100 primary runs used temperature 0, which is not the vendor-recommended setting for gpt-oss and is a known trigger for repetition loops. This run re-measures both models at temperature 1.0 so that (a) the loop finding is not a decoding artifact, (b) per-task success probabilities can be estimated from several draws, (c) the oracle router and stop-rule analyses stop depending on one lucky or unlucky sample.
+
+**Design (fixed now).** Same 100 manifest tasks, same prompt p1 and context builder (target file GIVEN, as in Pilot-100; this is the "file-given" setting), models gpt-oss-20b and gpt-oss-120b on Groq, reasoning_effort=medium, temperature 1.0, top_p default, max_completion_tokens 8000, seeds 1000, 1001, 1002 (three draws per task and model). Output: `data/raw/phase2_t1_v1.jsonl`. The prompt hash must equal the Pilot-100 hash per task (checked after generation). Apply: plain exact line-match arm and stock Argus v0.2.0b1 (commit 467b720), no prototype fixes. Grading: official swebench harness in Docker, one image at a time, every distinct patch graded; gold-patch result reused from Pilot-100 (`results/grading/state.jsonl`).
+
+**Analysis fixed in advance.** (1) Per-model resolve rate per draw and mean over draws with task-clustered bootstrap CI; (2) loop/truncation rate at temperature 1.0 versus 0; (3) per-task success probability from 3 draws, and the share of "solved by neither" tasks at temperature 0 that are solved by some draw; (4) the oracle router recomputed in three parts (model-choice only, must-attempt-all, and skip-hopeless), with and without the multi-draw smoothing; (5) offline stop-rule replays (stop after loop, after first failed attempt, after apply failure) reporting spend recovered and solves lost. All hypotheses exploratory; thresholds for rules are chosen on draws 1 and 2 and evaluated on draw 3 so no rule is scored on the data that tuned it.
