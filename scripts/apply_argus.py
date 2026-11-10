@@ -33,7 +33,7 @@ for l in open(TASKS, encoding="utf-8"):
 def process(rec, engine):
     t = full[rec["iid"]]
     target = rec["target_file"]
-    base = dict(iid=rec["iid"], model=rec["model"], finish=rec.get("finish"), target_file=target, argus_commit=commit)
+    base = dict(iid=rec["iid"], model=rec["model"], finish=rec.get("finish"), sample=rec.get("sample", 0), target_file=target, argus_commit=commit)
     content = rec.get("content") or ""
     if rec.get("finish") == "length" and not content.strip():
         return dict(base, status="truncated_no_output")
