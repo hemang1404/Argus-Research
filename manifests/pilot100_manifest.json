@@ -1,0 +1,1355 @@
+{
+ "name": "pilot100",
+ "seed": 20261110,
+ "n_primary": 100,
+ "created": "2026-11-10T09:50:02+00:00",
+ "source_file": "C:\\coding\\Argus-research-archive\\data\\swe_bench_verified_tasks.jsonl",
+ "source_sha256": "6041c431764aabbf585519afef8d3efa78a0217aa1b7e9a921b7f05aa0858b7e",
+ "eligibility": "gold source patch touches exactly one non-test .py file",
+ "sampling": "django capped at 30; remaining 70 slots proportional by repo among other repos (largest remainder), uniform within repo, python random.Random(seed), reserve ~30% per repo for F0 replacements only",
+ "tokenizer": "tiktoken o200k_base (approximation of gpt-oss tokenizer)",
+ "primary": [
+  {
+   "instance_id": "astropy__astropy-12907",
+   "repo": "astropy/astropy",
+   "base_commit": "d16bfe05a744909de4b27f5875fe0d4ed41ce607",
+   "gold_file": "astropy/modeling/separable.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 2,
+   "p2p_count": 13,
+   "problem_tokens_approx": 322
+  },
+  {
+   "instance_id": "astropy__astropy-13033",
+   "repo": "astropy/astropy",
+   "base_commit": "298ccb478e6bf092953bca67a3d29dc6c35f6752",
+   "gold_file": "astropy/timeseries/core.py",
+   "gold_changed_lines": 14,
+   "f2p_count": 1,
+   "p2p_count": 20,
+   "problem_tokens_approx": 684
+  },
+  {
+   "instance_id": "astropy__astropy-14182",
+   "repo": "astropy/astropy",
+   "base_commit": "a5917978be39d13cd90b517e1de4e7a539ffaa48",
+   "gold_file": "astropy/io/ascii/rst.py",
+   "gold_changed_lines": 41,
+   "f2p_count": 1,
+   "p2p_count": 9,
+   "problem_tokens_approx": 516
+  },
+  {
+   "instance_id": "astropy__astropy-14508",
+   "repo": "astropy/astropy",
+   "base_commit": "a3f4ae6cd24d5ecdf49f213d77b3513dd509a06c",
+   "gold_file": "astropy/io/fits/card.py",
+   "gold_changed_lines": 24,
+   "f2p_count": 1,
+   "p2p_count": 174,
+   "problem_tokens_approx": 755
+  },
+  {
+   "instance_id": "astropy__astropy-14995",
+   "repo": "astropy/astropy",
+   "base_commit": "b16c7d12ccbc7b2d20364b89fb44285bcbfede54",
+   "gold_file": "astropy/nddata/mixins/ndarithmetic.py",
+   "gold_changed_lines": 4,
+   "f2p_count": 1,
+   "p2p_count": 179,
+   "problem_tokens_approx": 737
+  },
+  {
+   "instance_id": "astropy__astropy-8872",
+   "repo": "astropy/astropy",
+   "base_commit": "b750a0e6ee76fb6b8a099a4d16ec51977be46bf6",
+   "gold_file": "astropy/units/quantity.py",
+   "gold_changed_lines": 11,
+   "f2p_count": 1,
+   "p2p_count": 80,
+   "problem_tokens_approx": 287
+  },
+  {
+   "instance_id": "django__django-10880",
+   "repo": "django/django",
+   "base_commit": "838e432e3e5519c5383d12018e6c78f8ec7833c1",
+   "gold_file": "django/db/models/aggregates.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 55,
+   "problem_tokens_approx": 55
+  },
+  {
+   "instance_id": "django__django-11087",
+   "repo": "django/django",
+   "base_commit": "8180ffba21bf10f4be905cb0d4890dc2bcff2788",
+   "gold_file": "django/db/models/deletion.py",
+   "gold_changed_lines": 30,
+   "f2p_count": 1,
+   "p2p_count": 41,
+   "problem_tokens_approx": 2441
+  },
+  {
+   "instance_id": "django__django-11141",
+   "repo": "django/django",
+   "base_commit": "5d9cf79baf07fc4aed7ad1b06990532a65378155",
+   "gold_file": "django/db/migrations/loader.py",
+   "gold_changed_lines": 10,
+   "f2p_count": 1,
+   "p2p_count": 24,
+   "problem_tokens_approx": 175
+  },
+  {
+   "instance_id": "django__django-11790",
+   "repo": "django/django",
+   "base_commit": "b1d6b35e146aea83b171c1b921178bbaae2795ed",
+   "gold_file": "django/contrib/auth/forms.py",
+   "gold_changed_lines": 4,
+   "f2p_count": 2,
+   "p2p_count": 77,
+   "problem_tokens_approx": 111
+  },
+  {
+   "instance_id": "django__django-11964",
+   "repo": "django/django",
+   "base_commit": "fc2b1cc926e34041953738e58fa6ad3053059b22",
+   "gold_file": "django/db/models/enums.py",
+   "gold_changed_lines": 8,
+   "f2p_count": 2,
+   "p2p_count": 15,
+   "problem_tokens_approx": 514
+  },
+  {
+   "instance_id": "django__django-12039",
+   "repo": "django/django",
+   "base_commit": "58c1acb1d6054dfec29d0f30b1033bae6ef62aec",
+   "gold_file": "django/db/backends/ddl_references.py",
+   "gold_changed_lines": 12,
+   "f2p_count": 1,
+   "p2p_count": 11,
+   "problem_tokens_approx": 288
+  },
+  {
+   "instance_id": "django__django-12209",
+   "repo": "django/django",
+   "base_commit": "5a68f024987e6d16c2626a31bf653a2edddea579",
+   "gold_file": "django/db/models/base.py",
+   "gold_changed_lines": 1,
+   "f2p_count": 1,
+   "p2p_count": 0,
+   "problem_tokens_approx": 266
+  },
+  {
+   "instance_id": "django__django-12774",
+   "repo": "django/django",
+   "base_commit": "67f9d076cfc1858b94f9ed6d1a5ce2327dcc8d0d",
+   "gold_file": "django/db/models/query.py",
+   "gold_changed_lines": 12,
+   "f2p_count": 1,
+   "p2p_count": 41,
+   "problem_tokens_approx": 283
+  },
+  {
+   "instance_id": "django__django-13012",
+   "repo": "django/django",
+   "base_commit": "22a59c01c00cf9fbefaee0e8e67fab82bbaf1fd2",
+   "gold_file": "django/db/models/expressions.py",
+   "gold_changed_lines": 3,
+   "f2p_count": 2,
+   "p2p_count": 137,
+   "problem_tokens_approx": 331
+  },
+  {
+   "instance_id": "django__django-13406",
+   "repo": "django/django",
+   "base_commit": "84609b3205905097d7d3038d32e6101f012c0619",
+   "gold_file": "django/db/models/query.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 3,
+   "p2p_count": 32,
+   "problem_tokens_approx": 790
+  },
+  {
+   "instance_id": "django__django-13551",
+   "repo": "django/django",
+   "base_commit": "7f9e4524d6b23424cf44fbe1bf1f4e70f6bb066e",
+   "gold_file": "django/contrib/auth/tokens.py",
+   "gold_changed_lines": 10,
+   "f2p_count": 2,
+   "p2p_count": 56,
+   "problem_tokens_approx": 120
+  },
+  {
+   "instance_id": "django__django-13810",
+   "repo": "django/django",
+   "base_commit": "429d089d0a8fbd400e0c010708df4f0d16218970",
+   "gold_file": "django/core/handlers/base.py",
+   "gold_changed_lines": 6,
+   "f2p_count": 1,
+   "p2p_count": 30,
+   "problem_tokens_approx": 462
+  },
+  {
+   "instance_id": "django__django-13933",
+   "repo": "django/django",
+   "base_commit": "42e8cf47c7ee2db238bf91197ea398126c546741",
+   "gold_file": "django/forms/models.py",
+   "gold_changed_lines": 6,
+   "f2p_count": 1,
+   "p2p_count": 19,
+   "problem_tokens_approx": 271
+  },
+  {
+   "instance_id": "django__django-14017",
+   "repo": "django/django",
+   "base_commit": "466920f6d726eee90d5566e0a9948e92b33a122e",
+   "gold_file": "django/db/models/query_utils.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 2,
+   "p2p_count": 147,
+   "problem_tokens_approx": 360
+  },
+  {
+   "instance_id": "django__django-14034",
+   "repo": "django/django",
+   "base_commit": "db1fc5cd3c5d36cdb5d0fe4404efd6623dd3e8fb",
+   "gold_file": "django/forms/boundfield.py",
+   "gold_changed_lines": 14,
+   "f2p_count": 1,
+   "p2p_count": 12,
+   "problem_tokens_approx": 312
+  },
+  {
+   "instance_id": "django__django-14238",
+   "repo": "django/django",
+   "base_commit": "30e123ed351317b7527f632b3b7dc4e81e850449",
+   "gold_file": "django/db/models/fields/__init__.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 2,
+   "p2p_count": 39,
+   "problem_tokens_approx": 690
+  },
+  {
+   "instance_id": "django__django-14434",
+   "repo": "django/django",
+   "base_commit": "5e04e84d67da8163f365e9f5fcd169e2630e2873",
+   "gold_file": "django/db/backends/base/schema.py",
+   "gold_changed_lines": 8,
+   "f2p_count": 1,
+   "p2p_count": 133,
+   "problem_tokens_approx": 36
+  },
+  {
+   "instance_id": "django__django-14534",
+   "repo": "django/django",
+   "base_commit": "910ecd1b8df7678f45c3d507dde6bcb1faafa243",
+   "gold_file": "django/forms/boundfield.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 2,
+   "p2p_count": 118,
+   "problem_tokens_approx": 369
+  },
+  {
+   "instance_id": "django__django-14771",
+   "repo": "django/django",
+   "base_commit": "4884a87e022056eda10534c13d74e49b8cdda632",
+   "gold_file": "django/utils/autoreload.py",
+   "gold_changed_lines": 5,
+   "f2p_count": 1,
+   "p2p_count": 60,
+   "problem_tokens_approx": 303
+  },
+  {
+   "instance_id": "django__django-15128",
+   "repo": "django/django",
+   "base_commit": "cb383753c0e0eb52306e1024d32a782549c27e61",
+   "gold_file": "django/db/models/sql/query.py",
+   "gold_changed_lines": 28,
+   "f2p_count": 1,
+   "p2p_count": 282,
+   "problem_tokens_approx": 667
+  },
+  {
+   "instance_id": "django__django-15161",
+   "repo": "django/django",
+   "base_commit": "96e7ff5e9ff6362d9a886545869ce4496ca4b0fb",
+   "gold_file": "django/db/models/expressions.py",
+   "gold_changed_lines": 6,
+   "f2p_count": 3,
+   "p2p_count": 208,
+   "problem_tokens_approx": 99
+  },
+  {
+   "instance_id": "django__django-15280",
+   "repo": "django/django",
+   "base_commit": "973fa566521037ac140dcece73fceae50ee522f1",
+   "gold_file": "django/db/models/fields/related_descriptors.py",
+   "gold_changed_lines": 5,
+   "f2p_count": 1,
+   "p2p_count": 85,
+   "problem_tokens_approx": 597
+  },
+  {
+   "instance_id": "django__django-15315",
+   "repo": "django/django",
+   "base_commit": "652c68ffeebd510a6f59e1b56b3e007d07683ad8",
+   "gold_file": "django/db/models/fields/__init__.py",
+   "gold_changed_lines": 6,
+   "f2p_count": 1,
+   "p2p_count": 33,
+   "problem_tokens_approx": 186
+  },
+  {
+   "instance_id": "django__django-15382",
+   "repo": "django/django",
+   "base_commit": "770d3e6a4ce8e0a91a9e27156036c1985e74d4a3",
+   "gold_file": "django/db/models/expressions.py",
+   "gold_changed_lines": 19,
+   "f2p_count": 1,
+   "p2p_count": 161,
+   "problem_tokens_approx": 92
+  },
+  {
+   "instance_id": "django__django-15930",
+   "repo": "django/django",
+   "base_commit": "63884829acd207404f2a5c3cc1d6b4cd0a822b70",
+   "gold_file": "django/db/models/expressions.py",
+   "gold_changed_lines": 5,
+   "f2p_count": 1,
+   "p2p_count": 88,
+   "problem_tokens_approx": 176
+  },
+  {
+   "instance_id": "django__django-16116",
+   "repo": "django/django",
+   "base_commit": "5d36a8266c7d5d1994d7a7eeb4016f80d9cb0401",
+   "gold_file": "django/core/management/commands/makemigrations.py",
+   "gold_changed_lines": 9,
+   "f2p_count": 1,
+   "p2p_count": 137,
+   "problem_tokens_approx": 162
+  },
+  {
+   "instance_id": "django__django-16485",
+   "repo": "django/django",
+   "base_commit": "39f83765e12b0e5d260b7939fc3fe281d879b279",
+   "gold_file": "django/template/defaultfilters.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 9,
+   "problem_tokens_approx": 64
+  },
+  {
+   "instance_id": "django__django-16595",
+   "repo": "django/django",
+   "base_commit": "f9fe062de5fc0896d6bbbf3f260b5c44473b3c77",
+   "gold_file": "django/db/migrations/operations/fields.py",
+   "gold_changed_lines": 6,
+   "f2p_count": 1,
+   "p2p_count": 37,
+   "problem_tokens_approx": 368
+  },
+  {
+   "instance_id": "django__django-16642",
+   "repo": "django/django",
+   "base_commit": "fbe850106b2e4b85f838219cb9e1df95fba6c164",
+   "gold_file": "django/http/response.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 21,
+   "problem_tokens_approx": 67
+  },
+  {
+   "instance_id": "django__django-16877",
+   "repo": "django/django",
+   "base_commit": "98f6ada0e2058d67d91fb6c16482411ec2ca0967",
+   "gold_file": "django/template/defaultfilters.py",
+   "gold_changed_lines": 10,
+   "f2p_count": 4,
+   "p2p_count": 0,
+   "problem_tokens_approx": 97
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-13989",
+   "repo": "matplotlib/matplotlib",
+   "base_commit": "a3e2897bfaf9eaac1d6649da535c4e721c89fa69",
+   "gold_file": "lib/matplotlib/axes/_axes.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 411,
+   "problem_tokens_approx": 436
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-20488",
+   "repo": "matplotlib/matplotlib",
+   "base_commit": "b7ce415c15eb39b026a097a2865da73fbcf15c9c",
+   "gold_file": "lib/matplotlib/image.py",
+   "gold_changed_lines": 6,
+   "f2p_count": 1,
+   "p2p_count": 111,
+   "problem_tokens_approx": 533
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-20676",
+   "repo": "matplotlib/matplotlib",
+   "base_commit": "6786f437df54ca7780a047203cbcfaa1db8dc542",
+   "gold_file": "lib/matplotlib/widgets.py",
+   "gold_changed_lines": 7,
+   "f2p_count": 2,
+   "p2p_count": 32,
+   "problem_tokens_approx": 385
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-23412",
+   "repo": "matplotlib/matplotlib",
+   "base_commit": "f06c2c3abdaf4b90285ce5ca7fedbb8ace715911",
+   "gold_file": "lib/matplotlib/patches.py",
+   "gold_changed_lines": 5,
+   "f2p_count": 1,
+   "p2p_count": 46,
+   "problem_tokens_approx": 578
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-24570",
+   "repo": "matplotlib/matplotlib",
+   "base_commit": "8f0003ae902952372824c9917975fb372c026a42",
+   "gold_file": "lib/matplotlib/offsetbox.py",
+   "gold_changed_lines": 4,
+   "f2p_count": 2,
+   "p2p_count": 267,
+   "problem_tokens_approx": 391
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-24637",
+   "repo": "matplotlib/matplotlib",
+   "base_commit": "a9ba9d5d3fe9d5ac15fbdb06127f97d381148dd0",
+   "gold_file": "lib/matplotlib/offsetbox.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 29,
+   "problem_tokens_approx": 533
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-24970",
+   "repo": "matplotlib/matplotlib",
+   "base_commit": "a3011dfd1aaa2487cce8aa7369475533133ef777",
+   "gold_file": "lib/matplotlib/colors.py",
+   "gold_changed_lines": 21,
+   "f2p_count": 1,
+   "p2p_count": 253,
+   "problem_tokens_approx": 429
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-25311",
+   "repo": "matplotlib/matplotlib",
+   "base_commit": "430fb1db88843300fb4baae3edc499bbfe073b0c",
+   "gold_file": "lib/matplotlib/offsetbox.py",
+   "gold_changed_lines": 4,
+   "f2p_count": 1,
+   "p2p_count": 181,
+   "problem_tokens_approx": 209
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-25960",
+   "repo": "matplotlib/matplotlib",
+   "base_commit": "1d0d255b79e84dfc9f2123c5eb85a842d342f72b",
+   "gold_file": "lib/matplotlib/figure.py",
+   "gold_changed_lines": 18,
+   "f2p_count": 1,
+   "p2p_count": 137,
+   "problem_tokens_approx": 225
+  },
+  {
+   "instance_id": "psf__requests-1766",
+   "repo": "psf/requests",
+   "base_commit": "847735553aeda6e6633f2b32e14ba14ba86887a4",
+   "gold_file": "requests/auth.py",
+   "gold_changed_lines": 4,
+   "f2p_count": 6,
+   "p2p_count": 79,
+   "problem_tokens_approx": 205
+  },
+  {
+   "instance_id": "psf__requests-2931",
+   "repo": "psf/requests",
+   "base_commit": "5f7a3a74aab1625c2bb65f643197ee885e3da576",
+   "gold_file": "requests/models.py",
+   "gold_changed_lines": 5,
+   "f2p_count": 1,
+   "p2p_count": 84,
+   "problem_tokens_approx": 79
+  },
+  {
+   "instance_id": "psf__requests-6028",
+   "repo": "psf/requests",
+   "base_commit": "0192aac24123735b3eaf9b08df46429bb770c283",
+   "gold_file": "requests/utils.py",
+   "gold_changed_lines": 4,
+   "f2p_count": 2,
+   "p2p_count": 185,
+   "problem_tokens_approx": 374
+  },
+  {
+   "instance_id": "pydata__xarray-3151",
+   "repo": "pydata/xarray",
+   "base_commit": "118f4d996e7711c9aced916e6049af9f28d5ec66",
+   "gold_file": "xarray/core/combine.py",
+   "gold_changed_lines": 15,
+   "f2p_count": 1,
+   "p2p_count": 66,
+   "problem_tokens_approx": 725
+  },
+  {
+   "instance_id": "pydata__xarray-4094",
+   "repo": "pydata/xarray",
+   "base_commit": "a64cf2d5476e7bbda099b34c40b7be1880dbd39a",
+   "gold_file": "xarray/core/dataarray.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 862,
+   "problem_tokens_approx": 574
+  },
+  {
+   "instance_id": "pydata__xarray-4356",
+   "repo": "pydata/xarray",
+   "base_commit": "e05fddea852d08fc0845f954b79deb9e9f9ff883",
+   "gold_file": "xarray/core/nanops.py",
+   "gold_changed_lines": 6,
+   "f2p_count": 8,
+   "p2p_count": 604,
+   "problem_tokens_approx": 204
+  },
+  {
+   "instance_id": "pydata__xarray-4966",
+   "repo": "pydata/xarray",
+   "base_commit": "37522e991a32ee3c0ad1a5ff8afe8e3eb1885550",
+   "gold_file": "xarray/coding/variables.py",
+   "gold_changed_lines": 8,
+   "f2p_count": 4,
+   "p2p_count": 21,
+   "problem_tokens_approx": 1253
+  },
+  {
+   "instance_id": "pydata__xarray-6721",
+   "repo": "pydata/xarray",
+   "base_commit": "cc183652bf6e1273e985e1c4b3cba79c896c1193",
+   "gold_file": "xarray/core/common.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 1405,
+   "problem_tokens_approx": 2702
+  },
+  {
+   "instance_id": "pylint-dev__pylint-7277",
+   "repo": "pylint-dev/pylint",
+   "base_commit": "684a1d6aa0a6791e20078bc524f97c8906332390",
+   "gold_file": "pylint/__init__.py",
+   "gold_changed_lines": 5,
+   "f2p_count": 1,
+   "p2p_count": 122,
+   "problem_tokens_approx": 287
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10051",
+   "repo": "pytest-dev/pytest",
+   "base_commit": "aa55975c7d3f6c9f6d7f68accc41bb7cadf0eb9a",
+   "gold_file": "src/_pytest/logging.py",
+   "gold_changed_lines": 7,
+   "f2p_count": 1,
+   "p2p_count": 15,
+   "problem_tokens_approx": 423
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5262",
+   "repo": "pytest-dev/pytest",
+   "base_commit": "58e6a09db49f34886ff13f3b7520dd0bcd7063cd",
+   "gold_file": "src/_pytest/capture.py",
+   "gold_changed_lines": 4,
+   "f2p_count": 1,
+   "p2p_count": 108,
+   "problem_tokens_approx": 1183
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5809",
+   "repo": "pytest-dev/pytest",
+   "base_commit": "8aba863a634f40560e25055d179220f0eefabe9a",
+   "gold_file": "src/_pytest/pastebin.py",
+   "gold_changed_lines": 6,
+   "f2p_count": 1,
+   "p2p_count": 3,
+   "problem_tokens_approx": 267
+  },
+  {
+   "instance_id": "pytest-dev__pytest-6197",
+   "repo": "pytest-dev/pytest",
+   "base_commit": "e856638ba086fcf5bebf1bebea32d5cf78de87b4",
+   "gold_file": "src/_pytest/python.py",
+   "gold_changed_lines": 24,
+   "f2p_count": 2,
+   "p2p_count": 145,
+   "problem_tokens_approx": 863
+  },
+  {
+   "instance_id": "pytest-dev__pytest-7521",
+   "repo": "pytest-dev/pytest",
+   "base_commit": "41d211c24a6781843b174379d6d6538f5c17adb9",
+   "gold_file": "src/_pytest/capture.py",
+   "gold_changed_lines": 1,
+   "f2p_count": 2,
+   "p2p_count": 125,
+   "problem_tokens_approx": 1074
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-10844",
+   "repo": "scikit-learn/scikit-learn",
+   "base_commit": "97523985b39ecde369d83352d7c3baf403b60a22",
+   "gold_file": "sklearn/metrics/cluster/supervised.py",
+   "gold_changed_lines": 5,
+   "f2p_count": 1,
+   "p2p_count": 16,
+   "problem_tokens_approx": 583
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-11578",
+   "repo": "scikit-learn/scikit-learn",
+   "base_commit": "dd69361a0d9c6ccde0d2353b00b86e0e7541a3e3",
+   "gold_file": "sklearn/linear_model/logistic.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 93,
+   "problem_tokens_approx": 1776
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-12973",
+   "repo": "scikit-learn/scikit-learn",
+   "base_commit": "a7b8b9e9e16d4e15fabda5ae615086c2e1c47d8a",
+   "gold_file": "sklearn/linear_model/least_angle.py",
+   "gold_changed_lines": 10,
+   "f2p_count": 1,
+   "p2p_count": 32,
+   "problem_tokens_approx": 389
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-13496",
+   "repo": "scikit-learn/scikit-learn",
+   "base_commit": "3aefc834dce72e850bff48689bea3c7dff5f3fad",
+   "gold_file": "sklearn/ensemble/iforest.py",
+   "gold_changed_lines": 10,
+   "f2p_count": 1,
+   "p2p_count": 19,
+   "problem_tokens_approx": 322
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-14053",
+   "repo": "scikit-learn/scikit-learn",
+   "base_commit": "6ab8c86c383dd847a1be7103ad115f174fe23ffd",
+   "gold_file": "sklearn/tree/export.py",
+   "gold_changed_lines": 3,
+   "f2p_count": 1,
+   "p2p_count": 5,
+   "problem_tokens_approx": 818
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-14710",
+   "repo": "scikit-learn/scikit-learn",
+   "base_commit": "4b6273b87442a4437d8b3873ea3022ae163f4fdf",
+   "gold_file": "sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py",
+   "gold_changed_lines": 4,
+   "f2p_count": 1,
+   "p2p_count": 63,
+   "problem_tokens_approx": 1649
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-14894",
+   "repo": "scikit-learn/scikit-learn",
+   "base_commit": "fdbaa58acbead5a254f2e6d597dc1ab3b947f4c6",
+   "gold_file": "sklearn/svm/base.py",
+   "gold_changed_lines": 13,
+   "f2p_count": 1,
+   "p2p_count": 85,
+   "problem_tokens_approx": 573
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-14983",
+   "repo": "scikit-learn/scikit-learn",
+   "base_commit": "06632c0d185128a53c57ccc73b25b6408e90bb89",
+   "gold_file": "sklearn/model_selection/_split.py",
+   "gold_changed_lines": 5,
+   "f2p_count": 2,
+   "p2p_count": 105,
+   "problem_tokens_approx": 416
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-25973",
+   "repo": "scikit-learn/scikit-learn",
+   "base_commit": "10dbc142bd17ccf7bd38eec2ac04b52ce0d1009e",
+   "gold_file": "sklearn/feature_selection/_sequential.py",
+   "gold_changed_lines": 12,
+   "f2p_count": 1,
+   "p2p_count": 72,
+   "problem_tokens_approx": 461
+  },
+  {
+   "instance_id": "sphinx-doc__sphinx-10435",
+   "repo": "sphinx-doc/sphinx",
+   "base_commit": "f1061c012e214f16fd8790dec3c283d787e3daa8",
+   "gold_file": "sphinx/writers/latex.py",
+   "gold_changed_lines": 6,
+   "f2p_count": 1,
+   "p2p_count": 74,
+   "problem_tokens_approx": 784
+  },
+  {
+   "instance_id": "sphinx-doc__sphinx-10466",
+   "repo": "sphinx-doc/sphinx",
+   "base_commit": "cab2d93076d0cca7c53fac885f927dde3e2a5fec",
+   "gold_file": "sphinx/builders/gettext.py",
+   "gold_changed_lines": 3,
+   "f2p_count": 1,
+   "p2p_count": 6,
+   "problem_tokens_approx": 817
+  },
+  {
+   "instance_id": "sphinx-doc__sphinx-10614",
+   "repo": "sphinx-doc/sphinx",
+   "base_commit": "ac2b7599d212af7d04649959ce6926c63c3133fa",
+   "gold_file": "sphinx/ext/inheritance_diagram.py",
+   "gold_changed_lines": 11,
+   "f2p_count": 1,
+   "p2p_count": 5,
+   "problem_tokens_approx": 787
+  },
+  {
+   "instance_id": "sphinx-doc__sphinx-11445",
+   "repo": "sphinx-doc/sphinx",
+   "base_commit": "71db08c05197545944949d5aa76cd340e7143627",
+   "gold_file": "sphinx/util/rst.py",
+   "gold_changed_lines": 14,
+   "f2p_count": 2,
+   "p2p_count": 8,
+   "problem_tokens_approx": 534
+  },
+  {
+   "instance_id": "sphinx-doc__sphinx-8459",
+   "repo": "sphinx-doc/sphinx",
+   "base_commit": "68aa4fb29e7dfe521749e1e14f750d7afabb3481",
+   "gold_file": "sphinx/ext/autodoc/typehints.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 17,
+   "problem_tokens_approx": 348
+  },
+  {
+   "instance_id": "sphinx-doc__sphinx-9230",
+   "repo": "sphinx-doc/sphinx",
+   "base_commit": "567ff22716ac258b9edd2c1711d766b440ac0b11",
+   "gold_file": "sphinx/util/docfields.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 44,
+   "problem_tokens_approx": 361
+  },
+  {
+   "instance_id": "sphinx-doc__sphinx-9258",
+   "repo": "sphinx-doc/sphinx",
+   "base_commit": "06107f838c28ab6ca6bfc2cc208e15997fcb2146",
+   "gold_file": "sphinx/domains/python.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 45,
+   "problem_tokens_approx": 126
+  },
+  {
+   "instance_id": "sphinx-doc__sphinx-9281",
+   "repo": "sphinx-doc/sphinx",
+   "base_commit": "8ec06e9a1bd862cd713b9db748e039ccc7b3e15b",
+   "gold_file": "sphinx/util/inspect.py",
+   "gold_changed_lines": 7,
+   "f2p_count": 1,
+   "p2p_count": 38,
+   "problem_tokens_approx": 209
+  },
+  {
+   "instance_id": "sphinx-doc__sphinx-9658",
+   "repo": "sphinx-doc/sphinx",
+   "base_commit": "232dbe41c5250eb7d559d40438c4743483e95f15",
+   "gold_file": "sphinx/ext/autodoc/mock.py",
+   "gold_changed_lines": 4,
+   "f2p_count": 1,
+   "p2p_count": 24,
+   "problem_tokens_approx": 762
+  },
+  {
+   "instance_id": "sphinx-doc__sphinx-9698",
+   "repo": "sphinx-doc/sphinx",
+   "base_commit": "f050a7775dfc9000f55d023d36d925a8d02ccfa8",
+   "gold_file": "sphinx/domains/python.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 45,
+   "problem_tokens_approx": 236
+  },
+  {
+   "instance_id": "sphinx-doc__sphinx-9711",
+   "repo": "sphinx-doc/sphinx",
+   "base_commit": "81a4fd973d4cfcb25d01a7b0be62cdb28f82406d",
+   "gold_file": "sphinx/extension.py",
+   "gold_changed_lines": 15,
+   "f2p_count": 1,
+   "p2p_count": 0,
+   "problem_tokens_approx": 402
+  },
+  {
+   "instance_id": "sympy__sympy-11618",
+   "repo": "sympy/sympy",
+   "base_commit": "360290c4c401e386db60723ddb0109ed499c9f6e",
+   "gold_file": "sympy/geometry/point.py",
+   "gold_changed_lines": 14,
+   "f2p_count": 1,
+   "p2p_count": 4,
+   "problem_tokens_approx": 73
+  },
+  {
+   "instance_id": "sympy__sympy-12481",
+   "repo": "sympy/sympy",
+   "base_commit": "c807dfe7569692cad24f02a08477b70c1679a4dd",
+   "gold_file": "sympy/combinatorics/permutations.py",
+   "gold_changed_lines": 8,
+   "f2p_count": 1,
+   "p2p_count": 7,
+   "problem_tokens_approx": 87
+  },
+  {
+   "instance_id": "sympy__sympy-13480",
+   "repo": "sympy/sympy",
+   "base_commit": "f57fe3f4b3f2cab225749e1b3b38ae1bf80b62f0",
+   "gold_file": "sympy/functions/elementary/hyperbolic.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 43,
+   "problem_tokens_approx": 148
+  },
+  {
+   "instance_id": "sympy__sympy-13551",
+   "repo": "sympy/sympy",
+   "base_commit": "9476425b9e34363c2d9ac38e9f04aa75ae54a775",
+   "gold_file": "sympy/concrete/products.py",
+   "gold_changed_lines": 4,
+   "f2p_count": 1,
+   "p2p_count": 17,
+   "problem_tokens_approx": 207
+  },
+  {
+   "instance_id": "sympy__sympy-13798",
+   "repo": "sympy/sympy",
+   "base_commit": "7121bdf1facdd90d05b6994b4c2e5b2865a4638a",
+   "gold_file": "sympy/printing/latex.py",
+   "gold_changed_lines": 23,
+   "f2p_count": 1,
+   "p2p_count": 102,
+   "problem_tokens_approx": 227
+  },
+  {
+   "instance_id": "sympy__sympy-14531",
+   "repo": "sympy/sympy",
+   "base_commit": "205da797006360fc629110937e39a19c9561313e",
+   "gold_file": "sympy/printing/str.py",
+   "gold_changed_lines": 38,
+   "f2p_count": 2,
+   "p2p_count": 84,
+   "problem_tokens_approx": 224
+  },
+  {
+   "instance_id": "sympy__sympy-14711",
+   "repo": "sympy/sympy",
+   "base_commit": "c6753448b5c34f95e250105d76709fe4d349ca1f",
+   "gold_file": "sympy/physics/vector/vector.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 2,
+   "problem_tokens_approx": 270
+  },
+  {
+   "instance_id": "sympy__sympy-15017",
+   "repo": "sympy/sympy",
+   "base_commit": "6810dee426943c1a2fe85b5002dd0d4cf2246a05",
+   "gold_file": "sympy/tensor/array/dense_ndim_array.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 14,
+   "problem_tokens_approx": 285
+  },
+  {
+   "instance_id": "sympy__sympy-15875",
+   "repo": "sympy/sympy",
+   "base_commit": "b506169ad727ee39cb3d60c8b3ff5e315d443d8e",
+   "gold_file": "sympy/core/add.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 80,
+   "problem_tokens_approx": 142
+  },
+  {
+   "instance_id": "sympy__sympy-16450",
+   "repo": "sympy/sympy",
+   "base_commit": "aefdd023dc4f73c441953ed51f5f05a076f0862f",
+   "gold_file": "sympy/simplify/simplify.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 38,
+   "problem_tokens_approx": 247
+  },
+  {
+   "instance_id": "sympy__sympy-16792",
+   "repo": "sympy/sympy",
+   "base_commit": "09786a173e7a0a488f46dd6000177c23e5d24eed",
+   "gold_file": "sympy/utilities/codegen.py",
+   "gold_changed_lines": 16,
+   "f2p_count": 1,
+   "p2p_count": 54,
+   "problem_tokens_approx": 467
+  },
+  {
+   "instance_id": "sympy__sympy-17139",
+   "repo": "sympy/sympy",
+   "base_commit": "1d3327b8e90a186df6972991963a5ae87053259d",
+   "gold_file": "sympy/simplify/fu.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 2,
+   "p2p_count": 67,
+   "problem_tokens_approx": 639
+  },
+  {
+   "instance_id": "sympy__sympy-17655",
+   "repo": "sympy/sympy",
+   "base_commit": "f5e965947af2410ded92cfad987aaf45262ea434",
+   "gold_file": "sympy/geometry/point.py",
+   "gold_changed_lines": 4,
+   "f2p_count": 2,
+   "p2p_count": 9,
+   "problem_tokens_approx": 488
+  },
+  {
+   "instance_id": "sympy__sympy-18698",
+   "repo": "sympy/sympy",
+   "base_commit": "3dff1b98a78f28c953ae2140b69356b8391e399c",
+   "gold_file": "sympy/polys/polytools.py",
+   "gold_changed_lines": 11,
+   "f2p_count": 1,
+   "p2p_count": 147,
+   "problem_tokens_approx": 214
+  },
+  {
+   "instance_id": "sympy__sympy-19346",
+   "repo": "sympy/sympy",
+   "base_commit": "94fb720696f5f5d12bad8bc813699fd696afd2fb",
+   "gold_file": "sympy/printing/repr.py",
+   "gold_changed_lines": 10,
+   "f2p_count": 1,
+   "p2p_count": 40,
+   "problem_tokens_approx": 145
+  },
+  {
+   "instance_id": "sympy__sympy-21596",
+   "repo": "sympy/sympy",
+   "base_commit": "110997fe18b9f7d5ba7d22f624d156a29bf40759",
+   "gold_file": "sympy/sets/handlers/intersection.py",
+   "gold_changed_lines": 37,
+   "f2p_count": 1,
+   "p2p_count": 46,
+   "problem_tokens_approx": 254
+  },
+  {
+   "instance_id": "sympy__sympy-22914",
+   "repo": "sympy/sympy",
+   "base_commit": "c4e836cdf73fc6aa7bab6a86719a0f08861ffb1d",
+   "gold_file": "sympy/printing/pycode.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 17,
+   "problem_tokens_approx": 166
+  },
+  {
+   "instance_id": "sympy__sympy-23262",
+   "repo": "sympy/sympy",
+   "base_commit": "fdc707f73a65a429935c01532cd3970d3355eab6",
+   "gold_file": "sympy/utilities/lambdify.py",
+   "gold_changed_lines": 4,
+   "f2p_count": 1,
+   "p2p_count": 61,
+   "problem_tokens_approx": 280
+  },
+  {
+   "instance_id": "sympy__sympy-24066",
+   "repo": "sympy/sympy",
+   "base_commit": "514579c655bf22e2af14f0743376ae1d7befe345",
+   "gold_file": "sympy/physics/units/unitsystem.py",
+   "gold_changed_lines": 7,
+   "f2p_count": 1,
+   "p2p_count": 30,
+   "problem_tokens_approx": 145
+  },
+  {
+   "instance_id": "sympy__sympy-24443",
+   "repo": "sympy/sympy",
+   "base_commit": "809c53c077485ca48a206cee78340389cb83b7f1",
+   "gold_file": "sympy/combinatorics/homomorphisms.py",
+   "gold_changed_lines": 55,
+   "f2p_count": 1,
+   "p2p_count": 1,
+   "problem_tokens_approx": 206
+  },
+  {
+   "instance_id": "sympy__sympy-24539",
+   "repo": "sympy/sympy",
+   "base_commit": "193e3825645d93c73e31cdceb6d742cc6919624d",
+   "gold_file": "sympy/polys/rings.py",
+   "gold_changed_lines": 9,
+   "f2p_count": 1,
+   "p2p_count": 62,
+   "problem_tokens_approx": 222
+  }
+ ],
+ "reserve": [
+  {
+   "instance_id": "astropy__astropy-13579",
+   "repo": "astropy/astropy",
+   "base_commit": "0df94ff7097961e92fd7812036a24b145bc13ca8",
+   "gold_file": "astropy/wcs/wcsapi/wrappers/sliced_wcs.py",
+   "gold_changed_lines": 4,
+   "f2p_count": 1,
+   "p2p_count": 40,
+   "problem_tokens_approx": 1424
+  },
+  {
+   "instance_id": "astropy__astropy-14096",
+   "repo": "astropy/astropy",
+   "base_commit": "1a4462d72eb03f30dc83a879b1dd57aac8b2c18b",
+   "gold_file": "astropy/coordinates/sky_coordinate.py",
+   "gold_changed_lines": 6,
+   "f2p_count": 1,
+   "p2p_count": 426,
+   "problem_tokens_approx": 241
+  },
+  {
+   "instance_id": "django__django-13513",
+   "repo": "django/django",
+   "base_commit": "6599608c4d0befdcb820ddccce55f183f247ae4f",
+   "gold_file": "django/views/debug.py",
+   "gold_changed_lines": 44,
+   "f2p_count": 1,
+   "p2p_count": 83,
+   "problem_tokens_approx": 294
+  },
+  {
+   "instance_id": "django__django-12708",
+   "repo": "django/django",
+   "base_commit": "447980e72ac01da1594dd3373a03ba40b7ee6f80",
+   "gold_file": "django/db/backends/base/schema.py",
+   "gold_changed_lines": 7,
+   "f2p_count": 1,
+   "p2p_count": 101,
+   "problem_tokens_approx": 234
+  },
+  {
+   "instance_id": "django__django-12965",
+   "repo": "django/django",
+   "base_commit": "437196da9a386bd4cc62b0ce3f2de4aba468613d",
+   "gold_file": "django/db/models/sql/compiler.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 52,
+   "problem_tokens_approx": 672
+  },
+  {
+   "instance_id": "django__django-15732",
+   "repo": "django/django",
+   "base_commit": "ce69e34bd646558bb44ea92cecfd98b345a0b3e0",
+   "gold_file": "django/db/backends/base/schema.py",
+   "gold_changed_lines": 32,
+   "f2p_count": 1,
+   "p2p_count": 125,
+   "problem_tokens_approx": 145
+  },
+  {
+   "instance_id": "django__django-11880",
+   "repo": "django/django",
+   "base_commit": "06909fe084f87a65459a83bd69d7cdbe4fce9a7c",
+   "gold_file": "django/forms/fields.py",
+   "gold_changed_lines": 1,
+   "f2p_count": 1,
+   "p2p_count": 114,
+   "problem_tokens_approx": 261
+  },
+  {
+   "instance_id": "django__django-15278",
+   "repo": "django/django",
+   "base_commit": "0ab58c120939093fea90822f376e1866fc714d1f",
+   "gold_file": "django/db/backends/sqlite3/schema.py",
+   "gold_changed_lines": 13,
+   "f2p_count": 1,
+   "p2p_count": 138,
+   "problem_tokens_approx": 298
+  },
+  {
+   "instance_id": "django__django-17029",
+   "repo": "django/django",
+   "base_commit": "953f29f700a60fc09b08b2c2270c12c447490c6a",
+   "gold_file": "django/apps/registry.py",
+   "gold_changed_lines": 1,
+   "f2p_count": 1,
+   "p2p_count": 43,
+   "problem_tokens_approx": 235
+  },
+  {
+   "instance_id": "django__django-14493",
+   "repo": "django/django",
+   "base_commit": "7272e1963ffdf39c1d4fe225d5425a45dd095d11",
+   "gold_file": "django/contrib/staticfiles/storage.py",
+   "gold_changed_lines": 1,
+   "f2p_count": 1,
+   "p2p_count": 36,
+   "problem_tokens_approx": 361
+  },
+  {
+   "instance_id": "django__django-16145",
+   "repo": "django/django",
+   "base_commit": "93d4c9ea1de24eb391cb2b3561b6703fd46374df",
+   "gold_file": "django/core/management/commands/runserver.py",
+   "gold_changed_lines": 9,
+   "f2p_count": 1,
+   "p2p_count": 174,
+   "problem_tokens_approx": 161
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-25287",
+   "repo": "matplotlib/matplotlib",
+   "base_commit": "f8ffce6d44127d4ea7d6491262ab30046b03294b",
+   "gold_file": "lib/matplotlib/axis.py",
+   "gold_changed_lines": 15,
+   "f2p_count": 2,
+   "p2p_count": 786,
+   "problem_tokens_approx": 552
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-23476",
+   "repo": "matplotlib/matplotlib",
+   "base_commit": "33a0599711d26dc2b79f851c6daed4947df7c167",
+   "gold_file": "lib/matplotlib/figure.py",
+   "gold_changed_lines": 3,
+   "f2p_count": 1,
+   "p2p_count": 104,
+   "problem_tokens_approx": 1091
+  },
+  {
+   "instance_id": "matplotlib__matplotlib-23314",
+   "repo": "matplotlib/matplotlib",
+   "base_commit": "97fc1154992f64cfb2f86321155a7404efeb2d8a",
+   "gold_file": "lib/mpl_toolkits/mplot3d/axes3d.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 862,
+   "problem_tokens_approx": 233
+  },
+  {
+   "instance_id": "psf__requests-2317",
+   "repo": "psf/requests",
+   "base_commit": "091991be0da19de9108dbe5e3752917fea3d7fdc",
+   "gold_file": "requests/sessions.py",
+   "gold_changed_lines": 4,
+   "f2p_count": 8,
+   "p2p_count": 133,
+   "problem_tokens_approx": 209
+  },
+  {
+   "instance_id": "pydata__xarray-7393",
+   "repo": "pydata/xarray",
+   "base_commit": "41fef6f1352be994cd90056d47440fe9aa4c068f",
+   "gold_file": "xarray/core/indexing.py",
+   "gold_changed_lines": 6,
+   "f2p_count": 2,
+   "p2p_count": 71,
+   "problem_tokens_approx": 772
+  },
+  {
+   "instance_id": "pydata__xarray-6744",
+   "repo": "pydata/xarray",
+   "base_commit": "7cc6cc991e586a6158bb656b8001234ccda25407",
+   "gold_file": "xarray/core/rolling.py",
+   "gold_changed_lines": 17,
+   "f2p_count": 3,
+   "p2p_count": 1815,
+   "problem_tokens_approx": 439
+  },
+  {
+   "instance_id": "pylint-dev__pylint-6903",
+   "repo": "pylint-dev/pylint",
+   "base_commit": "ca80f03a43bc39e4cc2c67dc99817b3c9f13b8a6",
+   "gold_file": "pylint/lint/run.py",
+   "gold_changed_lines": 7,
+   "f2p_count": 1,
+   "p2p_count": 8,
+   "problem_tokens_approx": 840
+  },
+  {
+   "instance_id": "pytest-dev__pytest-10081",
+   "repo": "pytest-dev/pytest",
+   "base_commit": "da9a2b584eb7a6c7e924b2621ed0ddaeca0a7bea",
+   "gold_file": "src/_pytest/unittest.py",
+   "gold_changed_lines": 5,
+   "f2p_count": 1,
+   "p2p_count": 63,
+   "problem_tokens_approx": 722
+  },
+  {
+   "instance_id": "pytest-dev__pytest-5631",
+   "repo": "pytest-dev/pytest",
+   "base_commit": "cb828ebe70b4fa35cd5f9a7ee024272237eab351",
+   "gold_file": "src/_pytest/compat.py",
+   "gold_changed_lines": 19,
+   "f2p_count": 1,
+   "p2p_count": 15,
+   "problem_tokens_approx": 638
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-25747",
+   "repo": "scikit-learn/scikit-learn",
+   "base_commit": "2c867b8f822eb7a684f0d5c4359e4426e1c9cfe0",
+   "gold_file": "sklearn/utils/_set_output.py",
+   "gold_changed_lines": 4,
+   "f2p_count": 1,
+   "p2p_count": 14,
+   "problem_tokens_approx": 1699
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-14087",
+   "repo": "scikit-learn/scikit-learn",
+   "base_commit": "a5743ed36fbd3fbc8e351bdab16561fbfca7dfa1",
+   "gold_file": "sklearn/linear_model/logistic.py",
+   "gold_changed_lines": 9,
+   "f2p_count": 3,
+   "p2p_count": 172,
+   "problem_tokens_approx": 673
+  },
+  {
+   "instance_id": "scikit-learn__scikit-learn-10297",
+   "repo": "scikit-learn/scikit-learn",
+   "base_commit": "b90661d6a46aa3619d3eec94d5281f5888add501",
+   "gold_file": "sklearn/linear_model/ridge.py",
+   "gold_changed_lines": 34,
+   "f2p_count": 1,
+   "p2p_count": 28,
+   "problem_tokens_approx": 389
+  },
+  {
+   "instance_id": "sphinx-doc__sphinx-9367",
+   "repo": "sphinx-doc/sphinx",
+   "base_commit": "6918e69600810a4664e53653d6ff0290c3c4a788",
+   "gold_file": "sphinx/pycode/ast.py",
+   "gold_changed_lines": 8,
+   "f2p_count": 1,
+   "p2p_count": 25,
+   "problem_tokens_approx": 138
+  },
+  {
+   "instance_id": "sphinx-doc__sphinx-7889",
+   "repo": "sphinx-doc/sphinx",
+   "base_commit": "ec9af606c6cfa515f946d74da9b51574f2f9b16f",
+   "gold_file": "sphinx/ext/autodoc/mock.py",
+   "gold_changed_lines": 4,
+   "f2p_count": 1,
+   "p2p_count": 5,
+   "problem_tokens_approx": 318
+  },
+  {
+   "instance_id": "sphinx-doc__sphinx-8265",
+   "repo": "sphinx-doc/sphinx",
+   "base_commit": "b428cd2404675475a5c3dc2a2b0790ba57676202",
+   "gold_file": "sphinx/pycode/ast.py",
+   "gold_changed_lines": 18,
+   "f2p_count": 1,
+   "p2p_count": 22,
+   "problem_tokens_approx": 506
+  },
+  {
+   "instance_id": "sphinx-doc__sphinx-9229",
+   "repo": "sphinx-doc/sphinx",
+   "base_commit": "876fa81e0a038cda466925b85ccf6c5452e0f685",
+   "gold_file": "sphinx/ext/autodoc/__init__.py",
+   "gold_changed_lines": 17,
+   "f2p_count": 1,
+   "p2p_count": 13,
+   "problem_tokens_approx": 994
+  },
+  {
+   "instance_id": "sympy__sympy-18211",
+   "repo": "sympy/sympy",
+   "base_commit": "b4f1aa3540fe68d078d76e78ba59d022dd6df39f",
+   "gold_file": "sympy/core/relational.py",
+   "gold_changed_lines": 9,
+   "f2p_count": 1,
+   "p2p_count": 54,
+   "problem_tokens_approx": 191
+  },
+  {
+   "instance_id": "sympy__sympy-20428",
+   "repo": "sympy/sympy",
+   "base_commit": "c0e85160406f9bf2bcaa2992138587668a1cd0bc",
+   "gold_file": "sympy/polys/domains/expressiondomain.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 154,
+   "problem_tokens_approx": 1252
+  },
+  {
+   "instance_id": "sympy__sympy-24661",
+   "repo": "sympy/sympy",
+   "base_commit": "a36caf5c74fe654cedc488e8a8a05fad388f8406",
+   "gold_file": "sympy/parsing/sympy_parser.py",
+   "gold_changed_lines": 23,
+   "f2p_count": 1,
+   "p2p_count": 27,
+   "problem_tokens_approx": 99
+  },
+  {
+   "instance_id": "sympy__sympy-14976",
+   "repo": "sympy/sympy",
+   "base_commit": "9cbea134220b0b951587e11b63e2c832c7246cbc",
+   "gold_file": "sympy/printing/pycode.py",
+   "gold_changed_lines": 7,
+   "f2p_count": 1,
+   "p2p_count": 13,
+   "problem_tokens_approx": 236
+  },
+  {
+   "instance_id": "sympy__sympy-18189",
+   "repo": "sympy/sympy",
+   "base_commit": "1923822ddf8265199dbd9ef9ce09641d3fd042b9",
+   "gold_file": "sympy/solvers/diophantine.py",
+   "gold_changed_lines": 2,
+   "f2p_count": 1,
+   "p2p_count": 41,
+   "problem_tokens_approx": 313
+  },
+  {
+   "instance_id": "sympy__sympy-19954",
+   "repo": "sympy/sympy",
+   "base_commit": "6f54459aa0248bf1467ad12ee6333d8bc924a642",
+   "gold_file": "sympy/combinatorics/perm_groups.py",
+   "gold_changed_lines": 9,
+   "f2p_count": 1,
+   "p2p_count": 56,
+   "problem_tokens_approx": 304
+  },
+  {
+   "instance_id": "sympy__sympy-13878",
+   "repo": "sympy/sympy",
+   "base_commit": "7b127bdf71a36d85216315f80c1b54d22b060818",
+   "gold_file": "sympy/stats/crv_types.py",
+   "gold_changed_lines": 156,
+   "f2p_count": 1,
+   "p2p_count": 19,
+   "problem_tokens_approx": 873
+  }
+ ]
+}

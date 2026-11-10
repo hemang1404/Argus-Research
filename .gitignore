@@ -1,0 +1,7 @@
+.env
+.env.*
+*.key
+__pycache__/
+.venv/
+raw_cache/
+data/src_cache/
