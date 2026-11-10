@@ -52,12 +52,12 @@ class KeyPool:
         self.keys = [Key(v) for v in load_keys(env_path)]
         self.cv = threading.Condition()
 
-    def acquire(self, timeout=900):
+    def acquire(self, timeout=900, exclude=()):
         end = time.time() + timeout
         with self.cv:
             while True:
                 now = time.time()
-                free = [k for k in self.keys if not k.busy and k.next_ok <= now and k.dead_until <= now]
+                free = [k for k in self.keys if not k.busy and k.next_ok <= now and k.dead_until <= now and k.id not in exclude]
                 if free:
                     k = min(free, key=lambda x: x.last_used)
                     k.busy = True
@@ -65,7 +65,7 @@ class KeyPool:
                     return k
                 if now > end:
                     raise TimeoutError("no key available")
-                waits = [max(k.next_ok, k.dead_until) - now for k in self.keys if not k.busy]
+                waits = [max(k.next_ok, k.dead_until) - now for k in self.keys if not k.busy and k.id not in exclude]
                 self.cv.wait(timeout=max(0.2, min(waits) if waits else 1.0))
 
     def release(self, key, cooldown=0.0, dead_for=0.0):
@@ -78,11 +78,14 @@ class KeyPool:
                 key.dead_until = max(key.dead_until, time.time() + dead_for)
             self.cv.notify_all()
 
-    def chat(self, body, max_tries=10):
+    def chat(self, body, max_tries=30, max_413_keys=8):
         """Returns dict(status, data|error, headers, key_id, tries, retries_log)."""
         log = []
+        denied = set()  # keys that returned 413 for this request
         for attempt in range(1, max_tries + 1):
-            key = self.acquire()
+            if len(denied) >= len(self.keys):
+                break
+            key = self.acquire(exclude=denied)
             t0 = time.time()
             req = urllib.request.Request(API, data=json.dumps(body).encode(), headers={
                 "Authorization": "Bearer " + key.value, "Content-Type": "application/json", "User-Agent": "argus-pilot100/0.1"})
@@ -109,8 +112,15 @@ class KeyPool:
                 self.release(key, cooldown=cool)
                 return dict(status=200, data=payload, headers=h, key_id=key.id, tries=attempt, retries=log, latency_s=round(dt, 2))
             if status == 413:
-                self.release(key)
-                return dict(status=413, error=msg, key_id=key.id, tries=attempt, retries=log, latency_s=round(dt, 2))
+                # Acceptance of a request with prompt+max_tokens above the nominal TPM depends on the key (measured
+                # 2026-11-10: 9 of 17 keys admitted an identical 9.9k-token request, 7 refused). Try other keys; only
+                # report 'too large' when many distinct keys have refused it.
+                denied.add(key.id)
+                log.append(dict(key=key.id, status=413))
+                self.release(key, cooldown=20)
+                if len(denied) >= max_413_keys:
+                    return dict(status=413, error=msg, key_id=key.id, tries=attempt, retries=log, latency_s=round(dt, 2))
+                continue
             if status == 429:
                 per_day = "per day" in msg.lower() or "TPD" in msg or "RPD" in msg
                 wait = float(h.get("retry-after", 30) or 30)

@@ -42,6 +42,8 @@ done = set()
 if os.path.exists(args.out):
     for l in open(args.out, encoding="utf-8"):
         r = json.loads(l)
+        if r.get("http") != 200:
+            continue  # failed records are retried
         done.add((r["iid"], r["model"], r["effort"], r["regime"], r["sample"]))
 os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
 lock = threading.Lock()

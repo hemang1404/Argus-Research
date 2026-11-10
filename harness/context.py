@@ -6,7 +6,7 @@ score highest under BM25 against the issue text, in file order, until the token 
 No line numbers are shown (models copy them into SEARCH blocks).
 Coverage is computed from the gold patch and is NEVER shown to the model.
 """
-import ast, math, os, re, urllib.request, urllib.error, collections
+import ast, math, os, re, threading, urllib.request, urllib.error, collections
 import tiktoken
 
 ENC = tiktoken.get_encoding("o200k_base")  # approximation of gpt-oss tokenizer
@@ -18,14 +18,20 @@ def ntok(s):
 
 
 def fetch_source(repo, commit, path):
+    """Fetch a file at a commit; cache with an atomic write so concurrent threads never read a partial file."""
     dst = os.path.join(CACHE, repo.replace("/", "__"), commit, *path.split("/"))
-    if not os.path.exists(dst):
+    if not (os.path.exists(dst) and os.path.getsize(dst) > 0):
         url = f"https://raw.githubusercontent.com/{repo}/{commit}/{path}"
         with urllib.request.urlopen(url, timeout=60) as r:
             data = r.read()
+        if not data:
+            raise ValueError(f"empty source fetched for {repo}@{commit[:8]}:{path}")
         os.makedirs(os.path.dirname(dst), exist_ok=True)
-        open(dst, "wb").write(data)
-    return open(dst, "rb").read().decode("utf-8", errors="replace").replace("\r\n", "\n")
+        tmp = f"{dst}.{os.getpid()}.{threading.get_ident()}.tmp"
+        with open(tmp, "wb") as f:
+            f.write(data)
+        os.replace(tmp, dst)  # atomic
+    return open(dst, "rb").read().decode("utf-8", errors="replace").replace(chr(13) + chr(10), chr(10))
 
 
 def words(s):
