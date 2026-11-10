@@ -17,21 +17,31 @@ def ntok(s):
     return len(ENC.encode(s))
 
 
+_LOCKS = {}
+_LOCKS_GUARD = threading.Lock()
+
+
 def fetch_source(repo, commit, path):
-    """Fetch a file at a commit; cache with an atomic write so concurrent threads never read a partial file."""
+    """Fetch a file at a commit. One lock per destination path, so concurrent threads never read a partial
+    file or collide on the atomic rename (Windows raises PermissionError when two threads replace one file)."""
     dst = os.path.join(CACHE, repo.replace("/", "__"), commit, *path.split("/"))
-    if not (os.path.exists(dst) and os.path.getsize(dst) > 0):
-        url = f"https://raw.githubusercontent.com/{repo}/{commit}/{path}"
-        with urllib.request.urlopen(url, timeout=60) as r:
-            data = r.read()
-        if not data:
-            raise ValueError(f"empty source fetched for {repo}@{commit[:8]}:{path}")
-        os.makedirs(os.path.dirname(dst), exist_ok=True)
-        tmp = f"{dst}.{os.getpid()}.{threading.get_ident()}.tmp"
-        with open(tmp, "wb") as f:
-            f.write(data)
-        os.replace(tmp, dst)  # atomic
-    return open(dst, "rb").read().decode("utf-8", errors="replace").replace(chr(13) + chr(10), chr(10))
+    with _LOCKS_GUARD:
+        lock = _LOCKS.setdefault(dst, threading.Lock())
+    with lock:
+        if not (os.path.exists(dst) and os.path.getsize(dst) > 0):
+            url = f"https://raw.githubusercontent.com/{repo}/{commit}/{path}"
+            with urllib.request.urlopen(url, timeout=60) as r:
+                data = r.read()
+            if not data:
+                raise ValueError(f"empty source fetched for {repo}@{commit[:8]}:{path}")
+            os.makedirs(os.path.dirname(dst), exist_ok=True)
+            tmp = f"{dst}.{os.getpid()}.tmp"
+            with open(tmp, "wb") as f:
+                f.write(data)
+            os.replace(tmp, dst)
+        with open(dst, "rb") as f:
+            raw = f.read()
+    return raw.decode("utf-8", errors="replace").replace(chr(13) + chr(10), chr(10))
 
 
 def words(s):
