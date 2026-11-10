@@ -12,6 +12,8 @@ Labels (earliest stage that failed), per arm:
   F7_wrong_fix           applied; hidden target tests still fail, no regression
   F8_regression          target tests pass but previously-passing tests break
   F78_both               target tests fail and regressions
+  F6_crash_all_tests     patch applied cleanly but the test run produced no results (suite crashed at startup)
+  F5_harness_apply_fail  git apply rejected the candidate inside the harness
   F7_no_op               applied but changed nothing
   PASS                   official harness: resolved
   F0_harness             gold patch did not resolve (task excluded) or no grading report
@@ -94,6 +96,15 @@ def label(kind, iid, model):
             return "PASS", g
         f2p_fail, p2p_fail = g.get("f2p_fail", 0), g.get("p2p_fail", 0)
         if not g.get("applied"):
+            # The harness reports applied=False both when git apply fails and when the patch applies but the test run
+            # produces no parseable results (the suite crashes at import/startup). Tell them apart from the run log.
+            lg = os.path.join(ROOT, "results", "grading", "logs", "run_evaluation", f"p100_{iid}_{g['hash']}", f"c{g['hash']}", iid, "run_instance.log")
+            try:
+                txt = open(lg, encoding="utf-8", errors="replace").read()
+            except OSError:
+                txt = ""
+            if "cleanly" in txt:
+                return "F6_crash_all_tests", g
             return "F5_harness_apply_fail", g
         if f2p_fail and p2p_fail:
             return "F78_both", g

@@ -1,0 +1,973 @@
+{
+ "mcnemar_20argus_vs_20plain": {
+  "only_first": 7,
+  "only_second": 0,
+  "both": 31,
+  "p": 0.0156
+ },
+ "mcnemar_120argus_vs_120plain": {
+  "only_first": 2,
+  "only_second": 0,
+  "both": 44,
+  "p": 0.5
+ },
+ "mcnemar_20argus_vs_120plain": {
+  "only_first": 6,
+  "only_second": 12,
+  "both": 32,
+  "p": 0.2379
+ },
+ "mcnemar_20argus_vs_120argus": {
+  "only_first": 4,
+  "only_second": 12,
+  "both": 34,
+  "p": 0.0768
+ },
+ "trunc": {
+  "n": 21,
+  "ids": [
+   "django__django-13406",
+   "django__django-14034",
+   "django__django-15128",
+   "django__django-15315",
+   "django__django-15930",
+   "django__django-16485",
+   "matplotlib__matplotlib-13989",
+   "matplotlib__matplotlib-20676",
+   "matplotlib__matplotlib-23412",
+   "matplotlib__matplotlib-25960",
+   "psf__requests-6028",
+   "pydata__xarray-4094",
+   "pytest-dev__pytest-10051",
+   "pytest-dev__pytest-6197",
+   "pytest-dev__pytest-7521",
+   "scikit-learn__scikit-learn-12973",
+   "sphinx-doc__sphinx-9698",
+   "sympy__sympy-14711",
+   "sympy__sympy-16450",
+   "sympy__sympy-19346",
+   "sympy__sympy-24443"
+  ],
+  "outcome_120b_plain_on_T": {
+   "F7_wrong_fix": 8,
+   "F3_wrong_file": 1,
+   "F4_search_not_found": 7,
+   "F8_regression": 2,
+   "F78_both": 1,
+   "PASS": 2
+  },
+  "pass_120b_on_T": 2,
+  "pass_120b_on_nonT": 42,
+  "n_nonT": 78,
+  "pass_20b_on_nonT_plain": 31,
+  "pass_20b_on_nonT_argus": 38,
+  "repos": {
+   "django/django": 6,
+   "matplotlib/matplotlib": 4,
+   "psf/requests": 1,
+   "pydata/xarray": 1,
+   "pytest-dev/pytest": 3,
+   "scikit-learn/scikit-learn": 1,
+   "sphinx-doc/sphinx": 1,
+   "sympy/sympy": 4
+  },
+  "covered_fully_T": 8,
+  "median_prompt_T": 5953,
+  "median_prompt_nonT": 5921.0,
+  "median_gold_lines_T": 5,
+  "median_gold_lines_nonT": 6.0,
+  "median_reasoning_120b_on_T": 1405,
+  "median_reasoning_120b_on_nonT": 711.0
+ },
+ "tokens_gpt-oss-20b": {
+  "mean_completion": 3094,
+  "median_completion": 1797,
+  "mean_reasoning": 2822,
+  "mean_prompt": 4911,
+  "finish": {
+   "stop": 77,
+   "length": 22
+  }
+ },
+ "reasoning_by_outcome_gpt-oss-20b": {
+  "F7_wrong_fix": {
+   "n": 15,
+   "median": 825,
+   "mean": 1197
+  },
+  "PASS": {
+   "n": 31,
+   "median": 1166,
+   "mean": 1586
+  },
+  "F78_both": {
+   "n": 8,
+   "median": 1658.5,
+   "mean": 1908
+  },
+  "F2_format": {
+   "n": 2,
+   "median": 2607.5,
+   "mean": 2608
+  },
+  "F8_regression": {
+   "n": 2,
+   "median": 882.0,
+   "mean": 882
+  },
+  "F1_budget_truncation": {
+   "n": 21,
+   "median": 7858,
+   "mean": 7664
+  },
+  "F4_search_not_found": {
+   "n": 15,
+   "median": 1279,
+   "mean": 1489
+  },
+  "F6_crash_all_tests": {
+   "n": 1,
+   "median": 1019,
+   "mean": 1019
+  },
+  "F4_ambiguous": {
+   "n": 3,
+   "median": 2043,
+   "mean": 1711
+  },
+  "F5_syntax": {
+   "n": 1,
+   "median": 606,
+   "mean": 606
+  }
+ },
+ "tokens_gpt-oss-120b": {
+  "mean_completion": 1360,
+  "median_completion": 1183,
+  "mean_reasoning": 1107,
+  "mean_prompt": 4911,
+  "finish": {
+   "stop": 99
+  }
+ },
+ "reasoning_by_outcome_gpt-oss-120b": {
+  "F7_wrong_fix": {
+   "n": 25,
+   "median": 1330,
+   "mean": 1293
+  },
+  "F78_both": {
+   "n": 7,
+   "median": 988,
+   "mean": 1343
+  },
+  "F8_regression": {
+   "n": 6,
+   "median": 1470.5,
+   "mean": 1459
+  },
+  "PASS": {
+   "n": 44,
+   "median": 690.5,
+   "mean": 818
+  },
+  "F3_wrong_file": {
+   "n": 1,
+   "median": 2954,
+   "mean": 2954
+  },
+  "F4_search_not_found": {
+   "n": 14,
+   "median": 1090.5,
+   "mean": 1344
+  },
+  "F4_ambiguous": {
+   "n": 2,
+   "median": 665.5,
+   "mean": 666
+  }
+ },
+ "wrongfix_gpt-oss-20b": {
+  "n": 25,
+  "labels": {
+   "F7_wrong_fix": 15,
+   "F78_both": 8,
+   "F8_regression": 2
+  },
+  "hit_gold_region": 16,
+  "miss_gold_region": 9,
+  "median_changed_lines": 5,
+  "median_gold_lines": 6,
+  "f2p_partial": 3
+ },
+ "region_pass_gpt-oss-20b": {
+  "hit_n": 44,
+  "hit_pass": 28,
+  "miss_n": 12,
+  "miss_pass": 3
+ },
+ "wrongfix_gpt-oss-120b": {
+  "n": 38,
+  "labels": {
+   "F7_wrong_fix": 25,
+   "F78_both": 7,
+   "F8_regression": 6
+  },
+  "hit_gold_region": 25,
+  "miss_gold_region": 13,
+  "median_changed_lines": 11.5,
+  "median_gold_lines": 6.5,
+  "f2p_partial": 3
+ },
+ "region_pass_gpt-oss-120b": {
+  "hit_n": 66,
+  "hit_pass": 41,
+  "miss_n": 16,
+  "miss_pass": 3
+ },
+ "coverage_nontrunc_gpt-oss-20b": {
+  "full": {
+   "n": 62,
+   "plain_pass": 26,
+   "argus_pass": 31
+  },
+  "partial": {
+   "n": 8,
+   "plain_pass": 4,
+   "argus_pass": 5
+  },
+  "zero": {
+   "n": 8,
+   "plain_pass": 1,
+   "argus_pass": 2
+  }
+ },
+ "ctxmode_gpt-oss-20b": {
+  "bm25_chunks": {
+   "n": 61,
+   "plain_pass": 21
+  },
+  "whole_file": {
+   "n": 38,
+   "plain_pass": 10
+  }
+ },
+ "coverage_nontrunc_gpt-oss-120b": {
+  "full": {
+   "n": 70,
+   "plain_pass": 37,
+   "argus_pass": 38
+  },
+  "partial": {
+   "n": 11,
+   "plain_pass": 6,
+   "argus_pass": 6
+  },
+  "zero": {
+   "n": 18,
+   "plain_pass": 1,
+   "argus_pass": 2
+  }
+ },
+ "ctxmode_gpt-oss-120b": {
+  "bm25_chunks": {
+   "n": 61,
+   "plain_pass": 24
+  },
+  "whole_file": {
+   "n": 38,
+   "plain_pass": 20
+  }
+ },
+ "by_repo": {
+  "astropy/astropy": {
+   "gpt-oss-20b": {
+    "n": 6,
+    "plain": 3,
+    "argus": 3
+   },
+   "gpt-oss-120b": {
+    "n": 6,
+    "plain": 2,
+    "argus": 2
+   }
+  },
+  "django/django": {
+   "gpt-oss-20b": {
+    "n": 30,
+    "plain": 9,
+    "argus": 9
+   },
+   "gpt-oss-120b": {
+    "n": 30,
+    "plain": 12,
+    "argus": 12
+   }
+  },
+  "matplotlib/matplotlib": {
+   "gpt-oss-20b": {
+    "n": 9,
+    "plain": 3,
+    "argus": 4
+   },
+   "gpt-oss-120b": {
+    "n": 9,
+    "plain": 4,
+    "argus": 4
+   }
+  },
+  "psf/requests": {
+   "gpt-oss-20b": {
+    "n": 2,
+    "plain": 0,
+    "argus": 0
+   },
+   "gpt-oss-120b": {
+    "n": 2,
+    "plain": 0,
+    "argus": 0
+   }
+  },
+  "pydata/xarray": {
+   "gpt-oss-20b": {
+    "n": 5,
+    "plain": 3,
+    "argus": 3
+   },
+   "gpt-oss-120b": {
+    "n": 5,
+    "plain": 4,
+    "argus": 4
+   }
+  },
+  "pylint-dev/pylint": {
+   "gpt-oss-20b": {
+    "n": 1,
+    "plain": 1,
+    "argus": 1
+   },
+   "gpt-oss-120b": {
+    "n": 1,
+    "plain": 1,
+    "argus": 1
+   }
+  },
+  "pytest-dev/pytest": {
+   "gpt-oss-20b": {
+    "n": 5,
+    "plain": 1,
+    "argus": 2
+   },
+   "gpt-oss-120b": {
+    "n": 5,
+    "plain": 2,
+    "argus": 2
+   }
+  },
+  "scikit-learn/scikit-learn": {
+   "gpt-oss-20b": {
+    "n": 9,
+    "plain": 3,
+    "argus": 5
+   },
+   "gpt-oss-120b": {
+    "n": 9,
+    "plain": 5,
+    "argus": 6
+   }
+  },
+  "sphinx-doc/sphinx": {
+   "gpt-oss-20b": {
+    "n": 11,
+    "plain": 3,
+    "argus": 5
+   },
+   "gpt-oss-120b": {
+    "n": 11,
+    "plain": 5,
+    "argus": 5
+   }
+  },
+  "sympy/sympy": {
+   "gpt-oss-20b": {
+    "n": 21,
+    "plain": 5,
+    "argus": 6
+   },
+   "gpt-oss-120b": {
+    "n": 21,
+    "plain": 9,
+    "argus": 10
+   }
+  }
+ },
+ "argus_tiers_gpt-oss-20b": {
+  "1": 58,
+  "2": 6,
+  "3": 2
+ },
+ "argus_changed_gpt-oss-20b": [
+  [
+   "django__django-14238",
+   "F4_search_not_found",
+   "F4_refused_other",
+   null
+  ],
+  [
+   "django__django-16595",
+   "F4_search_not_found",
+   "F4_ambiguous",
+   null
+  ],
+  [
+   "django__django-16642",
+   "F4_search_not_found",
+   "F7_wrong_fix",
+   2
+  ],
+  [
+   "matplotlib__matplotlib-20488",
+   "F4_search_not_found",
+   "PASS",
+   2
+  ],
+  [
+   "pydata__xarray-4356",
+   "F5_syntax",
+   "F4_refused_other",
+   null
+  ],
+  [
+   "pytest-dev__pytest-5262",
+   "F4_search_not_found",
+   "PASS",
+   3
+  ],
+  [
+   "scikit-learn__scikit-learn-11578",
+   "F4_search_not_found",
+   "PASS",
+   1
+  ],
+  [
+   "scikit-learn__scikit-learn-13496",
+   "F4_search_not_found",
+   "PASS",
+   1
+  ],
+  [
+   "sphinx-doc__sphinx-9230",
+   "F4_search_not_found",
+   "PASS",
+   2
+  ],
+  [
+   "sphinx-doc__sphinx-9711",
+   "F4_search_not_found",
+   "PASS",
+   2
+  ],
+  [
+   "sympy__sympy-13480",
+   "F4_search_not_found",
+   "PASS",
+   2
+  ],
+  [
+   "sympy__sympy-17655",
+   "F4_search_not_found",
+   "F4_refused_other",
+   null
+  ],
+  [
+   "sympy__sympy-21596",
+   "F4_search_not_found",
+   "F7_wrong_fix",
+   2
+  ],
+  [
+   "sympy__sympy-24539",
+   "F4_search_not_found",
+   "F78_both",
+   3
+  ]
+ ],
+ "plain_not_found_gpt-oss-20b": [
+  [
+   "django__django-14238",
+   "F4_refused_other"
+  ],
+  [
+   "django__django-15280",
+   "F4_search_not_found"
+  ],
+  [
+   "django__django-16595",
+   "F4_ambiguous"
+  ],
+  [
+   "django__django-16642",
+   "F7_wrong_fix"
+  ],
+  [
+   "matplotlib__matplotlib-20488",
+   "PASS"
+  ],
+  [
+   "pytest-dev__pytest-5262",
+   "PASS"
+  ],
+  [
+   "scikit-learn__scikit-learn-11578",
+   "PASS"
+  ],
+  [
+   "scikit-learn__scikit-learn-13496",
+   "PASS"
+  ],
+  [
+   "sphinx-doc__sphinx-9230",
+   "PASS"
+  ],
+  [
+   "sphinx-doc__sphinx-9711",
+   "PASS"
+  ],
+  [
+   "sympy__sympy-11618",
+   "F4_search_not_found"
+  ],
+  [
+   "sympy__sympy-13480",
+   "PASS"
+  ],
+  [
+   "sympy__sympy-17655",
+   "F4_refused_other"
+  ],
+  [
+   "sympy__sympy-21596",
+   "F7_wrong_fix"
+  ],
+  [
+   "sympy__sympy-24539",
+   "F78_both"
+  ]
+ ],
+ "plain_ambig_gpt-oss-20b": [
+  [
+   "matplotlib__matplotlib-24637",
+   "F4_ambiguous"
+  ],
+  [
+   "sympy__sympy-15017",
+   "F4_ambiguous"
+  ],
+  [
+   "sympy__sympy-16792",
+   "F4_ambiguous"
+  ]
+ ],
+ "argus_refused_other_gpt-oss-20b": [
+  "django__django-14238",
+  "pydata__xarray-4356",
+  "sympy__sympy-17655"
+ ],
+ "argus_tiers_gpt-oss-120b": {
+  "1": 82,
+  "2": 4
+ },
+ "argus_changed_gpt-oss-120b": [
+  [
+   "matplotlib__matplotlib-23412",
+   "F4_search_not_found",
+   "F4_ambiguous",
+   null
+  ],
+  [
+   "scikit-learn__scikit-learn-11578",
+   "F4_search_not_found",
+   "PASS",
+   2
+  ],
+  [
+   "scikit-learn__scikit-learn-14983",
+   "F4_search_not_found",
+   "F78_both",
+   2
+  ],
+  [
+   "sympy__sympy-13480",
+   "F4_search_not_found",
+   "PASS",
+   2
+  ],
+  [
+   "sympy__sympy-21596",
+   "F4_search_not_found",
+   "F7_wrong_fix",
+   2
+  ]
+ ],
+ "plain_not_found_gpt-oss-120b": [
+  [
+   "django__django-15128",
+   "F4_search_not_found"
+  ],
+  [
+   "django__django-15280",
+   "F4_search_not_found"
+  ],
+  [
+   "django__django-15315",
+   "F4_search_not_found"
+  ],
+  [
+   "matplotlib__matplotlib-13989",
+   "F4_search_not_found"
+  ],
+  [
+   "matplotlib__matplotlib-20676",
+   "F4_search_not_found"
+  ],
+  [
+   "matplotlib__matplotlib-23412",
+   "F4_ambiguous"
+  ],
+  [
+   "matplotlib__matplotlib-24637",
+   "F4_search_not_found"
+  ],
+  [
+   "pytest-dev__pytest-7521",
+   "F4_search_not_found"
+  ],
+  [
+   "scikit-learn__scikit-learn-11578",
+   "PASS"
+  ],
+  [
+   "scikit-learn__scikit-learn-14983",
+   "F78_both"
+  ],
+  [
+   "sympy__sympy-13480",
+   "PASS"
+  ],
+  [
+   "sympy__sympy-16450",
+   "F4_search_not_found"
+  ],
+  [
+   "sympy__sympy-21596",
+   "F7_wrong_fix"
+  ],
+  [
+   "sympy__sympy-24539",
+   "F4_search_not_found"
+  ]
+ ],
+ "plain_ambig_gpt-oss-120b": [
+  [
+   "sympy__sympy-15017",
+   "F4_ambiguous"
+  ],
+  [
+   "sympy__sympy-16792",
+   "F4_ambiguous"
+  ]
+ ],
+ "argus_refused_other_gpt-oss-120b": [],
+ "funnel_gpt-oss-20b": {
+  "total": 99,
+  "produced_output": 78,
+  "parsed_and_addressed_target": 76,
+  "plain_applied": 58,
+  "argus_applied": 67,
+  "plain_pass": 31,
+  "argus_pass": 38,
+  "pass_rate_given_plain_applied": 53.4,
+  "pass_rate_given_argus_applied": 56.7
+ },
+ "funnel_gpt-oss-120b": {
+  "total": 99,
+  "produced_output": 99,
+  "parsed_and_addressed_target": 98,
+  "plain_applied": 82,
+  "argus_applied": 86,
+  "plain_pass": 44,
+  "argus_pass": 46,
+  "pass_rate_given_plain_applied": 53.7,
+  "pass_rate_given_argus_applied": 53.5
+ },
+ "gap_after_argus_labels_20b": {
+  "F7_wrong_fix": 2,
+  "F4_refused_other": 3,
+  "F6_crash_all_tests": 1,
+  "F2_format": 1,
+  "F4_ambiguous": 1,
+  "F78_both": 1,
+  "F4_search_not_found": 1,
+  "F1_budget_truncation": 2
+ },
+ "both_fail_labels": {
+  "F7_wrong_fix | F7_wrong_fix": 13,
+  "F1_budget_truncation | F7_wrong_fix": 8,
+  "F1_budget_truncation | F4_search_not_found": 6,
+  "F78_both | F78_both": 4,
+  "F7_wrong_fix | F78_both": 2,
+  "F1_budget_truncation | F8_regression": 2,
+  "F78_both | F7_wrong_fix": 2,
+  "F4_ambiguous | F4_ambiguous": 2,
+  "F2_format | F8_regression": 1,
+  "F8_regression | F7_wrong_fix": 1,
+  "F1_budget_truncation | F3_wrong_file": 1,
+  "F4_search_not_found | F4_search_not_found": 1
+ },
+ "tasks_neither_model_applied_to_gold_region": 27,
+ "baseline_ladder_gpt-oss-20b": {
+  "plain_line_exact": {
+   "pass_": 31,
+   "gains": []
+  },
+  "substring_exact": {
+   "pass_": 33,
+   "gains": [
+    [
+     "scikit-learn__scikit-learn-11578",
+     1,
+     "PASS"
+    ],
+    [
+     "scikit-learn__scikit-learn-13496",
+     1,
+     "PASS"
+    ]
+   ]
+  },
+  "plus_whitespace_norm": {
+   "pass_": 37,
+   "gains": [
+    [
+     "django__django-16642",
+     2,
+     "F7_wrong_fix"
+    ],
+    [
+     "matplotlib__matplotlib-20488",
+     2,
+     "PASS"
+    ],
+    [
+     "scikit-learn__scikit-learn-11578",
+     1,
+     "PASS"
+    ],
+    [
+     "scikit-learn__scikit-learn-13496",
+     1,
+     "PASS"
+    ],
+    [
+     "sphinx-doc__sphinx-9230",
+     2,
+     "PASS"
+    ],
+    [
+     "sphinx-doc__sphinx-9711",
+     2,
+     "PASS"
+    ],
+    [
+     "sympy__sympy-13480",
+     2,
+     "PASS"
+    ],
+    [
+     "sympy__sympy-21596",
+     2,
+     "F7_wrong_fix"
+    ]
+   ]
+  },
+  "argus_all_tiers": {
+   "pass_": 38,
+   "gains": [
+    [
+     "django__django-16642",
+     2,
+     "F7_wrong_fix"
+    ],
+    [
+     "matplotlib__matplotlib-20488",
+     2,
+     "PASS"
+    ],
+    [
+     "pytest-dev__pytest-5262",
+     3,
+     "PASS"
+    ],
+    [
+     "scikit-learn__scikit-learn-11578",
+     1,
+     "PASS"
+    ],
+    [
+     "scikit-learn__scikit-learn-13496",
+     1,
+     "PASS"
+    ],
+    [
+     "sphinx-doc__sphinx-9230",
+     2,
+     "PASS"
+    ],
+    [
+     "sphinx-doc__sphinx-9711",
+     2,
+     "PASS"
+    ],
+    [
+     "sympy__sympy-13480",
+     2,
+     "PASS"
+    ],
+    [
+     "sympy__sympy-21596",
+     2,
+     "F7_wrong_fix"
+    ],
+    [
+     "sympy__sympy-24539",
+     3,
+     "F78_both"
+    ]
+   ]
+  }
+ },
+ "baseline_ladder_gpt-oss-120b": {
+  "plain_line_exact": {
+   "pass_": 44,
+   "gains": []
+  },
+  "substring_exact": {
+   "pass_": 44,
+   "gains": []
+  },
+  "plus_whitespace_norm": {
+   "pass_": 46,
+   "gains": [
+    [
+     "scikit-learn__scikit-learn-11578",
+     2,
+     "PASS"
+    ],
+    [
+     "scikit-learn__scikit-learn-14983",
+     2,
+     "F78_both"
+    ],
+    [
+     "sympy__sympy-13480",
+     2,
+     "PASS"
+    ],
+    [
+     "sympy__sympy-21596",
+     2,
+     "F7_wrong_fix"
+    ]
+   ]
+  },
+  "argus_all_tiers": {
+   "pass_": 46,
+   "gains": [
+    [
+     "scikit-learn__scikit-learn-11578",
+     2,
+     "PASS"
+    ],
+    [
+     "scikit-learn__scikit-learn-14983",
+     2,
+     "F78_both"
+    ],
+    [
+     "sympy__sympy-13480",
+     2,
+     "PASS"
+    ],
+    [
+     "sympy__sympy-21596",
+     2,
+     "F7_wrong_fix"
+    ]
+   ]
+  }
+ },
+ "tier_of_applied_nonpass_and_pass_gpt-oss-20b": [
+  [
+   "django__django-16642",
+   2,
+   "F7_wrong_fix"
+  ],
+  [
+   "matplotlib__matplotlib-20488",
+   2,
+   "PASS"
+  ],
+  [
+   "pytest-dev__pytest-5262",
+   3,
+   "PASS"
+  ],
+  [
+   "sphinx-doc__sphinx-9230",
+   2,
+   "PASS"
+  ],
+  [
+   "sphinx-doc__sphinx-9711",
+   2,
+   "PASS"
+  ],
+  [
+   "sympy__sympy-13480",
+   2,
+   "PASS"
+  ],
+  [
+   "sympy__sympy-21596",
+   2,
+   "F7_wrong_fix"
+  ],
+  [
+   "sympy__sympy-24539",
+   3,
+   "F78_both"
+  ]
+ ],
+ "tier_of_applied_nonpass_and_pass_gpt-oss-120b": [
+  [
+   "scikit-learn__scikit-learn-11578",
+   2,
+   "PASS"
+  ],
+  [
+   "scikit-learn__scikit-learn-14983",
+   2,
+   "F78_both"
+  ],
+  [
+   "sympy__sympy-13480",
+   2,
+   "PASS"
+  ],
+  [
+   "sympy__sympy-21596",
+   2,
+   "F7_wrong_fix"
+  ]
+ ]
+}

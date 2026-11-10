@@ -1,0 +1,529 @@
+##### astropy__astropy-12907 F7_wrong_fix f2p 0/2 p2p_fail 0 tier 1 hits_gold_region False cov 1.0 whole_file
+ISSUE: Modeling's `separability_matrix` does not compute separability correctly for nested CompoundModels Consider the following model: ```python from astropy.modeling import models as m from astropy.modeling.separable import separability_matrix cm = m.Linear1D(10) & m.Linear1D(5) ``` It's separability matrix as you might expect is a diagonal: ```python >>> separability_matrix(cm) array([[ True, False], [False, True]]) ``` 
+GOLD:
+-        cright[-right.shape[0]:, -right.shape[1]:] = 1
++        cright[-right.shape[0]:, -right.shape[1]:] = right
+MODEL:
++    if isinstance(model, CompoundModel):
++        mat = np.zeros((noutp, model.n_inputs))
++        if pos == 'left':
++            mat[:model.n_outputs, :model.n_inputs] = _separable(model)
++        else:
++            mat[-model.n_outputs:, -model.n_inputs:] = _separable(model)
++        return mat
+
+##### astropy__astropy-13033 F7_wrong_fix f2p 0/1 p2p_fail 0 tier 1 hits_gold_region True cov 1.0 whole_file
+ISSUE: TimeSeries: misleading exception when required column check fails. <!-- This comments are hidden when you submit the issue, so you do not need to remove them! --> <!-- Please be sure to check out our contributing guidelines, https://github.com/astropy/astropy/blob/main/CONTRIBUTING.md . Please be sure to check out our code of conduct, https://github.com/astropy/astropy/blob/main/CODE_OF_CONDUCT.md . --> <!-- Please h
+GOLD:
++        def as_scalar_or_list_str(obj):
++            if not hasattr(obj, "__len__"):
++                return f"'{obj}'"
++            elif len(obj) == 1:
++                return f"'{obj[0]}'"
++            else:
++                return str(obj)
+-                raise ValueError("{} object is invalid - expected '{}' "
+-                                 "as the first column{} but found '{}'"
+-                                 .format(self.__class__.__name__, required_columns[0], plural, self.colnames[0]))
++                raise ValueError("{} object is invalid - expected {} "
++                                 "as the first column{} but found {}"
++                                 .format(self.__class__.__name__, as_scalar_or_list_str(required_columns),
++                                            plural, as_scalar_or_list_str(self.colnames[:len(required_columns)])))
+MODEL:
++            if len(self.colnames) < len(required_columns):
++                missing = required_columns[len(self.colnames):]
++                missing_str = ', '.join(missing)
++                raise ValueError("{} object is invalid - expected '{}' as the first column{} but missing columns: {}"
++                                 .format(self.__class__.__name__, required_columns[0], plural, missing_str))
+
+##### astropy__astropy-14182 F7_wrong_fix f2p 0/1 p2p_fail 0 tier 1 hits_gold_region True cov 1.0 whole_file
+ISSUE: Please support header rows in RestructuredText output ### Description It would be great if the following would work: ```Python >>> from astropy.table import QTable >>> import astropy.units as u >>> import sys >>> tbl = QTable({'wave': [350,950]*u.nm, 'response': [0.7, 1.2]*u.count}) >>> tbl.write(sys.stdout, format="ascii.rst") ===== ======== wave response ===== ======== 350.0 0.7 950.0 1.2 ===== ======== >>> tbl.wri
+GOLD:
+-    start_line = 3
+-        ==== ===== ======
+-        Col1  Col2  Col3
+-        ==== ===== ======
+-          1    2.3  Hello
+-          2    4.5  Worlds
+-        ==== ===== ======
++      >>> from astropy.table import QTable
++      >>> import astropy.units as u
++      >>> import sys
++      >>> tbl = QTable({"wave": [350, 950] * u.nm, "response": [0.7, 1.2] * u.count})
++      >>> tbl.write(sys.stdout,  format="ascii.rst")
++      ===== ========
++       wave response
+   ...(27 more)
+MODEL:
+-    def __init__(self):
+-        super().__init__(delimiter_pad=None, bookend=False)
++    def __init__(self, header_rows=None, **kwargs):
++        super().__init__(delimiter_pad=None, bookend=False, header_rows=header_rows, **kwargs)
+
+##### django__django-11087 F78_both f2p 0/1 p2p_fail 1 tier 1 hits_gold_region False cov 1.0 whole_file
+ISSUE: Optimize .delete() to use only required fields. Description Hi! We're in the process of upgrading our Django 1.11 installation from Python 2.7 to Python 3.6, however are hitting an unexpected UnicodeDecodeError during a .delete() run by our daily data purging management command. STR: Have an existing Django 1.11 project running under Python 2.7.15 that uses mysqlclient-python v1.3.13 to connect to MySQL server v5.7.2
+GOLD:
++from itertools import chain
++    def _has_signal_listeners(self, model):
++        return (
++            signals.pre_delete.has_listeners(model) or
++            signals.post_delete.has_listeners(model)
++        )
++
+-        if (signals.pre_delete.has_listeners(model) or
+-                signals.post_delete.has_listeners(model) or
+-                signals.m2m_changed.has_listeners(model)):
++        if self._has_signal_listeners(model):
+-                    elif sub_objs:
+-                        field.remote_field.on_delete(self, field, sub_objs, self.using)
++                    else:
+   ...(16 more)
+MODEL:
+-        )
++        ).only(related.related_model._meta.pk.attname)
+
+##### django__django-12039 F7_wrong_fix f2p 0/1 p2p_fail 0 tier 1 hits_gold_region True cov 1.0 whole_file
+ISSUE: Use proper whitespace in CREATE INDEX statements Description (last modified by Hannes Ljungberg) Creating an index through: index = Index( fields=['-name’], name='idx' ) Will generate the valid but not so pretty CREATE INDEX statement: CREATE INDEX "idx" ON "schema_author" ("name"DESC) The following would be expected: CREATE INDEX "idx" ON "schema_author" ("name" DESC) This was partially fixed for indexes using opcla
+GOLD:
++            col = self.quote_name(column)
+-                return self.quote_name(column) + self.col_suffixes[idx]
++                suffix = self.col_suffixes[idx]
++                if suffix:
++                    col = '{} {}'.format(col, suffix)
+-                return self.quote_name(column)
++                pass
++            return col
+-                col = '{} {}'.format(col, self.col_suffixes[idx])
++                suffix = self.col_suffixes[idx]
++                if suffix:
++                    col = '{} {}'.format(col, suffix)
+MODEL:
+-                col = '{} {}'.format(col, self.col_suffixes[idx])
++                suffix = self.col_suffixes[idx]
++                if suffix:
++                    col = '{} {}'.format(col, suffix)
+
+##### django__django-12774 F8_regression f2p 1/1 p2p_fail 2 tier 1 hits_gold_region True cov 1.0 bm25_chunks
+ISSUE: Allow QuerySet.in_bulk() for fields with total UniqueConstraints. Description If a field is unique by UniqueConstraint instead of unique=True running in_bulk() on that field will fail. Consider: class Article(models.Model): slug = models.CharField(max_length=255) class Meta: constraints = [ models.UniqueConstraint(fields=["slug"], name="%(app_label)s_%(class)s_slug_unq") ] >>> Article.objects.in_bulk(field_name="slug
+GOLD:
+-        if field_name != 'pk' and not self.model._meta.get_field(field_name).unique:
++        opts = self.model._meta
++        unique_fields = [
++            constraint.fields[0]
++            for constraint in opts.total_unique_constraints
++            if len(constraint.fields) == 1
++        ]
++        if (
++            field_name != 'pk' and
++            not opts.get_field(field_name).unique and
++            field_name not in unique_fields
++        ):
+MODEL:
+-from django.db.models import AutoField, DateField, DateTimeField, sql
++from django.db.models import AutoField, DateField, DateTimeField, sql, UniqueConstraint
+-        if field_name != 'pk' and not self.model._meta.get_field(field_name).unique:
+-            raise ValueError("in_bulk()'s field_name must be a unique field but %r isn't." % field_name)
++        if field_name != 'pk':
++            field = self.model._meta.get_field(field_name)
++            if not field.unique:
++                # Check if field is part of a UniqueConstraint
++                if not any(
++                    isinstance(constraint, UniqueConstraint) and field_name in constraint.fields
++                    for constraint in self.model._meta.constraints
++                ):
++                    raise ValueError("in_bulk()'s field_name must be a unique field but %r isn't." % field_name)
+
+##### django__django-13551 F7_wrong_fix f2p 0/2 p2p_fail 0 tier 1 hits_gold_region True cov 1.0 whole_file
+ISSUE: Changing user's email could invalidate password reset tokens Description Sequence: Have account with email address foo@… Password reset request for that email (unused) foo@… account changes their email address Password reset email is used The password reset email's token should be rejected at that point, but in fact it is allowed. The fix is to add the user's email address into ​PasswordResetTokenGenerator._make_hash
+GOLD:
+-        Hash the user's primary key and some user state that's sure to change
+-        after a password reset to produce a token that invalidated when it's
+-        used:
++        Hash the user's primary key, email (if available), and some user state
++        that's sure to change after a password reset to produce a token that is
++        invalidated when it's used:
+-        return str(user.pk) + user.password + str(login_timestamp) + str(timestamp)
++        email_field = user.get_email_field_name()
++        email = getattr(user, email_field, '') or ''
++        return f'{user.pk}{user.password}{login_timestamp}{timestamp}{email}'
+MODEL:
+-        return str(user.pk) + user.password + str(login_timestamp) + str(timestamp)
++        return str(user.pk) + user.password + str(login_timestamp) + str(timestamp) + str(getattr(user, 'email', ''))
+
+##### django__django-14017 F7_wrong_fix f2p 0/2 p2p_fail 0 tier 1 hits_gold_region False cov 1.0 whole_file
+ISSUE: Q(...) & Exists(...) raises a TypeError Description Exists(...) & Q(...) works, but Q(...) & Exists(...) raise a TypeError Here's a minimal example: In [3]: Exists(Product.objects.all()) & Q() Out[3]: <Q: (AND: <django.db.models.expressions.Exists object at 0x7fc18dd0ed90>, (AND: ))> In [4]: Q() & Exists(Product.objects.all()) --------------------------------------------------------------------------- TypeError Trace
+GOLD:
+-        if not isinstance(other, Q):
++        if not(isinstance(other, Q) or getattr(other, 'conditional', False) is True):
+MODEL:
++
++    def __rand__(self, other):
++        """
++        Support expressions on the left-hand side of a Q instance.
++        """
++        if hasattr(other, "__and__"):
++            return other.__and__(self)
++        return NotImplemented
+
+##### django__django-14534 F7_wrong_fix f2p 1/2 p2p_fail 0 tier 1 hits_gold_region True cov 1.0 whole_file
+ISSUE: BoundWidget.id_for_label ignores id set by ChoiceWidget.options Description If you look at the implementation of BoundField.subwidgets class BoundField: ... def subwidgets(self): id_ = self.field.widget.attrs.get('id') or self.auto_id attrs = {'id': id_} if id_ else {} attrs = self.build_widget_attrs(attrs) return [ BoundWidget(self.field.widget, widget, self.form.renderer) for widget in self.field.widget.subwidgets(
+GOLD:
+-        return 'id_%s_%s' % (self.data['name'], self.data['index'])
++        return self.data['attrs'].get('id')
+MODEL:
++        # Use the id from the widget's attrs if available; otherwise fall back
++        # to the default id format used by Django.
++        attrs = self.data.get('attrs', {})
++        if 'id' in attrs:
++            return attrs['id']
+
+##### django__django-15161 F7_wrong_fix f2p 2/3 p2p_fail 0 tier 1 hits_gold_region True cov 0.333 bm25_chunks
+ISSUE: Use simplified paths for deconstruct of expressions Description Previously F() deconstructed to: django.db.models.expressions.F(). But since it can also be imported from django.db.models, ​PR #14047 changed it to deconstruct to django.db.models.F(). This simplifies generated migration code where it will be referenced only as from django.db import models / models.F(). As Mariusz pointed out on the PR, the same techniq
+GOLD:
++@deconstructible(path='django.db.models.Func')
++@deconstructible(path='django.db.models.Value')
++@deconstructible(path='django.db.models.ExpressionWrapper')
++@deconstructible(path='django.db.models.When')
++@deconstructible(path='django.db.models.Case')
++@deconstructible(path='django.db.models.OrderBy')
+MODEL:
++@deconstructible(path='django.db.models.Expression')
++@deconstructible(path='django.db.models.ResolvedOuterRef')
++@deconstructible(path='django.db.models.OuterRef')
++@deconstructible(path='django.db.models.Func')
++@deconstructible(path='django.db.models.Value')
++@deconstructible(path='django.db.models.RawSQL')
++@deconstructible(path='django.db.models.Ref')
++@deconstructible(path='django.db.models.ExpressionList')
++@deconstructible(path='django.db.models.ExpressionWrapper')
++@deconstructible(path='django.db.models.When')
++@deconstructible(path='django.db.models.Subquery')
++@deconstructible(path='django.db.models.Window')
++@deconstructible(path='django.db.models.WindowFrame')
+
+##### django__django-16642 F7_wrong_fix f2p 0/1 p2p_fail 0 tier 2 hits_gold_region True cov 1.0 whole_file
+ISSUE: Improper guessing of Mime Type for "br" and "Z" file types Description Below FileResponse will set the content type as text/html, even if the last file extension is "Z' or "br". FileResponse(open('test.html.Z', 'rb')) FileResponse(open('test.html.br', 'rb'))
+GOLD:
++                    "br": "application/x-brotli",
++                    "compress": "application/x-compress",
+MODEL:
++                    "br": "application/x-brotli",
++                    "x-compress": "application/x-compress",
+
+##### django__django-16877 F7_wrong_fix f2p 2/4 p2p_fail 0 tier 1 hits_gold_region False cov 0.5 bm25_chunks
+ISSUE: New template filter `escapeseq` Description Following #34574, and after some conversations within the security team, it seems appropriate to provide a new template filter escapeseq which would be to escape what safeseq is to safe. An example of usage would be: {{ some_list|escapeseq|join:"," }} where each item of some_list is escaped before applying the join operation. This usage makes sense in a context where autoes
+GOLD:
++@register.filter(is_safe=True)
++def escapeseq(value):
++    """
++    An "escape" filter for sequences. Mark each element in the sequence,
++    individually, as a string that should be auto-escaped. Return a list with
++    the results.
++    """
++    return [conditional_escape(obj) for obj in value]
++
++
+MODEL:
++
++@register.filter(is_safe=True)
++def escapeseq(value):
++    """
++    Escape each element in a sequence. This is the counterpart to ``safeseq``.
++    It returns a list where each element has been escaped for safe HTML
++    rendering. Useful when autoescape is off and you want to ensure that
++    each item is properly escaped before further processing (e.g., joining).
++    """
++    return [escape(v) for v in value]
+
+##### psf__requests-2931 F8_regression f2p 1/1 p2p_fail 1 tier 1 hits_gold_region True cov 1.0 bm25_chunks
+ISSUE: Request with binary payload fails due to calling to_native_string Introduced with https://github.com/kennethreitz/requests/issues/2844 ``` import requests requests.put("http://httpbin.org/put", data=u"ööö".encode("utf-8")) ``` This works with 2.8.1, but not with 2.9.
+GOLD:
+-            return to_native_string(data)
++            return data
++        if isinstance(params, (str, bytes)):
++            params = to_native_string(params)
++
+MODEL:
+-        if isinstance(data, (str, bytes)):
++        if isinstance(data, bytes):
++            return data
++        elif isinstance(data, str):
+
+##### scikit-learn__scikit-learn-14710 F78_both f2p 0/1 p2p_fail 13 tier 1 hits_gold_region True cov 1.0 bm25_chunks
+ISSUE: HistGradientBoostingClassifier does not work with string target when early stopping turned on <!-- If your issue is a usage question, submit it here instead: - StackOverflow with the scikit-learn tag: https://stackoverflow.com/questions/tagged/scikit-learn - Mailing List: https://mail.python.org/mailman/listinfo/scikit-learn For more information, see User Questions: http://scikit-learn.org/stable/support.html#user-qu
+GOLD:
++        if is_classifier(self):
++            y_small_train = self.classes_[y_small_train.astype(int)]
++            if is_classifier(self):
++                y_val = self.classes_[y_val.astype(int)]
+MODEL:
++        # Decode the encoded labels back to the original classes for scoring
++        y_small_train_decoded = self._label_encoder.inverse_transform(y_small_train)
+-            self.scorer_(self, X_binned_small_train, y_small_train)
++            self.scorer_(self, X_binned_small_train, y_small_train_decoded)
++            y_val_decoded = self._label_encoder.inverse_transform(y_val)
+-                self.scorer_(self, X_binned_val, y_val)
++                self.scorer_(self, X_binned_val, y_val_decoded)
+
+##### scikit-learn__scikit-learn-14983 F7_wrong_fix f2p 0/2 p2p_fail 0 tier 1 hits_gold_region False cov 0.0 bm25_chunks
+ISSUE: RepeatedKFold and RepeatedStratifiedKFold do not show correct __repr__ string #### Description `RepeatedKFold` and `RepeatedStratifiedKFold` do not show correct \_\_repr\_\_ string. #### Steps/Code to Reproduce ```python >>> from sklearn.model_selection import RepeatedKFold, RepeatedStratifiedKFold >>> repr(RepeatedKFold()) >>> repr(RepeatedStratifiedKFold()) ``` #### Expected Results ```python >>> repr(RepeatedKFold
+GOLD:
++    def __repr__(self):
++        return _build_repr(self)
++
++                if value is None and hasattr(self, 'cvargs'):
++                    value = self.cvargs.get(key, None)
+MODEL:
++    def __repr__(self):
++        return ("RepeatedKFold(n_splits=%s, n_repeats=%s, random_state=%s)"
++                % (self.cvargs['n_splits'], self.n_repeats, self.random_state))
++
++
++    def __repr__(self):
++        return ("RepeatedStratifiedKFold(n_splits=%s, n_repeats=%s, random_state=%s)"
++                % (self.cvargs['n_splits'], self.n_repeats, self.random_state))
+
+##### scikit-learn__scikit-learn-25973 F78_both f2p 0/1 p2p_fail 67 tier 1 hits_gold_region False cov 1.0 whole_file
+ISSUE: Unable to pass splits to SequentialFeatureSelector ### Describe the bug This runs fine with e.g. `cv=5`, but according to the documentation, it should also be able to take an iterable of splits. However, passing splits from the cross validator fails Im fairly certain I have done similar things in the past to other classes in scikit-learn requiring a `cv` parameter. If somebody could confirm wether this is a bug, or I
+GOLD:
+-from ..base import BaseEstimator, MetaEstimatorMixin, clone
++from ..base import BaseEstimator, MetaEstimatorMixin, clone, is_classifier
+-from ..model_selection import cross_val_score
++from ..model_selection import cross_val_score, check_cv
++        cv = check_cv(self.cv, y, classifier=is_classifier(self.estimator))
++
+-                cloned_estimator, X, y, current_mask
++                cloned_estimator, X, y, cv, current_mask
+-    def _get_best_new_feature_score(self, estimator, X, y, current_mask):
++    def _get_best_new_feature_score(self, estimator, X, y, cv, current_mask):
+-                cv=self.cv,
++                cv=cv,
+MODEL:
+-        "cv": ["cv_object"],
++        "cv": ["cv_object", "iterable"],
++        # Ensure cv is re-iterable if an iterable of splits is provided
++        if not hasattr(self.cv, "split") and not isinstance(self.cv, Integral):
++            self.cv = list(self.cv)
+
+##### sphinx-doc__sphinx-10435 F7_wrong_fix f2p 0/1 p2p_fail 0 tier 1 hits_gold_region True cov 1.0 bm25_chunks
+ISSUE: LaTeX: new Inline code highlighting from #10251 adds whitespace at start and end in pdf output ### Describe the bug The #10251 enhancement activates syntax highlighting for the Docutiles `code` role. For LaTeX output, a space character is inserted at start and end of the inline code. Example ``` Inline \sphinxcode{\sphinxupquote{ <--- this produces a space in output \PYG{k}{def} \PYG{n+nf}{foo}\PYG{p}{(}\PYG{l+m+mi}{
+GOLD:
+-                                r'\sphinxcode{\sphinxupquote{')
++                                r'\sphinxcode{\sphinxupquote{%')
+-        hlcode = hlcode.rstrip()[:-14]  # strip \end{Verbatim}
++        hlcode = hlcode.rstrip()[:-15]  # strip \n\end{Verbatim}
+-        self.body.append('}}')
++        self.body.append('%' + CR + '}}')
+MODEL:
++        hlcode = hlcode.strip()
+
+##### sphinx-doc__sphinx-10614 F7_wrong_fix f2p 0/1 p2p_fail 0 tier 1 hits_gold_region True cov 1.0 whole_file
+ISSUE: inheritance-diagram 404 links with SVG ### Describe the bug I have created some SVG inheritance diagrams using the `sphinx.ext.inheritance_diagram` plugin. If the inheritance diagram is created in a file that is not in the root directory, the links lead to a 404 page. This issue does not happen in the default (png?) mode. This issue is similar to #2484 and #3176 however this is reproduced with only first party extens
+GOLD:
+-            if graphviz_output_format == 'SVG':
+-                urls[child['reftitle']] = "../" + child.get('refuri')
++            # Construct the name from the URI if the reference is external via intersphinx
++            if not child.get('internal', True):
++                refname = child['refuri'].rsplit('#', 1)[-1]
+-                urls[child['reftitle']] = child.get('refuri')
++                refname = child['reftitle']
++
++            urls[refname] = child.get('refuri')
+-                urls[child['reftitle']] = '../' + current_filename + '#' + child.get('refid')
++                urls[child['reftitle']] = current_filename + '#' + child.get('refid')
+MODEL:
+-                urls[child['reftitle']] = "../" + child.get('refuri')
++                urls[child['reftitle']] = child.get('refuri')
+-                urls[child['reftitle']] = '../' + current_filename + '#' + child.get('refid')
++                urls[child['reftitle']] = current_filename + '#' + child.get('refid')
+
+##### sphinx-doc__sphinx-8459 F78_both f2p 0/1 p2p_fail 1 tier 1 hits_gold_region True cov 1.0 whole_file
+ISSUE: autodoc_type_aliases doesn't work when autodoc_typehints is set to "description" **Describe the bug** autodoc_type_aliases doesn't work when autodoc_typehints is set to "description". **To Reproduce** types.py ```python from __future__ import annotations from typing import Any, Dict JSONObject = Dict[str, Any] def sphinx_doc(data: JSONObject) -> JSONObject: """Does it work. Args: data: Does it args. Returns: Does it 
+GOLD:
+-            sig = inspect.signature(obj)
++            sig = inspect.signature(obj, type_aliases=app.config.autodoc_type_aliases)
+MODEL:
+-                    annotation[param.name] = typing.stringify(param.annotation)
++                    annotation[param.name] = typing.stringify(param.annotation, app=app)
+-                annotation['return'] = typing.stringify(sig.return_annotation)
++                annotation['return'] = typing.stringify(sig.return_annotation, app=app)
+
+##### sphinx-doc__sphinx-9258 F7_wrong_fix f2p 0/1 p2p_fail 0 tier 1 hits_gold_region False cov 0.0 bm25_chunks
+ISSUE: [RFE] Support union types specification using | (vertical bar/pipe) Please add a support for specifying multiple types acceptable for a parameter/attribute/variable. Use case: Imagine that there is a function that accepts both `bytes` and `str`. The docstring would look like: ``` restructuredtext def foo(text): """Bar :param text: a text :type text: bytes | str """ ``` Such a syntax is already supported by e.g. [PyCh
+GOLD:
+-        delims = r'(\s*[\[\]\(\),](?:\s*or\s)?\s*|\s+or\s+|\.\.\.)'
++        delims = r'(\s*[\[\]\(\),](?:\s*or\s)?\s*|\s+or\s+|\s*\|\s*|\.\.\.)'
+MODEL:
++        if '|' in annotation:
++            parts = [p.strip() for p in annotation.split('|')]
++            result: List[Node] = []
++            for i, part in enumerate(parts):
++                if i > 0:
++                    result.append(addnodes.desc_sig_punctuation('', '|'))
++                result.extend(_parse_annotation(part, env))
++            return result
+
+##### sphinx-doc__sphinx-9658 F78_both f2p 0/1 p2p_fail 1 tier 1 hits_gold_region False cov 1.0 whole_file
+ISSUE: Inherited classes not correctly documented when mocked ### Describe the bug We're experiencing an issue when documenting classes that inherit mocked classes. However, classes which inherit other classes from our own package are ok. This issue appears to be dependent on the `sphinx` version: - `sphinx<3.0`: Everything is OK. - `sphinx>=3.0 < 3.4.2`: Classes that inherit mocked classes are not documented. (see [sphinx 
+GOLD:
++    __name__ = ''
+-        self.__qualname__ = ''
++        self.__qualname__ = self.__name__
++             '__name__': name,
+MODEL:
+-        return _make_subclass(name, self.__name__)()
++        return _make_subclass(name, self.__name__)
+
+##### sympy__sympy-13551 F78_both f2p 0/1 p2p_fail 1 tier 1 hits_gold_region True cov 1.0 whole_file
+ISSUE: Product(n + 1 / 2**k, [k, 0, n-1]) is incorrect >>> from sympy import * >>> from sympy.abc import n,k >>> p = Product(n + 1 / 2**k, [k, 0, n-1]).doit() >>> print(simplify(p)) 2**(n*(-n + 1)/2) + n**n >>> print(p.subs(n,2)) 9/2 This is incorrect- for example, the product for `n=2` is `(2 + 2^0) * (2 + 2^(-1)) = 15/2`. The correct expression involves the [q-Pochhammer symbol](https://www.wolframalpha.com/input/?i=produ
+GOLD:
+-
+-                p = sum([self._eval_product(i, (k, a, n)) for i in p.as_coeff_Add()])
++                from sympy.concrete.summations import Sum
++                p = exp(Sum(log(p), (k, a, n)))
+MODEL:
++            # For an addition, split into numerator and denominator,
++            # evaluate each product separately, and divide the results.
+-            q = self._eval_product(q, (k, a, n))
+-            if q.is_Number:
+-
+-                # There is expression, which couldn't change by
+-                # as_numer_denom(). E.g. n**(2/3) + 1 --> (n**(2/3) + 1, 1).
+-                # We have to catch this case.
+-
+-                p = sum([self._eval_product(i, (k, a, n)) for i in p.as_coeff_Add()])
+-            else:
+-                p = self._eval_product(p, (k, a, n))
+-            return p / q
++            p_prod = self._eval_product(p, (k, a, n))
+   ...(4 more)
+
+##### sympy__sympy-13798 F7_wrong_fix f2p 0/1 p2p_fail 0 tier 1 hits_gold_region True cov 1.0 bm25_chunks
+ISSUE: latex() and mul_symbol The `latex()` pretty-printing function accepts a `mul_symbol` kwarg that must be one of four choices. I would like to be able to supply my own choice which is not in the list. Specifically, I want the multiplication symbol to be `\,` (i.e., a thin space). This is what I mean ``` >>> latex(3*x**2*y) '3 \\, x^{2} \\, y' # I typed the thin spaces in after the fact ``` Thin spaces are used by sympy
+GOLD:
+-
+-        self._settings['mul_symbol_latex'] = \
+-            mul_symbol_table[self._settings['mul_symbol']]
+-
+-        self._settings['mul_symbol_latex_numbers'] = \
+-            mul_symbol_table[self._settings['mul_symbol'] or 'dot']
++        try:
++            self._settings['mul_symbol_latex'] = \
++                mul_symbol_table[self._settings['mul_symbol']]
++        except KeyError:
++            self._settings['mul_symbol_latex'] = \
++                self._settings['mul_symbol']
++        try:
++            self._settings['mul_symbol_latex_numbers'] = \
+   ...(9 more)
+MODEL:
+-        self._settings['mul_symbol_latex'] = \
+-            mul_symbol_table[self._settings['mul_symbol']]
+-
+-        self._settings['mul_symbol_latex_numbers'] = \
+-            mul_symbol_table[self._settings['mul_symbol'] or 'dot']
++        mul_sym = self._settings['mul_symbol']
++        # Allow arbitrary mul_symbol values; fall back to the provided string
++        if mul_sym in mul_symbol_table:
++            self._settings['mul_symbol_latex'] = mul_symbol_table[mul_sym]
++            self._settings['mul_symbol_latex_numbers'] = \
++                mul_symbol_table[mul_sym or 'dot']
++        else:
++            # Use the custom string directly
++            self._settings['mul_symbol_latex'] = mul_sym
+   ...(3 more)
+
+##### sympy__sympy-15875 F78_both f2p 0/1 p2p_fail 23 tier 1 hits_gold_region True cov 1.0 bm25_chunks
+ISSUE: is_zero is incorrect on complex integer `is_zero` should return `None` if it cannot decide, but should never give the wrong answer. However: ``` >>> e = -2*I + (1 + I)**2 >>> e.is_zero False >>> simplify(e).is_zero True ``` This is causing errors in determining the rank of a matrix. See issue #15872 Fixing is_zero for complex numbers while Add References to other Issues or PRs #15873 Other comments: <!-- BEGIN RELEAS
+GOLD:
+-        if len(nz) == len(self.args):
++        if len(nz) == 0 or len(nz) == len(self.args):
+MODEL:
+-        nz = []
+-        z = 0
+-        im_or_z = False
+-        im = False
++        real_terms = []
++        imag_terms = []
+-                    z += 1
++                    continue
+-                    nz.append(a)
++                    real_terms.append(a)
+-                im = True
+-            elif (S.ImaginaryUnit*a).is_real:
+-                im_or_z = True
++                if a.is_zero:
+   ...(30 more)
+
+##### sympy__sympy-21596 F7_wrong_fix f2p 0/1 p2p_fail 0 tier 2 hits_gold_region True cov 1.0 whole_file
+ISSUE: bug in is_subset(Reals) Solving issue #19513 has given rise to another bug. Now: ``` In [8]: S1 = imageset(Lambda(n, n + (n - 1)*(n + 1)*I), S.Integers) In [9]: S1 Out[9]: {n + ⅈ⋅(n - 1)⋅(n + 1) │ n ∊ ℤ} In [10]: 2 in S1 Out[10]: False In [11]: 2 in S1.intersect(Reals) Out[11]: True ``` This output is incorrect. Correct output is: ``` In [4]: S1 Out[4]: {n + ⅈ⋅(n - 1)⋅(n + 1) │ n ∊ ℤ} In [5]: 2 in S1 Out[5]: False In
+GOLD:
+-
++from sympy.simplify.radsimp import numer
++
++        def _solution_union(exprs, sym):
++            # return a union of linear solutions to i in expr;
++            # if i cannot be solved, use a ConditionSet for solution
++            sols = []
++            for i in exprs:
++                x, xis = solve_linear(i, 0, [sym])
++                if x == sym:
++                    sols.append(FiniteSet(xis))
++                else:
++                    sols.append(ConditionSet(sym, Eq(i, 0)))
++            return Union(*sols)
+   ...(23 more)
+MODEL:
+-                base_set -= FiniteSet(xis)
++                base_set &= FiniteSet(*xis)
+-                base_set -= ConditionSet(n, Eq(im, 0), S.Integers)
++                base_set &= ConditionSet(n, Eq(im, 0), S.Integers)
+-                        base_set -= FiniteSet(xis)
++                        base_set &= FiniteSet(*xis)
+-                    base_set -= ConditionSet(n, Eq(i, 0), S.Integers)
++                    base_set &= ConditionSet(n, Eq(i, 0), S.Integers)
+
+##### sympy__sympy-22914 F7_wrong_fix f2p 0/1 p2p_fail 0 tier 1 hits_gold_region False cov 1.0 whole_file
+ISSUE: PythonCodePrinter doesn't support Min and Max We can't generate python code for the sympy function Min and Max. For example: ``` from sympy import symbols, Min, pycode a, b = symbols("a b") c = Min(a,b) print(pycode(c)) ``` the output is: ``` # Not supported in Python: # Min Min(a, b) ``` Similar to issue #16669, we should add following methods to PythonCodePrinter: ``` def _print_Min(self, expr): return "min({})".fo
+GOLD:
++    'Min': 'min',
++    'Max': 'max',
+MODEL:
++    def _print_Min(self, expr):
++        return "min({})".format(", ".join(self._print(arg) for arg in expr.args))
++
++    def _print_Max(self, expr):
++        return "max({})".format(", ".join(self._print(arg) for arg in expr.args))
+
+##### sympy__sympy-24066 F78_both f2p 0/1 p2p_fail 2 tier 1 hits_gold_region True cov 1.0 whole_file
+ISSUE: SI._collect_factor_and_dimension() cannot properly detect that exponent is dimensionless How to reproduce: ```python from sympy import exp from sympy.physics import units from sympy.physics.units.systems.si import SI expr = units.second / (units.ohm * units.farad) dim = SI._collect_factor_and_dimension(expr)[1] assert SI.get_dimension_system().is_dimensionless(dim) buggy_expr = 100 + exp(expr) SI._collect_factor_and_
+GOLD:
+-            fds = [self._collect_factor_and_dimension(
+-                arg) for arg in expr.args]
+-            return (expr.func(*(f[0] for f in fds)),
+-                    *(d[1] for d in fds))
++            fds = [self._collect_factor_and_dimension(arg) for arg in expr.args]
++            dims = [Dimension(1) if self.get_dimension_system().is_dimensionless(d[1]) else d[1] for d in fds]
++            return (expr.func(*(f[0] for f in fds)), *dims)
+MODEL:
++from sympy import exp
++            # exp(x) should be dimensionless regardless of x's dimension
++            if expr.func is exp:
++                return (expr.func(*(f[0] for f in fds)), S.One)
+
+##### sympy__sympy-24539 F78_both f2p 0/1 p2p_fail 13 tier 3 hits_gold_region False cov 0.0 bm25_chunks
+ISSUE: `PolyElement.as_expr()` not accepting symbols The method `PolyElement.as_expr()` https://github.com/sympy/sympy/blob/193e3825645d93c73e31cdceb6d742cc6919624d/sympy/polys/rings.py#L618-L624 is supposed to let you set the symbols you want to use, but, as it stands, either you pass the wrong number of symbols, and get an error message, or you pass the right number of symbols, and it ignores them, using `self.ring.symbol
+GOLD:
+-        if symbols and len(symbols) != self.ring.ngens:
+-            raise ValueError("not enough symbols, expected %s got %s" % (self.ring.ngens, len(symbols)))
+-        else:
++        if not symbols:
++        elif len(symbols) != self.ring.ngens:
++            raise ValueError(
++                "Wrong number of symbols, expected %s got %s" %
++                (self.ring.ngens, len(symbols))
++            )
+MODEL:
+-        return dmp_from_dict(self, self.ring.ngens-1, self.ring.domain)
++        return expr_from_dict(self, self.ring, symbols)
+

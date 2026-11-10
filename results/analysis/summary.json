@@ -1,0 +1,203 @@
+{
+ "n_tasks": 100,
+ "valid_tasks": 99,
+ "excluded_gold_failed": [
+  "psf__requests-1766"
+ ],
+ "pending_gold": 0,
+ "gpt-oss-20b": {
+  "plain": {
+   "n": 99,
+   "labels": {
+    "PASS": 31,
+    "F1_budget_truncation": 21,
+    "F7_wrong_fix": 15,
+    "F4_search_not_found": 15,
+    "F78_both": 8,
+    "F4_ambiguous": 3,
+    "F2_format": 2,
+    "F8_regression": 2,
+    "F6_crash_all_tests": 1,
+    "F5_syntax": 1
+   },
+   "resolved": 31,
+   "rate": 31.3,
+   "wilson": [
+    23.0,
+    41.0
+   ]
+  },
+  "argus": {
+   "n": 99,
+   "labels": {
+    "PASS": 38,
+    "F1_budget_truncation": 21,
+    "F7_wrong_fix": 17,
+    "F78_both": 9,
+    "F4_ambiguous": 4,
+    "F4_refused_other": 3,
+    "F2_format": 2,
+    "F8_regression": 2,
+    "F4_search_not_found": 2,
+    "F6_crash_all_tests": 1
+   },
+   "resolved": 38,
+   "rate": 38.4,
+   "wilson": [
+    29.4,
+    48.2
+   ]
+  },
+  "cov_fully_covered": {
+   "n": 70,
+   "plain_pass": 26,
+   "argus_pass": 31
+  },
+  "cov_not_fully": {
+   "n": 29,
+   "plain_pass": 5,
+   "argus_pass": 7
+  },
+  "cov_zero_cov": {
+   "n": 18,
+   "plain_pass": 1,
+   "argus_pass": 2
+  },
+  "argus_gained_pass": [
+   "matplotlib__matplotlib-20488",
+   "pytest-dev__pytest-5262",
+   "scikit-learn__scikit-learn-11578",
+   "scikit-learn__scikit-learn-13496",
+   "sphinx-doc__sphinx-9230",
+   "sphinx-doc__sphinx-9711",
+   "sympy__sympy-13480"
+  ],
+  "argus_lost_pass": [],
+  "argus_newly_applied": [
+   "django__django-16642",
+   "matplotlib__matplotlib-20488",
+   "pytest-dev__pytest-5262",
+   "scikit-learn__scikit-learn-11578",
+   "scikit-learn__scikit-learn-13496",
+   "sphinx-doc__sphinx-9230",
+   "sphinx-doc__sphinx-9711",
+   "sympy__sympy-13480",
+   "sympy__sympy-21596",
+   "sympy__sympy-24539"
+  ],
+  "argus_newly_refused": []
+ },
+ "gpt-oss-120b": {
+  "plain": {
+   "n": 99,
+   "labels": {
+    "PASS": 44,
+    "F7_wrong_fix": 25,
+    "F4_search_not_found": 14,
+    "F78_both": 7,
+    "F8_regression": 6,
+    "F4_ambiguous": 2,
+    "F3_wrong_file": 1
+   },
+   "resolved": 44,
+   "rate": 44.4,
+   "wilson": [
+    35.0,
+    54.3
+   ]
+  },
+  "argus": {
+   "n": 99,
+   "labels": {
+    "PASS": 46,
+    "F7_wrong_fix": 26,
+    "F4_search_not_found": 9,
+    "F78_both": 8,
+    "F8_regression": 6,
+    "F4_ambiguous": 3,
+    "F3_wrong_file": 1
+   },
+   "resolved": 46,
+   "rate": 46.5,
+   "wilson": [
+    37.0,
+    56.2
+   ]
+  },
+  "cov_fully_covered": {
+   "n": 70,
+   "plain_pass": 37,
+   "argus_pass": 38
+  },
+  "cov_not_fully": {
+   "n": 29,
+   "plain_pass": 7,
+   "argus_pass": 8
+  },
+  "cov_zero_cov": {
+   "n": 18,
+   "plain_pass": 1,
+   "argus_pass": 2
+  },
+  "argus_gained_pass": [
+   "scikit-learn__scikit-learn-11578",
+   "sympy__sympy-13480"
+  ],
+  "argus_lost_pass": [],
+  "argus_newly_applied": [
+   "scikit-learn__scikit-learn-11578",
+   "scikit-learn__scikit-learn-14983",
+   "sympy__sympy-13480",
+   "sympy__sympy-21596"
+  ],
+  "argus_newly_refused": []
+ },
+ "paired_plain_20_vs_120": null,
+ "paired_plain": {
+  "both": 27,
+  "only_20b": 4,
+  "only_120b": 17,
+  "neither": 51,
+  "p_exact_two_sided": 0.0072
+ },
+ "gap_tasks_plain": [
+  "django__django-14017",
+  "django__django-14238",
+  "django__django-14434",
+  "django__django-14771",
+  "django__django-16595",
+  "matplotlib__matplotlib-20488",
+  "pydata__xarray-4356",
+  "pytest-dev__pytest-5262",
+  "scikit-learn__scikit-learn-13496",
+  "scikit-learn__scikit-learn-25973",
+  "sphinx-doc__sphinx-9230",
+  "sphinx-doc__sphinx-9711",
+  "sympy__sympy-11618",
+  "sympy__sympy-14711",
+  "sympy__sympy-17655",
+  "sympy__sympy-19346",
+  "sympy__sympy-22914"
+ ],
+ "paired_argus": {
+  "both": 34,
+  "only_20b": 4,
+  "only_120b": 12,
+  "neither": 49,
+  "p_exact_two_sided": 0.0768
+ },
+ "gap_tasks_argus": [
+  "django__django-14017",
+  "django__django-14238",
+  "django__django-14434",
+  "django__django-14771",
+  "django__django-16595",
+  "pydata__xarray-4356",
+  "scikit-learn__scikit-learn-25973",
+  "sympy__sympy-11618",
+  "sympy__sympy-14711",
+  "sympy__sympy-17655",
+  "sympy__sympy-19346",
+  "sympy__sympy-22914"
+ ]
+}
