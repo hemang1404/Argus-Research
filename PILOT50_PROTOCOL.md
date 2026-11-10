@@ -159,3 +159,17 @@ Report negative results as results. If Argus's loop doesn't beat matched-compute
 5. Up to three improvement rounds on D.
 6. Freeze; build and seal Set C; power analysis from D.
 7. Run C once; audit; write.
+
+
+## Revision 3 (2026-11-10): no-oracle localization run (pre-registered before any localization or generation)
+
+**Question.** The Pilot-100 prompts name the target file, taken from the gold patch (an oracle). How much of the resolve rate survives when the file must be found from the issue text alone?
+
+**Localizers (neither sees the gold patch; gold is used only afterwards to score recall):**
+- L-A: Argus `DeterministicLocalizer` as published (commit 467b720): traceback frame, explicit file paths in the issue, symbol extraction + `git grep`, its default `EXCLUDED_DIRS`. Run on a snapshot of the repo at the task's `base_commit` (GitHub tarball), `git init` + `git add` so `git grep` works.
+- L-B: file-level BM25 over all non-test `.py` files of the same snapshot, query = issue text. (Matches the BM25 stage of the earlier project.)
+- Primary pipeline file = L-A top-1; if L-A returns no candidate, L-B top-1. Reported separately: recall@1/3/5 for L-A, L-B and the primary.
+
+**Generation.** Same prompt p1, same context builder, same models, effort medium, temperature 0, seed 1000, cap 8000, but the target file is the primary localizer's top-1. When the chosen file equals the oracle file the prompt is byte-identical to the oracle run and that output is reused (prompt hash checked). Apply: plain and stock Argus (v0.2.0b1, no prototype fixes). Docker grading: every patch for tasks where the chosen file is the oracle file reuses the existing grade. Patches for wrong-file tasks are graded on a pre-declared random sample (seed 7, up to 20 distinct patches); the rest are counted unresolved and flagged as extrapolated.
+
+**Analysis fixed in advance.** Primary metrics: localization recall@1 (primary), resolve rate (plain, Argus) per model with the oracle run beside it, and the share of the oracle-to-no-oracle drop explained by wrong-file selection. Exploratory only; no tuning of localizers on these tasks.
