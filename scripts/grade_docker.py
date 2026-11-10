@@ -11,15 +11,17 @@ os.environ["PYTHONIOENCODING"] = "utf-8"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GRADE = os.path.join(ROOT, "results", "grading")
 os.makedirs(GRADE, exist_ok=True)
-STATE = os.path.join(GRADE, "state.jsonl")
-
 ap = argparse.ArgumentParser()
+ap.add_argument("--apply-dir", default=os.path.join(ROOT, "data", "phase1"))
+ap.add_argument("--state", default=os.path.join(GRADE, "state.jsonl"))
 ap.add_argument("--limit", type=int, default=0)
 ap.add_argument("--ids", nargs="*")
 ap.add_argument("--timeout", type=int, default=1800)
 ap.add_argument("--min-free-gb", type=float, default=15.0)
 ap.add_argument("--no-gold", action="store_true")
 args = ap.parse_args()
+STATE = os.path.abspath(args.state)
+args.apply_dir = os.path.abspath(args.apply_dir)
 
 man = json.load(open(os.path.join(ROOT, "manifests", "pilot100_manifest.json"), encoding="utf-8"))
 ids = args.ids or [t["instance_id"] for t in man["primary"]]
@@ -31,7 +33,9 @@ for l in open(r"C:\coding\Argus-research-archive\data\swe_bench_verified_tasks.j
 cands = collections.defaultdict(dict)  # iid -> hash -> dict(diff, labels)
 for kind in ("plain", "argus"):
     for tag in ("gpt-oss-20b", "gpt-oss-120b"):
-        p = os.path.join(ROOT, "data", "phase1", f"{kind}_apply_{tag}.jsonl")
+        p = os.path.join(args.apply_dir, f"{kind}_apply_{tag}.jsonl")
+        if not os.path.exists(p):
+            continue
         for l in open(p, encoding="utf-8"):
             r = json.loads(l)
             if r["status"] != "applied":
