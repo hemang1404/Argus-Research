@@ -25,6 +25,7 @@ ap.add_argument("--prompt-budget", type=int, default=6000, help="estimated promp
 ap.add_argument("--max-out", type=int, default=6000)
 ap.add_argument("--temperature", type=float, default=0.0)
 ap.add_argument("--out", required=True)
+ap.add_argument("--target-map", help="JSON {iid: path} overriding the target file (no-oracle run)")
 ap.add_argument("--workers", type=int, default=16)
 args = ap.parse_args()
 
@@ -38,6 +39,7 @@ if args.limit:
     ids = ids[:args.limit]
 meta = {t["instance_id"]: t for t in manifest["primary"] + manifest["reserve"]}
 
+TARGETS = json.load(open(args.target_map, encoding="utf-8")) if args.target_map else {}
 done = set()
 if os.path.exists(args.out):
     for l in open(args.out, encoding="utf-8"):
@@ -53,7 +55,7 @@ print(f"{len(pool.keys)} keys; prompt_hash={prompt_hash()}; manifest={manifest['
 
 def job(iid, model, sample):
     t = full[iid]
-    path = meta[iid]["gold_file"]
+    path = TARGETS.get(iid) or meta[iid]["gold_file"]
     src = fetch_source(t["repo"], t["base_commit"], path)
     issue_tokens = ntok(t["problem_statement"][:6000])
     code_budget = max(500, args.prompt_budget - ntok(SYSTEM) - issue_tokens - 250)
