@@ -1,0 +1,23 @@
+{
+ "gemini-3.1-flash-lite": {
+  "n": 30,
+  "file_exact": 23,
+  "file_rate": 0.767,
+  "mean_gold_line_overlap": 0.064,
+  "tasks_with_overlap_ge_half": 2
+ },
+ "gemini-3.5-flash-lite": {
+  "n": 30,
+  "file_exact": 22,
+  "file_rate": 0.733,
+  "mean_gold_line_overlap": 0.052,
+  "tasks_with_overlap_ge_half": 1
+ },
+ "openai/gpt-oss-120b": {
+  "n": 30,
+  "file_exact": 15,
+  "file_rate": 0.5,
+  "mean_gold_line_overlap": 0.032,
+  "tasks_with_overlap_ge_half": 0
+ }
+}

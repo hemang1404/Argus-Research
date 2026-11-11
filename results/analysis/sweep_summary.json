@@ -1,0 +1,440 @@
+{
+ "n_tasks": 100,
+ "draws": 3,
+ "ungraded_applied_patches": 0,
+ "bootstrap": {
+  "n": 5000,
+  "seed": 20261112,
+  "unit": "task"
+ },
+ "resolved": {
+  "gpt-oss-20b": {
+   "plain": {
+    "per_draw": [
+     30,
+     34,
+     29
+    ],
+    "mean": 31.0,
+    "ci95": [
+     23.67,
+     38.67
+    ]
+   },
+   "argus": {
+    "per_draw": [
+     37,
+     39,
+     34
+    ],
+    "mean": 36.67,
+    "ci95": [
+     28.67,
+     45.0
+    ]
+   },
+   "argus_minus_plain": {
+    "mean": 5.67,
+    "ci95": [
+     2.67,
+     9.0
+    ]
+   },
+   "rescued_draws": 34,
+   "rescued_resolved": 18,
+   "rescued_pass_rate": 0.529,
+   "lost_to_refusal": 2,
+   "lost_resolved": 1,
+   "argus_pass_given_applied": 0.476
+  },
+  "gpt-oss-120b": {
+   "plain": {
+    "per_draw": [
+     46,
+     50,
+     37
+    ],
+    "mean": 44.33,
+    "ci95": [
+     36.0,
+     53.0
+    ]
+   },
+   "argus": {
+    "per_draw": [
+     49,
+     53,
+     41
+    ],
+    "mean": 47.67,
+    "ci95": [
+     39.33,
+     56.33
+    ]
+   },
+   "argus_minus_plain": {
+    "mean": 3.33,
+    "ci95": [
+     0.67,
+     6.67
+    ]
+   },
+   "rescued_draws": 18,
+   "rescued_resolved": 11,
+   "rescued_pass_rate": 0.611,
+   "lost_to_refusal": 2,
+   "lost_resolved": 1,
+   "argus_pass_given_applied": 0.552
+  },
+  "gemini-3.1-flash-lite": {
+   "plain": {
+    "per_draw": [
+     50,
+     46,
+     44
+    ],
+    "mean": 46.67,
+    "ci95": [
+     37.67,
+     55.67
+    ]
+   },
+   "argus": {
+    "per_draw": [
+     50,
+     46,
+     45
+    ],
+    "mean": 47.0,
+    "ci95": [
+     38.0,
+     56.0
+    ]
+   },
+   "argus_minus_plain": {
+    "mean": 0.33,
+    "ci95": [
+     0.0,
+     1.0
+    ]
+   },
+   "rescued_draws": 9,
+   "rescued_resolved": 1,
+   "rescued_pass_rate": 0.111,
+   "lost_to_refusal": 0,
+   "lost_resolved": 0,
+   "argus_pass_given_applied": 0.516
+  },
+  "gemini-3.5-flash-lite": {
+   "plain": {
+    "per_draw": [
+     51,
+     48,
+     51
+    ],
+    "mean": 50.0,
+    "ci95": [
+     40.67,
+     59.0
+    ]
+   },
+   "argus": {
+    "per_draw": [
+     53,
+     49,
+     53
+    ],
+    "mean": 51.67,
+    "ci95": [
+     42.33,
+     60.67
+    ]
+   },
+   "argus_minus_plain": {
+    "mean": 1.67,
+    "ci95": [
+     0.0,
+     4.0
+    ]
+   },
+   "rescued_draws": 8,
+   "rescued_resolved": 5,
+   "rescued_pass_rate": 0.625,
+   "lost_to_refusal": 0,
+   "lost_resolved": 0,
+   "argus_pass_given_applied": 0.608
+  }
+ },
+ "funnel": {
+  "gpt-oss-20b": {
+   "plain": {
+    "resolved": 93,
+    "edit_not_applied:no_match": 62,
+    "no_blocks": 14,
+    "applied_but_wrong": 106,
+    "empty_or_truncated": 19,
+    "edit_not_applied:ambiguous": 5,
+    "edit_not_applied:wrong_file": 1
+   },
+   "argus": {
+    "resolved": 110,
+    "applied_but_wrong": 121,
+    "no_blocks": 14,
+    "empty_or_truncated": 19,
+    "edit_not_applied:refused": 35,
+    "edit_not_applied:path_refused": 1
+   }
+  },
+  "gpt-oss-120b": {
+   "plain": {
+    "applied_but_wrong": 110,
+    "resolved": 133,
+    "edit_not_applied:ambiguous": 9,
+    "edit_not_applied:no_match": 42,
+    "edit_not_applied:wrong_file": 1,
+    "no_blocks": 4,
+    "edit_not_applied:no_change": 1
+   },
+   "argus": {
+    "applied_but_wrong": 116,
+    "resolved": 143,
+    "edit_not_applied:refused": 35,
+    "edit_not_applied:path_refused": 1,
+    "no_blocks": 4,
+    "edit_not_applied:no_change": 1
+   }
+  },
+  "gemini-3.1-flash-lite": {
+   "plain": {
+    "resolved": 140,
+    "applied_but_wrong": 124,
+    "edit_not_applied:no_match": 30,
+    "edit_not_applied:ambiguous": 5,
+    "edit_not_applied:no_change": 1
+   },
+   "argus": {
+    "resolved": 141,
+    "applied_but_wrong": 132,
+    "edit_not_applied:refused": 26,
+    "edit_not_applied:no_change": 1
+   }
+  },
+  "gemini-3.5-flash-lite": {
+   "plain": {
+    "resolved": 150,
+    "applied_but_wrong": 97,
+    "empty_or_truncated": 14,
+    "edit_not_applied:no_match": 29,
+    "no_blocks": 5,
+    "edit_not_applied:ambiguous": 5
+   },
+   "argus": {
+    "resolved": 155,
+    "applied_but_wrong": 100,
+    "empty_or_truncated": 14,
+    "edit_not_applied:refused": 26,
+    "no_blocks": 5
+   }
+  }
+ },
+ "per_task": {
+  "gpt-oss-20b": {
+   "pass_at_3": 50,
+   "always": 23,
+   "sometimes": 27,
+   "never": 50
+  },
+  "gpt-oss-120b": {
+   "pass_at_3": 61,
+   "always": 31,
+   "sometimes": 30,
+   "never": 39
+  },
+  "gemini-3.1-flash-lite": {
+   "pass_at_3": 55,
+   "always": 36,
+   "sometimes": 19,
+   "never": 45
+  },
+  "gemini-3.5-flash-lite": {
+   "pass_at_3": 59,
+   "always": 44,
+   "sometimes": 15,
+   "never": 41
+  }
+ },
+ "tasks_gemini_only": [
+  "django__django-12774",
+  "django__django-15128",
+  "django__django-15315",
+  "pytest-dev__pytest-10051",
+  "scikit-learn__scikit-learn-14983",
+  "sympy__sympy-13551",
+  "sympy__sympy-13798",
+  "sympy__sympy-17139"
+ ],
+ "tasks_gptoss_only": [
+  "django__django-15930",
+  "django__django-16877",
+  "matplotlib__matplotlib-23412",
+  "pydata__xarray-4094",
+  "sympy__sympy-19346"
+ ],
+ "tasks_both": 56,
+ "tasks_neither": 31,
+ "pairwise_only": {
+  "gpt-oss-20b_not_gpt-oss-120b": 0,
+  "gpt-oss-20b_not_gemini-3.1-flash-lite": 5,
+  "gpt-oss-20b_not_gemini-3.5-flash-lite": 4,
+  "gpt-oss-120b_not_gpt-oss-20b": 11,
+  "gpt-oss-120b_not_gemini-3.1-flash-lite": 9,
+  "gpt-oss-120b_not_gemini-3.5-flash-lite": 8,
+  "gemini-3.1-flash-lite_not_gpt-oss-20b": 10,
+  "gemini-3.1-flash-lite_not_gpt-oss-120b": 3,
+  "gemini-3.1-flash-lite_not_gemini-3.5-flash-lite": 5,
+  "gemini-3.5-flash-lite_not_gpt-oss-20b": 13,
+  "gemini-3.5-flash-lite_not_gpt-oss-120b": 6,
+  "gemini-3.5-flash-lite_not_gemini-3.1-flash-lite": 9
+ },
+ "cost": {
+  "gpt-oss-20b": {
+   "usd_per_100_task_pass": 0.116,
+   "mean_solves": 36.67,
+   "usd_per_solve": 0.00316,
+   "mean_truncated_draws": 7.3
+  },
+  "gpt-oss-120b": {
+   "usd_per_100_task_pass": 0.1565,
+   "mean_solves": 47.67,
+   "usd_per_solve": 0.00328,
+   "mean_truncated_draws": 0.3
+  },
+  "gemini-3.1-flash-lite": {
+   "usd_per_100_task_pass": 0.291,
+   "mean_solves": 47.0,
+   "usd_per_solve": 0.00619,
+   "mean_truncated_draws": 0.0
+  },
+  "gemini-3.5-flash-lite": {
+   "usd_per_100_task_pass": 1.3251,
+   "mean_solves": 51.67,
+   "usd_per_solve": 0.02565,
+   "mean_truncated_draws": 2.0
+  }
+ },
+ "routing_replay": {
+  "cascade_order": [
+   "gpt-oss-20b",
+   "gpt-oss-120b",
+   "gemini-3.1-flash-lite",
+   "gemini-3.5-flash-lite"
+  ],
+  "per_draw": [
+   {
+    "oracle_solved": 64,
+    "oracle_usd": 0.12565964999999998,
+    "cascade_solved": 64,
+    "cascade_usd": 0.9088566000000005
+   },
+   {
+    "oracle_solved": 64,
+    "oracle_usd": 0.13152965000000003,
+    "cascade_solved": 64,
+    "cascade_usd": 1.0236844000000003
+   },
+   {
+    "oracle_solved": 62,
+    "oracle_usd": 0.217027275,
+    "cascade_solved": 62,
+    "cascade_usd": 1.1502324000000004
+   }
+  ],
+  "mean": {
+   "oracle_solved": 63.3333,
+   "oracle_usd": 0.1581,
+   "cascade_solved": 63.3333,
+   "cascade_usd": 1.0276
+  },
+  "note": "Docker result as perfect verifier; oracle skips tasks no model solves; upper bounds, not deployable policies"
+ },
+ "cascade_subsets_post_hoc": {
+  "gpt-oss-20b": {
+   "solved": 36.67,
+   "usd": 0.116
+  },
+  "gpt-oss-120b": {
+   "solved": 47.67,
+   "usd": 0.1565
+  },
+  "gemini-3.1-flash-lite": {
+   "solved": 47.0,
+   "usd": 0.291
+  },
+  "gemini-3.5-flash-lite": {
+   "solved": 51.67,
+   "usd": 1.3251
+  },
+  "gpt-oss-20b->gpt-oss-120b": {
+   "solved": 52.0,
+   "usd": 0.2235
+  },
+  "gpt-oss-20b->gemini-3.1-flash-lite": {
+   "solved": 51.67,
+   "usd": 0.3017
+  },
+  "gpt-oss-20b->gemini-3.5-flash-lite": {
+   "solved": 55.33,
+   "usd": 1.0541
+  },
+  "gpt-oss-120b->gemini-3.1-flash-lite": {
+   "solved": 56.67,
+   "usd": 0.3071
+  },
+  "gpt-oss-120b->gemini-3.5-flash-lite": {
+   "solved": 61.0,
+   "usd": 0.9676
+  },
+  "gemini-3.1-flash-lite->gemini-3.5-flash-lite": {
+   "solved": 58.33,
+   "usd": 1.1385
+  },
+  "gpt-oss-20b->gpt-oss-120b->gemini-3.1-flash-lite": {
+   "solved": 58.67,
+   "usd": 0.361
+  },
+  "gpt-oss-20b->gpt-oss-120b->gemini-3.5-flash-lite": {
+   "solved": 61.67,
+   "usd": 0.9761
+  },
+  "gpt-oss-20b->gemini-3.1-flash-lite->gemini-3.5-flash-lite": {
+   "solved": 59.67,
+   "usd": 1.0737
+  },
+  "gpt-oss-120b->gemini-3.1-flash-lite->gemini-3.5-flash-lite": {
+   "solved": 62.67,
+   "usd": 1.0065
+  },
+  "gpt-oss-20b->gpt-oss-120b->gemini-3.1-flash-lite->gemini-3.5-flash-lite": {
+   "solved": 63.33,
+   "usd": 1.0276
+  }
+ },
+ "best_of_3_single_model": {
+  "gpt-oss-20b": {
+   "solved_any_of_3": 50,
+   "usd": 0.348
+  },
+  "gpt-oss-120b": {
+   "solved_any_of_3": 61,
+   "usd": 0.4695
+  },
+  "gemini-3.1-flash-lite": {
+   "solved_any_of_3": 55,
+   "usd": 0.873
+  },
+  "gemini-3.5-flash-lite": {
+   "solved_any_of_3": 59,
+   "usd": 3.9753
+  }
+ }
+}
