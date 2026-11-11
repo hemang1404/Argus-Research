@@ -185,3 +185,25 @@ Generation and Docker grading for the issue-only run are DROPPED (owner decision
 **Design (fixed now).** Same 100 manifest tasks, same prompt p1 and context builder (target file GIVEN, as in Pilot-100; this is the "file-given" setting), models gpt-oss-20b and gpt-oss-120b on Groq, reasoning_effort=medium, temperature 1.0, top_p default, max_completion_tokens 8000, seeds 1000, 1001, 1002 (three draws per task and model). Output: `data/raw/phase2_t1_v1.jsonl`. The prompt hash must equal the Pilot-100 hash per task (checked after generation). Apply: plain exact line-match arm and stock Argus v0.2.0b1 (commit 467b720), no prototype fixes. Grading: official swebench harness in Docker, one image at a time, every distinct patch graded; gold-patch result reused from Pilot-100 (`results/grading/state.jsonl`).
 
 **Analysis fixed in advance.** (1) Per-model resolve rate per draw and mean over draws with task-clustered bootstrap CI; (2) loop/truncation rate at temperature 1.0 versus 0; (3) per-task success probability from 3 draws, and the share of "solved by neither" tasks at temperature 0 that are solved by some draw; (4) the oracle router recomputed in three parts (model-choice only, must-attempt-all, and skip-hopeless), with and without the multi-draw smoothing; (5) offline stop-rule replays (stop after loop, after first failed attempt, after apply failure) reporting spend recovered and solves lost. All hypotheses exploratory; thresholds for rules are chosen on draws 1 and 2 and evaluated on draw 3 so no rule is scored on the data that tuned it.
+
+## Revision 5 (2026-11-11, tag pilot100-loop-prereg): Argus-loop discovery run on the 99 valid tasks
+
+**Status.** Discovery experiment. It uses the same 99 tasks as every earlier analysis, so its numbers are hypotheses for design, never claims. A separate confirmatory pre-registration (Revision 6) will be written after the loop design is frozen and a sealed task set is hashed. Nothing here is a SWE-bench score: the test-given arm shows test output to the model and is a different task setting from the leaderboard.
+
+**Question.** Does feedback-driven repair (the Argus loop) solve more tasks than independent re-drawing at the same spend, and which failure classes does it repair?
+
+**Fixed design.**
+- Prompt p1 and the whole-file context builder as in Pilot-100 and Revision 4, plus one feedback block from turn 2 onward. Ladder, following `argus/runtime/controller.py`: turn 1 gpt-oss-20b, medium effort; turn 2 gpt-oss-20b, high effort; turns 3 and 4 gpt-oss-120b, high effort. Temperature 1.0, max_completion_tokens 8000, seed 2000 + turn. Up to 4 turns. Deviation from the real controller (stated, not hidden): the 25/45-line context radius is not replicated; the whole target file is given at every turn, as in the baselines. The real RecoveryController is used only in the confirmatory run.
+- Apply: stock Argus apply engine (commit 467b720), no prototype fixes.
+- **Arm L-B (test-given).** After a failed turn the model receives: for an apply or format failure, Argus's own error message; for a patch that applied, the output of the first failing FAIL_TO_PASS test only (name plus traceback/assertion text, truncated to 2,000 characters), not the test source, not the gold patch, not the other tests. Stop rule: stop when all FAIL_TO_PASS tests pass in the harness. Final status = official harness resolved (FAIL_TO_PASS and PASS_TO_PASS). Cases that stop on pass but fail PASS_TO_PASS are reported separately as "stopped but regressed".
+- **Arm L-A (observable only).** Feedback is limited to what needs no test: format, apply, syntax errors. Stop rule: stop at the first patch that applies and parses. No test output is ever shown or used.
+- **Baselines, no new generation.** (a) Independent re-draws on the same ladder (draws 1-2 of the 20B, then draws 1-2 of the 120B from Revision 4, test-gated stop, averaged over draw orders); (b) the 120B alone, up to 4 turns, from re-draws.
+- Docker: one task image at a time; the image is kept for the task's turns and removed afterwards.
+
+**Primary comparison (fixed in advance).** Resolved rate of L-B minus independent re-draws at matched cumulative dollar spend (Groq list prices), paired by task, task-clustered bootstrap 95% CI (2,000 resamples), reported as a curve over spend and as the difference at 1, 2, 3 and 4 turns.
+
+**Secondary (exploratory).** Which failure class each solved turn repaired (loop, format, apply, wrong fix, regression); loop rate after feedback; L-A vs L-B (value of test feedback); stop-but-regressed count; cost per solve; per-turn token use; edit-location check (does the repaired patch overlap the gold region).
+
+**What would count as evidence.** If the L-B minus re-draw CI excludes zero in favour of L-B at matched spend, feedback adds something beyond resampling in this setting. If it includes zero, the loop is spending tokens, not adding information. Either result goes into Report 5 with the discovery caveat.
+
+**Not done here.** No tuning of the feedback format after seeing results. If a change is wanted it is a new revision and a rerun.
