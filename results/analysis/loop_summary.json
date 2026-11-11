@@ -1,0 +1,470 @@
+{
+ "n_tasks": 99,
+ "headline": {
+  "L_B_resolved": 53,
+  "L_B_stop_counts": {
+   "resolved": 53,
+   "max_turns": 39,
+   "stopped_f2p_pass_regressed": 7
+  },
+  "L_A_resolved": 45,
+  "redraw_ladder_resolved_mean": 54.9,
+  "redraw_120B_x3_resolved_mean": 58.3,
+  "redraw_20B_x3_resolved_mean": 47.5
+ },
+ "by_turn": {
+  "1": {
+   "turn": 1,
+   "L_B_solved": 38,
+   "L_B_mean_cum_spend": 0.00115,
+   "L_A_solved": 38,
+   "L_A_mean_cum_spend": 0.00115,
+   "redraw_ladder_solved": 35.7,
+   "redraw_ladder_mean_cum_spend": 0.00115,
+   "L_B_minus_redraw_ladder_pp": 2.4,
+   "ci95_pp": [
+    -4.7,
+    9.4
+   ]
+  },
+  "2": {
+   "turn": 2,
+   "L_B_solved": 38,
+   "L_B_mean_cum_spend": 0.00264,
+   "L_A_solved": 38,
+   "L_A_mean_cum_spend": 0.00192,
+   "redraw_ladder_solved": 43.8,
+   "redraw_ladder_mean_cum_spend": 0.00191,
+   "L_B_minus_redraw_ladder_pp": -5.9,
+   "ci95_pp": [
+    -13.5,
+    1.9
+   ]
+  },
+  "3": {
+   "turn": 3,
+   "L_B_solved": 46,
+   "L_B_mean_cum_spend": 0.00528,
+   "L_A_solved": 42,
+   "L_A_mean_cum_spend": 0.00322,
+   "redraw_ladder_solved": 51.3,
+   "redraw_ladder_mean_cum_spend": 0.00274,
+   "L_B_minus_redraw_ladder_pp": -5.3,
+   "ci95_pp": [
+    -13.5,
+    2.7
+   ]
+  },
+  "4": {
+   "turn": 4,
+   "L_B_solved": 53,
+   "L_B_mean_cum_spend": 0.00765,
+   "L_A_solved": 45,
+   "L_A_mean_cum_spend": 0.00419,
+   "redraw_ladder_solved": 54.9,
+   "redraw_ladder_mean_cum_spend": 0.00344,
+   "L_B_minus_redraw_ladder_pp": -2.0,
+   "ci95_pp": [
+    -10.4,
+    6.8
+   ]
+  }
+ },
+ "matched_spend": [
+  {
+   "budget": 0.0003,
+   "L_B_solved": 1,
+   "L_A_solved": 1,
+   "redraw_ladder_solved": 1.7,
+   "redraw_120B_solved": 0.0,
+   "L_B_minus_ladder_pp": -0.7,
+   "ci95_pp": [
+    -2.0,
+    0.0
+   ],
+   "L_A_minus_ladder_pp": -0.7,
+   "ci95_A_pp": [
+    -2.0,
+    0.0
+   ],
+   "L_B_minus_120B_pp": 1.0,
+   "ci95_120_pp": [
+    0.0,
+    3.0
+   ]
+  },
+  {
+   "budget": 0.0005,
+   "L_B_solved": 3,
+   "L_A_solved": 3,
+   "redraw_ladder_solved": 4.7,
+   "redraw_120B_solved": 2.0,
+   "L_B_minus_ladder_pp": -1.7,
+   "ci95_pp": [
+    -5.4,
+    2.0
+   ],
+   "L_A_minus_ladder_pp": -1.7,
+   "ci95_A_pp": [
+    -5.4,
+    2.0
+   ],
+   "L_B_minus_120B_pp": 1.0,
+   "ci95_120_pp": [
+    -1.0,
+    3.7
+   ]
+  },
+  {
+   "budget": 0.0008,
+   "L_B_solved": 19,
+   "L_A_solved": 19,
+   "redraw_ladder_solved": 19.7,
+   "redraw_120B_solved": 4.0,
+   "L_B_minus_ladder_pp": -0.7,
+   "ci95_pp": [
+    -6.1,
+    4.7
+   ],
+   "L_A_minus_ladder_pp": -0.7,
+   "ci95_A_pp": [
+    -6.4,
+    4.4
+   ],
+   "L_B_minus_120B_pp": 15.2,
+   "ci95_120_pp": [
+    7.7,
+    22.9
+   ]
+  },
+  {
+   "budget": 0.0012,
+   "L_B_solved": 35,
+   "L_A_solved": 35,
+   "redraw_ladder_solved": 28.7,
+   "redraw_120B_solved": 13.2,
+   "L_B_minus_ladder_pp": 6.4,
+   "ci95_pp": [
+    -0.3,
+    13.1
+   ],
+   "L_A_minus_ladder_pp": 6.4,
+   "ci95_A_pp": [
+    0.0,
+    13.0
+   ],
+   "L_B_minus_120B_pp": 22.1,
+   "ci95_120_pp": [
+    14.3,
+    30.5
+   ]
+  },
+  {
+   "budget": 0.0018,
+   "L_B_solved": 37,
+   "L_A_solved": 37,
+   "redraw_ladder_solved": 35.9,
+   "redraw_120B_solved": 38.8,
+   "L_B_minus_ladder_pp": 1.1,
+   "ci95_pp": [
+    -6.1,
+    8.1
+   ],
+   "L_A_minus_ladder_pp": 1.1,
+   "ci95_A_pp": [
+    -5.9,
+    8.1
+   ],
+   "L_B_minus_120B_pp": -1.9,
+   "ci95_120_pp": [
+    -8.9,
+    5.1
+   ]
+  },
+  {
+   "budget": 0.0026,
+   "L_B_solved": 38,
+   "L_A_solved": 38,
+   "redraw_ladder_solved": 41.1,
+   "redraw_120B_solved": 48.7,
+   "L_B_minus_ladder_pp": -3.1,
+   "ci95_pp": [
+    -10.3,
+    3.9
+   ],
+   "L_A_minus_ladder_pp": -3.1,
+   "ci95_A_pp": [
+    -10.6,
+    3.8
+   ],
+   "L_B_minus_120B_pp": -10.8,
+   "ci95_120_pp": [
+    -18.0,
+    -4.2
+   ]
+  },
+  {
+   "budget": 0.004,
+   "L_B_solved": 38,
+   "L_A_solved": 38,
+   "redraw_ladder_solved": 46.9,
+   "redraw_120B_solved": 54.8,
+   "L_B_minus_ladder_pp": -9.0,
+   "ci95_pp": [
+    -16.7,
+    -1.8
+   ],
+   "L_A_minus_ladder_pp": -9.0,
+   "ci95_A_pp": [
+    -16.1,
+    -1.8
+   ],
+   "L_B_minus_120B_pp": -17.0,
+   "ci95_120_pp": [
+    -25.1,
+    -8.9
+   ]
+  },
+  {
+   "budget": 0.006,
+   "L_B_solved": 38,
+   "L_A_solved": 38,
+   "redraw_ladder_solved": 52.6,
+   "redraw_120B_solved": 57.0,
+   "L_B_minus_ladder_pp": -14.8,
+   "ci95_pp": [
+    -23.0,
+    -7.1
+   ],
+   "L_A_minus_ladder_pp": -14.8,
+   "ci95_A_pp": [
+    -23.0,
+    -6.4
+   ],
+   "L_B_minus_120B_pp": -19.2,
+   "ci95_120_pp": [
+    -27.9,
+    -10.8
+   ]
+  },
+  {
+   "budget": 0.009,
+   "L_B_solved": 46,
+   "L_A_solved": 42,
+   "redraw_ladder_solved": 54.7,
+   "redraw_120B_solved": 58.3,
+   "L_B_minus_ladder_pp": -8.8,
+   "ci95_pp": [
+    -16.9,
+    -0.1
+   ],
+   "L_A_minus_ladder_pp": -12.8,
+   "ci95_A_pp": [
+    -21.7,
+    -4.3
+   ],
+   "L_B_minus_120B_pp": -12.5,
+   "ci95_120_pp": [
+    -21.2,
+    -4.0
+   ]
+  },
+  {
+   "budget": 0.013,
+   "L_B_solved": 49,
+   "L_A_solved": 43,
+   "redraw_ladder_solved": 54.9,
+   "redraw_120B_solved": 58.3,
+   "L_B_minus_ladder_pp": -6.0,
+   "ci95_pp": [
+    -14.3,
+    2.1
+   ],
+   "L_A_minus_ladder_pp": -12.1,
+   "ci95_A_pp": [
+    -20.9,
+    -3.5
+   ],
+   "L_B_minus_120B_pp": -9.4,
+   "ci95_120_pp": [
+    -18.2,
+    -0.7
+   ]
+  },
+  {
+   "budget": 0.02,
+   "L_B_solved": 53,
+   "L_A_solved": 45,
+   "redraw_ladder_solved": 54.9,
+   "redraw_120B_solved": 58.3,
+   "L_B_minus_ladder_pp": -2.0,
+   "ci95_pp": [
+    -10.4,
+    6.6
+   ],
+   "L_A_minus_ladder_pp": -10.0,
+   "ci95_A_pp": [
+    -18.9,
+    -1.2
+   ],
+   "L_B_minus_120B_pp": -5.4,
+   "ci95_120_pp": [
+    -14.8,
+    3.0
+   ]
+  }
+ ],
+ "cost": {
+  "L_B_total": 0.7577,
+  "L_B_per_solve": 0.0143,
+  "L_A_total": 0.4149,
+  "L_A_per_solve": 0.00922,
+  "redraw_ladder_total": 0.3401,
+  "redraw_120B_x3_total": 0.2987,
+  "redraw_ladder_per_solve": 0.00619,
+  "redraw_120B_x3_per_solve": 0.00512
+ },
+ "turn_class_transitions": {
+  "apply_fail": {
+   "loop": 10,
+   "wrong_fix": 3,
+   "apply_fail": 2
+  },
+  "loop": {
+   "wrong_fix": 17,
+   "loop": 60,
+   "resolved": 11,
+   "apply_fail": 2
+  },
+  "wrong_fix": {
+   "resolved": 4,
+   "loop": 34,
+   "wrong_fix": 6
+  },
+  "no_edit": {
+   "loop": 5
+  }
+ },
+ "loop_rate_by_turn": {
+  "turn1_gpt-oss-20b_medium": {
+   "loops": 11,
+   "n": 99,
+   "pct": 11.1
+  },
+  "turn2_gpt-oss-20b_high": {
+   "loops": 49,
+   "n": 54,
+   "pct": 90.7
+  },
+  "turn3_gpt-oss-120b_high": {
+   "loops": 30,
+   "n": 54,
+   "pct": 55.6
+  },
+  "turn4_gpt-oss-120b_high": {
+   "loops": 30,
+   "n": 46,
+   "pct": 65.2
+  }
+ },
+ "turn1_class": {
+  "apply_fail": 12,
+  "wrong_fix": 26,
+  "resolved": 38,
+  "no_edit": 5,
+  "stopped_regressed": 7,
+  "loop": 11
+ },
+ "repair_by_previous_failure": {
+  "apply_fail": {
+   "turns_attempted": 15,
+   "resolved_next": 0,
+   "pct": 0.0
+  },
+  "loop": {
+   "turns_attempted": 90,
+   "resolved_next": 11,
+   "pct": 12.2
+  },
+  "wrong_fix": {
+   "turns_attempted": 44,
+   "resolved_next": 4,
+   "pct": 9.1
+  },
+  "no_edit": {
+   "turns_attempted": 5,
+   "resolved_next": 0,
+   "pct": 0.0
+  }
+ },
+ "tasks_resolved_after_turn1": 38,
+ "tasks_resolved_at_each_turn": [
+  38,
+  38,
+  46,
+  53
+ ],
+ "stopped_but_regressed": [
+  "django__django-10880",
+  "django__django-11141",
+  "django__django-12774",
+  "psf__requests-2931",
+  "pytest-dev__pytest-10051",
+  "pytest-dev__pytest-7521",
+  "sympy__sympy-13551"
+ ],
+ "tasks_never_resolved_by_loop": 46,
+ "loop_resolved_not_in_any_rev4_draw": [
+  "django__django-14017",
+  "django__django-15315",
+  "pytest-dev__pytest-6197",
+  "scikit-learn__scikit-learn-14983",
+  "sphinx-doc__sphinx-9658",
+  "sympy__sympy-17139"
+ ],
+ "rev4_any_draw_resolved_not_by_loop": [
+  "django__django-10880",
+  "django__django-13012",
+  "django__django-15930",
+  "django__django-16485",
+  "django__django-16642",
+  "django__django-16877",
+  "matplotlib__matplotlib-23412",
+  "matplotlib__matplotlib-24570",
+  "pydata__xarray-4094",
+  "pytest-dev__pytest-7521",
+  "sympy__sympy-15875",
+  "sympy__sympy-18698",
+  "sympy__sympy-24443"
+ ],
+ "edit_location_of_rescued_patches": {
+  "resolved_turn>=2_overlaps_gold": 12,
+  "resolved_turn>=2_elsewhere": 3
+ },
+ "tokens_per_turn": {
+  "1": {
+   "n": 99,
+   "mean_prompt": 4911,
+   "mean_completion": 2592,
+   "mean_cost": 0.00115
+  },
+  "2": {
+   "n": 54,
+   "mean_prompt": 5297,
+   "mean_completion": 7834,
+   "mean_cost": 0.00275
+  },
+  "3": {
+   "n": 54,
+   "mean_prompt": 5153,
+   "mean_completion": 6766,
+   "mean_cost": 0.00483
+  },
+  "4": {
+   "n": 46,
+   "mean_prompt": 5332,
+   "mean_completion": 7177,
+   "mean_cost": 0.00511
+  }
+ }
+}
