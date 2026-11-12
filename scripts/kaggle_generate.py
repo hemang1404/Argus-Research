@@ -14,7 +14,7 @@ import gc, glob, json, os, time, torch
 import transformers
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-RUNS = [("Qwen/Qwen3.5-2B", "none"), ("Qwen/Qwen3.5-4B", "none")]   # later: [("Qwen/Qwen3.5-4B", "nf4")] and [("Qwen/Qwen3.5-9B", "none")]
+RUNS = [("Qwen/Qwen3.5-9B", "none")]   # 9B run; earlier runs: 2B and 4B fp16; remaining: [("Qwen/Qwen3.5-4B", "nf4")]
 MAX_NEW = 4000
 cands = glob.glob("/kaggle/input/**/prompts.jsonl", recursive=True) + glob.glob("prompts.jsonl") + glob.glob("/kaggle/working/prompts.jsonl")
 assert cands, "prompts.jsonl not found: attach it as a Kaggle dataset or put it in /kaggle/working"
