@@ -23,7 +23,7 @@ PROMPTS = [json.loads(l) for l in open(cands[0], encoding="utf-8")]
 
 def run_model(MODEL_ID, QUANT):
     TAG = MODEL_ID.split("/")[-1] + ("-nf4" if QUANT == "nf4" else "")
-    OUT = f"/kaggle/working/outputs_{TAG}.jsonl"
+    OUT = f"/kaggle/working/outputs_{TAG}_remaining.jsonl"
     done = set()
     if os.path.exists(OUT):
         for l in open(OUT, encoding="utf-8"):
