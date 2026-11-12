@@ -2,10 +2,11 @@
 
   python -X utf8 scripts/analyze_loop2.py   -> results/analysis/loop2_summary.json
 """
-import collections, glob, json, os, random, re
+import collections, glob, json, os, random, re, sys
+SUF = sys.argv[1] if len(sys.argv) > 1 else ""
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 T = {}
-for l in open(os.path.join(ROOT, "data", "loop2", "trajectories.jsonl"), encoding="utf-8"):
+for l in open(os.path.join(ROOT, "data", "loop2" + SUF, "trajectories.jsonl"), encoding="utf-8"):
     r = json.loads(l); T[r["iid"]] = r
 IDS = json.load(open(os.path.join(ROOT, "data", "gemini_sweep", "task_ids_full.json")))["ids"]
 assert sorted(T) == sorted(IDS), (len(T), len(IDS))
@@ -119,5 +120,5 @@ for arm in ("F", "R"):
             rows.append((i, "touches_gold_region" if g and any(abs(x - y) <= 5 for x in m for y in g) else "elsewhere"))
     gold_chk[f"{arm}_only_solves"] = rows
 out["gold_region_check"] = gold_chk
-json.dump(out, open(os.path.join(ROOT, "results", "analysis", "loop2_summary.json"), "w", encoding="utf-8"), indent=1)
+json.dump(out, open(os.path.join(ROOT, "results", "analysis", "loop2" + SUF + "_summary.json"), "w", encoding="utf-8"), indent=1)
 print(json.dumps(out, indent=1))

@@ -4,7 +4,8 @@
 Tasks where an attempt could not be made (request over the free-tier 8,000 tokens/minute limit, image pull failure) are counted unsolved
 in the pre-registered primary numbers and also reported with those tasks left out.
 """
-import collections, json, os, random
+import collections, json, os, random, sys
+SUF = sys.argv[1] if len(sys.argv) > 1 else ""
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IDS = json.load(open(os.path.join(ROOT, "data", "gemini_sweep", "task_ids_full.json")))["ids"]
 
@@ -16,7 +17,7 @@ def load(p):
     return d
 
 
-T2, T3 = load("data/loop2/trajectories.jsonl"), load("data/loop3/trajectories.jsonl")
+T2, T3 = load("data/loop2" + SUF + "/trajectories.jsonl"), load("data/loop3" + SUF + "/trajectories.jsonl")
 assert sorted(T3) == sorted(IDS) and sorted(T2) == sorted(IDS)
 arms = {"P": {i: T3[i]["P"] for i in IDS}, "F": {i: T2[i]["F"] for i in IDS}, "R": {i: T2[i]["R"] for i in IDS}}
 infra = {i for i in IDS if any(a["state"] in ("api_error", "image_pull_failed", "grade_error") for a in arms["P"][i]["attempts"])}
@@ -81,5 +82,5 @@ for arm in arms:
     out[f"{arm}_total"] = dict(solved=sum(arms[arm][i]["solved"] for i in IDS), accepted_regressed=sum(arms[arm][i]["stop"] == "accepted_regressed" for i in IDS),
                                usd=round(sum(arms[arm][i]["cost_usd"] for i in IDS), 4))
     out[f"{arm}_total"]["usd_per_solve"] = round(out[f"{arm}_total"]["usd"] / max(1, out[f"{arm}_total"]["solved"]), 5)
-json.dump(out, open(os.path.join(ROOT, "results", "analysis", "loop3_summary.json"), "w", encoding="utf-8"), indent=1)
+json.dump(out, open(os.path.join(ROOT, "results", "analysis", "loop3" + SUF + "_summary.json"), "w", encoding="utf-8"), indent=1)
 print(json.dumps(out, indent=1))
