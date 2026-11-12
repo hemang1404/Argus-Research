@@ -1,0 +1,46 @@
+{
+ "Qwen3.5-2B": {
+  "n": 30,
+  "finish": {
+   "stop": 27,
+   "length": 3
+  },
+  "mean_new_tokens": 1088,
+  "plain": {
+   "applied": 12,
+   "no_match": 13,
+   "wrong_file": 3,
+   "no_blocks": 2
+  },
+  "argus": {
+   "applied": 16,
+   "refused": 9,
+   "path_refused": 3,
+   "no_blocks": 2
+  },
+  "plain_edit_failures": 13,
+  "causes": {
+   "near_miss_changed_lines": 7,
+   "partial_overlap_0.5_0.82": 3,
+   "whitespace_or_blank_lines_only": 2,
+   "near_miss_missing_or_extra_lines": 1
+  },
+  "whitespace_kinds": {
+   "indent": 1,
+   "blank_lines+indent": 1
+  },
+  "cause_x_argus": {
+   "near_miss_changed_lines | refused_REFUSED_SYNTAX_ERROR": 3,
+   "near_miss_changed_lines | rescued_tier3": 2,
+   "partial_overlap_0.5_0.82 | refused_REFUSED_NO_MATCH": 2,
+   "near_miss_changed_lines | refused_REFUSED_ANCHOR_INTERIOR_MISMATCH": 2,
+   "whitespace_or_blank_lines_only | rescued_tier2": 1,
+   "whitespace_or_blank_lines_only | refused_REFUSED_SYNTAX_ERROR": 1,
+   "partial_overlap_0.5_0.82 | refused_REFUSED_SYNTAX_ERROR": 1,
+   "near_miss_missing_or_extra_lines | rescued_tier3": 1
+  },
+  "plain_applied": 12,
+  "argus_applied": 16,
+  "argus_rescued": 4
+ }
+}

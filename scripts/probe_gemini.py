@@ -115,8 +115,9 @@ def job(iid, model, sample):
     code_budget = max(500, PROMPT_BUDGET - ntok(SYSTEM) - ntok(t["problem_statement"][:6000]) - 250)
     code, spans, info = build_file_context(t, src, code_budget)
     messages = build_messages(t, path, code)
-    body = {"model": model, "messages": messages, "temperature": args.temperature, "max_completion_tokens": args.max_out,
-            "reasoning_effort": args.effort}
+    body = {"model": model, "messages": messages, "temperature": args.temperature, "max_completion_tokens": args.max_out}
+    if args.effort != "omit":  # Gemma rejects reasoning_effort (any value, including "none"); use --effort omit for it
+        body["reasoning_effort"] = args.effort
     status, data, dt, tries = call(body)
     rec = dict(iid=iid, repo=t["repo"], model="google/" + model, effort=args.effort, regime="file", sample=sample, prompt_version=PROMPT_VERSION,
                prompt_hash=prompt_hash(), ctx=info, target_file=path, ts=datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
