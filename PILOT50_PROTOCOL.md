@@ -266,3 +266,18 @@ Generation and Docker grading for the issue-only run are DROPPED (owner decision
 **Analysis fixed in advance.** Primary: tasks solved within at most 3 attempts, F minus R, paired by task, task-clustered bootstrap 95% CI (5,000 resamples, seed 20261112), with spend. Secondary: P minus R and P minus F; at most 2 attempts; per-attempt resolve rate among tasks reaching attempt 2 and 3; effect by feedback type (apply failure vs test failure vs truncated); accepted-but-regressed counts; cost per solve. Tasks that could not complete an attempt (token-per-minute limit, image pull failure) are counted unsolved and also reported left out. Effects under about 5 tasks cannot be distinguished from zero.
 
 **Limits.** Same tasks as all design; whole file; file-given; Groq list prices; the 20B truncates more often at medium effort, which changes what a retry can do.
+
+## Revision 10 (2026-11-12): Qwen3.5 size-ladder probe of edit-failure signatures (exploratory; prediction written before any output)
+
+**Why.** Reports 6 and the failure analysis found that gpt-oss models fail to apply edits mainly through wrong leading indentation (20B 36 of 37 whitespace-type failures, 120B 15 of 16), while Gemini Flash-Lite fails by paraphrasing lines, and that the Argus apply layer's gain falls from the 20B to the 120B to Gemini. That cannot separate "weaker models make more of these errors" from "a gpt-oss habit". A size ladder inside one open family (Qwen3.5) can.
+
+**Design (fixed now).** The same 30 tasks as the Gemini probe (`data/probe_gemini/task_ids.json`), prompt p1 (hash 56e5b02fa8ed), 6,000-token context, target file GIVEN, one draw per task and model (`data/qwen_probe/prompts.jsonl`, built by `scripts/build_qwen_prompts.py`). Models, run on Kaggle (2 x T4) with `scripts/kaggle_generate.py`: Qwen/Qwen3.5-2B, -4B, -9B in fp16; Qwen3.5-4B also in 4-bit nf4 (quantization check); instruct checkpoints only (no -Base). Settings: temperature 1.0, top_p 1.0, top_k 0, thinking OFF, max_new_tokens 4000, no seed. The 27B (Groq) and 0.8B are not part of this probe. Outputs are then applied with plain apply and Argus (commit 467b720) exactly as for the other models (`scripts/apply_plain.py`, `apply_argus.py`) and edit failures are classified with the rules of `scripts/analyze_failures.py`. No Docker grading, no solve rates.
+
+**Predictions (written before any output).**
+- P1 (capability explanation): the share of plain edit failures that are indentation-only falls as size rises (2B > 4B > 9B), and the Argus apply layer rescues a larger share at the small sizes.
+- P2 (gpt-oss-specific explanation): indentation-only failures are rare at every Qwen size; Qwen failures are mostly paraphrase, partial-overlap or format failures.
+- P3: the 2B loses a large share of draws to format failure (no SEARCH/REPLACE blocks) or empty output, leaving little for an apply layer to fix.
+- P4: the 4B fp16 vs nf4 difference in edit-failure rate and indentation share indicates how much quantization alone changes the signature; a gap of more than about 10 percentage points would make the local-quantized ladder unreliable.
+A mixed picture is a valid outcome. With 30 tasks and one draw, per-model counts are small and only large differences are reported.
+
+**Limits.** Thinking is off for Qwen while gpt-oss ran at medium reasoning, so edit-failure signatures, not solve rates, are compared; fp16 on T4 and Hugging Face transformers sampling differ from the API runs; one draw on 30 tasks; the chat template and default system handling come from the checkpoint.
