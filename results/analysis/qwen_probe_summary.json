@@ -20,8 +20,9 @@
   },
   "plain_edit_failures": 13,
   "causes": {
-   "near_miss_changed_lines": 7,
+   "near_miss_changed_lines": 5,
    "partial_overlap_0.5_0.82": 3,
+   "elision_marker_in_search": 2,
    "whitespace_or_blank_lines_only": 2,
    "near_miss_missing_or_extra_lines": 1
   },
@@ -33,7 +34,7 @@
    "near_miss_changed_lines | refused_REFUSED_SYNTAX_ERROR": 3,
    "near_miss_changed_lines | rescued_tier3": 2,
    "partial_overlap_0.5_0.82 | refused_REFUSED_NO_MATCH": 2,
-   "near_miss_changed_lines | refused_REFUSED_ANCHOR_INTERIOR_MISMATCH": 2,
+   "elision_marker_in_search | refused_REFUSED_ANCHOR_INTERIOR_MISMATCH": 2,
    "whitespace_or_blank_lines_only | rescued_tier2": 1,
    "whitespace_or_blank_lines_only | refused_REFUSED_SYNTAX_ERROR": 1,
    "partial_overlap_0.5_0.82 | refused_REFUSED_SYNTAX_ERROR": 1,
@@ -65,8 +66,8 @@
   },
   "plain_edit_failures": 7,
   "causes": {
-   "near_miss_missing_or_extra_lines": 2,
-   "near_miss_changed_lines": 3,
+   "elision_marker_in_search": 3,
+   "near_miss_changed_lines": 2,
    "whitespace_or_blank_lines_only": 1,
    "ambiguous_multiple_exact_matches": 1
   },
@@ -74,14 +75,48 @@
    "indent": 1
   },
   "cause_x_argus": {
-   "near_miss_missing_or_extra_lines | rescued_tier3": 2,
+   "elision_marker_in_search | rescued_tier3": 2,
    "near_miss_changed_lines | rescued_tier3": 1,
-   "near_miss_changed_lines | refused_REFUSED_ANCHOR_INTERIOR_MISMATCH": 2,
+   "elision_marker_in_search | refused_REFUSED_ANCHOR_INTERIOR_MISMATCH": 1,
+   "near_miss_changed_lines | refused_REFUSED_ANCHOR_INTERIOR_MISMATCH": 1,
    "whitespace_or_blank_lines_only | rescued_tier2": 1,
    "ambiguous_multiple_exact_matches | refused_REFUSED_AMBIGUOUS_MULTIPLE_EXACT_MATCHES": 1
   },
   "plain_applied": 20,
   "argus_applied": 24,
   "argus_rescued": 4
+ },
+ "Qwen3.5-9B": {
+  "n": 30,
+  "finish": {
+   "stop": 29,
+   "length": 1
+  },
+  "mean_new_tokens": 678,
+  "plain": {
+   "applied": 24,
+   "no_match": 4,
+   "no_blocks": 2
+  },
+  "argus": {
+   "applied": 26,
+   "refused": 2,
+   "no_blocks": 2
+  },
+  "plain_edit_failures": 4,
+  "causes": {
+   "partial_overlap_0.5_0.82": 2,
+   "near_miss_missing_or_extra_lines": 1,
+   "elision_marker_in_search": 1
+  },
+  "whitespace_kinds": {},
+  "cause_x_argus": {
+   "partial_overlap_0.5_0.82 | refused_REFUSED_NO_MATCH": 2,
+   "near_miss_missing_or_extra_lines | rescued_tier3": 1,
+   "elision_marker_in_search | rescued_tier3": 1
+  },
+  "plain_applied": 24,
+  "argus_applied": 26,
+  "argus_rescued": 2
  }
 }

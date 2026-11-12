@@ -67,7 +67,7 @@ for fn in sorted(f for f in os.listdir(D_IN) if f.startswith("outputs_") and f.e
             pos = find_all(lines, S)
             if len(pos) == 1:
                 lines[pos[0]:pos[0] + len(S)] = R; continue
-            cause = classify(lines, S, len(pos))
+            cause = "elision_marker_in_search" if any("lines omitted" in x for x in S) else classify(lines, S, len(pos))
             if cause == "whitespace_or_blank_lines_only":
                 kinds[indent_kind(lines, S)] += 1
             break
