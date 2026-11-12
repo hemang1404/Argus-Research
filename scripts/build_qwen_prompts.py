@@ -11,13 +11,17 @@ from harness.prompts import SYSTEM, build_messages, prompt_hash, PROMPT_VERSION
 
 TASKS = r"C:\coding\Argus-research-archive\data\swe_bench_verified_tasks.jsonl"
 PROMPT_BUDGET = 6000
+REMAIN = "--remaining" in sys.argv
 ids = json.load(open(os.path.join(ROOT, "data", "probe_gemini", "task_ids.json")))["ids"]
+if REMAIN:  # Revision 11: the 70 tasks of the full 100-task set not in the 30-task probe
+    _full = json.load(open(os.path.join(ROOT, "data", "gemini_sweep", "task_ids_full.json")))["ids"]
+    ids = [i for i in _full if i not in set(ids)]
 man = json.load(open(os.path.join(ROOT, "manifests", "pilot100_manifest.json"), encoding="utf-8"))
 meta = {t["instance_id"]: t for t in man["primary"] + man["reserve"]}
 full = {}
 for l in open(TASKS, encoding="utf-8"):
     d = json.loads(l); full[d["instance_id"]] = d
-out = open(os.path.join(ROOT, "data", "qwen_probe", "prompts.jsonl"), "w", encoding="utf-8")
+out = open(os.path.join(ROOT, "data", "qwen_probe", "prompts_remaining.jsonl" if REMAIN else "prompts.jsonl"), "w", encoding="utf-8")
 for iid in ids:
     t = full[iid]; path = meta[iid]["gold_file"]
     src = fetch_source(t["repo"], t["base_commit"], path)

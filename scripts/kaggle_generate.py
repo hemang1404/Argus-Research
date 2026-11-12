@@ -1,4 +1,4 @@
-"""Kaggle generation for the Qwen size-ladder probe (Revision 10). Reads prompts.jsonl from the attached dataset, answers each prompt ONCE per model,
+"""Kaggle generation for the Qwen size-ladder probe (Revision 10). Reads prompts_remaining.jsonl from the attached dataset, answers each prompt ONCE per model,
 one prompt at a time, appends to /kaggle/working/outputs_<tag>.jsonl. Run with Save & Run All (Commit) so the outputs are kept.
 Settings: temperature 1.0, top_p 1.0, top_k 0, thinking OFF, max_new_tokens 4000, fp16 on T4. QUANT nf4 = 4-bit (quantization check only).
 Memory handling (added after the first 9B attempt ran out of memory on prompts of 6k tokens with device_map="auto"): weights are split evenly
@@ -14,10 +14,10 @@ import gc, glob, json, time, torch
 import transformers
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-RUNS = [("Qwen/Qwen3.5-9B", "none")]
+RUNS = [("Qwen/Qwen3.5-2B", "none"), ("Qwen/Qwen3.5-4B", "none"), ("Qwen/Qwen3.5-9B", "none")]   # Revision 11: remaining 70 tasks, one draw each
 MAX_NEW = 4000
-cands = glob.glob("/kaggle/input/**/prompts.jsonl", recursive=True) + glob.glob("prompts.jsonl") + glob.glob("/kaggle/working/prompts.jsonl")
-assert cands, "prompts.jsonl not found: attach it as a Kaggle dataset or put it in /kaggle/working"
+cands = glob.glob("/kaggle/input/**/prompts_remaining.jsonl", recursive=True) + glob.glob("prompts_remaining.jsonl") + glob.glob("/kaggle/working/prompts_remaining.jsonl")
+assert cands, "prompts_remaining.jsonl not found: attach it as a Kaggle dataset or put it in /kaggle/working"
 PROMPTS = [json.loads(l) for l in open(cands[0], encoding="utf-8")]
 
 
