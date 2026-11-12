@@ -16,6 +16,7 @@ ap.add_argument("--limit", type=int, default=0)
 ap.add_argument("--out-dir", default=os.path.join(ROOT, "data", "loop3"))
 ap.add_argument("--workers", type=int, default=3)
 ap.add_argument("--max-turns", type=int, default=3)
+ap.add_argument("--model", default="openai/gpt-oss-120b")
 args = ap.parse_args()
 OUT = os.path.abspath(args.out_dir)
 os.makedirs(OUT, exist_ok=True)
@@ -28,7 +29,7 @@ import harness.dockergrade as DG  # chdir + stdout redirect happen here; use DG.
 
 ENV = r"C:\coding\Argus\.env"
 TASKS = r"C:\coding\Argus-research-archive\data\swe_bench_verified_tasks.jsonl"
-MODEL, EFFORT = "openai/gpt-oss-120b", "medium"
+MODEL, EFFORT = args.model, "medium"
 TEMP, MAX_OUT, PROMPT_BUDGET, EXCERPT = 1.0, 8000, 6000, 2000
 PRICE = {"openai/gpt-oss-20b": (0.075, 0.30), "openai/gpt-oss-120b": (0.15, 0.60)}
 
