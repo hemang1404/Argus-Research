@@ -281,3 +281,23 @@ Generation and Docker grading for the issue-only run are DROPPED (owner decision
 A mixed picture is a valid outcome. With 30 tasks and one draw, per-model counts are small and only large differences are reported.
 
 **Limits.** Thinking is off for Qwen while gpt-oss ran at medium reasoning, so edit-failure signatures, not solve rates, are compared; fp16 on T4 and Hugging Face transformers sampling differ from the API runs; one draw on 30 tasks; the chat template and default system handling come from the checkpoint.
+
+## Revision 11 (2026-11-13): Qwen3.5 size ladder extended to 100 tasks with Docker grading (exploratory; pre-registered before generation)
+
+**Why.** Revision 10 measured how edits fail on 30 tasks but no solve rates. To compare with the gpt-oss and Gemini runs, the three Qwen sizes are extended to the 100 tasks of `data/gemini_sweep/task_ids_full.json` and every distinct patch is graded.
+
+**Design (fixed now).** Qwen/Qwen3.5-2B, -4B, -9B (instruct, fp16, Kaggle 2 x T4, `scripts/kaggle_generate.py` as committed), ONE draw per task and model. The 30 probe tasks reuse the Revision 10 draws; the other 70 are generated now with identical settings: prompt p1 (hash 56e5b02fa8ed), 6,000-token context, target file GIVEN, temperature 1.0, top_p 1.0, top_k 0, thinking OFF, max_new_tokens 4000, no seed, 9B with the chunked-prefill fallback described in Report 10. Plain apply and stock Argus (467b720), official swebench harness in Docker, one image at a time, known grades reused by (task, patch hash).
+
+**Analysis fixed in advance.** Per model: resolved tasks of 100 for plain and Argus apply with task-clustered bootstrap 95% CI (5,000 resamples, seed 20261112); Argus minus plain (paired) and rescued draws with their pass rate; failure funnel (empty or capped, no blocks, edit not applied, applied but wrong, resolved); pass rate given applied; edit-failure causes as in Report 10. Comparison with gpt-oss-20b, gpt-oss-120b and Gemini Flash-Lite on the same 100 tasks (draw 0 of each), reported descriptively. With one draw per task, intervals are wide and per-task success probabilities are not estimated.
+
+**Limits.** Thinking is off for Qwen (gpt-oss ran at medium reasoning), so solve rates are not a like-for-like capability ranking; one draw; same tasks as all design; fp16 on T4 with a chunked-prefill fallback for part of the 9B.
+
+## Revision 12 (2026-11-13): Gemma 4 through the Gemini API, 100 tasks x 3 draws (exploratory; pre-registered before generation)
+
+**Why.** Gemma 4 is an open-weights family reachable through the existing Gemini key. A smoke test (2 tasks, `data/gemma_smoke/`) showed that both models answer when the reasoning setting is omitted, that the 31B writes a `<thought>...</thought>` section containing draft SEARCH/REPLACE blocks before its final answer, and that the 31B is much slower per call (158 to 194 s) than the 26B-A4B (9 to 49 s).
+
+**Design (fixed now).** Models `gemma-4-26b-a4b-it` (run first) and `gemma-4-31b-it` (run after the 26B is graded). Task set: the 100 tasks of `data/gemini_sweep/task_ids_full.json`; prompt p1, 6,000-token context, target file GIVEN; Google's OpenAI-compatible endpoint; temperature 1.0; max_completion_tokens 16,000; no reasoning parameter (the endpoint rejects it for Gemma, including "none"); 3 draws per task and model; no seed. **Pre-processing rule:** before applying, remove everything up to and including the last `</thought>` tag in the content; if there is no such tag the content is used unchanged; the raw content is stored unmodified. Apply arms: plain and stock Argus (467b720); Docker grading as before. No dollar spend expected (free tier); usage is recorded raw. Gemma thinking is not controllable, so the 31B (which thinks inline) and the 26B (which appears not to) are not run at equal effort.
+
+**Analysis fixed in advance.** As in Revision 6 for each model: resolved tasks per draw and mean with task-clustered bootstrap CI for plain and Argus; Argus effect (paired) and rescued draws with pass rate; failure funnel and edit-failure causes; per-task success probability and pass@3; tasks solved by Gemma but by no gpt-oss draw and the reverse; comparison with the other families. A feedback-versus-re-draw test on Gemma is a separate revision, decided after these signatures.
+
+**Limits.** Same tasks as all design; contamination not excluded; the hidden-token accounting of the Gemini API applies; rate limits of the free tier are unknown and may slow the 31B.
