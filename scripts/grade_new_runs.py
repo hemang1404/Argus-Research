@@ -41,6 +41,10 @@ def prepare(group):
             for r in recs:
                 r["raw_content"] = r.get("content"); r["content"] = strip_thought(r.get("content"))
         tags = [model]
+    elif group == "qwen38":
+        D = os.path.join(ROOT, "data", "qwen38")
+        recs = [r for r in load(os.path.join(D, "raw.jsonl")) if r["model"].endswith("qwen3.8-27b") and r.get("http") == 200]
+        tags = ["qwen3.8-27b"]
     elif group == "qwen":
         D = os.path.join(ROOT, "data", "qwen_probe")
         recs = []
