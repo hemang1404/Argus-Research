@@ -323,3 +323,13 @@ A mixed picture is a valid outcome. With 30 tasks and one draw, per-model counts
 **Reported regardless of outcome.** Resolved tasks per arm and model with CIs; per-attempt resolve rates; cost per solve; accepted-but-regressed counts; per-repo breakdown and a repo-clustered bootstrap as a sensitivity check (the set is 33% django); failure funnel; deviations from this plan, if any, with dates.
 
 **Limits.** File-given setting, not a leaderboard score; same models and prompts as design; Groq list prices of undated docs; contamination of Verified tasks cannot be excluded; effects under about 5 points are not detectable at 200 tasks.
+
+## Revision 14 (2026-11-13): Qwen3.8-27B on Groq, 100 design tasks x 3 draws, reasoning off (pre-registered before generation; one smoke call on astropy__astropy-12907 only)
+
+**Purpose.** One additional model point for the apply-layer comparison. It is NOT part of the Qwen3.5 size ladder: Qwen3.8-27B differs from Qwen3.5-2B/4B/9B in both size and model generation, so no size effect is claimed from it. It is reported next to the other families (same role as Gemini and gpt-oss) in the cross-family comparison of plain edit-failure rate against Argus gain.
+
+**Setting.** Model `qwen/qwen3.8-27b` on Groq, reasoning_effort none, temperature 1.0, max_completion_tokens 4000 (as the Qwen3.5 runs), seed 1000+draw, draws 0, 1, 2. The 100 design tasks of `data/gemini_sweep/task_ids_full.json`, file given, prompt p1 (hash 56e5b02fa8ed), 6,000-token context. Plain apply and Argus apply (v0.2.0b1, commit 467b720) of every draw, official Docker harness for every distinct applied patch, known grades reused by (task, patch hash), a patch whose test run hangs until the 1,800 s harness timeout is counted as not resolved and flagged.
+
+**Predictions fixed now.** (a) Plain not-applied rate between 8% and 20% (Gemini/gpt-oss-120b range, higher than the 12% of Gemini 3.1 would count as a miss on the low side); (b) Argus gain in resolved tasks per 100 (mean of draws) at most +3, with 95% CI including 0 or only just excluding it; (c) resolved tasks per 100 plain at least 25. Analysis as in Revision 12: task-clustered bootstrap CIs, paired Argus-minus-plain, rescued draws, failure funnel.
+
+**Limits.** Same tasks as all design work; contamination not excluded; Groq free-tier rate limits may drop or delay calls (failed calls are retried, not replaced); series and size are confounded as stated above.
