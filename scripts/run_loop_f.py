@@ -1,32 +1,29 @@
 """Revision 15 (feedback loop on Gemma 26B and Qwen3.8-27B, design set): arm F (test feedback, previous answer not shown, <= 3 attempts, stop at the first
-patch that passes all FAIL_TO_PASS tests) for a model whose independent draws already exist and are already Docker-graded.
+patch that passes all FAIL_TO_PASS tests) for models whose independent draws already exist.
 
-  * attempt 1 of F = draw 0 of the existing sweep (shared with the re-draw arm R, as in Revisions 7-9); no new call and, when it is already accepted
-    (passes all FAIL_TO_PASS), no Docker run at all;
+  * attempt 1 of F = draw 0 of the existing sweep (shared with the re-draw arm R, as in Revisions 7-9); no new call;
   * the re-draw arm R is NOT regenerated: it is replayed offline from the three stored independent draws (draw order 0, 1, 2) and their stored grades;
-  * only a task whose attempt 1 is not accepted gets ONE image pull; there attempt 1 is re-graded once to obtain the failing-test text, then attempts 2 and 3
-    are generated with the feedback block of Revisions 5/7/9 and graded in the same container image.
+  * a task whose attempt 1 is accepted for every model and that has no ungraded stored patch needs no Docker run at all; every other task gets ONE image
+    pull, in which (a) ungraded stored patches of --also-grade are graded, (b) for each model whose attempt 1 is not accepted, attempt 1 is re-graded once
+    (to obtain the failing-test text), and attempts 2 and 3 are generated with the feedback block of Revisions 5/7/9 and graded. All models share the pull.
 Helper functions (failure excerpt, feedback text, acceptance rule) are the same as in scripts/run_blind.py.
 
-  python -X utf8 scripts/run_loop_f.py --model gemma26 --workers 2
-  python -X utf8 scripts/run_loop_f.py --model qwen38 --workers 2
+  python -X utf8 scripts/run_loop_f.py --model gemma26 qwen38 --also-grade qwen38 --workers 2
 """
 import argparse, hashlib, json, os, re, sys, threading, time, datetime, urllib.request, urllib.error, concurrent.futures as cf
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 ap = argparse.ArgumentParser()
-ap.add_argument("--model", required=True, choices=["gemma26", "qwen38"])
+ap.add_argument("--model", nargs="+", required=True, choices=["gemma26", "qwen38"])
 ap.add_argument("--ids", nargs="*")
-ap.add_argument("--out-dir")
+ap.add_argument("--out-root", help="parent of the loop_f_<model> output dirs (default: data/)")
 ap.add_argument("--workers", type=int, default=2)
 ap.add_argument("--max-turns", type=int, default=3)
-ap.add_argument("--also-grade", help="group whose stored patches (apply_<group>/ files, already prepared by grade_new_runs.py) are graded in the SAME image pull, e.g. qwen38")
+ap.add_argument("--also-grade", help="group whose stored patches (apply_<group>/ files, prepared by grade_new_runs.py) are graded in the SAME image pulls, e.g. qwen38")
 args = ap.parse_args()
-CFG = dict(
+CFGS = dict(
     gemma26=dict(api="gemma-4-26b-a4b-it", raw=os.path.join("data", "gemma_sweep", "raw.jsonl"), raw_model="google/gemma-4-26b-a4b-it", backend="google", max_out=16000),
-    qwen38=dict(api="qwen/qwen3.8-27b", raw=os.path.join("data", "qwen38", "raw.jsonl"), raw_model="qwen/qwen3.8-27b", backend="groq", max_out=4000))[args.model]
-OUT = os.path.abspath(args.out_dir or os.path.join(ROOT, "data", "loop_f_" + args.model))
-os.makedirs(OUT, exist_ok=True)
+    qwen38=dict(api="qwen/qwen3.8-27b", raw=os.path.join("data", "qwen38", "raw.jsonl"), raw_model="qwen/qwen3.8-27b", backend="groq", max_out=4000))
 
 from harness.keypool import KeyPool
 from harness.context import fetch_source, build_file_context, ntok
@@ -65,7 +62,7 @@ for f in ("data/probe_gemini/grading.jsonl", "data/gemini_sweep/grading.jsonl", 
 STATE = os.path.join(ROOT, "data", "new_runs_grading.jsonl")
 EXTRA = {}  # iid -> {hash: diff} of patches of --also-grade that still have no grade
 if args.also_grade:
-    _d = os.path.join(ROOT, "data", args.also_grade if args.also_grade != "qwen38" else "qwen38", "apply_" + args.also_grade)
+    _d = os.path.join(ROOT, "data", args.also_grade, "apply_" + args.also_grade)
     for _arm in ("plain", "argus"):
         for _f in os.listdir(_d):
             if _f.startswith(_arm + "_apply_"):
@@ -73,26 +70,29 @@ if args.also_grade:
                     if r["status"] == "applied" and (r["iid"], sha(r["diff"])) not in KNOWN:
                         EXTRA.setdefault(r["iid"], {})[sha(r["diff"])] = r["diff"]
     print(f"{sum(len(v) for v in EXTRA.values())} patches of {args.also_grade} over {len(EXTRA)} tasks to grade in the same pulls", flush=True)
-DRAWS = {}
-for r in load(os.path.join(ROOT, CFG["raw"])):
-    if r["model"] == CFG["raw_model"] and r.get("http") == 200:
-        DRAWS.setdefault(r["iid"], {})[r.get("sample", 0)] = r
 
-key = None
-pool = None
-if CFG["backend"] == "google":
+key, pool = None, None
+if any(CFGS[m]["backend"] == "google" for m in args.model):
     for l in open(ENV, encoding="utf-8", errors="replace"):
-        m = re.match(r"\s*GOOGLE_API_KEY\s*=\s*(.*)", l)
-        if m:
-            key = m.group(1).strip().strip("\"'")
+        mm = re.match(r"\s*GOOGLE_API_KEY\s*=\s*(.*)", l)
+        if mm:
+            key = mm.group(1).strip().strip("\"'")
     assert key, "GOOGLE_API_KEY missing"
-else:
+if any(CFGS[m]["backend"] == "groq" for m in args.model):
     pool = KeyPool(ENV)
 lock = threading.Lock()
-CALLS, TRAJ, PULLFAIL = (os.path.join(OUT, n) for n in ("calls.jsonl", "trajectories.jsonl", "pull_failures.jsonl"))
-calls = {r["key"]: r for r in load(CALLS)}
-done = {r["iid"] for r in load(TRAJ)}
 API = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+
+M = {}  # per-model state
+for m in args.model:
+    out_dir = os.path.abspath(os.path.join(args.out_root or os.path.join(ROOT, "data"), "loop_f_" + m))
+    os.makedirs(out_dir, exist_ok=True)
+    draws = {}
+    for r in load(os.path.join(ROOT, CFGS[m]["raw"])):
+        if r["model"] == CFGS[m]["raw_model"] and r.get("http") == 200:
+            draws.setdefault(r["iid"], {})[r.get("sample", 0)] = r
+    paths = {n: os.path.join(out_dir, n + ".jsonl") for n in ("calls", "trajectories", "pull_failures")}
+    M[m] = dict(cfg=CFGS[m], draws=draws, paths=paths, calls={r["key"]: r for r in load(paths["calls"])}, done={r["iid"] for r in load(paths["trajectories"])})
 
 
 def google_chat(body):
@@ -115,23 +115,24 @@ def google_chat(body):
     return last
 
 
-def call_model(body):
+def call_model(m, body):
+    st = M[m]
     ck = hashlib.sha256(json.dumps(body, sort_keys=True).encode()).hexdigest()[:20]
     with lock:
-        c = calls.get(ck)
+        c = st["calls"].get(ck)
     if c and c.get("http") == 200:
         return c
-    res = google_chat(body) if CFG["backend"] == "google" else pool.chat(body)
+    res = google_chat(body) if st["cfg"]["backend"] == "google" else pool.chat(body)
     rec = dict(key=ck, http=res["status"], tries=res.get("tries"), latency_s=res.get("latency_s"), model=body["model"])
     if res["status"] == 200:
-        d = res["data"]; m = d["choices"][0]["message"]; u = d.get("usage", {})
-        rec.update(content=m.get("content"), finish=d["choices"][0].get("finish_reason"), prompt_tokens=u.get("prompt_tokens"), completion_tokens=u.get("completion_tokens"),
-                   usage_raw=u if CFG["backend"] == "google" else None, served_model=d.get("model"))
+        d = res["data"]; mm = d["choices"][0]["message"]; u = d.get("usage", {})
+        rec.update(content=mm.get("content"), finish=d["choices"][0].get("finish_reason"), prompt_tokens=u.get("prompt_tokens"), completion_tokens=u.get("completion_tokens"),
+                   usage_raw=u if st["cfg"]["backend"] == "google" else None, served_model=d.get("model"))
     else:
         rec["error"] = str(res.get("error"))[:300]
     with lock:
-        calls[ck] = rec
-        open(CALLS, "a", encoding="utf-8").write(json.dumps(rec) + "\n")
+        st["calls"][ck] = rec
+        open(st["paths"]["calls"], "a", encoding="utf-8").write(json.dumps(rec) + "\n")
     return rec
 
 
@@ -145,8 +146,8 @@ def failure_excerpt(text, failed_names, limit=EXCERPT):
     name = failed_names[0] if failed_names else ""
     core = re.split(r"::", name)[-1]
     core = re.sub(r"\[.*\]$", "", core)
-    m = re.match(r"\w+", core)
-    core = m.group(0) if m else ""
+    mm = re.match(r"\w+", core)
+    core = mm.group(0) if mm else ""
     out = None
     if core:
         lines = seg.split("\n")
@@ -199,13 +200,20 @@ def accept_state(ap_res, grade):
     return "continue"
 
 
-def run_task(iid):
-    t0 = time.time()
-    t = full[iid]; target = meta[iid]["gold_file"]
-    d0 = DRAWS.get(iid, {}).get(0)
+def write_traj(m, out):
+    with lock:
+        open(M[m]["paths"]["trajectories"], "a", encoding="utf-8").write(json.dumps(out) + "\n")
+
+
+def plan_model(m, iid, t, target):
+    """attempt 1 of model m = its draw 0 (no call); returns a plan or None when draw 0 or an earlier result exists."""
+    st = M[m]
+    if iid in st["done"]:
+        return None
+    d0 = st["draws"].get(iid, {}).get(0)
     if d0 is None:
-        return dict(iid=iid, skipped="draw0_missing")
-    out = dict(iid=iid, target_file=target, prompt_hash=prompt_hash(), model=args.model, ts=datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"))
+        return dict(m=m, skipped="draw0_missing")
+    out = dict(iid=iid, target_file=target, prompt_hash=prompt_hash(), model=m, ts=datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"))
     ap1 = apply_output(t["repo"], t["base_commit"], target, d0.get("content"), d0.get("finish"))
     g1, h1 = None, None
     if ap1["status"] == "applied":
@@ -215,15 +223,81 @@ def run_task(iid):
         tr1.update(patch_hash=h1, grade={k: g1.get(k) for k in ("applied", "resolved", "f2p_pass", "f2p_fail", "p2p_fail")})
     unknown = ap1["status"] == "applied" and g1 is None
     tr1["state"] = "unknown" if unknown else accept_state(ap1, g1)
-    if tr1["state"] not in ("continue", "unknown") and not EXTRA.get(iid):
-        out["F"] = dict(attempts=[tr1], n=1, stop=tr1["state"], solved=tr1["state"] == "accepted_resolved", docker_used=False)
-        out["secs"] = round(time.time() - t0, 1)
-        with lock:
-            open(TRAJ, "a", encoding="utf-8").write(json.dumps(out) + "\n")
-        return out
+    return dict(m=m, out=out, ap1=ap1, g1=g1, h1=h1, tr1=tr1)
+
+
+def finish_accepted(plan, t0, docker_used):
+    out, tr1 = plan["out"], plan["tr1"]
+    out["F"] = dict(attempts=[tr1], n=1, stop=tr1["state"], solved=tr1["state"] == "accepted_resolved", docker_used=docker_used)
+    out["secs"] = round(time.time() - t0, 1)
+    write_traj(plan["m"], out)
+
+
+def run_loop(plan, iid, t, target, base_msgs, memo, t0):
+    m, out, ap1, g1, h1, tr1 = plan["m"], plan["out"], plan["ap1"], plan["g1"], plan["h1"], plan["tr1"]
+    cfg = M[m]["cfg"]
+    grade, test_text = None, ""
+    if ap1["status"] == "applied":
+        if h1 in memo:
+            grade, test_text = memo[h1]
+        else:
+            grade, test_text = DG.grade_one(iid, h1, ap1["diff"]); memo[h1] = (grade, test_text)
+        tr1["regrade"] = {k: v for k, v in grade.items() if k != "log_text"}
+        if g1 is not None and grade.get("resolved") != g1.get("resolved"):
+            tr1["regrade_differs_from_stored"] = True
+        tr1["state"] = accept_state(ap1, grade)
+    else:
+        tr1["state"] = "continue"
+    atts = [tr1]
+    fb = feedback_for(ap1, grade or {}, test_text)
+    turn = 1
+    while atts[-1]["state"] == "continue" and turn < args.max_turns:
+        turn += 1
+        msgs = [base_msgs[0], dict(role="user", content=prompt_with_feedback(base_msgs[1]["content"], turn, fb))]
+        body = {"model": cfg["api"], "messages": msgs, "temperature": TEMP, "max_completion_tokens": cfg["max_out"]}
+        if cfg["backend"] == "groq":
+            body["reasoning_effort"] = "none"; body["seed"] = 6000 + turn
+        rec = call_model(m, body)
+        tr = dict(turn=turn, source="new_call", http=rec["http"], feedback_in=fb)
+        if rec["http"] != 200:
+            tr.update(state="api_error", error=rec.get("error")); atts.append(tr); break
+        ap_res = apply_output(t["repo"], t["base_commit"], target, rec.get("content"), rec.get("finish"))
+        tr.update(finish=rec["finish"], prompt_tokens=rec["prompt_tokens"], completion_tokens=rec["completion_tokens"], apply_status=ap_res["status"], max_tier=ap_res.get("max_tier"), refusal_reason=ap_res.get("refusal_reason"))
+        grade, test_text = None, ""
+        if ap_res["status"] == "applied":
+            h = sha(ap_res["diff"]); tr["patch_hash"] = h
+            if h in memo:
+                grade, test_text = memo[h]
+            else:
+                grade, test_text = DG.grade_one(iid, h, ap_res["diff"]); memo[h] = (grade, test_text); tr["graded_fresh"] = True
+            tr["grade"] = {k: v for k, v in grade.items() if k != "log_text"}
+            if grade.get("resolved") is None:
+                tr["state"] = "grade_error"; atts.append(tr); break
+        tr["state"] = accept_state(ap_res, grade)
+        atts.append(tr)
+        fb = feedback_for(ap_res, grade or {}, test_text)
+    last = atts[-1]
+    out["F"] = dict(attempts=atts, n=len(atts), stop=last["state"], solved=last["state"] == "accepted_resolved", docker_used=True)
+    out["secs"] = round(time.time() - t0, 1)
+    write_traj(m, out)
+
+
+def run_task(iid):
+    t0 = time.time()
+    t = full[iid]; target = meta[iid]["gold_file"]
+    plans = [p for p in (plan_model(m, iid, t, target) for m in args.model) if p is not None]
+    skipped = [p["m"] for p in plans if p.get("skipped")]
+    plans = [p for p in plans if not p.get("skipped")]
+    pending = [p for p in plans if p["tr1"]["state"] in ("continue", "unknown")]
+    extras = EXTRA.get(iid, {})
+    if not pending and not extras:
+        for p in plans:
+            finish_accepted(p, t0, False)
+        return dict(iid=iid, summary={p["m"]: (p["tr1"]["state"], 1, False) for p in plans}, skipped=skipped, secs=round(time.time() - t0, 1))
     if not DG.pull(iid):
-        with lock:
-            open(PULLFAIL, "a", encoding="utf-8").write(json.dumps(dict(iid=iid, ts=datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"))) + "\n")
+        for p in pending:
+            with lock:
+                open(M[p["m"]]["paths"]["pull_failures"], "a", encoding="utf-8").write(json.dumps(dict(iid=iid, ts=datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"))) + "\n")
         return dict(iid=iid, pull_failed=True)
     memo = {}
     try:
@@ -231,69 +305,31 @@ def run_task(iid):
         code_budget = max(500, PROMPT_BUDGET - ntok(SYSTEM) - ntok(t["problem_statement"][:6000]) - 250)
         code, spans, info = build_file_context(t, src, code_budget)
         base_msgs = build_messages(t, target, code)
-        out["ctx"] = info
-        for h, diff in sorted(EXTRA.get(iid, {}).items()):  # patches of the other group: same image, no extra pull
-            res, _ = DG.grade_one(iid, h, diff)
+        for h, diff in sorted(extras.items()):  # stored patches of the other group: same image, no extra pull
+            res, text = DG.grade_one(iid, h, diff)
+            memo[h] = (res, text)
             rec = dict(iid=iid, h=h, applied=res.get("applied"), resolved=res.get("resolved"), f2p_pass=res.get("f2p_pass"), f2p_fail=res.get("f2p_fail"),
                        p2p_fail=res.get("p2p_fail"), error=res.get("error"), note=res.get("note"))
             with lock:
                 open(STATE, "a", encoding="utf-8").write(json.dumps(rec) + "\n")
             DG.say(f"  [{args.also_grade}] {iid} {h} applied={rec['applied']} resolved={rec['resolved']}")
-        if tr1["state"] not in ("continue", "unknown"):  # attempt 1 already accepted: nothing to loop
-            out["F"] = dict(attempts=[tr1], n=1, stop=tr1["state"], solved=tr1["state"] == "accepted_resolved", docker_used=True)
-            out["secs"] = round(time.time() - t0, 1)
-            with lock:
-                open(TRAJ, "a", encoding="utf-8").write(json.dumps(out) + "\n")
-            return out
-        grade, test_text = None, ""
-        if ap1["status"] == "applied":
-            grade, test_text = DG.grade_one(iid, h1, ap1["diff"]); memo[h1] = (grade, test_text)
-            tr1["regrade"] = {k: v for k, v in grade.items() if k != "log_text"}
-            if g1 is not None and grade.get("resolved") != g1.get("resolved"):
-                tr1["regrade_differs_from_stored"] = True
-            tr1["state"] = accept_state(ap1, grade)
-        else:
-            tr1["state"] = "continue"
-        atts = [tr1]
-        fb = feedback_for(ap1, grade or {}, test_text)
-        turn = 1
-        while atts[-1]["state"] == "continue" and turn < args.max_turns:
-            turn += 1
-            msgs = [base_msgs[0], dict(role="user", content=prompt_with_feedback(base_msgs[1]["content"], turn, fb))]
-            body = {"model": CFG["api"], "messages": msgs, "temperature": TEMP, "max_completion_tokens": CFG["max_out"]}
-            if CFG["backend"] == "groq":
-                body["reasoning_effort"] = "none"; body["seed"] = 6000 + turn
-            rec = call_model(body)
-            tr = dict(turn=turn, source="new_call", http=rec["http"], feedback_in=fb)
-            if rec["http"] != 200:
-                tr.update(state="api_error", error=rec.get("error")); atts.append(tr); break
-            ap_res = apply_output(t["repo"], t["base_commit"], target, rec.get("content"), rec.get("finish"))
-            tr.update(finish=rec["finish"], prompt_tokens=rec["prompt_tokens"], completion_tokens=rec["completion_tokens"], apply_status=ap_res["status"], max_tier=ap_res.get("max_tier"), refusal_reason=ap_res.get("refusal_reason"))
-            grade, test_text = None, ""
-            if ap_res["status"] == "applied":
-                h = sha(ap_res["diff"]); tr["patch_hash"] = h
-                if h in memo:
-                    grade, test_text = memo[h]
-                else:
-                    grade, test_text = DG.grade_one(iid, h, ap_res["diff"]); memo[h] = (grade, test_text); tr["graded_fresh"] = True
-                tr["grade"] = {k: v for k, v in grade.items() if k != "log_text"}
-                if grade.get("resolved") is None:
-                    tr["state"] = "grade_error"; atts.append(tr); break
-            tr["state"] = accept_state(ap_res, grade)
-            atts.append(tr)
-            fb = feedback_for(ap_res, grade or {}, test_text)
-        last = atts[-1]
-        out["F"] = dict(attempts=atts, n=len(atts), stop=last["state"], solved=last["state"] == "accepted_resolved", docker_used=True)
-        out["secs"] = round(time.time() - t0, 1)
-        with lock:
-            open(TRAJ, "a", encoding="utf-8").write(json.dumps(out) + "\n")
-        return out
+        summary = {}
+        for p in plans:
+            p["out"]["ctx"] = info
+            if p["tr1"]["state"] not in ("continue", "unknown"):
+                finish_accepted(p, t0, True)
+                summary[p["m"]] = (p["tr1"]["state"], 1, True)
+            else:
+                run_loop(p, iid, t, target, base_msgs, memo, t0)
+                tl = [json.loads(l) for l in open(M[p["m"]]["paths"]["trajectories"], encoding="utf-8")][-1]["F"]
+                summary[p["m"]] = (tl["stop"], tl["n"], True)
+        return dict(iid=iid, summary=summary, skipped=skipped, secs=round(time.time() - t0, 1))
     finally:
         DG.cleanup(iid)
 
 
-todo = [i for i in IDS if i not in done]
-DG.say(f"model {args.model}; {len(todo)} tasks to run ({len(done)} done); out={OUT}; prompt_hash={prompt_hash()}")
+todo = [i for i in IDS if any(i not in M[m]["done"] for m in args.model)]
+DG.say(f"models {args.model}; {len(todo)} tasks to run; prompt_hash={prompt_hash()}")
 n = 0
 with cf.ThreadPoolExecutor(args.workers) as ex:
     futs = {ex.submit(run_task, i): i for i in todo}
@@ -303,10 +339,8 @@ with cf.ThreadPoolExecutor(args.workers) as ex:
             r = f.result()
             if r.get("pull_failed"):
                 DG.say(f"[{n}/{len(todo)}] {r['iid']} IMAGE PULL FAILED (retried on the next run)")
-            elif r.get("skipped"):
-                DG.say(f"[{n}/{len(todo)}] {r['iid']} SKIPPED {r['skipped']}")
             else:
-                DG.say(f"[{n}/{len(todo)}] {r['iid']} F {r['F']['stop']} n={r['F']['n']} docker={r['F']['docker_used']} {r['secs']:.0f}s")
+                DG.say(f"[{n}/{len(todo)}] {r['iid']} " + " ".join(f"{m}:{v[0]}/n={v[1]}" for m, v in r["summary"].items()) + (f" SKIPPED {r['skipped']}" if r["skipped"] else "") + f" {r['secs']:.0f}s")
         except Exception as e:
             import traceback
             DG.say(f"[{n}/{len(todo)}] {futs[f]} EXCEPTION {repr(e)[:300]}")
