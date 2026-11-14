@@ -18,6 +18,7 @@ ap.add_argument("--model", nargs="+", required=True, choices=["gemma26", "qwen38
 ap.add_argument("--ids", nargs="*")
 ap.add_argument("--out-root", help="parent of the loop_f_<model> output dirs (default: data/)")
 ap.add_argument("--workers", type=int, default=2)
+ap.add_argument("--arm", choices=["F", "P"], default="F", help="F: previous answer not shown (Rev 15). P (Rev 17): the model's previous answer (<=3000 chars) is shown with the test/apply feedback, as in Argus src/swebench/patch_builder.build_repair_prompt")
 ap.add_argument("--max-turns", type=int, default=3)
 ap.add_argument("--cap-usd", type=float, default=6.0, help="stop issuing paid Gemini calls once estimated new spend reaches this")
 ap.add_argument("--also-grade", help="group whose stored patches (apply_<group>/ files, prepared by grade_new_runs.py) are graded in the SAME image pulls, e.g. qwen38")
@@ -89,7 +90,7 @@ API = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 
 M = {}  # per-model state
 for m in args.model:
-    out_dir = os.path.abspath(os.path.join(args.out_root or os.path.join(ROOT, "data"), "loop_f_" + m))
+    out_dir = os.path.abspath(os.path.join(args.out_root or os.path.join(ROOT, "data"), ("loop_f_" if args.arm == "F" else "loop_p_") + m))
     os.makedirs(out_dir, exist_ok=True)
     draws = {}
     for r in load(os.path.join(ROOT, CFGS[m]["raw"])):
@@ -199,9 +200,14 @@ def feedback_for(ap_res, grade, test_text):
     return f"{head}\n```\n{ex}\n```"
 
 
-def prompt_with_feedback(base_user, turn, feedback):
+def prompt_with_feedback(base_user, turn, feedback, prev=None):
     if not feedback:
         return base_user
+    if args.arm == "P":
+        return (base_user + f"\n\n## Previous Attempt (FAILED) (turn {turn - 1} of {args.max_turns})\n```\n{(prev or '')[:3000]}\n```\n\n"
+                f"## Result of the previous attempt\n{feedback}\n\n"
+                "The file shown above is the original, unmodified file. Write corrected SEARCH/REPLACE block(s) against it. "
+                "Include ALL necessary changes (the valid parts of your previous attempt and the corrections), without breaking existing behaviour.")
     return (base_user + f"\n\n## Result of your previous attempt (turn {turn - 1} of {args.max_turns})\n{feedback}\n\n"
             "The file shown above is the original, unmodified file. Write corrected SEARCH/REPLACE block(s) against it.")
 
@@ -235,7 +241,7 @@ def plan_model(m, iid, t, target):
         tr1.update(patch_hash=h1, grade={k: g1.get(k) for k in ("applied", "resolved", "f2p_pass", "f2p_fail", "p2p_fail")})
     unknown = ap1["status"] == "applied" and g1 is None
     tr1["state"] = "unknown" if unknown else accept_state(ap1, g1)
-    return dict(m=m, out=out, ap1=ap1, g1=g1, h1=h1, tr1=tr1)
+    return dict(m=m, out=out, ap1=ap1, g1=g1, h1=h1, tr1=tr1, prev=d0.get("content"))
 
 
 def finish_accepted(plan, t0, docker_used):
@@ -263,9 +269,10 @@ def run_loop(plan, iid, t, target, base_msgs, memo, t0):
     atts = [tr1]
     fb = feedback_for(ap1, grade or {}, test_text)
     turn = 1
+    prev = plan["prev"]
     while atts[-1]["state"] == "continue" and turn < args.max_turns:
         turn += 1
-        msgs = [base_msgs[0], dict(role="user", content=prompt_with_feedback(base_msgs[1]["content"], turn, fb))]
+        msgs = [base_msgs[0], dict(role="user", content=prompt_with_feedback(base_msgs[1]["content"], turn, fb, prev))]
         body = {"model": cfg["api"], "messages": msgs, "temperature": TEMP, "max_completion_tokens": cfg["max_out"]}
         if cfg["backend"] == "groq":
             body["reasoning_effort"] = "none"; body["seed"] = 6000 + turn
@@ -273,6 +280,7 @@ def run_loop(plan, iid, t, target, base_msgs, memo, t0):
         tr = dict(turn=turn, source="new_call", http=rec["http"], feedback_in=fb)
         if rec["http"] != 200:
             tr.update(state="api_error", error=rec.get("error")); atts.append(tr); break
+        prev = rec.get("content")
         ap_res = apply_output(t["repo"], t["base_commit"], target, rec.get("content"), rec.get("finish"))
         tr.update(finish=rec["finish"], prompt_tokens=rec["prompt_tokens"], completion_tokens=rec["completion_tokens"], apply_status=ap_res["status"], max_tier=ap_res.get("max_tier"), refusal_reason=ap_res.get("refusal_reason"))
         grade, test_text = None, ""

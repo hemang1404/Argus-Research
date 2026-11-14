@@ -23,10 +23,11 @@ def draws(path, arm, tag):
     for r in L(f"{path}/{arm}_apply_{tag}.jsonl"):
         per[r["iid"]][r["sample"]] = r
     return per
-CFG = {"qwen38": ("data/qwen38/apply_qwen38", "qwen3.8-27b"), "gemma26": ("data/gemma_sweep/apply_gemma26", "gemma-4-26b-a4b-it")}
+CFG = {"qwen38": ("data/qwen38/apply_qwen38", "qwen3.8-27b"), "gemma26": ("data/gemma_sweep/apply_gemma26", "gemma-4-26b-a4b-it"),
+       "gemini31": ("data/gemini_sweep/apply", "gemini-3.1-flash-lite"), "gemini35": ("data/gemini_sweep/apply", "gemini-3.5-flash-lite")}
 for m, (path, tag) in CFG.items():
     P, A = draws(path, "plain", tag), draws(path, "argus", tag)
-    T = {r["iid"]: r for r in L(f"data/loop_f_{m}/trajectories.jsonl")}
+    T = {r["iid"]: r for r in L(f"data/loop_{os.environ.get('ARM', 'f').lower()}_{m}/trajectories.jsonl")}
     ids = [i for i in IDS if i in T]
     def ok(arm, i, s):
         r = arm[i].get(s); return bool(r and r["status"] == "applied" and (g := grade(i, r["diff"])) and g["resolved"])
