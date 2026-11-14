@@ -29,6 +29,7 @@ for m, (path, tag) in CFG.items():
     P, A = draws(path, "plain", tag), draws(path, "argus", tag)
     T = {r["iid"]: r for r in L(f"data/loop_{os.environ.get('ARM', 'f').lower()}_{m}/trajectories.jsonl")}
     ids = [i for i in IDS if i in T]
+    if not ids: continue
     def ok(arm, i, s):
         r = arm[i].get(s); return bool(r and r["status"] == "applied" and (g := grade(i, r["diff"])) and g["resolved"])
     out = collections.OrderedDict()

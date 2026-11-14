@@ -18,11 +18,14 @@ ap.add_argument("--model", nargs="+", required=True, choices=["gemma26", "qwen38
 ap.add_argument("--ids", nargs="*")
 ap.add_argument("--out-root", help="parent of the loop_f_<model> output dirs (default: data/)")
 ap.add_argument("--workers", type=int, default=2)
-ap.add_argument("--arm", choices=["F", "P"], default="F", help="F: previous answer not shown (Rev 15). P (Rev 17): the model's previous answer (<=3000 chars) is shown with the test/apply feedback, as in Argus src/swebench/patch_builder.build_repair_prompt")
+ap.add_argument("--rep", type=int, default=0, help="Rev 18 replicate number; >0 gives fresh, separately cached draws and its own output dir")
+ap.add_argument("--temp", type=float, default=1.0, help="temperature of the new calls (attempts 2 and 3); Rev 18 greedy check uses 0")
+ap.add_argument("--arm", choices=["F", "P", "R"], default="F", help="F: previous answer not shown (Rev 15). P (Rev 17): the model's previous answer (<=3000 chars) is shown with the test/apply feedback, as in Argus src/swebench/patch_builder.build_repair_prompt")
 ap.add_argument("--max-turns", type=int, default=3)
 ap.add_argument("--cap-usd", type=float, default=6.0, help="stop issuing paid Gemini calls once estimated new spend reaches this")
 ap.add_argument("--also-grade", help="group whose stored patches (apply_<group>/ files, prepared by grade_new_runs.py) are graded in the SAME image pulls, e.g. qwen38")
 args = ap.parse_args()
+assert not (args.arm == "R" and not args.rep), "arm R needs --rep >= 1 (otherwise attempts 2 and 3 would share one cached call)"
 CFGS = dict(
     gemma26=dict(api="gemma-4-26b-a4b-it", raw=os.path.join("data", "gemma_sweep", "raw.jsonl"), raw_model="google/gemma-4-26b-a4b-it", backend="google", max_out=16000),
     qwen38=dict(api="qwen/qwen3.8-27b", raw=os.path.join("data", "qwen38", "raw.jsonl"), raw_model="qwen/qwen3.8-27b", backend="groq", max_out=4000),
@@ -38,7 +41,7 @@ import harness.dockergrade as DG  # chdir + stdout redirect happen here; use DG.
 
 ENV = r"C:\coding\Argus\.env"
 TASKS = r"C:\coding\Argus-research-archive\data\swe_bench_verified_tasks.jsonl"
-TEMP, PROMPT_BUDGET, EXCERPT = 1.0, 6000, 2000
+TEMP, PROMPT_BUDGET, EXCERPT = args.temp, 6000, 2000
 IDS = args.ids or json.load(open(os.path.join(ROOT, "data", "gemini_sweep", "task_ids_full.json")))["ids"]
 man = json.load(open(os.path.join(ROOT, "manifests", "pilot100_manifest.json"), encoding="utf-8"))
 meta = {t["instance_id"]: t for t in man["primary"] + man["reserve"]}
@@ -90,7 +93,7 @@ API = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 
 M = {}  # per-model state
 for m in args.model:
-    out_dir = os.path.abspath(os.path.join(args.out_root or os.path.join(ROOT, "data"), ("loop_f_" if args.arm == "F" else "loop_p_") + m))
+    out_dir = os.path.abspath(os.path.join(args.out_root or os.path.join(ROOT, "data"), "loop_" + args.arm.lower() + (f"_rep{args.rep}" if args.rep else "") + (f"_t{args.temp:g}" if args.temp != 1.0 else "") + "_" + m))
     os.makedirs(out_dir, exist_ok=True)
     draws = {}
     for r in load(os.path.join(ROOT, CFGS[m]["raw"])):
@@ -120,9 +123,10 @@ def google_chat(body):
     return last
 
 
-def call_model(m, body):
+def call_model(m, body, nonce=""):
     st = M[m]
-    ck = hashlib.sha256(json.dumps(body, sort_keys=True).encode()).hexdigest()[:20]
+    # nonce (never sent to the API) separates the cache entries of independent unseeded draws, as in run_blind.py
+    ck = hashlib.sha256((json.dumps(body, sort_keys=True) + nonce).encode()).hexdigest()[:20]
     with lock:
         c = st["calls"].get(ck)
     if c and c.get("http") == 200:
@@ -201,8 +205,8 @@ def feedback_for(ap_res, grade, test_text):
 
 
 def prompt_with_feedback(base_user, turn, feedback, prev=None):
-    if not feedback:
-        return base_user
+    if not feedback or args.arm == "R":
+        return base_user  # arm R (Rev 18): a fresh independent re-draw, no information about the failure
     if args.arm == "P":
         return (base_user + f"\n\n## Previous Attempt (FAILED) (turn {turn - 1} of {args.max_turns})\n```\n{(prev or '')[:3000]}\n```\n\n"
                 f"## Result of the previous attempt\n{feedback}\n\n"
@@ -276,7 +280,7 @@ def run_loop(plan, iid, t, target, base_msgs, memo, t0):
         body = {"model": cfg["api"], "messages": msgs, "temperature": TEMP, "max_completion_tokens": cfg["max_out"]}
         if cfg["backend"] == "groq":
             body["reasoning_effort"] = "none"; body["seed"] = 6000 + turn
-        rec = call_model(m, body)
+        rec = call_model(m, body, f"{args.arm}-rep{args.rep}-turn{turn}" if args.rep else "")
         tr = dict(turn=turn, source="new_call", http=rec["http"], feedback_in=fb)
         if rec["http"] != 200:
             tr.update(state="api_error", error=rec.get("error")); atts.append(tr); break
