@@ -8,7 +8,7 @@ Resumable (one JSON line per finished task; model calls cached by request hash).
 
   python -X utf8 scripts/run_blind.py --ids astropy__astropy-12907 --out-dir data/blind_smoke
 """
-import argparse, hashlib, json, os, re, sys, threading, time, datetime, concurrent.futures as cf
+import argparse, hashlib, json, os, re, sys, threading, time, datetime, urllib.request, urllib.error, concurrent.futures as cf
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 ap = argparse.ArgumentParser()
@@ -29,9 +29,10 @@ import harness.dockergrade as DG  # chdir + stdout redirect happen here; use DG.
 
 ENV = r"C:\coding\Argus\.env"
 TASKS = r"C:\coding\Argus-research-archive\data\swe_bench_verified_tasks.jsonl"
-MODELS = ["openai/gpt-oss-20b", "openai/gpt-oss-120b"]
+MODELS = ["openai/gpt-oss-20b", "openai/gpt-oss-120b"] + ([] if os.environ.get("ARGUS_NO_GEMMA") else ["google/gemma-4-26b-a4b-it"])  # Revision 16: Gemma 26B added as EXPLORATORY arms in the same image pull
+GEMMA = "google/gemma-4-26b-a4b-it"
 EFFORT, TEMP, MAX_OUT, PROMPT_BUDGET, EXCERPT = "medium", 1.0, 8000, 6000, 2000
-PRICE = {"openai/gpt-oss-20b": (0.075, 0.30), "openai/gpt-oss-120b": (0.15, 0.60)}
+PRICE = {"openai/gpt-oss-20b": (0.075, 0.30), "openai/gpt-oss-120b": (0.15, 0.60), GEMMA: (0.0, 0.0)}
 
 ids = args.ids or json.load(open(os.path.join(ROOT, "manifests", "blind200_manifest.json"), encoding="utf-8"))["ids"]
 if args.limit:
@@ -41,6 +42,34 @@ for l in open(TASKS, encoding="utf-8"):
     d = json.loads(l); full[d["instance_id"]] = d
 
 pool = KeyPool(ENV)
+gkey = None
+if GEMMA in MODELS:
+    for _l in open(ENV, encoding="utf-8", errors="replace"):
+        _m = re.match(r"\s*GOOGLE_API_KEY\s*=\s*(.*)", _l)
+        if _m:
+            gkey = _m.group(1).strip().strip("\"'")
+    assert gkey, "GOOGLE_API_KEY missing"
+GAPI = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+
+
+def google_chat(body):
+    last = None
+    for attempt in range(1, 7):
+        req = urllib.request.Request(GAPI, data=json.dumps(body).encode(), headers={"Authorization": "Bearer " + gkey, "Content-Type": "application/json", "User-Agent": "argus-research-pilot50"})
+        t0 = time.time()
+        try:
+            with urllib.request.urlopen(req, timeout=600) as r:
+                return dict(status=200, data=json.loads(r.read()), latency_s=round(time.time() - t0, 2), tries=attempt)
+        except urllib.error.HTTPError as e:
+            raw = e.read().decode("utf-8", "replace")
+            last = dict(status=e.code, error=raw[:300].replace(gkey, "<key>"), latency_s=round(time.time() - t0, 2), tries=attempt)
+            if e.code in (429, 500, 502, 503, 504):
+                time.sleep(min(10 * attempt, 60)); continue
+            return last
+        except Exception as e:
+            last = dict(status=-1, error=str(e)[:200], latency_s=round(time.time() - t0, 2), tries=attempt)
+            time.sleep(5 * attempt)
+    return last
 lock = threading.Lock()
 CALLS = os.path.join(OUT, "calls.jsonl")
 TRAJ = os.path.join(OUT, "trajectories.jsonl")
@@ -65,14 +94,15 @@ def gold_file(t):
     return fs[0]
 
 
-def call_model(body):
-    key = hashlib.sha256(json.dumps(body, sort_keys=True).encode()).hexdigest()[:20]
+def call_model(body, nonce=None):
+    # nonce only separates cache entries of unseeded Gemma draws; it is never sent to the API
+    key = hashlib.sha256(json.dumps([body, nonce] if nonce else body, sort_keys=True).encode()).hexdigest()[:20]
     with lock:
         c = calls.get(key)
     if c and c.get("http") == 200:
         return c
-    res = pool.chat(body)
-    rec = dict(key=key, http=res["status"], tries=res.get("tries"), latency_s=res.get("latency_s"), model=body["model"], effort=body["reasoning_effort"])
+    res = google_chat(body) if body["model"] == "gemma-4-26b-a4b-it" else pool.chat(body)
+    rec = dict(key=key, http=res["status"], tries=res.get("tries"), latency_s=res.get("latency_s"), model=body["model"], effort=body.get("reasoning_effort"))
     if res["status"] == 200:
         d = res["data"]; m = d["choices"][0]["message"]; u = d.get("usage", {})
         rec.update(content=m.get("content"), finish=d["choices"][0].get("finish_reason"), prompt_tokens=u.get("prompt_tokens"),
@@ -177,8 +207,12 @@ def run_task(iid):
 
         def attempt(model, seed, feedback, turn):
             msgs = [base_msgs[0], dict(role="user", content=prompt_with_feedback(base_msgs[1]["content"], turn, feedback))]
-            body = {"model": model, "messages": msgs, "temperature": TEMP, "max_completion_tokens": MAX_OUT, "reasoning_effort": EFFORT, "seed": seed}
-            rec = call_model(body)
+            if model == GEMMA:  # as the Gemma sweep and Revision 15: no reasoning parameter, no seed, 16,000 output tokens
+                body = {"model": "gemma-4-26b-a4b-it", "messages": msgs, "temperature": TEMP, "max_completion_tokens": 16000}
+                rec = call_model(body, nonce=seed)
+            else:
+                body = {"model": model, "messages": msgs, "temperature": TEMP, "max_completion_tokens": MAX_OUT, "reasoning_effort": EFFORT, "seed": seed}
+                rec = call_model(body)
             tr = dict(turn=turn, seed=seed, http=rec["http"], feedback_in=feedback)
             if rec["http"] != 200:
                 tr.update(error=rec.get("error"), state="api_error", cost_usd=0)

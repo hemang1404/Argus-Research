@@ -14,16 +14,20 @@ import argparse, hashlib, json, os, re, sys, threading, time, datetime, urllib.r
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 ap = argparse.ArgumentParser()
-ap.add_argument("--model", nargs="+", required=True, choices=["gemma26", "qwen38"])
+ap.add_argument("--model", nargs="+", required=True, choices=["gemma26", "qwen38", "gemini31", "gemini35"])
 ap.add_argument("--ids", nargs="*")
 ap.add_argument("--out-root", help="parent of the loop_f_<model> output dirs (default: data/)")
 ap.add_argument("--workers", type=int, default=2)
 ap.add_argument("--max-turns", type=int, default=3)
+ap.add_argument("--cap-usd", type=float, default=6.0, help="stop issuing paid Gemini calls once estimated new spend reaches this")
 ap.add_argument("--also-grade", help="group whose stored patches (apply_<group>/ files, prepared by grade_new_runs.py) are graded in the SAME image pulls, e.g. qwen38")
 args = ap.parse_args()
 CFGS = dict(
     gemma26=dict(api="gemma-4-26b-a4b-it", raw=os.path.join("data", "gemma_sweep", "raw.jsonl"), raw_model="google/gemma-4-26b-a4b-it", backend="google", max_out=16000),
-    qwen38=dict(api="qwen/qwen3.8-27b", raw=os.path.join("data", "qwen38", "raw.jsonl"), raw_model="qwen/qwen3.8-27b", backend="groq", max_out=4000))
+    qwen38=dict(api="qwen/qwen3.8-27b", raw=os.path.join("data", "qwen38", "raw.jsonl"), raw_model="qwen/qwen3.8-27b", backend="groq", max_out=4000),
+    gemini31=dict(api="gemini-3.1-flash-lite", raw=os.path.join("data", "gemini_sweep", "raw.jsonl"), raw_model="google/gemini-3.1-flash-lite", backend="google", max_out=16000, price=(0.25, 1.50)),
+    gemini35=dict(api="gemini-3.5-flash-lite", raw=os.path.join("data", "gemini_sweep", "raw.jsonl"), raw_model="google/gemini-3.5-flash-lite", backend="google", max_out=16000, price=(0.30, 2.50)))
+SPENT = dict(usd=0.0)
 
 from harness.keypool import KeyPool
 from harness.context import fetch_source, build_file_context, ntok
@@ -122,6 +126,8 @@ def call_model(m, body):
         c = st["calls"].get(ck)
     if c and c.get("http") == 200:
         return c
+    if st["cfg"].get("price") and SPENT["usd"] >= args.cap_usd:
+        return dict(key=ck, http=-2, error="spend cap reached (not cached)", model=body["model"])
     res = google_chat(body) if st["cfg"]["backend"] == "google" else pool.chat(body)
     rec = dict(key=ck, http=res["status"], tries=res.get("tries"), latency_s=res.get("latency_s"), model=body["model"])
     if res["status"] == 200:
@@ -130,6 +136,12 @@ def call_model(m, body):
                    usage_raw=u if st["cfg"]["backend"] == "google" else None, served_model=d.get("model"))
     else:
         rec["error"] = str(res.get("error"))[:300]
+    if st["cfg"].get("price") and res["status"] == 200:
+        u = rec.get("usage_raw") or {}
+        out_t = (u["total_tokens"] - u["prompt_tokens"]) if u.get("total_tokens") and u.get("prompt_tokens") else (rec.get("completion_tokens") or 0)
+        rec["cost_usd"] = round(((rec.get("prompt_tokens") or 0) * st["cfg"]["price"][0] + out_t * st["cfg"]["price"][1]) / 1e6, 6)
+        with lock:
+            SPENT["usd"] += rec["cost_usd"]
     with lock:
         st["calls"][ck] = rec
         open(st["paths"]["calls"], "a", encoding="utf-8").write(json.dumps(rec) + "\n")
