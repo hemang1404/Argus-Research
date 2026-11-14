@@ -21,11 +21,16 @@ ap.add_argument("--workers", type=int, default=2)
 ap.add_argument("--rep", type=int, default=0, help="Rev 18 replicate number; >0 gives fresh, separately cached draws and its own output dir")
 ap.add_argument("--temp", type=float, default=1.0, help="temperature of the new calls (attempts 2 and 3); Rev 18 greedy check uses 0")
 ap.add_argument("--arm", choices=["F", "P", "R"], default="F", help="F: previous answer not shown (Rev 15). P (Rev 17): the model's previous answer (<=3000 chars) is shown with the test/apply feedback, as in Argus src/swebench/patch_builder.build_repair_prompt")
+ap.add_argument("--specs", nargs="*", help="Rev 18 batch mode: several arm specs ARM:REP:TEMP (e.g. R:1:1 F:1:1 P:1:1 F:0:0 P:0:0) run against ONE image pull per task")
 ap.add_argument("--max-turns", type=int, default=3)
 ap.add_argument("--cap-usd", type=float, default=6.0, help="stop issuing paid Gemini calls once estimated new spend reaches this")
 ap.add_argument("--also-grade", help="group whose stored patches (apply_<group>/ files, prepared by grade_new_runs.py) are graded in the SAME image pulls, e.g. qwen38")
 args = ap.parse_args()
-assert not (args.arm == "R" and not args.rep), "arm R needs --rep >= 1 (otherwise attempts 2 and 3 would share one cached call)"
+SPECS = [tuple(x.split(":")) for x in args.specs] if args.specs else [(args.arm, str(args.rep), str(args.temp))]
+SPECS = [(a, int(r), float(t)) for a, r, t in SPECS]
+for _a, _r, _t in SPECS:
+    assert _a in ("F", "P", "R"), _a
+    assert not (_a == "R" and not _r), "arm R needs rep >= 1 (otherwise attempts 2 and 3 would share one cached call)"
 CFGS = dict(
     gemma26=dict(api="gemma-4-26b-a4b-it", raw=os.path.join("data", "gemma_sweep", "raw.jsonl"), raw_model="google/gemma-4-26b-a4b-it", backend="google", max_out=16000),
     qwen38=dict(api="qwen/qwen3.8-27b", raw=os.path.join("data", "qwen38", "raw.jsonl"), raw_model="qwen/qwen3.8-27b", backend="groq", max_out=4000),
@@ -80,7 +85,7 @@ if args.also_grade:
     print(f"{sum(len(v) for v in EXTRA.values())} patches of {args.also_grade} over {len(EXTRA)} tasks to grade in the same pulls", flush=True)
 
 key, pool = None, None
-if any(CFGS[m]["backend"] == "google" for m in args.model):
+if any(CFGS[m]["backend"] == "google" for m in args.model):  # (key is read once; never printed)
     for l in open(ENV, encoding="utf-8", errors="replace"):
         mm = re.match(r"\s*GOOGLE_API_KEY\s*=\s*(.*)", l)
         if mm:
@@ -91,16 +96,22 @@ if any(CFGS[m]["backend"] == "groq" for m in args.model):
 lock = threading.Lock()
 API = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 
-M = {}  # per-model state
+M = {}  # per (model, arm, replicate, temperature) state; key "model|arm|rep|temp"
+_DRAWS = {}
 for m in args.model:
-    out_dir = os.path.abspath(os.path.join(args.out_root or os.path.join(ROOT, "data"), "loop_" + args.arm.lower() + (f"_rep{args.rep}" if args.rep else "") + (f"_t{args.temp:g}" if args.temp != 1.0 else "") + "_" + m))
-    os.makedirs(out_dir, exist_ok=True)
     draws = {}
     for r in load(os.path.join(ROOT, CFGS[m]["raw"])):
         if r["model"] == CFGS[m]["raw_model"] and r.get("http") == 200:
             draws.setdefault(r["iid"], {})[r.get("sample", 0)] = r
-    paths = {n: os.path.join(out_dir, n + ".jsonl") for n in ("calls", "trajectories", "pull_failures")}
-    M[m] = dict(cfg=CFGS[m], draws=draws, paths=paths, calls={r["key"]: r for r in load(paths["calls"])}, done={r["iid"] for r in load(paths["trajectories"])})
+    _DRAWS[m] = draws
+for _arm, _rep, _temp in SPECS:
+    for m in args.model:
+        out_dir = os.path.abspath(os.path.join(args.out_root or os.path.join(ROOT, "data"), "loop_" + _arm.lower() + (f"_rep{_rep}" if _rep else "") + (f"_t{_temp:g}" if _temp != 1.0 else "") + "_" + m))
+        os.makedirs(out_dir, exist_ok=True)
+        paths = {n: os.path.join(out_dir, n + ".jsonl") for n in ("calls", "trajectories", "pull_failures")}
+        M[f"{m}|{_arm}|{_rep}|{_temp:g}"] = dict(m=m, arm=_arm, rep=_rep, temp=_temp, cfg=CFGS[m], draws=_DRAWS[m], paths=paths,
+                                                calls={r["key"]: r for r in load(paths["calls"])}, done={r["iid"] for r in load(paths["trajectories"])})
+KEYS = list(M)
 
 
 def google_chat(body):
@@ -204,10 +215,10 @@ def feedback_for(ap_res, grade, test_text):
     return f"{head}\n```\n{ex}\n```"
 
 
-def prompt_with_feedback(base_user, turn, feedback, prev=None):
-    if not feedback or args.arm == "R":
+def prompt_with_feedback(base_user, turn, feedback, prev=None, arm="F"):
+    if not feedback or arm == "R":
         return base_user  # arm R (Rev 18): a fresh independent re-draw, no information about the failure
-    if args.arm == "P":
+    if arm == "P":
         return (base_user + f"\n\n## Previous Attempt (FAILED) (turn {turn - 1} of {args.max_turns})\n```\n{(prev or '')[:3000]}\n```\n\n"
                 f"## Result of the previous attempt\n{feedback}\n\n"
                 "The file shown above is the original, unmodified file. Write corrected SEARCH/REPLACE block(s) against it. "
@@ -235,7 +246,7 @@ def plan_model(m, iid, t, target):
     d0 = st["draws"].get(iid, {}).get(0)
     if d0 is None:
         return dict(m=m, skipped="draw0_missing")
-    out = dict(iid=iid, target_file=target, prompt_hash=prompt_hash(), model=m, ts=datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"))
+    out = dict(iid=iid, target_file=target, prompt_hash=prompt_hash(), model=st["m"], spec=m, ts=datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"))
     ap1 = apply_output(t["repo"], t["base_commit"], target, d0.get("content"), d0.get("finish"))
     g1, h1 = None, None
     if ap1["status"] == "applied":
@@ -257,7 +268,7 @@ def finish_accepted(plan, t0, docker_used):
 
 def run_loop(plan, iid, t, target, base_msgs, memo, t0):
     m, out, ap1, g1, h1, tr1 = plan["m"], plan["out"], plan["ap1"], plan["g1"], plan["h1"], plan["tr1"]
-    cfg = M[m]["cfg"]
+    cfg = M[m]["cfg"]; arm, rp, temp = M[m]["arm"], M[m]["rep"], M[m]["temp"]
     grade, test_text = None, ""
     if ap1["status"] == "applied":
         if h1 in memo:
@@ -276,11 +287,11 @@ def run_loop(plan, iid, t, target, base_msgs, memo, t0):
     prev = plan["prev"]
     while atts[-1]["state"] == "continue" and turn < args.max_turns:
         turn += 1
-        msgs = [base_msgs[0], dict(role="user", content=prompt_with_feedback(base_msgs[1]["content"], turn, fb, prev))]
-        body = {"model": cfg["api"], "messages": msgs, "temperature": TEMP, "max_completion_tokens": cfg["max_out"]}
+        msgs = [base_msgs[0], dict(role="user", content=prompt_with_feedback(base_msgs[1]["content"], turn, fb, prev, arm))]
+        body = {"model": cfg["api"], "messages": msgs, "temperature": temp, "max_completion_tokens": cfg["max_out"]}
         if cfg["backend"] == "groq":
             body["reasoning_effort"] = "none"; body["seed"] = 6000 + turn
-        rec = call_model(m, body, f"{args.arm}-rep{args.rep}-turn{turn}" if args.rep else "")
+        rec = call_model(m, body, f"{arm}-rep{rp}-turn{turn}" if rp else "")
         tr = dict(turn=turn, source="new_call", http=rec["http"], feedback_in=fb)
         if rec["http"] != 200:
             tr.update(state="api_error", error=rec.get("error")); atts.append(tr); break
@@ -309,7 +320,7 @@ def run_loop(plan, iid, t, target, base_msgs, memo, t0):
 def run_task(iid):
     t0 = time.time()
     t = full[iid]; target = meta[iid]["gold_file"]
-    plans = [p for p in (plan_model(m, iid, t, target) for m in args.model) if p is not None]
+    plans = [p for p in (plan_model(m, iid, t, target) for m in KEYS) if p is not None]
     skipped = [p["m"] for p in plans if p.get("skipped")]
     plans = [p for p in plans if not p.get("skipped")]
     pending = [p for p in plans if p["tr1"]["state"] in ("continue", "unknown")]
@@ -352,8 +363,8 @@ def run_task(iid):
         DG.cleanup(iid)
 
 
-todo = [i for i in IDS if any(i not in M[m]["done"] for m in args.model)]
-DG.say(f"models {args.model}; {len(todo)} tasks to run; prompt_hash={prompt_hash()}")
+todo = [i for i in IDS if any(i not in M[m]["done"] for m in KEYS)]
+DG.say(f"models {args.model}; specs {SPECS}; {len(todo)} tasks to run; prompt_hash={prompt_hash()}")
 n = 0
 with cf.ThreadPoolExecutor(args.workers) as ex:
     futs = {ex.submit(run_task, i): i for i in todo}
