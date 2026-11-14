@@ -75,6 +75,8 @@ CALLS = os.path.join(OUT, "calls.jsonl")
 TRAJ = os.path.join(OUT, "trajectories.jsonl")
 PULLFAIL = os.path.join(OUT, "pull_failures.jsonl")
 calls = {}
+KLOCKS, HLOCKS = {}, {}
+GRADE_SEM = threading.Semaphore(4)  # at most 4 harness containers at once from this process
 if os.path.exists(CALLS):
     for l in open(CALLS, encoding="utf-8"):
         r = json.loads(l); calls[r["key"]] = r
@@ -97,6 +99,13 @@ def gold_file(t):
 def call_model(body, nonce=None):
     # nonce only separates cache entries of unseeded Gemma draws; it is never sent to the API
     key = hashlib.sha256(json.dumps([body, nonce] if nonce else body, sort_keys=True).encode()).hexdigest()[:20]
+    with lock:
+        klock = KLOCKS.setdefault(key, threading.Lock())
+    with klock:  # identical requests issued by the R and F arms at the same time are made once (attempt 1 is shared)
+        return _call_model(body, nonce, key)
+
+
+def _call_model(body, nonce, key):
     with lock:
         c = calls.get(key)
     if c and c.get("http") == 200:
@@ -226,11 +235,16 @@ def run_task(iid):
             grade, test_text = None, ""
             if ap_res["status"] == "applied":
                 h = sha(ap_res["diff"]); tr["patch_hash"] = h
-                if h in st["memo"]:
-                    grade, test_text = st["memo"][h]
-                else:
-                    grade, test_text = DG.grade_one(iid, h, ap_res["diff"]); tr["graded_fresh"] = True
-                    st["memo"][h] = (grade, test_text)
+                with lock:
+                    hl = HLOCKS.setdefault((iid, h), threading.Lock())
+                with hl:
+                    if h in st["memo"]:
+                        grade, test_text = st["memo"][h]
+                    else:
+                        with GRADE_SEM:
+                            grade, test_text = DG.grade_one(iid, h, ap_res["diff"])
+                        tr["graded_fresh"] = True
+                        st["memo"][h] = (grade, test_text)
                 tr["grade"] = {k: v for k, v in grade.items() if k not in ("log_text",)}
                 if grade.get("resolved") is None:
                     tr["state"] = "grade_error"
@@ -239,24 +253,34 @@ def run_task(iid):
             return tr, feedback_for(ap_res, grade or {}, test_text)
 
         out["models"] = {}
+
+        def run_arm(model, arm):
+            trs = []
+            if arm == "R":
+                for d in range(args.max_turns):
+                    tr, _ = attempt(model, 5000 + d, None, d + 1)
+                    trs.append(tr)
+                    if tr["state"] != "continue":
+                        break
+            else:
+                tr, fb = attempt(model, 5000, None, 1)
+                trs.append(tr)
+                turn = 1
+                while trs[-1]["state"] == "continue" and turn < args.max_turns:
+                    turn += 1
+                    tr, nfb = attempt(model, 6000 + turn, fb, turn)
+                    tr["feedback_out"] = nfb
+                    trs.append(tr)
+                    fb = nfb
+            return trs
+
+        with cf.ThreadPoolExecutor(2 * len(MODELS)) as aex:  # Revision 16: the six (model, arm) chains of one task run concurrently; results are identical to the sequential order
+            jobs = {(m, a): aex.submit(run_arm, m, a) for m in MODELS for a in ("R", "F")}
+            armres = {k: f.result() for k, f in jobs.items()}
         for model in MODELS:
-            arms = {"R": [], "F": []}
-            for d in range(args.max_turns):
-                tr, _ = attempt(model, 5000 + d, None, d + 1)
-                arms["R"].append(tr)
-                if tr["state"] != "continue":
-                    break
-            tr, fb = attempt(model, 5000, None, 1)
-            arms["F"].append(tr)
-            turn = 1
-            while arms["F"][-1]["state"] == "continue" and turn < args.max_turns:
-                turn += 1
-                tr, nfb = attempt(model, 6000 + turn, fb, turn)
-                tr["feedback_out"] = nfb
-                arms["F"].append(tr)
-                fb = nfb
             res = {}
-            for a, trs in arms.items():
+            for a in ("R", "F"):
+                trs = armres[(model, a)]
                 last = trs[-1]
                 res[a] = dict(attempts=trs, n=len(trs), stop=last["state"], solved=last["state"] == "accepted_resolved", cost_usd=round(sum(x.get("cost_usd", 0) for x in trs), 6))
             out["models"][model.split("/")[-1]] = res
