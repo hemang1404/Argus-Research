@@ -15,7 +15,7 @@ Reference arms: R and F from Revision 7 (120B) and Revision 9 (20B); Gemma F fro
 - 20B F-R is +8.0 (CI +2, +14), consistent with the blind run (+6.6).
 - Cost per solve: 20B F $0.0049, 20B P $0.0050, 120B R $0.0054, 120B F $0.0058, 120B P $0.0061 (Gemma has no list cost here).
 - Losses: 20B had 1 P grade_error and 1 F api_error; Gemma had 4 P and 7 F api_error. Without them the differences change by less than 1 point (Gemma P-F +6.7, CI 0 to 13.5). The 120B pass logged one grade_error (`sympy__sympy-18698`) that is stored as stop "continue", so the sensitivity filter does not exclude it (one task).
-- Gemma caveats: `django__django-13406` has no Gemma P record (99 of 100), so it is not in the comparison. The Gemma F arm is from an earlier run with its own draws; attempts 2 and 3 are not matched, so P-F mixes the prompt effect with draw noise. Treat +6.1 as a lead.
+- Gemma caveats: `django__django-13406` has no Gemma P or F record (99 of 100): Gemma 26B has no stored draw 0 for it, because the Google endpoint closed the connection without a response on every draw-0 try in the sweep (6 tries each, repeatedly), so attempt 1 does not exist. It is excluded from both arms. The Gemma F arm is from an earlier run with its own draws; attempts 2 and 3 are not matched, so P-F mixes the prompt effect with draw noise. Treat +6.1 as a lead.
 
 Reading: showing the previous patch does not beat feedback alone on either gpt-oss model. Only Gemma shows a hint of a P advantage, with the weakest comparison.
 
