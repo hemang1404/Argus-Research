@@ -1,0 +1,301 @@
+17 keys; 100 tasks to run (0 done); out=C:\coding\Argus-pilot50\data\loop4; prompt_hash=56e5b02fa8ed
+[1/100] astropy__astropy-13579 P: accepted_resolved n=1 $0.0021 0s
+  pulled astropy__astropy-14182 in 114s
+  pulled astropy__astropy-12907 in 118s
+  pulled astropy__astropy-13033 in 127s
+[2/100] astropy__astropy-13033 P: continue n=3 $0.0047 290s
+[3/100] astropy__astropy-14508 P: accepted_resolved n=1 $0.0018 0s
+[4/100] astropy__astropy-14995 P: accepted_resolved n=1 $0.0015 0s
+[5/100] astropy__astropy-8872 P: accepted_regressed n=1 $0.0018 0s
+[6/100] django__django-10880 P: accepted_resolved n=1 $0.0005 0s
+[7/100] astropy__astropy-12907 P: continue n=3 $0.0052 291s
+[8/100] astropy__astropy-14182 P: continue n=3 $0.0034 291s
+[9/100] django__django-11141 P: accepted_regressed n=1 $0.0009 0s
+[10/100] django__django-11790 P: accepted_resolved n=1 $0.0016 0s
+[11/100] django__django-11964 P: accepted_resolved n=1 $0.0007 0s
+[12/100] django__django-12209 P: accepted_resolved n=1 $0.0026 0s
+  pulled django__django-12774 in 94s
+  pulled django__django-11087 in 98s
+  pulled django__django-12039 in 93s
+[13/100] django__django-12039 P: accepted_resolved n=2 $0.0037 136s
+[14/100] django__django-13012 P: accepted_resolved n=1 $0.0016 0s
+[15/100] django__django-11087 P: continue n=3 $0.0045 166s
+[16/100] django__django-12774 P: accepted_resolved n=3 $0.0057 165s
+[17/100] django__django-13810 P: accepted_resolved n=1 $0.0015 0s
+[18/100] django__django-13933 P: accepted_resolved n=1 $0.0013 0s
+[19/100] django__django-13551 P: continue n=3 $0.0030 9s
+  pulled django__django-13406 in 41s
+[20/100] django__django-13406 P: continue n=3 $0.0061 82s
+[21/100] django__django-14238 P: accepted_resolved n=1 $0.0017 0s
+[22/100] django__django-14434 P: continue n=3 $0.0058 9s
+  pulled django__django-14034 in 84s
+  pulled django__django-14017 in 108s
+  pulled django__django-14534 in 52s
+[23/100] django__django-14534 P: accepted_resolved n=2 $0.0015 83s
+[24/100] django__django-14017 P: accepted_resolved n=3 $0.0038 148s
+[25/100] django__django-14034 P: continue n=3 $0.0058 167s
+[26/100] django__django-15161 P: continue n=3 $0.0051 7s
+  pulled django__django-14771 in 44s
+  pulled django__django-15128 in 44s
+[27/100] django__django-15280 P: continue n=3 $0.0088 17s
+  pulled django__django-15315 in 11s
+[28/100] django__django-15315 P: continue n=3 $0.0050 48s
+[29/100] django__django-14771 P: continue n=3 $0.0070 112s
+[30/100] django__django-15128 P: continue n=3 $0.0068 111s
+[31/100] django__django-16116 P: accepted_resolved n=1 $0.0011 0s
+[32/100] django__django-16485 P: accepted_resolved n=1 $0.0025 0s
+[33/100] django__django-16595 P: accepted_resolved n=1 $0.0011 0s
+  pulled django__django-15382 in 12s
+  pulled django__django-15930 in 12s
+[34/100] django__django-15930 P: accepted_resolved n=2 $0.0042 47s
+  pulled django__django-16642 in 40s
+  pulled django__django-16877 in 12s
+[35/100] django__django-15382 P: accepted_regressed n=3 $0.0075 82s
+[36/100] matplotlib__matplotlib-13989 P: continue n=3 $0.0069 18s
+[37/100] matplotlib__matplotlib-20488 P: accepted_resolved n=1 $0.0014 0s
+[38/100] django__django-16877 P: continue n=3 $0.0046 44s
+[39/100] matplotlib__matplotlib-20676 P: continue n=3 $0.0063 17s
+[40/100] django__django-16642 P: continue n=3 $0.0095 123s
+  pulled matplotlib__matplotlib-24637 in 471s
+  pulled matplotlib__matplotlib-24570 in 492s
+  pulled matplotlib__matplotlib-23412 in 490s
+[41/100] matplotlib__matplotlib-23412 P: accepted_regressed n=2 $0.0060 565s
+[42/100] matplotlib__matplotlib-24970 P: accepted_resolved n=1 $0.0018 0s
+[43/100] matplotlib__matplotlib-24570 P: accepted_resolved n=2 $0.0048 585s
+[44/100] matplotlib__matplotlib-24637 P: accepted_resolved n=3 $0.0049 583s
+[45/100] psf__requests-2931 P: accepted_regressed n=1 $0.0015 0s
+17 keys; 55 tasks to run (45 done); out=C:\coding\Argus-pilot50\data\loop4; prompt_hash=56e5b02fa8ed
+  pulled psf__requests-6028 in 55s
+[1/55] psf__requests-6028 P: continue n=3 $0.0050 355s
+[2/55] pydata__xarray-3151 P: accepted_resolved n=1 $0.0016 0s
+  pulled matplotlib__matplotlib-25960 in 655s
+  pulled matplotlib__matplotlib-25311 in 706s
+[3/55] matplotlib__matplotlib-25311 P: accepted_resolved n=2 $0.0036 793s
+[4/55] pydata__xarray-4356 P: accepted_resolved n=1 $0.0009 0s
+[5/55] pydata__xarray-4966 P: accepted_resolved n=1 $0.0015 0s
+[6/55] pydata__xarray-4094 P: accepted_resolved n=1 $0.0013 516s
+[7/55] pylint-dev__pylint-7277 P: accepted_resolved n=1 $0.0004 0s
+  pulled pytest-dev__pytest-10051 in 30s
+[8/55] matplotlib__matplotlib-25960 P: continue n=3 $0.0074 1164s
+[9/55] pytest-dev__pytest-10051 P: continue n=3 $0.0052 294s
+[10/55] pytest-dev__pytest-5809 P: accepted_resolved n=1 $0.0004 2s
+[11/55] pytest-dev__pytest-5262 P: accepted_resolved n=1 $0.0014 6s
+[12/55] pytest-dev__pytest-7521 P: continue n=3 $0.0048 33s
+[13/55] scikit-learn__scikit-learn-10844 P: accepted_resolved n=1 $0.0014 2s
+  pulled pytest-dev__pytest-6197 in 81s
+  pulled pydata__xarray-6721 in 133s
+[14/55] pydata__xarray-6721 P: accepted_resolved n=1 $0.0013 583s
+[15/55] pytest-dev__pytest-6197 P: accepted_regressed n=2 $0.0036 1283s
+[16/55] scikit-learn__scikit-learn-13496 P: accepted_resolved n=1 $0.0012 0s
+[17/55] scikit-learn__scikit-learn-14053 P: accepted_resolved n=1 $0.0014 171s
+[18/55] scikit-learn__scikit-learn-12973 P: continue n=3 $0.0055 1287s
+[19/55] scikit-learn__scikit-learn-14894 P: accepted_resolved n=1 $0.0018 0s
+  pulled scikit-learn__scikit-learn-14983 in 124s
+  pulled scikit-learn__scikit-learn-14710 in 181s
+[20/55] scikit-learn__scikit-learn-14983 P: accepted_resolved n=2 $0.0041 211s
+[21/55] scikit-learn__scikit-learn-25973 P: accepted_regressed n=1 $0.0013 0s
+[22/55] scikit-learn__scikit-learn-14710 P: accepted_resolved n=2 $0.0040 283s
+  pulled sphinx-doc__sphinx-10435 in 34s
+  pulled sphinx-doc__sphinx-10466 in 8s
+[23/55] sphinx-doc__sphinx-10435 P: continue n=3 $0.0052 121s
+[24/55] sphinx-doc__sphinx-10466 P: accepted_resolved n=1 $0.0009 107s
+[25/55] sphinx-doc__sphinx-11445 P: accepted_resolved n=1 $0.0008 0s
+  pulled sphinx-doc__sphinx-10614 in 40s
+  pulled sphinx-doc__sphinx-8459 in 43s
+[26/55] sphinx-doc__sphinx-8459 P: continue n=3 $0.0052 236s
+  pulled sphinx-doc__sphinx-9230 in 36s
+[27/55] sphinx-doc__sphinx-9230 P: accepted_resolved n=2 $0.0022 64s
+  pulled sphinx-doc__sphinx-9258 in 35s
+[28/55] sphinx-doc__sphinx-10614 P: continue n=3 $0.0063 628s
+[29/55] scikit-learn__scikit-learn-11578 P: accepted_resolved n=1 $0.0010 2482s
+[30/55] sphinx-doc__sphinx-9658 P: accepted_resolved n=1 $0.0015 31s
+  pulled sphinx-doc__sphinx-9698 in 7s
+[31/55] sphinx-doc__sphinx-9281 P: accepted_resolved n=1 $0.0014 257s
+[32/55] sphinx-doc__sphinx-9711 P: accepted_resolved n=1 $0.0009 0s
+[33/55] sympy__sympy-11618 P: accepted_resolved n=1 $0.0018 3s
+[34/55] sympy__sympy-12481 P: accepted_resolved n=1 $0.0013 0s
+[35/55] sympy__sympy-13480 P: accepted_resolved n=1 $0.0012 0s
+  pulled sympy__sympy-13551 in 34s
+[36/55] sympy__sympy-13551 P: accepted_regressed n=2 $0.0034 71s
+  pulled sympy__sympy-13798 in 31s
+[37/55] sphinx-doc__sphinx-9698 P: continue n=3 $0.0063 351s
+  pulled sympy__sympy-14531 in 33s
+[38/55] sympy__sympy-14531 P: accepted_resolved n=2 $0.0051 69s
+[39/55] sympy__sympy-14711 P: accepted_resolved n=1 $0.0019 0s
+  pulled sympy__sympy-15017 in 33s
+[40/55] sympy__sympy-15017 P: continue n=3 $0.0028 105s
+  pulled sympy__sympy-15875 in 33s
+[41/55] sympy__sympy-13798 P: continue n=3 $0.0051 358s
+[42/55] sympy__sympy-15875 P: continue n=3 $0.0100 414s
+[43/55] sympy__sympy-16450 P: continue n=3 $0.0041 809s
+[44/55] sphinx-doc__sphinx-9258 P: continue n=3 $0.0071 1828s
+  pulled sympy__sympy-17139 in 68s
+  pulled sympy__sympy-17655 in 11s
+[45/55] sympy__sympy-17139 P: accepted_resolved n=3 $0.0042 171s
+  pulled sympy__sympy-18698 in 9s
+[46/55] sympy__sympy-17655 P: accepted_resolved n=1 $0.0015 178s
+[47/55] sympy__sympy-19346 P: accepted_resolved n=1 $0.0013 0s
+  pulled sympy__sympy-21596 in 67s
+[48/55] sympy__sympy-18698 P: accepted_regressed n=2 $0.0042 252s
+[49/55] sympy__sympy-22914 P: accepted_resolved n=1 $0.0013 0s
+  pulled sympy__sympy-23262 in 64s
+[50/55] sympy__sympy-16792 P: continue n=3 $0.0049 979s
+[51/55] sympy__sympy-23262 P: accepted_resolved n=2 $0.0035 97s
+  pulled sympy__sympy-24443 in 12s
+[52/55] sympy__sympy-24066 P: accepted_resolved n=1 $0.0017 95s
+[53/55] sympy__sympy-24443 P: continue n=3 $0.0065 104s
+[54/55] sympy__sympy-21596 P: continue n=3 $0.0057 628s
+  pulled sympy__sympy-24539 in 64s
+[55/55] sympy__sympy-24539 P: continue n=3 $0.0044 416s
+all done
+17 keys; 100 tasks to run (0 done); out=C:\coding\Argus-pilot50\data\loop4_20b; prompt_hash=56e5b02fa8ed
+[1/100] astropy__astropy-12907 P: accepted_resolved n=1 $0.0014 0s
+[2/100] astropy__astropy-13579 P: accepted_resolved n=1 $0.0010 0s
+[3/100] astropy__astropy-14508 P: accepted_resolved n=1 $0.0013 0s
+[4/100] astropy__astropy-14995 P: accepted_resolved n=1 $0.0007 0s
+17 keys; 100 tasks to run (0 done); out=C:\coding\Argus-pilot50\data\loop4_20b; prompt_hash=56e5b02fa8ed
+  pulled astropy__astropy-12907 in 136s
+  pulled astropy__astropy-13033 in 179s
+[1/100] astropy__astropy-12907 P: accepted_resolved n=1 $0.0014 378s
+[2/100] astropy__astropy-14182 P: continue n=3 $0.0022 92s
+[3/100] astropy__astropy-14508 P: accepted_resolved n=1 $0.0013 0s
+  pulled astropy__astropy-14995 in 77s
+[4/100] astropy__astropy-13033 P: continue n=3 $0.0018 626s
+[5/100] astropy__astropy-14995 P: accepted_resolved n=1 $0.0007 178s
+[6/100] django__django-10880 P: accepted_regressed n=1 $0.0002 0s
+  pulled django__django-11087 in 42s
+[7/100] astropy__astropy-8872 P: accepted_resolved n=3 $0.0051 68s
+[8/100] django__django-11141 P: accepted_regressed n=1 $0.0005 0s
+[9/100] django__django-11790 P: accepted_resolved n=1 $0.0006 0s
+  pulled django__django-11964 in 69s
+[10/100] django__django-11964 P: accepted_resolved n=2 $0.0013 99s
+  pulled django__django-12039 in 12s
+[11/100] django__django-12039 P: accepted_resolved n=3 $0.0031 114s
+[12/100] django__django-12209 P: accepted_resolved n=1 $0.0009 0s
+  pulled django__django-12774 in 11s
+[13/100] astropy__astropy-13579 P: accepted_resolved n=1 $0.0010 1026s
+[14/100] django__django-12774 P: continue n=3 $0.0034 150s
+  pulled django__django-13012 in 41s
+  pulled django__django-13406 in 13s
+[15/100] django__django-13406 P: continue n=3 $0.0062 54s
+  pulled django__django-13551 in 66s
+[16/100] django__django-13012 P: continue n=3 $0.0041 286s
+[17/100] django__django-13810 P: accepted_resolved n=1 $0.0004 0s
+[18/100] django__django-13551 P: continue n=3 $0.0026 349s
+[19/100] django__django-13933 P: accepted_resolved n=1 $0.0007 182s
+  pulled django__django-14017 in 67s
+[20/100] django__django-14034 P: continue n=3 $0.0053 220s
+[21/100] django__django-14238 P: continue n=3 $0.0025 122s
+[22/100] django__django-14434 P: continue n=3 $0.0056 19s
+  pulled django__django-14534 in 12s
+[23/100] django__django-14017 P: continue n=3 $0.0036 418s
+  pulled django__django-14771 in 44s
+[24/100] django__django-14534 P: accepted_resolved n=2 $0.0012 110s
+[25/100] django__django-11087 P: continue n=3 $0.0031 1439s
+[26/100] django__django-14771 P: continue n=3 $0.0059 318s
+  pulled django__django-15161 in 68s
+[27/100] django__django-15161 P: continue n=3 $0.0031 320s
+[28/100] django__django-15128 P: continue n=3 $0.0030 756s
+  pulled django__django-15382 in 72s
+[29/100] django__django-15382 P: continue n=3 $0.0066 178s
+  pulled django__django-15930 in 72s
+[30/100] django__django-15930 P: accepted_resolved n=2 $0.0034 278s
+[31/100] django__django-16116 P: accepted_resolved n=1 $0.0006 0s
+[32/100] django__django-16485 P: accepted_resolved n=1 $0.0026 0s
+[33/100] django__django-16595 P: accepted_resolved n=1 $0.0005 0s
+  pulled django__django-16642 in 73s
+[34/100] django__django-16642 P: continue n=3 $0.0036 132s
+  pulled django__django-16877 in 70s
+[35/100] django__django-16877 P: continue n=3 $0.0027 103s
+[36/100] matplotlib__matplotlib-13989 P: continue n=3 $0.0045 483s
+  pulled matplotlib__matplotlib-20488 in 125s
+[37/100] django__django-15315 P: continue n=3 $0.0028 1736s
+  pulled matplotlib__matplotlib-20676 in 74s
+[38/100] django__django-15280 P: continue n=3 $0.0085 2195s
+[39/100] matplotlib__matplotlib-20488 P: accepted_resolved n=2 $0.0022 595s
+  pulled matplotlib__matplotlib-24570 in 167s
+[40/100] matplotlib__matplotlib-24570 P: continue n=3 $0.0074 255s
+  pulled matplotlib__matplotlib-24637 in 167s
+  pulled matplotlib__matplotlib-23412 in 159s
+[41/100] matplotlib__matplotlib-23412 P: continue n=3 $0.0028 681s
+[42/100] matplotlib__matplotlib-24637 P: accepted_resolved n=2 $0.0022 367s
+[43/100] matplotlib__matplotlib-25311 P: accepted_resolved n=1 $0.0009 0s
+  pulled matplotlib__matplotlib-24970 in 324s
+  pulled matplotlib__matplotlib-25960 in 327s
+[44/100] matplotlib__matplotlib-25960 P: continue n=3 $0.0068 444s
+[45/100] psf__requests-2931 P: accepted_regressed n=1 $0.0006 0s
+  pulled psf__requests-6028 in 34s
+[46/100] psf__requests-6028 P: accepted_regressed n=2 $0.0032 63s
+[47/100] pydata__xarray-3151 P: accepted_resolved n=1 $0.0010 0s
+[48/100] matplotlib__matplotlib-24970 P: accepted_resolved n=2 $0.0017 562s
+[49/100] pydata__xarray-4356 P: accepted_resolved n=1 $0.0006 0s
+[50/100] pydata__xarray-4966 P: accepted_resolved n=1 $0.0010 0s
+[51/100] pydata__xarray-6721 P: accepted_resolved n=1 $0.0009 0s
+[52/100] pylint-dev__pylint-7277 P: accepted_resolved n=1 $0.0003 0s
+  pulled pytest-dev__pytest-10051 in 43s
+[53/100] pytest-dev__pytest-10051 P: accepted_resolved n=2 $0.0039 76s
+[54/100] pytest-dev__pytest-5262 P: accepted_resolved n=1 $0.0012 0s
+[55/100] pytest-dev__pytest-5809 P: accepted_resolved n=1 $0.0002 0s
+  pulled pytest-dev__pytest-6197 in 31s
+  pulled pydata__xarray-4094 in 121s
+[56/100] pydata__xarray-4094 P: continue n=3 $0.0054 178s
+[57/100] pytest-dev__pytest-6197 P: accepted_regressed n=3 $0.0046 111s
+[58/100] scikit-learn__scikit-learn-10844 P: accepted_resolved n=1 $0.0006 0s
+[59/100] scikit-learn__scikit-learn-11578 P: accepted_resolved n=1 $0.0006 0s
+[60/100] scikit-learn__scikit-learn-12973 P: continue n=3 $0.0034 7s
+[61/100] scikit-learn__scikit-learn-13496 P: accepted_resolved n=1 $0.0007 0s
+[62/100] scikit-learn__scikit-learn-14053 P: accepted_resolved n=1 $0.0009 0s
+  pulled pytest-dev__pytest-7521 in 29s
+[63/100] pytest-dev__pytest-7521 P: continue n=3 $0.0072 79s
+[64/100] scikit-learn__scikit-learn-14894 P: accepted_resolved n=1 $0.0009 0s
+  pulled scikit-learn__scikit-learn-14710 in 53s
+[65/100] matplotlib__matplotlib-20676 P: continue n=3 $0.0062 1847s
+[66/100] scikit-learn__scikit-learn-25973 P: accepted_resolved n=1 $0.0014 0s
+  pulled scikit-learn__scikit-learn-14983 in 125s
+[67/100] scikit-learn__scikit-learn-14983 P: continue n=3 $0.0027 165s
+[68/100] sphinx-doc__sphinx-10466 P: accepted_resolved n=1 $0.0005 0s
+[69/100] sphinx-doc__sphinx-10614 P: continue n=3 $0.0028 5s
+[70/100] sphinx-doc__sphinx-11445 P: accepted_resolved n=1 $0.0008 0s
+  pulled sphinx-doc__sphinx-10435 in 57s
+[71/100] scikit-learn__scikit-learn-14710 P: continue n=3 $0.0063 252s
+[72/100] sphinx-doc__sphinx-9230 P: accepted_resolved n=2 $0.0014 2s
+  pulled sphinx-doc__sphinx-8459 in 31s
+[73/100] sphinx-doc__sphinx-10435 P: continue n=3 $0.0040 130s
+[74/100] sphinx-doc__sphinx-9281 P: accepted_resolved n=1 $0.0013 0s
+[75/100] sphinx-doc__sphinx-9658 P: accepted_resolved n=1 $0.0005 0s
+  pulled sphinx-doc__sphinx-9258 in 32s
+  pulled sphinx-doc__sphinx-9698 in 9s
+[76/100] sphinx-doc__sphinx-8459 P: accepted_resolved n=3 $0.0027 90s
+[77/100] sphinx-doc__sphinx-9711 P: accepted_resolved n=1 $0.0002 0s
+[78/100] sympy__sympy-11618 P: accepted_resolved n=1 $0.0007 0s
+[79/100] sympy__sympy-12481 P: accepted_resolved n=1 $0.0007 0s
+[80/100] sympy__sympy-13480 P: accepted_resolved n=1 $0.0006 0s
+[81/100] sphinx-doc__sphinx-9258 P: continue n=3 $0.0057 70s
+[82/100] sphinx-doc__sphinx-9698 P: continue n=3 $0.0054 46s
+[83/100] sympy__sympy-14531 P: accepted_resolved n=1 $0.0007 0s
+[84/100] sympy__sympy-14711 P: accepted_resolved n=1 $0.0009 2s
+  pulled sympy__sympy-13551 in 37s
+  pulled sympy__sympy-15017 in 16s
+  pulled sympy__sympy-13798 in 42s
+[85/100] sympy__sympy-15017 P: continue n=3 $0.0017 47s
+  pulled sympy__sympy-15875 in 10s
+[86/100] sympy__sympy-13798 P: accepted_resolved n=3 $0.0037 101s
+[87/100] sympy__sympy-13551 P: continue n=3 $0.0051 116s
+[88/100] sympy__sympy-15875 P: accepted_resolved n=2 $0.0030 43s
+[89/100] sympy__sympy-16792 P: continue n=3 $0.0031 5s
+[90/100] sympy__sympy-16450 P: continue n=3 $0.0047 11s
+[91/100] sympy__sympy-17139 P: continue n=3 $0.0042 11s
+[92/100] sympy__sympy-19346 P: accepted_resolved n=1 $0.0006 0s
+[93/100] sympy__sympy-21596 P: continue n=3 $0.0054 9s
+[94/100] sympy__sympy-22914 P: accepted_resolved n=1 $0.0007 0s
+[95/100] sympy__sympy-23262 P: accepted_resolved n=1 $0.0010 0s
+  pulled sympy__sympy-17655 in 94s
+  pulled sympy__sympy-24066 in 77s
+  pulled sympy__sympy-18698 in 85s
+[96/100] sympy__sympy-17655 P: accepted_resolved n=2 $0.0021 131s
+[97/100] sympy__sympy-24066 P: accepted_regressed n=3 $0.0057 142s
+[98/100] sympy__sympy-24539 P: continue n=3 $0.0032 11s
+  pulled sympy__sympy-24443 in 59s
+[99/100] sympy__sympy-24443 P: accepted_resolved n=3 $0.0051 119s
+[100/100] sympy__sympy-18698 P: grade_error n=2 $0.0050 1916s
+all done

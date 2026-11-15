@@ -22,6 +22,7 @@ ap.add_argument("--out-dir", default=os.path.join(ROOT, "data", "loop4"))
 ap.add_argument("--workers", type=int, default=3)
 ap.add_argument("--max-turns", type=int, default=3)
 ap.add_argument("--model", default="openai/gpt-oss-120b")
+ap.add_argument("--gemma-fill", action="store_true", help="with --gemma: run Gemma on the tasks that were skipped when it was added (frozen in skip_ids.json) instead of the others")
 ap.add_argument("--gemma", action="store_true", help="also run Gemma 26B arm P in the same image pull, on tasks not already done for the Groq model")
 args = ap.parse_args()
 OUT = os.path.abspath(args.out_dir)
@@ -72,7 +73,7 @@ if args.gemma:
         json.dump(sorted(done), open(skip_p, "w", encoding="utf-8"))
     skip = set(json.load(open(skip_p, encoding="utf-8")))
     gdone = {json.loads(l)["iid"] for l in open(GTRAJ, encoding="utf-8")} if os.path.exists(GTRAJ) else set()
-    GTODO = {i for i in ids if i not in skip and i not in gdone}
+    GTODO = {i for i in ids if (i in skip if args.gemma_fill else i not in skip) and i not in gdone}  # --gemma-fill: the tasks skipped when Gemma was added
     for r in (json.loads(l) for l in open(os.path.join(ROOT, "data", "gemma_sweep", "raw.jsonl"), encoding="utf-8")):
         if r["model"] == "google/gemma-4-26b-a4b-it" and r.get("http") == 200:
             GDRAWS.setdefault(r["iid"], {})[r.get("sample", 0)] = r
