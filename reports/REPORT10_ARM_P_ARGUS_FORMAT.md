@@ -2,7 +2,7 @@
 
 Data: `data/loop4` (120B), `data/loop4_20b`, `data/loop4_gemma26`. Scripts: `scripts/analyze_rev19.py`, `scripts/analyze_why19.py`. Results: `results/analysis/rev19_results.json`.
 Design set, 100 tasks, up to 3 attempts, attempt 1 shared across arms. Paired task bootstrap, 5,000 resamples, seed 20261113. Infrastructure losses count as unsolved.
-Reference arms: R and F from Revision 7 (120B) and Revision 9 (20B); Gemma F from Revision 15/16. No matched Gemma R arm.
+Reference arms: R and F from Revision 7 (120B) and Revision 9 (20B); Gemma F from Revision 15/16. There is no live Gemma R arm; an R reference replayed from stored sweep draws (44.4% solved, not matched to P's draws) gives P-R of +5.1 (computed in Report 18).
 
 ## Results (solved within 3 attempts)
 
@@ -10,11 +10,11 @@ Reference arms: R and F from Revision 7 (120B) and Revision 9 (20B); Gemma F fro
 |---|---|---|---|---|---|---|---|
 | gpt-oss-120b | 100 | 56 | 57 | 59 | -1.0 (-5, +3) | -3.0 (-9, +3) | P-F and P-R inside the pre-registered ranges |
 | gpt-oss-20b | 100 | 53 | 55 | 47 | -2.0 (-10, +6) | +6.0 (-1, +13) | inside |
-| Gemma 26B | 99 | 49 | 43 | none | +6.1 (0, +12) | n/a | MISS (predicted -5 to +5) |
+| Gemma 26B | 99 | 49 | 43 | 44 (replay, unmatched) | +6.1 (0, +12) | n/a | MISS (predicted -5 to +5) |
 
 - 20B F-R is +8.0 (CI +2, +14), consistent with the blind run (+6.6).
 - Cost per solve: 20B F $0.0049, 20B P $0.0050, 120B R $0.0054, 120B F $0.0058, 120B P $0.0061 (Gemma has no list cost here).
-- Losses: 20B had 1 P grade_error and 1 F api_error; Gemma had 4 P and 7 F api_error. Without them the differences change by less than 1 point (Gemma P-F +6.7, CI 0 to 13.5). The 120B pass logged one grade_error (`sympy__sympy-18698`) that is stored as stop "continue", so the sensitivity filter does not exclude it (one task).
+- Losses: 20B had 1 P grade_error and 1 F api_error; Gemma had 4 P and 7 F api_error. Without them the differences change by less than 1 point (Gemma P-F +6.7, CI 0 to 13.5). The 120B pass had no grade_error; the one grade_error in this revision (`sympy__sympy-18698`) belongs to the 20B pass and is already counted in the 20B numbers above. (An earlier version of this file wrongly placed it in the 120B pass.)
 - Gemma caveats: `django__django-13406` has no Gemma P or F record (99 of 100): Gemma 26B has no stored draw 0 for it, because the Google endpoint closed the connection without a response on every draw-0 try in the sweep (6 tries each, repeatedly), so attempt 1 does not exist. It is excluded from both arms. The Gemma F arm is from an earlier run with its own draws; attempts 2 and 3 are not matched, so P-F mixes the prompt effect with draw noise. Treat +6.1 as a lead.
 
 Reading: showing the previous patch does not beat feedback alone on either gpt-oss model. Only Gemma shows a hint of a P advantage, with the weakest comparison.
