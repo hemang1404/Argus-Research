@@ -1,0 +1,6 @@
+<unknown>:5: SyntaxWarning: "\w" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\w"? A raw string is also an option.
+<unknown>:4: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+SELFTEST PROBLEM humaneval/32 gold base/plus True False | broken base False | The solution fails the example tests: Traceback (most recent call last):   File "C:\Users\dell\AppData\Local\Temp\tmpyatjco_4\t.py", line 53, in <modu
+SELFTEST PROBLEM mbpp/590 gold base/plus True False | broken base False | The solution fails the example tests: FAILED: assert polar_rect(3,4)==((5.0, 0.9272952180016122), (-2+2.4492935982947064e-16j))  ->  NameError: name '
+SELFTEST PROBLEM mbpp/596 gold base/plus True False | broken base False | The solution fails the example tests: FAILED: assert tuple_size(("A", 1, "B", 2, "C", 3) ) == sys.getsizeof(("A", 1, "B", 2, "C", 3))  ->  NameError: 
+selftest: 539/542 ok, 3 problems

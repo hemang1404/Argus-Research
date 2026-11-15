@@ -1,0 +1,32 @@
+openai/gpt-oss-20b: 30 tasks, 30 to run -> C:\coding\Argus-pilot50\data\algo_check_20b
+humaneval/12     one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.4s
+humaneval/103    one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.6s
+humaneval/108    one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.9s
+humaneval/135    one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.1s
+humaneval/140    one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.7s
+humaneval/142    one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.8s
+humaneval/153    one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.2s
+humaneval/20     one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.1s
+humaneval/33     one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.5s
+humaneval/56     one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.3s
+humaneval/61     one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.1s
+humaneval/71     one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.4s
+humaneval/97     one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.2s
+humaneval/139    one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  7.9s
+mbpp/162         one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.5s
+mbpp/247         one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.3s
+mbpp/256         one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.0s
+mbpp/262         one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.1s
+mbpp/458         one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  0.9s
+mbpp/460         one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  0.9s
+humaneval/91     one-shot continue           R accepted_regressed/2  F accepted_regressed/2  P accepted_regressed/2  5.6s
+mbpp/477         one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  0.8s
+mbpp/607         one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.2s
+mbpp/478         one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.6s
+mbpp/628         one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.0s
+mbpp/77          one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.0s
+mbpp/638         one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.7s
+mbpp/89          one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  0.9s
+mbpp/721         one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  2.3s
+mbpp/91          one-shot accepted_resolved  R accepted_resolved/1  F accepted_resolved/1  P accepted_resolved/1  1.1s
+all done
