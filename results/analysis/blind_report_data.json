@@ -1,0 +1,131 @@
+{
+ "analysed": 198,
+ "gold_failed": [
+  "psf__requests-1724",
+  "psf__requests-1921"
+ ],
+ "results": {
+  "gpt-oss-20b": {
+   "all analysed (infra failures = unsolved)": {
+    "n": 198,
+    "R": 49.0,
+    "F": 55.6,
+    "diff": 6.6,
+    "ci": [
+     1.5,
+     11.6
+    ],
+    "ci_repo": [
+     1.4,
+     15.0
+    ],
+    "F_only": 20,
+    "R_only": 7
+   },
+   "excluding tasks with infra failures": {
+    "n": 193,
+    "R": 50.3,
+    "F": 57.0,
+    "diff": 6.7,
+    "ci": [
+     1.6,
+     11.9
+    ],
+    "ci_repo": [
+     1.5,
+     15.0
+    ],
+    "F_only": 20,
+    "R_only": 7
+   }
+  },
+  "gpt-oss-120b": {
+   "all analysed (infra failures = unsolved)": {
+    "n": 198,
+    "R": 54.5,
+    "F": 59.1,
+    "diff": 4.5,
+    "ci": [
+     0.0,
+     9.1
+    ],
+    "ci_repo": [
+     1.0,
+     10.3
+    ],
+    "F_only": 15,
+    "R_only": 6
+   },
+   "excluding tasks with infra failures": {
+    "n": 198,
+    "R": 54.5,
+    "F": 59.1,
+    "diff": 4.5,
+    "ci": [
+     0.0,
+     9.1
+    ],
+    "ci_repo": [
+     1.0,
+     10.3
+    ],
+    "F_only": 15,
+    "R_only": 6
+   }
+  },
+  "gemma-4-26b-a4b-it": {
+   "all analysed (infra failures = unsolved)": {
+    "n": 198,
+    "R": 40.4,
+    "F": 41.4,
+    "diff": 1.0,
+    "ci": [
+     -3.5,
+     5.6
+    ],
+    "ci_repo": [
+     -5.1,
+     4.3
+    ],
+    "F_only": 11,
+    "R_only": 9
+   },
+   "excluding tasks with infra failures": {
+    "n": 177,
+    "R": 45.2,
+    "F": 46.3,
+    "diff": 1.1,
+    "ci": [
+     -3.4,
+     6.2
+    ],
+    "ci_repo": [
+     -6.1,
+     4.6
+    ],
+    "F_only": 11,
+    "R_only": 9
+   }
+  }
+ },
+ "h4": {
+  "gpt-oss-20b": {
+   "n": 198,
+   "argus": 72.2,
+   "plain": 59.1,
+   "gain": 13.1
+  },
+  "gpt-oss-120b": {
+   "n": 198,
+   "argus": 84.3,
+   "plain": 78.8,
+   "gain": 5.6
+  },
+  "gemma-4-26b-a4b-it": {
+   "n": 193,
+   "argus": 61.1,
+   "plain": 43.5,
+   "gain": 17.6
+  }
+ }
+}
