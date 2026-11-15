@@ -22,6 +22,7 @@ ap.add_argument("--out-dir", default=os.path.join(ROOT, "data", "loop4"))
 ap.add_argument("--workers", type=int, default=3)
 ap.add_argument("--max-turns", type=int, default=3)
 ap.add_argument("--model", default="openai/gpt-oss-120b")
+ap.add_argument("--gemma", action="store_true", help="also run Gemma 26B arm P in the same image pull, on tasks not already done for the Groq model")
 args = ap.parse_args()
 OUT = os.path.abspath(args.out_dir)
 os.makedirs(OUT, exist_ok=True)
@@ -59,6 +60,64 @@ done = set()
 if os.path.exists(TRAJ):
     for l in open(TRAJ, encoding="utf-8"):
         done.add(json.loads(l)["iid"])
+
+# --gemma: Gemma 26B arm P in the same pulls, only for tasks NOT already finished by the Groq run when Gemma was added (those are left for later)
+GTODO, GDRAWS, GKEY = set(), {}, None
+GDIR = os.path.join(ROOT, "data", "loop4_gemma26"); GTRAJ = os.path.join(GDIR, "trajectories.jsonl"); GCALLS = os.path.join(GDIR, "calls.jsonl")
+gcalls = {}
+if args.gemma:
+    os.makedirs(GDIR, exist_ok=True)
+    skip_p = os.path.join(GDIR, "skip_ids.json")
+    if not os.path.exists(skip_p):  # frozen once: tasks already done for the Groq model at the moment Gemma was added
+        json.dump(sorted(done), open(skip_p, "w", encoding="utf-8"))
+    skip = set(json.load(open(skip_p, encoding="utf-8")))
+    gdone = {json.loads(l)["iid"] for l in open(GTRAJ, encoding="utf-8")} if os.path.exists(GTRAJ) else set()
+    GTODO = {i for i in ids if i not in skip and i not in gdone}
+    for r in (json.loads(l) for l in open(os.path.join(ROOT, "data", "gemma_sweep", "raw.jsonl"), encoding="utf-8")):
+        if r["model"] == "google/gemma-4-26b-a4b-it" and r.get("http") == 200:
+            GDRAWS.setdefault(r["iid"], {})[r.get("sample", 0)] = r
+    for l in (open(GCALLS, encoding="utf-8") if os.path.exists(GCALLS) else []):
+        r = json.loads(l); gcalls[r["key"]] = r
+    for l in open(ENV, encoding="utf-8", errors="replace"):  # key is read once and never printed
+        mm = re.match(r"\s*GOOGLE_API_KEY\s*=\s*(.*)", l)
+        if mm:
+            GKEY = mm.group(1).strip().strip("\"'")
+    assert GKEY, "GOOGLE_API_KEY missing"
+GAPI = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+
+
+def gcall(body, nonce=""):
+    import urllib.request, urllib.error
+    ck = hashlib.sha256((json.dumps(body, sort_keys=True) + nonce).encode()).hexdigest()[:20]
+    with lock:
+        c = gcalls.get(ck)
+    if c and c.get("http") == 200:
+        return c
+    last = None
+    for attempt in range(1, 7):
+        req = urllib.request.Request(GAPI, data=json.dumps(body).encode(), headers={"Authorization": "Bearer " + GKEY, "Content-Type": "application/json", "User-Agent": "argus-research-probe/0.1"})
+        t0 = time.time()
+        try:
+            with urllib.request.urlopen(req, timeout=600) as r:
+                d = json.loads(r.read()); mm = d["choices"][0]["message"]; u = d.get("usage", {})
+                rec = dict(key=ck, http=200, tries=attempt, latency_s=round(time.time() - t0, 2), model=body["model"], content=mm.get("content"), finish=d["choices"][0].get("finish_reason"),
+                           prompt_tokens=u.get("prompt_tokens"), completion_tokens=u.get("completion_tokens"), usage_raw=u)
+                break
+        except urllib.error.HTTPError as e:
+            raw = e.read().decode("utf-8", "replace")
+            last = dict(key=ck, http=e.code, tries=attempt, latency_s=round(time.time() - t0, 2), model=body["model"], error=raw[:300].replace(GKEY, "<key>"))
+            if e.code in (429, 500, 502, 503, 504):
+                time.sleep(min(10 * attempt, 60)); continue
+            rec = last; break
+        except Exception as e:
+            last = dict(key=ck, http=-1, tries=attempt, latency_s=round(time.time() - t0, 2), model=body["model"], error=str(e)[:200].replace(GKEY, "<key>"))
+            time.sleep(5 * attempt)
+    else:
+        rec = last
+    with lock:
+        gcalls[ck] = rec
+        open(GCALLS, "a", encoding="utf-8").write(json.dumps(rec) + "\n")
+    return rec
 
 
 def sha(s):
@@ -214,7 +273,54 @@ def run_task(iid):
         tr["answer_chars"] = len(rec.get("content") or "")
         return tr, (rec.get("content") or "", feedback_for(ap_res, grade or {}, test_text))
 
+    def gemma_chain():
+        """Gemma 26B arm P in the same image pull: attempt 1 = stored draw 0 (gemma sweep), attempts 2-3 new calls (Google endpoint, T=1.0, 16000 out, no seed)."""
+        d0 = GDRAWS.get(iid, {}).get(0)
+        if d0 is None:
+            return None
+        atts, prev, fb = [], None, None
+        for turn in range(1, args.max_turns + 1):
+            if turn == 1:
+                rec = d0; tr = dict(turn=1, source="existing_draw_0")
+            else:
+                user = base_msgs[1]["content"] + (f"\n\n## Previous Attempt (FAILED) (turn {turn - 1} of {args.max_turns})\n```\n{(prev or '')[:3000]}\n```\n\n"
+                                                  f"## Result of the previous attempt\n{fb}\n\n"
+                                                  "The file shown above is the original, unmodified file. Write corrected SEARCH/REPLACE block(s) against it. "
+                                                  "Include ALL necessary changes (the valid parts of your previous attempt and the corrections), without breaking existing behaviour.")
+                body = {"model": "gemma-4-26b-a4b-it", "messages": [base_msgs[0], dict(base_msgs[1], content=user)], "temperature": TEMP, "max_completion_tokens": 16000}
+                rec = gcall(body, f"P-turn{turn}")
+                tr = dict(turn=turn, source="new_call", http=rec["http"], feedback_in=fb)
+                if rec["http"] != 200:
+                    tr.update(state="api_error", error=rec.get("error")); atts.append(tr); break
+            tr.update(finish=rec.get("finish"), prompt_tokens=rec.get("prompt_tokens"), completion_tokens=rec.get("completion_tokens"))
+            ap_res = apply_output(t["repo"], t["base_commit"], target, rec.get("content"), rec.get("finish"))
+            tr.update(apply_status=ap_res["status"], max_tier=ap_res.get("max_tier"), refusal_reason=ap_res.get("refusal_reason"))
+            grade, test_text = None, ""
+            if ap_res["status"] == "applied":
+                h = sha(ap_res["diff"]); tr["patch_hash"] = h
+                if h in st["memo"]:
+                    grade, test_text = st["memo"][h]
+                else:
+                    grade, test_text = known_grade(iid, h)
+                    if grade is None:
+                        if not st["pulled"]:
+                            if not DG.pull(iid):
+                                tr["state"] = "image_pull_failed"; atts.append(tr); break
+                            st["pulled"] = True
+                        grade, test_text = DG.grade_one(iid, h, ap_res["diff"]); tr["graded_fresh"] = True
+                    st["memo"][h] = (grade, test_text)
+                tr["grade"] = {k: v for k, v in grade.items() if k not in ("log_text",)}
+                if grade.get("resolved") is None:
+                    tr["state"] = "grade_error"; atts.append(tr); break
+            tr["state"] = accept_state(ap_res, grade)
+            atts.append(tr)
+            if tr["state"] != "continue":
+                break
+            prev = rec.get("content") or ""; fb = feedback_for(ap_res, grade or {}, test_text)
+        return atts
+
     arms = {"P": []}
+    gem = None
     try:
         history = []
         tr, nxt = attempt(5000, history, 1)  # attempt 1 = Revision 7 draw 0 (cached call)
@@ -226,9 +332,21 @@ def run_task(iid):
             tr, nxt = attempt(9000 + turn, history, turn)
             tr["feedback_out"] = history[-1][1]
             arms["P"].append(tr)
+        if args.gemma and iid in GTODO:
+            try:
+                gem = gemma_chain()
+            except Exception as e:  # a Gemma failure must not lose the Groq record; the task stays undone for Gemma and is reported
+                import traceback
+                DG.say(f"  GEMMA EXCEPTION {iid} {repr(e)[:200]}"); DG.say(traceback.format_exc()[-600:])
     finally:
         if st["pulled"]:
             DG.cleanup(iid)
+    if gem:
+        last = gem[-1]
+        gout = dict(iid=iid, ctx=info, prompt_hash=prompt_hash(), ts=datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"), model="gemma-4-26b-a4b-it",
+                    P=dict(attempts=gem, n=len(gem), stop=last["state"], solved=last["state"] == "accepted_resolved", cost_usd=0.0))
+        with lock:
+            open(GTRAJ, "a", encoding="utf-8").write(json.dumps(gout) + "\n")
     out = dict(iid=iid, ctx=info, prompt_hash=prompt_hash(), secs=round(time.time() - t0, 1), ts=datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"))
     for a, trs in arms.items():
         last = trs[-1]
