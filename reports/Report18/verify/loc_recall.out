@@ -1,0 +1,6 @@
+scored 100 of 100 | download errors: []
+L-A Argus {'recall@1': 21, 'recall@3': 29, 'recall@5': 32, 'recall@10': 36, 'returned_nothing': 9}
+L-B BM25 {'recall@1': 27, 'recall@3': 55, 'recall@5': 70, 'recall@10': 82, 'returned_nothing': 0}
+primary (LA, else LB) {'recall@1': 21, 'recall@3': 35, 'recall@5': 46, 'recall@10': 77, 'returned_nothing': 0}
+chosen == oracle: 21 | chosen wrong: 79
+{'astropy/astropy': '3/6', 'django/django': '2/30', 'matplotlib/matplotlib': '2/9', 'psf/requests': '0/3', 'pydata/xarray': '2/5', 'pylint-dev/pylint': '0/1', 'pytest-dev/pytest': '3/5', 'scikit-learn/scikit-learn': '4/9', 'sphinx-doc/sphinx': '1/11', 'sympy/sympy': '4/21'}

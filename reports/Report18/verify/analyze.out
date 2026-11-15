@@ -1,0 +1,14 @@
+{
+ "n_tasks": 100,
+ "valid_tasks": 99,
+ "excluded_gold_failed": [
+  "psf__requests-1766"
+ ],
+ "pending_gold": 0
+}
+gpt-oss-20b
+   plain resolved 31 / 99 (23.0, 41.0) {'PASS': 31, 'F1_budget_truncation': 21, 'F7_wrong_fix': 15, 'F4_search_not_found': 15, 'F78_both': 8, 'F4_ambiguous': 3, 'F2_format': 2, 'F8_regression': 2, 'F6_crash_all_tests': 1, 'F5_syntax': 1}
+   argus resolved 38 / 99 (29.4, 48.2) {'PASS': 38, 'F1_budget_truncation': 21, 'F7_wrong_fix': 17, 'F78_both': 9, 'F4_ambiguous': 4, 'F4_refused_other': 3, 'F2_format': 2, 'F8_regression': 2, 'F4_search_not_found': 2, 'F6_crash_all_tests': 1}
+gpt-oss-120b
+   plain resolved 44 / 99 (35.0, 54.3) {'PASS': 44, 'F7_wrong_fix': 25, 'F4_search_not_found': 14, 'F78_both': 7, 'F8_regression': 6, 'F4_ambiguous': 2, 'F3_wrong_file': 1}
+   argus resolved 46 / 99 (37.0, 56.2) {'PASS': 46, 'F7_wrong_fix': 26, 'F4_search_not_found': 9, 'F78_both': 8, 'F8_regression': 6, 'F4_ambiguous': 3, 'F3_wrong_file': 1}

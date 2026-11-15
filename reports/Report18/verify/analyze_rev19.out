@@ -1,0 +1,27 @@
+
+=== 120b: 100 tasks (P 100, F 100, R 100)
+  stops P: {'continue': 35, 'accepted_resolved': 56, 'accepted_regressed': 9}
+  stops F: {'continue': 36, 'accepted_resolved': 57, 'accepted_regressed': 7}
+  P: solved 56/100 = 56.0%  cost $0.343  per solve $0.0061
+  F: solved 57/100 = 57.0%  cost $0.330  per solve $0.0058
+  R: solved 59/100 = 59.0%  cost $0.320  per solve $0.0054
+  P-F: -1.0  95% CI (-5.0, 3.0)  (2 vs 3 tasks)  prediction [-5,4] -> inside  | without infra losses n=100: -1.0 CI (-5.0, 3.0)
+  P-R: -3.0  95% CI (-9.0, 3.0)  (4 vs 7 tasks)  prediction [-4,6] -> inside  | without infra losses n=100: -3.0 CI (-9.0, 3.0)
+  F-R: -2.0  95% CI (-8.0, 3.0)  (3 vs 5 tasks)  | without infra losses n=100: -2.0 CI (-8.0, 3.0)
+
+=== 20b: 100 tasks (P 100, F 100, R 100)
+  stops P: {'accepted_resolved': 53, 'continue': 40, 'accepted_regressed': 6, 'grade_error': 1}
+  stops F: {'accepted_resolved': 55, 'continue': 40, 'accepted_regressed': 4, 'api_error': 1}
+  P: solved 53/100 = 53.0%  cost $0.268  per solve $0.0050
+  F: solved 55/100 = 55.0%  cost $0.269  per solve $0.0049
+  R: solved 47/100 = 47.0%  cost $0.279  per solve $0.0059
+  P-F: -2.0  95% CI (-10.0, 6.0)  (7 vs 9 tasks)  prediction [-5,4] -> inside  | without infra losses n=98: -1.0 CI (-9.2, 7.1)
+  P-R: +6.0  95% CI (-1.0, 13.0)  (10 vs 4 tasks)  prediction [-2,8] -> inside  | without infra losses n=99: +6.1 CI (-1.0, 14.1)
+  F-R: +8.0  95% CI (2.0, 14.0)  (9 vs 1 tasks)  | without infra losses n=99: +8.1 CI (2.0, 14.1)
+
+=== gemma: 99 tasks (P 99, F 99)
+  stops P: {'continue': 35, 'accepted_regressed': 11, 'accepted_resolved': 49, 'api_error': 4}
+  stops F: {'accepted_resolved': 43, 'continue': 40, 'accepted_regressed': 9, 'api_error': 7}
+  P: solved 49/99 = 49.5%  cost $0.000
+  F: solved 43/99 = 43.4%  cost $0.000
+  P-F: +6.1  95% CI (0.0, 12.1)  (8 vs 2 tasks)  prediction [-5,5] -> MISS  | without infra losses n=89: +6.7 CI (0.0, 13.5)

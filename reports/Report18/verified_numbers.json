@@ -1,0 +1,3482 @@
+{
+ "V": {
+  "design_t0": {
+   "gpt-oss-20b:plain": 31,
+   "gpt-oss-20b:argus": 38,
+   "gpt-oss-120b:plain": 44,
+   "gpt-oss-120b:argus": 46
+  },
+  "design_summary": {
+   "n_tasks": 100,
+   "valid_tasks": 99,
+   "excluded_gold_failed": [
+    "psf__requests-1766"
+   ],
+   "pending_gold": 0,
+   "gpt-oss-20b": {
+    "plain": {
+     "n": 99,
+     "labels": {
+      "PASS": 31,
+      "F1_budget_truncation": 21,
+      "F7_wrong_fix": 15,
+      "F4_search_not_found": 15,
+      "F78_both": 8,
+      "F4_ambiguous": 3,
+      "F2_format": 2,
+      "F8_regression": 2,
+      "F6_crash_all_tests": 1,
+      "F5_syntax": 1
+     },
+     "resolved": 31,
+     "rate": 31.3,
+     "wilson": [
+      23.0,
+      41.0
+     ]
+    },
+    "argus": {
+     "n": 99,
+     "labels": {
+      "PASS": 38,
+      "F1_budget_truncation": 21,
+      "F7_wrong_fix": 17,
+      "F78_both": 9,
+      "F4_ambiguous": 4,
+      "F4_refused_other": 3,
+      "F2_format": 2,
+      "F8_regression": 2,
+      "F4_search_not_found": 2,
+      "F6_crash_all_tests": 1
+     },
+     "resolved": 38,
+     "rate": 38.4,
+     "wilson": [
+      29.4,
+      48.2
+     ]
+    },
+    "cov_fully_covered": {
+     "n": 70,
+     "plain_pass": 26,
+     "argus_pass": 31
+    },
+    "cov_not_fully": {
+     "n": 29,
+     "plain_pass": 5,
+     "argus_pass": 7
+    },
+    "cov_zero_cov": {
+     "n": 18,
+     "plain_pass": 1,
+     "argus_pass": 2
+    },
+    "argus_gained_pass": [
+     "matplotlib__matplotlib-20488",
+     "pytest-dev__pytest-5262",
+     "scikit-learn__scikit-learn-11578",
+     "scikit-learn__scikit-learn-13496",
+     "sphinx-doc__sphinx-9230",
+     "sphinx-doc__sphinx-9711",
+     "sympy__sympy-13480"
+    ],
+    "argus_lost_pass": [],
+    "argus_newly_applied": [
+     "django__django-16642",
+     "matplotlib__matplotlib-20488",
+     "pytest-dev__pytest-5262",
+     "scikit-learn__scikit-learn-11578",
+     "scikit-learn__scikit-learn-13496",
+     "sphinx-doc__sphinx-9230",
+     "sphinx-doc__sphinx-9711",
+     "sympy__sympy-13480",
+     "sympy__sympy-21596",
+     "sympy__sympy-24539"
+    ],
+    "argus_newly_refused": []
+   },
+   "gpt-oss-120b": {
+    "plain": {
+     "n": 99,
+     "labels": {
+      "PASS": 44,
+      "F7_wrong_fix": 25,
+      "F4_search_not_found": 14,
+      "F78_both": 7,
+      "F8_regression": 6,
+      "F4_ambiguous": 2,
+      "F3_wrong_file": 1
+     },
+     "resolved": 44,
+     "rate": 44.4,
+     "wilson": [
+      35.0,
+      54.3
+     ]
+    },
+    "argus": {
+     "n": 99,
+     "labels": {
+      "PASS": 46,
+      "F7_wrong_fix": 26,
+      "F4_search_not_found": 9,
+      "F78_both": 8,
+      "F8_regression": 6,
+      "F4_ambiguous": 3,
+      "F3_wrong_file": 1
+     },
+     "resolved": 46,
+     "rate": 46.5,
+     "wilson": [
+      37.0,
+      56.2
+     ]
+    },
+    "cov_fully_covered": {
+     "n": 70,
+     "plain_pass": 37,
+     "argus_pass": 38
+    },
+    "cov_not_fully": {
+     "n": 29,
+     "plain_pass": 7,
+     "argus_pass": 8
+    },
+    "cov_zero_cov": {
+     "n": 18,
+     "plain_pass": 1,
+     "argus_pass": 2
+    },
+    "argus_gained_pass": [
+     "scikit-learn__scikit-learn-11578",
+     "sympy__sympy-13480"
+    ],
+    "argus_lost_pass": [],
+    "argus_newly_applied": [
+     "scikit-learn__scikit-learn-11578",
+     "scikit-learn__scikit-learn-14983",
+     "sympy__sympy-13480",
+     "sympy__sympy-21596"
+    ],
+    "argus_newly_refused": []
+   },
+   "paired_plain_20_vs_120": null,
+   "paired_plain": {
+    "both": 27,
+    "only_20b": 4,
+    "only_120b": 17,
+    "neither": 51,
+    "p_exact_two_sided": 0.0072
+   },
+   "gap_tasks_plain": [
+    "django__django-14017",
+    "django__django-14238",
+    "django__django-14434",
+    "django__django-14771",
+    "django__django-16595",
+    "matplotlib__matplotlib-20488",
+    "pydata__xarray-4356",
+    "pytest-dev__pytest-5262",
+    "scikit-learn__scikit-learn-13496",
+    "scikit-learn__scikit-learn-25973",
+    "sphinx-doc__sphinx-9230",
+    "sphinx-doc__sphinx-9711",
+    "sympy__sympy-11618",
+    "sympy__sympy-14711",
+    "sympy__sympy-17655",
+    "sympy__sympy-19346",
+    "sympy__sympy-22914"
+   ],
+   "paired_argus": {
+    "both": 34,
+    "only_20b": 4,
+    "only_120b": 12,
+    "neither": 49,
+    "p_exact_two_sided": 0.0768
+   },
+   "gap_tasks_argus": [
+    "django__django-14017",
+    "django__django-14238",
+    "django__django-14434",
+    "django__django-14771",
+    "django__django-16595",
+    "pydata__xarray-4356",
+    "scikit-learn__scikit-learn-25973",
+    "sympy__sympy-11618",
+    "sympy__sympy-14711",
+    "sympy__sympy-17655",
+    "sympy__sympy-19346",
+    "sympy__sympy-22914"
+   ]
+  },
+  "deep": {
+   "mcnemar_20argus_vs_20plain": {
+    "only_first": 7,
+    "only_second": 0,
+    "both": 31,
+    "p": 0.0156
+   },
+   "mcnemar_120argus_vs_120plain": {
+    "only_first": 2,
+    "only_second": 0,
+    "both": 44,
+    "p": 0.5
+   },
+   "mcnemar_20argus_vs_120plain": {
+    "only_first": 6,
+    "only_second": 12,
+    "both": 32,
+    "p": 0.2379
+   },
+   "mcnemar_20argus_vs_120argus": {
+    "only_first": 4,
+    "only_second": 12,
+    "both": 34,
+    "p": 0.0768
+   },
+   "trunc": {
+    "n": 21,
+    "ids": [
+     "django__django-13406",
+     "django__django-14034",
+     "django__django-15128",
+     "django__django-15315",
+     "django__django-15930",
+     "django__django-16485",
+     "matplotlib__matplotlib-13989",
+     "matplotlib__matplotlib-20676",
+     "matplotlib__matplotlib-23412",
+     "matplotlib__matplotlib-25960",
+     "psf__requests-6028",
+     "pydata__xarray-4094",
+     "pytest-dev__pytest-10051",
+     "pytest-dev__pytest-6197",
+     "pytest-dev__pytest-7521",
+     "scikit-learn__scikit-learn-12973",
+     "sphinx-doc__sphinx-9698",
+     "sympy__sympy-14711",
+     "sympy__sympy-16450",
+     "sympy__sympy-19346",
+     "sympy__sympy-24443"
+    ],
+    "outcome_120b_plain_on_T": {
+     "F7_wrong_fix": 8,
+     "F3_wrong_file": 1,
+     "F4_search_not_found": 7,
+     "F8_regression": 2,
+     "F78_both": 1,
+     "PASS": 2
+    },
+    "pass_120b_on_T": 2,
+    "pass_120b_on_nonT": 42,
+    "n_nonT": 78,
+    "pass_20b_on_nonT_plain": 31,
+    "pass_20b_on_nonT_argus": 38,
+    "repos": {
+     "django/django": 6,
+     "matplotlib/matplotlib": 4,
+     "psf/requests": 1,
+     "pydata/xarray": 1,
+     "pytest-dev/pytest": 3,
+     "scikit-learn/scikit-learn": 1,
+     "sphinx-doc/sphinx": 1,
+     "sympy/sympy": 4
+    },
+    "covered_fully_T": 8,
+    "median_prompt_T": 5953,
+    "median_prompt_nonT": 5921.0,
+    "median_gold_lines_T": 5,
+    "median_gold_lines_nonT": 6.0,
+    "median_reasoning_120b_on_T": 1405,
+    "median_reasoning_120b_on_nonT": 711.0
+   },
+   "tokens_gpt-oss-20b": {
+    "mean_completion": 3094,
+    "median_completion": 1797,
+    "mean_reasoning": 2822,
+    "mean_prompt": 4911,
+    "finish": {
+     "stop": 77,
+     "length": 22
+    }
+   },
+   "reasoning_by_outcome_gpt-oss-20b": {
+    "F7_wrong_fix": {
+     "n": 15,
+     "median": 825,
+     "mean": 1197
+    },
+    "PASS": {
+     "n": 31,
+     "median": 1166,
+     "mean": 1586
+    },
+    "F78_both": {
+     "n": 8,
+     "median": 1658.5,
+     "mean": 1908
+    },
+    "F2_format": {
+     "n": 2,
+     "median": 2607.5,
+     "mean": 2608
+    },
+    "F8_regression": {
+     "n": 2,
+     "median": 882.0,
+     "mean": 882
+    },
+    "F1_budget_truncation": {
+     "n": 21,
+     "median": 7858,
+     "mean": 7664
+    },
+    "F4_search_not_found": {
+     "n": 15,
+     "median": 1279,
+     "mean": 1489
+    },
+    "F6_crash_all_tests": {
+     "n": 1,
+     "median": 1019,
+     "mean": 1019
+    },
+    "F4_ambiguous": {
+     "n": 3,
+     "median": 2043,
+     "mean": 1711
+    },
+    "F5_syntax": {
+     "n": 1,
+     "median": 606,
+     "mean": 606
+    }
+   },
+   "tokens_gpt-oss-120b": {
+    "mean_completion": 1360,
+    "median_completion": 1183,
+    "mean_reasoning": 1107,
+    "mean_prompt": 4911,
+    "finish": {
+     "stop": 99
+    }
+   },
+   "reasoning_by_outcome_gpt-oss-120b": {
+    "F7_wrong_fix": {
+     "n": 25,
+     "median": 1330,
+     "mean": 1293
+    },
+    "F78_both": {
+     "n": 7,
+     "median": 988,
+     "mean": 1343
+    },
+    "F8_regression": {
+     "n": 6,
+     "median": 1470.5,
+     "mean": 1459
+    },
+    "PASS": {
+     "n": 44,
+     "median": 690.5,
+     "mean": 818
+    },
+    "F3_wrong_file": {
+     "n": 1,
+     "median": 2954,
+     "mean": 2954
+    },
+    "F4_search_not_found": {
+     "n": 14,
+     "median": 1090.5,
+     "mean": 1344
+    },
+    "F4_ambiguous": {
+     "n": 2,
+     "median": 665.5,
+     "mean": 666
+    }
+   },
+   "wrongfix_gpt-oss-20b": {
+    "n": 25,
+    "labels": {
+     "F7_wrong_fix": 15,
+     "F78_both": 8,
+     "F8_regression": 2
+    },
+    "hit_gold_region": 16,
+    "miss_gold_region": 9,
+    "median_changed_lines": 5,
+    "median_gold_lines": 6,
+    "f2p_partial": 3
+   },
+   "region_pass_gpt-oss-20b": {
+    "hit_n": 44,
+    "hit_pass": 28,
+    "miss_n": 12,
+    "miss_pass": 3
+   },
+   "wrongfix_gpt-oss-120b": {
+    "n": 38,
+    "labels": {
+     "F7_wrong_fix": 25,
+     "F78_both": 7,
+     "F8_regression": 6
+    },
+    "hit_gold_region": 25,
+    "miss_gold_region": 13,
+    "median_changed_lines": 11.5,
+    "median_gold_lines": 6.5,
+    "f2p_partial": 3
+   },
+   "region_pass_gpt-oss-120b": {
+    "hit_n": 66,
+    "hit_pass": 41,
+    "miss_n": 16,
+    "miss_pass": 3
+   },
+   "coverage_nontrunc_gpt-oss-20b": {
+    "full": {
+     "n": 62,
+     "plain_pass": 26,
+     "argus_pass": 31
+    },
+    "partial": {
+     "n": 8,
+     "plain_pass": 4,
+     "argus_pass": 5
+    },
+    "zero": {
+     "n": 8,
+     "plain_pass": 1,
+     "argus_pass": 2
+    }
+   },
+   "ctxmode_gpt-oss-20b": {
+    "bm25_chunks": {
+     "n": 61,
+     "plain_pass": 21
+    },
+    "whole_file": {
+     "n": 38,
+     "plain_pass": 10
+    }
+   },
+   "coverage_nontrunc_gpt-oss-120b": {
+    "full": {
+     "n": 70,
+     "plain_pass": 37,
+     "argus_pass": 38
+    },
+    "partial": {
+     "n": 11,
+     "plain_pass": 6,
+     "argus_pass": 6
+    },
+    "zero": {
+     "n": 18,
+     "plain_pass": 1,
+     "argus_pass": 2
+    }
+   },
+   "ctxmode_gpt-oss-120b": {
+    "bm25_chunks": {
+     "n": 61,
+     "plain_pass": 24
+    },
+    "whole_file": {
+     "n": 38,
+     "plain_pass": 20
+    }
+   },
+   "by_repo": {
+    "astropy/astropy": {
+     "gpt-oss-20b": {
+      "n": 6,
+      "plain": 3,
+      "argus": 3
+     },
+     "gpt-oss-120b": {
+      "n": 6,
+      "plain": 2,
+      "argus": 2
+     }
+    },
+    "django/django": {
+     "gpt-oss-20b": {
+      "n": 30,
+      "plain": 9,
+      "argus": 9
+     },
+     "gpt-oss-120b": {
+      "n": 30,
+      "plain": 12,
+      "argus": 12
+     }
+    },
+    "matplotlib/matplotlib": {
+     "gpt-oss-20b": {
+      "n": 9,
+      "plain": 3,
+      "argus": 4
+     },
+     "gpt-oss-120b": {
+      "n": 9,
+      "plain": 4,
+      "argus": 4
+     }
+    },
+    "psf/requests": {
+     "gpt-oss-20b": {
+      "n": 2,
+      "plain": 0,
+      "argus": 0
+     },
+     "gpt-oss-120b": {
+      "n": 2,
+      "plain": 0,
+      "argus": 0
+     }
+    },
+    "pydata/xarray": {
+     "gpt-oss-20b": {
+      "n": 5,
+      "plain": 3,
+      "argus": 3
+     },
+     "gpt-oss-120b": {
+      "n": 5,
+      "plain": 4,
+      "argus": 4
+     }
+    },
+    "pylint-dev/pylint": {
+     "gpt-oss-20b": {
+      "n": 1,
+      "plain": 1,
+      "argus": 1
+     },
+     "gpt-oss-120b": {
+      "n": 1,
+      "plain": 1,
+      "argus": 1
+     }
+    },
+    "pytest-dev/pytest": {
+     "gpt-oss-20b": {
+      "n": 5,
+      "plain": 1,
+      "argus": 2
+     },
+     "gpt-oss-120b": {
+      "n": 5,
+      "plain": 2,
+      "argus": 2
+     }
+    },
+    "scikit-learn/scikit-learn": {
+     "gpt-oss-20b": {
+      "n": 9,
+      "plain": 3,
+      "argus": 5
+     },
+     "gpt-oss-120b": {
+      "n": 9,
+      "plain": 5,
+      "argus": 6
+     }
+    },
+    "sphinx-doc/sphinx": {
+     "gpt-oss-20b": {
+      "n": 11,
+      "plain": 3,
+      "argus": 5
+     },
+     "gpt-oss-120b": {
+      "n": 11,
+      "plain": 5,
+      "argus": 5
+     }
+    },
+    "sympy/sympy": {
+     "gpt-oss-20b": {
+      "n": 21,
+      "plain": 5,
+      "argus": 6
+     },
+     "gpt-oss-120b": {
+      "n": 21,
+      "plain": 9,
+      "argus": 10
+     }
+    }
+   },
+   "argus_tiers_gpt-oss-20b": {
+    "1": 58,
+    "2": 6,
+    "3": 2
+   },
+   "argus_changed_gpt-oss-20b": [
+    [
+     "django__django-14238",
+     "F4_search_not_found",
+     "F4_refused_other",
+     null
+    ],
+    [
+     "django__django-16595",
+     "F4_search_not_found",
+     "F4_ambiguous",
+     null
+    ],
+    [
+     "django__django-16642",
+     "F4_search_not_found",
+     "F7_wrong_fix",
+     2
+    ],
+    [
+     "matplotlib__matplotlib-20488",
+     "F4_search_not_found",
+     "PASS",
+     2
+    ],
+    [
+     "pydata__xarray-4356",
+     "F5_syntax",
+     "F4_refused_other",
+     null
+    ],
+    [
+     "pytest-dev__pytest-5262",
+     "F4_search_not_found",
+     "PASS",
+     3
+    ],
+    [
+     "scikit-learn__scikit-learn-11578",
+     "F4_search_not_found",
+     "PASS",
+     1
+    ],
+    [
+     "scikit-learn__scikit-learn-13496",
+     "F4_search_not_found",
+     "PASS",
+     1
+    ],
+    [
+     "sphinx-doc__sphinx-9230",
+     "F4_search_not_found",
+     "PASS",
+     2
+    ],
+    [
+     "sphinx-doc__sphinx-9711",
+     "F4_search_not_found",
+     "PASS",
+     2
+    ],
+    [
+     "sympy__sympy-13480",
+     "F4_search_not_found",
+     "PASS",
+     2
+    ],
+    [
+     "sympy__sympy-17655",
+     "F4_search_not_found",
+     "F4_refused_other",
+     null
+    ],
+    [
+     "sympy__sympy-21596",
+     "F4_search_not_found",
+     "F7_wrong_fix",
+     2
+    ],
+    [
+     "sympy__sympy-24539",
+     "F4_search_not_found",
+     "F78_both",
+     3
+    ]
+   ],
+   "plain_not_found_gpt-oss-20b": [
+    [
+     "django__django-14238",
+     "F4_refused_other"
+    ],
+    [
+     "django__django-15280",
+     "F4_search_not_found"
+    ],
+    [
+     "django__django-16595",
+     "F4_ambiguous"
+    ],
+    [
+     "django__django-16642",
+     "F7_wrong_fix"
+    ],
+    [
+     "matplotlib__matplotlib-20488",
+     "PASS"
+    ],
+    [
+     "pytest-dev__pytest-5262",
+     "PASS"
+    ],
+    [
+     "scikit-learn__scikit-learn-11578",
+     "PASS"
+    ],
+    [
+     "scikit-learn__scikit-learn-13496",
+     "PASS"
+    ],
+    [
+     "sphinx-doc__sphinx-9230",
+     "PASS"
+    ],
+    [
+     "sphinx-doc__sphinx-9711",
+     "PASS"
+    ],
+    [
+     "sympy__sympy-11618",
+     "F4_search_not_found"
+    ],
+    [
+     "sympy__sympy-13480",
+     "PASS"
+    ],
+    [
+     "sympy__sympy-17655",
+     "F4_refused_other"
+    ],
+    [
+     "sympy__sympy-21596",
+     "F7_wrong_fix"
+    ],
+    [
+     "sympy__sympy-24539",
+     "F78_both"
+    ]
+   ],
+   "plain_ambig_gpt-oss-20b": [
+    [
+     "matplotlib__matplotlib-24637",
+     "F4_ambiguous"
+    ],
+    [
+     "sympy__sympy-15017",
+     "F4_ambiguous"
+    ],
+    [
+     "sympy__sympy-16792",
+     "F4_ambiguous"
+    ]
+   ],
+   "argus_refused_other_gpt-oss-20b": [
+    "django__django-14238",
+    "pydata__xarray-4356",
+    "sympy__sympy-17655"
+   ],
+   "argus_tiers_gpt-oss-120b": {
+    "1": 82,
+    "2": 4
+   },
+   "argus_changed_gpt-oss-120b": [
+    [
+     "matplotlib__matplotlib-23412",
+     "F4_search_not_found",
+     "F4_ambiguous",
+     null
+    ],
+    [
+     "scikit-learn__scikit-learn-11578",
+     "F4_search_not_found",
+     "PASS",
+     2
+    ],
+    [
+     "scikit-learn__scikit-learn-14983",
+     "F4_search_not_found",
+     "F78_both",
+     2
+    ],
+    [
+     "sympy__sympy-13480",
+     "F4_search_not_found",
+     "PASS",
+     2
+    ],
+    [
+     "sympy__sympy-21596",
+     "F4_search_not_found",
+     "F7_wrong_fix",
+     2
+    ]
+   ],
+   "plain_not_found_gpt-oss-120b": [
+    [
+     "django__django-15128",
+     "F4_search_not_found"
+    ],
+    [
+     "django__django-15280",
+     "F4_search_not_found"
+    ],
+    [
+     "django__django-15315",
+     "F4_search_not_found"
+    ],
+    [
+     "matplotlib__matplotlib-13989",
+     "F4_search_not_found"
+    ],
+    [
+     "matplotlib__matplotlib-20676",
+     "F4_search_not_found"
+    ],
+    [
+     "matplotlib__matplotlib-23412",
+     "F4_ambiguous"
+    ],
+    [
+     "matplotlib__matplotlib-24637",
+     "F4_search_not_found"
+    ],
+    [
+     "pytest-dev__pytest-7521",
+     "F4_search_not_found"
+    ],
+    [
+     "scikit-learn__scikit-learn-11578",
+     "PASS"
+    ],
+    [
+     "scikit-learn__scikit-learn-14983",
+     "F78_both"
+    ],
+    [
+     "sympy__sympy-13480",
+     "PASS"
+    ],
+    [
+     "sympy__sympy-16450",
+     "F4_search_not_found"
+    ],
+    [
+     "sympy__sympy-21596",
+     "F7_wrong_fix"
+    ],
+    [
+     "sympy__sympy-24539",
+     "F4_search_not_found"
+    ]
+   ],
+   "plain_ambig_gpt-oss-120b": [
+    [
+     "sympy__sympy-15017",
+     "F4_ambiguous"
+    ],
+    [
+     "sympy__sympy-16792",
+     "F4_ambiguous"
+    ]
+   ],
+   "argus_refused_other_gpt-oss-120b": [],
+   "funnel_gpt-oss-20b": {
+    "total": 99,
+    "produced_output": 78,
+    "parsed_and_addressed_target": 76,
+    "plain_applied": 58,
+    "argus_applied": 67,
+    "plain_pass": 31,
+    "argus_pass": 38,
+    "pass_rate_given_plain_applied": 53.4,
+    "pass_rate_given_argus_applied": 56.7
+   },
+   "funnel_gpt-oss-120b": {
+    "total": 99,
+    "produced_output": 99,
+    "parsed_and_addressed_target": 98,
+    "plain_applied": 82,
+    "argus_applied": 86,
+    "plain_pass": 44,
+    "argus_pass": 46,
+    "pass_rate_given_plain_applied": 53.7,
+    "pass_rate_given_argus_applied": 53.5
+   },
+   "gap_after_argus_labels_20b": {
+    "F7_wrong_fix": 2,
+    "F4_refused_other": 3,
+    "F6_crash_all_tests": 1,
+    "F2_format": 1,
+    "F4_ambiguous": 1,
+    "F78_both": 1,
+    "F4_search_not_found": 1,
+    "F1_budget_truncation": 2
+   },
+   "both_fail_labels": {
+    "F7_wrong_fix | F7_wrong_fix": 13,
+    "F1_budget_truncation | F7_wrong_fix": 8,
+    "F1_budget_truncation | F4_search_not_found": 6,
+    "F78_both | F78_both": 4,
+    "F7_wrong_fix | F78_both": 2,
+    "F1_budget_truncation | F8_regression": 2,
+    "F78_both | F7_wrong_fix": 2,
+    "F4_ambiguous | F4_ambiguous": 2,
+    "F2_format | F8_regression": 1,
+    "F8_regression | F7_wrong_fix": 1,
+    "F1_budget_truncation | F3_wrong_file": 1,
+    "F4_search_not_found | F4_search_not_found": 1
+   },
+   "tasks_neither_model_applied_to_gold_region": 27,
+   "baseline_ladder_gpt-oss-20b": {
+    "plain_line_exact": {
+     "pass_": 31,
+     "gains": []
+    },
+    "substring_exact": {
+     "pass_": 33,
+     "gains": [
+      [
+       "scikit-learn__scikit-learn-11578",
+       1,
+       "PASS"
+      ],
+      [
+       "scikit-learn__scikit-learn-13496",
+       1,
+       "PASS"
+      ]
+     ]
+    },
+    "plus_whitespace_norm": {
+     "pass_": 37,
+     "gains": [
+      [
+       "django__django-16642",
+       2,
+       "F7_wrong_fix"
+      ],
+      [
+       "matplotlib__matplotlib-20488",
+       2,
+       "PASS"
+      ],
+      [
+       "scikit-learn__scikit-learn-11578",
+       1,
+       "PASS"
+      ],
+      [
+       "scikit-learn__scikit-learn-13496",
+       1,
+       "PASS"
+      ],
+      [
+       "sphinx-doc__sphinx-9230",
+       2,
+       "PASS"
+      ],
+      [
+       "sphinx-doc__sphinx-9711",
+       2,
+       "PASS"
+      ],
+      [
+       "sympy__sympy-13480",
+       2,
+       "PASS"
+      ],
+      [
+       "sympy__sympy-21596",
+       2,
+       "F7_wrong_fix"
+      ]
+     ]
+    },
+    "argus_all_tiers": {
+     "pass_": 38,
+     "gains": [
+      [
+       "django__django-16642",
+       2,
+       "F7_wrong_fix"
+      ],
+      [
+       "matplotlib__matplotlib-20488",
+       2,
+       "PASS"
+      ],
+      [
+       "pytest-dev__pytest-5262",
+       3,
+       "PASS"
+      ],
+      [
+       "scikit-learn__scikit-learn-11578",
+       1,
+       "PASS"
+      ],
+      [
+       "scikit-learn__scikit-learn-13496",
+       1,
+       "PASS"
+      ],
+      [
+       "sphinx-doc__sphinx-9230",
+       2,
+       "PASS"
+      ],
+      [
+       "sphinx-doc__sphinx-9711",
+       2,
+       "PASS"
+      ],
+      [
+       "sympy__sympy-13480",
+       2,
+       "PASS"
+      ],
+      [
+       "sympy__sympy-21596",
+       2,
+       "F7_wrong_fix"
+      ],
+      [
+       "sympy__sympy-24539",
+       3,
+       "F78_both"
+      ]
+     ]
+    }
+   },
+   "baseline_ladder_gpt-oss-120b": {
+    "plain_line_exact": {
+     "pass_": 44,
+     "gains": []
+    },
+    "substring_exact": {
+     "pass_": 44,
+     "gains": []
+    },
+    "plus_whitespace_norm": {
+     "pass_": 46,
+     "gains": [
+      [
+       "scikit-learn__scikit-learn-11578",
+       2,
+       "PASS"
+      ],
+      [
+       "scikit-learn__scikit-learn-14983",
+       2,
+       "F78_both"
+      ],
+      [
+       "sympy__sympy-13480",
+       2,
+       "PASS"
+      ],
+      [
+       "sympy__sympy-21596",
+       2,
+       "F7_wrong_fix"
+      ]
+     ]
+    },
+    "argus_all_tiers": {
+     "pass_": 46,
+     "gains": [
+      [
+       "scikit-learn__scikit-learn-11578",
+       2,
+       "PASS"
+      ],
+      [
+       "scikit-learn__scikit-learn-14983",
+       2,
+       "F78_both"
+      ],
+      [
+       "sympy__sympy-13480",
+       2,
+       "PASS"
+      ],
+      [
+       "sympy__sympy-21596",
+       2,
+       "F7_wrong_fix"
+      ]
+     ]
+    }
+   },
+   "tier_of_applied_nonpass_and_pass_gpt-oss-20b": [
+    [
+     "django__django-16642",
+     2,
+     "F7_wrong_fix"
+    ],
+    [
+     "matplotlib__matplotlib-20488",
+     2,
+     "PASS"
+    ],
+    [
+     "pytest-dev__pytest-5262",
+     3,
+     "PASS"
+    ],
+    [
+     "sphinx-doc__sphinx-9230",
+     2,
+     "PASS"
+    ],
+    [
+     "sphinx-doc__sphinx-9711",
+     2,
+     "PASS"
+    ],
+    [
+     "sympy__sympy-13480",
+     2,
+     "PASS"
+    ],
+    [
+     "sympy__sympy-21596",
+     2,
+     "F7_wrong_fix"
+    ],
+    [
+     "sympy__sympy-24539",
+     3,
+     "F78_both"
+    ]
+   ],
+   "tier_of_applied_nonpass_and_pass_gpt-oss-120b": [
+    [
+     "scikit-learn__scikit-learn-11578",
+     2,
+     "PASS"
+    ],
+    [
+     "scikit-learn__scikit-learn-14983",
+     2,
+     "F78_both"
+    ],
+    [
+     "sympy__sympy-13480",
+     2,
+     "PASS"
+    ],
+    [
+     "sympy__sympy-21596",
+     2,
+     "F7_wrong_fix"
+    ]
+   ]
+  },
+  "t0_cost": {
+   "cost20": 0.128374125,
+   "cost120": 0.15369164999999999,
+   "loop20": 0.059360550000000005
+  },
+  "t0_cost_per_solve": {
+   "120B plain": 0.003492992045454545,
+   "120B Argus": 0.0033411228260869564,
+   "20B plain": 0.004141100806451613,
+   "20B Argus": 0.0033782664473684214
+  },
+  "t1": {
+   "n_valid": 99,
+   "excluded": [
+    "psf__requests-1766"
+   ],
+   "resolve": {
+    "plain:gpt-oss-20b": {
+     "per_draw": [
+      29,
+      33,
+      28
+     ],
+     "per_draw_pct": [
+      29.3,
+      33.3,
+      28.3
+     ],
+     "mean_pct": 30.3,
+     "ci95": [
+      22.9,
+      38.0
+     ]
+    },
+    "plain:gpt-oss-120b": {
+     "per_draw": [
+      45,
+      49,
+      37
+     ],
+     "per_draw_pct": [
+      45.5,
+      49.5,
+      37.4
+     ],
+     "mean_pct": 44.1,
+     "ci95": [
+      35.7,
+      52.5
+     ]
+    },
+    "argus:gpt-oss-20b": {
+     "per_draw": [
+      36,
+      38,
+      33
+     ],
+     "per_draw_pct": [
+      36.4,
+      38.4,
+      33.3
+     ],
+     "mean_pct": 36.0,
+     "ci95": [
+      28.3,
+      44.1
+     ]
+    },
+    "argus:gpt-oss-120b": {
+     "per_draw": [
+      48,
+      52,
+      41
+     ],
+     "per_draw_pct": [
+      48.5,
+      52.5,
+      41.4
+     ],
+     "mean_pct": 47.5,
+     "ci95": [
+      39.1,
+      55.9
+     ]
+    },
+    "argus_minus_plain:gpt-oss-20b": {
+     "mean_pp": 5.72,
+     "ci95_pp": [
+      2.7,
+      9.1
+     ]
+    },
+    "argus_minus_plain:gpt-oss-120b": {
+     "mean_pp": 3.37,
+     "ci95_pp": [
+      0.7,
+      6.7
+     ]
+    },
+    "argus:120b_minus_20b": {
+     "mean_pp": 11.45,
+     "ci95_pp": [
+      6.1,
+      16.5
+     ]
+    }
+   },
+   "t0_reference": {
+    "gpt-oss-20b": {
+     "plain": 31,
+     "argus": 38,
+     "n": 99
+    },
+    "gpt-oss-120b": {
+     "plain": 44,
+     "argus": 46,
+     "n": 99
+    }
+   },
+   "loop": {
+    "gpt-oss-20b": {
+     "t1_loops": 22,
+     "t1_runs": 297,
+     "t1_pct": 7.4,
+     "t0_loops": 22,
+     "t0_runs": 99,
+     "t0_pct": 22.2,
+     "t1_loop_tokens_share_of_spend_pct": 18.0,
+     "tasks_with_any_loop": 16,
+     "tasks_looping_all_3_draws": 1,
+     "t0_loopers_that_loop_again_at_t1_any_draw": 10,
+     "t0_loopers_n": 22
+    },
+    "gpt-oss-120b": {
+     "t1_loops": 1,
+     "t1_runs": 297,
+     "t1_pct": 0.3,
+     "t0_loops": 0,
+     "t0_runs": 99,
+     "t0_pct": 0.0,
+     "t1_loop_tokens_share_of_spend_pct": 1.2,
+     "tasks_with_any_loop": 1,
+     "tasks_looping_all_3_draws": 0,
+     "t0_loopers_that_loop_again_at_t1_any_draw": 0,
+     "t0_loopers_n": 0
+    }
+   },
+   "per_task": {
+    "gpt-oss-20b": {
+     "hist_k_of_3": {
+      "0": 50,
+      "1": 13,
+      "2": 14,
+      "3": 22
+     },
+     "always": 22,
+     "sometimes": 27,
+     "never": 50,
+     "never_at_t0": 61,
+     "t0_failed_solved_by_some_draw": 13,
+     "t0_passed_not_solved_by_any_draw": 2
+    },
+    "gpt-oss-120b": {
+     "hist_k_of_3": {
+      "0": 39,
+      "1": 10,
+      "2": 19,
+      "3": 31
+     },
+     "always": 31,
+     "sometimes": 29,
+     "never": 39,
+     "never_at_t0": 53,
+     "t0_failed_solved_by_some_draw": 16,
+     "t0_passed_not_solved_by_any_draw": 2
+    },
+    "solved_by_neither_at_t0": {
+     "n": 49,
+     "solved_by_some_t1_draw_any_model": 12,
+     "tasks": [
+      "astropy__astropy-12907",
+      "django__django-15930",
+      "django__django-16485",
+      "django__django-16642",
+      "django__django-16877",
+      "matplotlib__matplotlib-23412",
+      "matplotlib__matplotlib-24637",
+      "pydata__xarray-4094",
+      "pytest-dev__pytest-7521",
+      "sympy__sympy-15875",
+      "sympy__sympy-24066",
+      "sympy__sympy-24443"
+     ],
+     "by_20b": 5,
+     "by_120b": 12
+    },
+    "solvable_by_any_model_any_draw_t1": 60,
+    "solved_by_20b_not_by_120b_any_draw": 0,
+    "solved_by_120b_not_by_20b_any_draw": 11,
+    "draw_pair_agreement_pct": {
+     "gpt-oss-20b": 81.8,
+     "gpt-oss-120b": 80.5
+    }
+   },
+   "oracle": {
+    "single_draw_each": {
+     "always_gpt-oss-20b": {
+      "solves_per_draw": [
+       36,
+       38,
+       33
+      ],
+      "mean_solves": 35.7,
+      "mean_spend": 0.1143,
+      "usd_per_solve": 0.00321
+     },
+     "always_gpt-oss-120b": {
+      "solves_per_draw": [
+       48,
+       52,
+       41
+      ],
+      "mean_solves": 47,
+      "mean_spend": 0.1543,
+      "usd_per_solve": 0.00328
+     },
+     "O1_model_choice_only": {
+      "solves_per_draw": [
+       51.0,
+       56.0,
+       46.0
+      ],
+      "mean_solves": 51.0,
+      "mean_spend": 0.1128,
+      "usd_per_solve": 0.00221
+     },
+     "O3_skip_hopeless": {
+      "solves_per_draw": [
+       51.0,
+       56.0,
+       46.0
+      ],
+      "mean_solves": 51.0,
+      "mean_spend": 0.0557,
+      "usd_per_solve": 0.00109
+     },
+     "cascade_test_gated": {
+      "solves_per_draw": [
+       51.0,
+       56.0,
+       46.0
+      ],
+      "mean_solves": 51.0,
+      "mean_spend": 0.2218,
+      "usd_per_solve": 0.00435
+     },
+     "cascade_observable_only": {
+      "solves_per_draw": [
+       40.0,
+       40.0,
+       39.0
+      ],
+      "mean_solves": 39.7,
+      "mean_spend": 0.1564,
+      "usd_per_solve": 0.00394
+     }
+    },
+    "smoothed": {
+     "O1_model_choice_only_smoothed": {
+      "expected_solves": 49.3,
+      "spend": 0.124,
+      "usd_per_solve": 0.00251
+     },
+     "O3_skip_hopeless_smoothed": {
+      "expected_solves": 49.3,
+      "spend": 0.0761,
+      "usd_per_solve": 0.00154
+     }
+    },
+    "fixed_smoothed": {
+     "gpt-oss-20b": {
+      "expected_solves": 35.7,
+      "spend": 0.1143,
+      "usd_per_solve": 0.00321
+     },
+     "gpt-oss-120b": {
+      "expected_solves": 47.0,
+      "spend": 0.1543,
+      "usd_per_solve": 0.00328
+     }
+    },
+    "decomposition_note": "O1 = pick the model per task but every task still gets one attempt; O3 = O1 plus skipping tasks nobody solves. O3 - O1 spend is the part of the oracle that is pure knowledge of hopelessness.",
+    "spend_O1_minus_O3": 0.0571
+   },
+   "stop_rules": {
+    "gpt-oss-20b": {
+     "no_retry (K=1)": {
+      "solves": 35.67,
+      "spend": 0.1143,
+      "solves_lost_vs_K3": 13.33,
+      "spend_saved_vs_K3": 0.1499,
+      "usd_per_solve": 0.00321
+     },
+     "retry to K=2": {
+      "solves": 44.67,
+      "spend": 0.1949,
+      "solves_lost_vs_K3": 4.33,
+      "spend_saved_vs_K3": 0.0694,
+      "usd_per_solve": 0.00436
+     },
+     "retry to K=3 (baseline)": {
+      "solves": 49.0,
+      "spend": 0.2643,
+      "solves_lost_vs_K3": 0.0,
+      "spend_saved_vs_K3": 0.0,
+      "usd_per_solve": 0.00539
+     },
+     "stop_after_loop": {
+      "solves": 47.17,
+      "spend": 0.2325,
+      "solves_lost_vs_K3": 1.83,
+      "spend_saved_vs_K3": 0.0317,
+      "usd_per_solve": 0.00493
+     },
+     "stop_after_no_patch (loop or apply failure)": {
+      "solves": 43.5,
+      "spend": 0.1914,
+      "solves_lost_vs_K3": 5.5,
+      "spend_saved_vs_K3": 0.0729,
+      "usd_per_solve": 0.0044
+     },
+     "stop_after_apply_failure (not loop)": {
+      "solves": 45.33,
+      "spend": 0.2177,
+      "solves_lost_vs_K3": 3.67,
+      "spend_saved_vs_K3": 0.0466,
+      "usd_per_solve": 0.0048
+     },
+     "stop_after_patch_applied_but_failed": {
+      "solves": 39.5,
+      "spend": 0.1673,
+      "solves_lost_vs_K3": 9.5,
+      "spend_saved_vs_K3": 0.097,
+      "usd_per_solve": 0.00424
+     }
+    },
+    "gpt-oss-120b": {
+     "no_retry (K=1)": {
+      "solves": 47.0,
+      "spend": 0.1543,
+      "solves_lost_vs_K3": 13.0,
+      "spend_saved_vs_K3": 0.159,
+      "usd_per_solve": 0.00328
+     },
+     "retry to K=2": {
+      "solves": 56.67,
+      "spend": 0.2417,
+      "solves_lost_vs_K3": 3.33,
+      "spend_saved_vs_K3": 0.0716,
+      "usd_per_solve": 0.00427
+     },
+     "retry to K=3 (baseline)": {
+      "solves": 60.0,
+      "spend": 0.3133,
+      "solves_lost_vs_K3": 0.0,
+      "spend_saved_vs_K3": 0.0,
+      "usd_per_solve": 0.00522
+     },
+     "stop_after_loop": {
+      "solves": 60.0,
+      "spend": 0.311,
+      "solves_lost_vs_K3": 0.0,
+      "spend_saved_vs_K3": 0.0024,
+      "usd_per_solve": 0.00518
+     },
+     "stop_after_no_patch (loop or apply failure)": {
+      "solves": 56.33,
+      "spend": 0.2611,
+      "solves_lost_vs_K3": 3.67,
+      "spend_saved_vs_K3": 0.0522,
+      "usd_per_solve": 0.00464
+     },
+     "stop_after_apply_failure (not loop)": {
+      "solves": 56.33,
+      "spend": 0.2635,
+      "solves_lost_vs_K3": 3.67,
+      "spend_saved_vs_K3": 0.0498,
+      "usd_per_solve": 0.00468
+     },
+     "stop_after_patch_applied_but_failed": {
+      "solves": 49.33,
+      "spend": 0.1977,
+      "solves_lost_vs_K3": 10.67,
+      "spend_saved_vs_K3": 0.1156,
+      "usd_per_solve": 0.00401
+     }
+    }
+   },
+   "cascades": {
+    "20B x1 -> 120B x1 (test-gated)": {
+     "solves": 51.0,
+     "spend": 0.2218,
+     "usd_per_solve": 0.00435
+    },
+    "20B x3 -> 120B x1 (test-gated)": {
+     "solves": 55.0,
+     "spend": 0.3507,
+     "usd_per_solve": 0.00638
+    },
+    "20B x3 -> 120B x3 (test-gated)": {
+     "solves": 60.0,
+     "spend": 0.4955,
+     "usd_per_solve": 0.00826
+    },
+    "20B x1 -> 120B x1 (observable-only: accept first applied patch)": {
+     "solves": 39.67,
+     "spend": 0.1564,
+     "usd_per_solve": 0.00394
+    },
+    "20B x3 -> 120B x3 (observable-only: accept first applied patch)": {
+     "solves": 39.5,
+     "spend": 0.211,
+     "usd_per_solve": 0.00534
+    }
+   },
+   "early_abort": {
+    "gpt-oss-20b": {
+     "tuned_max_tokens_of_resolved_runs_draws01": 7780,
+     "chosen_cap": 8000,
+     "draw3_runs_aborted": 0,
+     "draw3_resolved_lost": 0,
+     "draw3_resolved": 33,
+     "spend_before": 0.1144,
+     "spend_after": 0.1144,
+     "saved_pct": 0.0,
+     "aborted_runs_that_were_loops": 0,
+     "resolved_tokens_p50_p90_p99_max": [
+      1234,
+      4724,
+      7717,
+      7780
+     ]
+    },
+    "gpt-oss-120b": {
+     "tuned_max_tokens_of_resolved_runs_draws01": 3024,
+     "chosen_cap": 4000,
+     "draw3_runs_aborted": 1,
+     "draw3_resolved_lost": 0,
+     "draw3_resolved": 41,
+     "spend_before": 0.1556,
+     "spend_after": 0.1549,
+     "saved_pct": 0.5,
+     "aborted_runs_that_were_loops": 0,
+     "resolved_tokens_p50_p90_p99_max": [
+      960,
+      1774,
+      3024,
+      3736
+     ]
+    }
+   },
+   "apply_layer": {
+    "gpt-oss-20b": {
+     "draws_argus_gained_resolve": 18,
+     "draws_argus_lost_resolve": 1,
+     "argus_only_applied_draws": 34,
+     "argus_only_applied_and_resolved": 18,
+     "tasks_gained": [
+      "astropy__astropy-8872",
+      "django__django-13810",
+      "django__django-16116",
+      "django__django-16642",
+      "matplotlib__matplotlib-20488",
+      "matplotlib__matplotlib-24970",
+      "pytest-dev__pytest-5809",
+      "scikit-learn__scikit-learn-11578",
+      "scikit-learn__scikit-learn-13496",
+      "sphinx-doc__sphinx-9281",
+      "sympy__sympy-13480",
+      "sympy__sympy-14531",
+      "sympy__sympy-14711",
+      "sympy__sympy-23262"
+     ]
+    },
+    "gpt-oss-120b": {
+     "draws_argus_gained_resolve": 11,
+     "draws_argus_lost_resolve": 1,
+     "argus_only_applied_draws": 18,
+     "argus_only_applied_and_resolved": 11,
+     "tasks_gained": [
+      "django__django-14771",
+      "scikit-learn__scikit-learn-11578",
+      "sphinx-doc__sphinx-11445",
+      "sphinx-doc__sphinx-9230",
+      "sympy__sympy-13480",
+      "sympy__sympy-22914",
+      "sympy__sympy-23262"
+     ]
+    }
+   },
+   "conditional_pass_given_applied": {
+    "gpt-oss-20b": 46.9,
+    "gpt-oss-120b": 55.1
+   },
+   "apply_rate_pct": {
+    "gpt-oss-20b": 76.8,
+    "gpt-oss-120b": 86.2
+   },
+   "spend_total_usd": {
+    "gpt-oss-20b": 0.343,
+    "gpt-oss-120b": 0.4628
+   }
+  },
+  "sweep": {
+   "n_tasks": 100,
+   "draws": 3,
+   "ungraded_applied_patches": 0,
+   "bootstrap": {
+    "n": 5000,
+    "seed": 20261112,
+    "unit": "task"
+   },
+   "resolved": {
+    "gpt-oss-20b": {
+     "plain": {
+      "per_draw": [
+       30,
+       34,
+       29
+      ],
+      "mean": 31.0,
+      "ci95": [
+       23.67,
+       38.67
+      ]
+     },
+     "argus": {
+      "per_draw": [
+       37,
+       39,
+       34
+      ],
+      "mean": 36.67,
+      "ci95": [
+       28.67,
+       45.0
+      ]
+     },
+     "argus_minus_plain": {
+      "mean": 5.67,
+      "ci95": [
+       2.67,
+       9.0
+      ]
+     },
+     "rescued_draws": 34,
+     "rescued_resolved": 18,
+     "rescued_pass_rate": 0.529,
+     "lost_to_refusal": 2,
+     "lost_resolved": 1,
+     "argus_pass_given_applied": 0.476
+    },
+    "gpt-oss-120b": {
+     "plain": {
+      "per_draw": [
+       46,
+       50,
+       37
+      ],
+      "mean": 44.33,
+      "ci95": [
+       36.0,
+       53.0
+      ]
+     },
+     "argus": {
+      "per_draw": [
+       49,
+       53,
+       41
+      ],
+      "mean": 47.67,
+      "ci95": [
+       39.33,
+       56.33
+      ]
+     },
+     "argus_minus_plain": {
+      "mean": 3.33,
+      "ci95": [
+       0.67,
+       6.67
+      ]
+     },
+     "rescued_draws": 18,
+     "rescued_resolved": 11,
+     "rescued_pass_rate": 0.611,
+     "lost_to_refusal": 2,
+     "lost_resolved": 1,
+     "argus_pass_given_applied": 0.552
+    },
+    "gemini-3.1-flash-lite": {
+     "plain": {
+      "per_draw": [
+       50,
+       46,
+       44
+      ],
+      "mean": 46.67,
+      "ci95": [
+       37.67,
+       55.67
+      ]
+     },
+     "argus": {
+      "per_draw": [
+       50,
+       46,
+       45
+      ],
+      "mean": 47.0,
+      "ci95": [
+       38.0,
+       56.0
+      ]
+     },
+     "argus_minus_plain": {
+      "mean": 0.33,
+      "ci95": [
+       0.0,
+       1.0
+      ]
+     },
+     "rescued_draws": 9,
+     "rescued_resolved": 1,
+     "rescued_pass_rate": 0.111,
+     "lost_to_refusal": 0,
+     "lost_resolved": 0,
+     "argus_pass_given_applied": 0.516
+    },
+    "gemini-3.5-flash-lite": {
+     "plain": {
+      "per_draw": [
+       51,
+       48,
+       51
+      ],
+      "mean": 50.0,
+      "ci95": [
+       40.67,
+       59.0
+      ]
+     },
+     "argus": {
+      "per_draw": [
+       53,
+       49,
+       53
+      ],
+      "mean": 51.67,
+      "ci95": [
+       42.33,
+       60.67
+      ]
+     },
+     "argus_minus_plain": {
+      "mean": 1.67,
+      "ci95": [
+       0.0,
+       4.0
+      ]
+     },
+     "rescued_draws": 8,
+     "rescued_resolved": 5,
+     "rescued_pass_rate": 0.625,
+     "lost_to_refusal": 0,
+     "lost_resolved": 0,
+     "argus_pass_given_applied": 0.608
+    }
+   },
+   "funnel": {
+    "gpt-oss-20b": {
+     "plain": {
+      "resolved": 93,
+      "edit_not_applied:no_match": 62,
+      "no_blocks": 14,
+      "applied_but_wrong": 106,
+      "empty_or_truncated": 19,
+      "edit_not_applied:ambiguous": 5,
+      "edit_not_applied:wrong_file": 1
+     },
+     "argus": {
+      "resolved": 110,
+      "applied_but_wrong": 121,
+      "no_blocks": 14,
+      "empty_or_truncated": 19,
+      "edit_not_applied:refused": 35,
+      "edit_not_applied:path_refused": 1
+     }
+    },
+    "gpt-oss-120b": {
+     "plain": {
+      "applied_but_wrong": 110,
+      "resolved": 133,
+      "edit_not_applied:ambiguous": 9,
+      "edit_not_applied:no_match": 42,
+      "edit_not_applied:wrong_file": 1,
+      "no_blocks": 4,
+      "edit_not_applied:no_change": 1
+     },
+     "argus": {
+      "applied_but_wrong": 116,
+      "resolved": 143,
+      "edit_not_applied:refused": 35,
+      "edit_not_applied:path_refused": 1,
+      "no_blocks": 4,
+      "edit_not_applied:no_change": 1
+     }
+    },
+    "gemini-3.1-flash-lite": {
+     "plain": {
+      "resolved": 140,
+      "applied_but_wrong": 124,
+      "edit_not_applied:no_match": 30,
+      "edit_not_applied:ambiguous": 5,
+      "edit_not_applied:no_change": 1
+     },
+     "argus": {
+      "resolved": 141,
+      "applied_but_wrong": 132,
+      "edit_not_applied:refused": 26,
+      "edit_not_applied:no_change": 1
+     }
+    },
+    "gemini-3.5-flash-lite": {
+     "plain": {
+      "resolved": 150,
+      "applied_but_wrong": 97,
+      "empty_or_truncated": 14,
+      "edit_not_applied:no_match": 29,
+      "no_blocks": 5,
+      "edit_not_applied:ambiguous": 5
+     },
+     "argus": {
+      "resolved": 155,
+      "applied_but_wrong": 100,
+      "empty_or_truncated": 14,
+      "edit_not_applied:refused": 26,
+      "no_blocks": 5
+     }
+    }
+   },
+   "per_task": {
+    "gpt-oss-20b": {
+     "pass_at_3": 50,
+     "always": 23,
+     "sometimes": 27,
+     "never": 50
+    },
+    "gpt-oss-120b": {
+     "pass_at_3": 61,
+     "always": 31,
+     "sometimes": 30,
+     "never": 39
+    },
+    "gemini-3.1-flash-lite": {
+     "pass_at_3": 55,
+     "always": 36,
+     "sometimes": 19,
+     "never": 45
+    },
+    "gemini-3.5-flash-lite": {
+     "pass_at_3": 59,
+     "always": 44,
+     "sometimes": 15,
+     "never": 41
+    }
+   },
+   "tasks_gemini_only": [
+    "django__django-12774",
+    "django__django-15128",
+    "django__django-15315",
+    "pytest-dev__pytest-10051",
+    "scikit-learn__scikit-learn-14983",
+    "sympy__sympy-13551",
+    "sympy__sympy-13798",
+    "sympy__sympy-17139"
+   ],
+   "tasks_gptoss_only": [
+    "django__django-15930",
+    "django__django-16877",
+    "matplotlib__matplotlib-23412",
+    "pydata__xarray-4094",
+    "sympy__sympy-19346"
+   ],
+   "tasks_both": 56,
+   "tasks_neither": 31,
+   "pairwise_only": {
+    "gpt-oss-20b_not_gpt-oss-120b": 0,
+    "gpt-oss-20b_not_gemini-3.1-flash-lite": 5,
+    "gpt-oss-20b_not_gemini-3.5-flash-lite": 4,
+    "gpt-oss-120b_not_gpt-oss-20b": 11,
+    "gpt-oss-120b_not_gemini-3.1-flash-lite": 9,
+    "gpt-oss-120b_not_gemini-3.5-flash-lite": 8,
+    "gemini-3.1-flash-lite_not_gpt-oss-20b": 10,
+    "gemini-3.1-flash-lite_not_gpt-oss-120b": 3,
+    "gemini-3.1-flash-lite_not_gemini-3.5-flash-lite": 5,
+    "gemini-3.5-flash-lite_not_gpt-oss-20b": 13,
+    "gemini-3.5-flash-lite_not_gpt-oss-120b": 6,
+    "gemini-3.5-flash-lite_not_gemini-3.1-flash-lite": 9
+   },
+   "cost": {
+    "gpt-oss-20b": {
+     "usd_per_100_task_pass": 0.116,
+     "mean_solves": 36.67,
+     "usd_per_solve": 0.00316,
+     "mean_truncated_draws": 7.3
+    },
+    "gpt-oss-120b": {
+     "usd_per_100_task_pass": 0.1565,
+     "mean_solves": 47.67,
+     "usd_per_solve": 0.00328,
+     "mean_truncated_draws": 0.3
+    },
+    "gemini-3.1-flash-lite": {
+     "usd_per_100_task_pass": 0.291,
+     "mean_solves": 47.0,
+     "usd_per_solve": 0.00619,
+     "mean_truncated_draws": 0.0
+    },
+    "gemini-3.5-flash-lite": {
+     "usd_per_100_task_pass": 1.3251,
+     "mean_solves": 51.67,
+     "usd_per_solve": 0.02565,
+     "mean_truncated_draws": 2.0
+    }
+   },
+   "routing_replay": {
+    "cascade_order": [
+     "gpt-oss-20b",
+     "gpt-oss-120b",
+     "gemini-3.1-flash-lite",
+     "gemini-3.5-flash-lite"
+    ],
+    "per_draw": [
+     {
+      "oracle_solved": 64,
+      "oracle_usd": 0.12565964999999998,
+      "cascade_solved": 64,
+      "cascade_usd": 0.9088566000000005
+     },
+     {
+      "oracle_solved": 64,
+      "oracle_usd": 0.13152965000000003,
+      "cascade_solved": 64,
+      "cascade_usd": 1.0236844000000003
+     },
+     {
+      "oracle_solved": 62,
+      "oracle_usd": 0.217027275,
+      "cascade_solved": 62,
+      "cascade_usd": 1.1502324000000004
+     }
+    ],
+    "mean": {
+     "oracle_solved": 63.3333,
+     "oracle_usd": 0.1581,
+     "cascade_solved": 63.3333,
+     "cascade_usd": 1.0276
+    },
+    "note": "Docker result as perfect verifier; oracle skips tasks no model solves; upper bounds, not deployable policies"
+   },
+   "cascade_subsets_post_hoc": {
+    "gpt-oss-20b": {
+     "solved": 36.67,
+     "usd": 0.116
+    },
+    "gpt-oss-120b": {
+     "solved": 47.67,
+     "usd": 0.1565
+    },
+    "gemini-3.1-flash-lite": {
+     "solved": 47.0,
+     "usd": 0.291
+    },
+    "gemini-3.5-flash-lite": {
+     "solved": 51.67,
+     "usd": 1.3251
+    },
+    "gpt-oss-20b->gpt-oss-120b": {
+     "solved": 52.0,
+     "usd": 0.2235
+    },
+    "gpt-oss-20b->gemini-3.1-flash-lite": {
+     "solved": 51.67,
+     "usd": 0.3017
+    },
+    "gpt-oss-20b->gemini-3.5-flash-lite": {
+     "solved": 55.33,
+     "usd": 1.0541
+    },
+    "gpt-oss-120b->gemini-3.1-flash-lite": {
+     "solved": 56.67,
+     "usd": 0.3071
+    },
+    "gpt-oss-120b->gemini-3.5-flash-lite": {
+     "solved": 61.0,
+     "usd": 0.9676
+    },
+    "gemini-3.1-flash-lite->gemini-3.5-flash-lite": {
+     "solved": 58.33,
+     "usd": 1.1385
+    },
+    "gpt-oss-20b->gpt-oss-120b->gemini-3.1-flash-lite": {
+     "solved": 58.67,
+     "usd": 0.361
+    },
+    "gpt-oss-20b->gpt-oss-120b->gemini-3.5-flash-lite": {
+     "solved": 61.67,
+     "usd": 0.9761
+    },
+    "gpt-oss-20b->gemini-3.1-flash-lite->gemini-3.5-flash-lite": {
+     "solved": 59.67,
+     "usd": 1.0737
+    },
+    "gpt-oss-120b->gemini-3.1-flash-lite->gemini-3.5-flash-lite": {
+     "solved": 62.67,
+     "usd": 1.0065
+    },
+    "gpt-oss-20b->gpt-oss-120b->gemini-3.1-flash-lite->gemini-3.5-flash-lite": {
+     "solved": 63.33,
+     "usd": 1.0276
+    }
+   },
+   "best_of_3_single_model": {
+    "gpt-oss-20b": {
+     "solved_any_of_3": 50,
+     "usd": 0.348
+    },
+    "gpt-oss-120b": {
+     "solved_any_of_3": 61,
+     "usd": 0.4695
+    },
+    "gemini-3.1-flash-lite": {
+     "solved_any_of_3": 55,
+     "usd": 0.873
+    },
+    "gemini-3.5-flash-lite": {
+     "solved_any_of_3": 59,
+     "usd": 3.9753
+    }
+   }
+  },
+  "new_runs": {
+   "Qwen3.5-2B": {
+    "tasks": 100,
+    "draws": 100,
+    "plain_applied_pct": 27.0,
+    "argus_applied_pct": 34.0,
+    "plain_resolved_per100": 0.0,
+    "plain_ci": [
+     0.0,
+     0.0
+    ],
+    "argus_resolved_per100": 0.0,
+    "argus_ci": [
+     0.0,
+     0.0
+    ],
+    "delta_per100": 0.0,
+    "delta_ci": [
+     0.0,
+     0.0
+    ],
+    "any_draw_plain": 0,
+    "any_draw_argus": 0
+   },
+   "Qwen3.5-4B": {
+    "tasks": 100,
+    "draws": 100,
+    "plain_applied_pct": 68.0,
+    "argus_applied_pct": 78.0,
+    "plain_resolved_per100": 10.0,
+    "plain_ci": [
+     4.0,
+     16.0
+    ],
+    "argus_resolved_per100": 11.0,
+    "argus_ci": [
+     5.0,
+     18.0
+    ],
+    "delta_per100": 1.0,
+    "delta_ci": [
+     0.0,
+     3.0
+    ],
+    "any_draw_plain": 10,
+    "any_draw_argus": 11
+   },
+   "Qwen3.5-9B": {
+    "tasks": 100,
+    "draws": 100,
+    "plain_applied_pct": 72.0,
+    "argus_applied_pct": 82.0,
+    "plain_resolved_per100": 10.0,
+    "plain_ci": [
+     5.0,
+     16.0
+    ],
+    "argus_resolved_per100": 11.0,
+    "argus_ci": [
+     5.0,
+     17.0
+    ],
+    "delta_per100": 1.0,
+    "delta_ci": [
+     0.0,
+     3.0
+    ],
+    "any_draw_plain": 10,
+    "any_draw_argus": 11
+   },
+   "gemma-4-26b-a4b-it": {
+    "tasks": 100,
+    "draws": 297,
+    "plain_applied_pct": 49.2,
+    "argus_applied_pct": 61.3,
+    "plain_resolved_per100": 25.5,
+    "plain_ci": [
+     18.3,
+     33.2
+    ],
+    "argus_resolved_per100": 31.5,
+    "argus_ci": [
+     24.0,
+     39.2
+    ],
+    "delta_per100": 6.0,
+    "delta_ci": [
+     2.7,
+     10.0
+    ],
+    "any_draw_plain": 37,
+    "any_draw_argus": 46
+   }
+  },
+  "loops": {
+   "120B R": 59,
+   "120B F": 57,
+   "20B R": 47,
+   "20B F": 55,
+   "120B P8": 57,
+   "20B P9": 52,
+   "120B P19": 56,
+   "20B P19": 53,
+   "Gemma P19": 49,
+   "Gemma F": 43
+  },
+  "loops_n": {
+   "120B R": 100,
+   "120B F": 100,
+   "20B R": 100,
+   "20B F": 100,
+   "120B P8": 100,
+   "20B P9": 100,
+   "120B P19": 100,
+   "20B P19": 100,
+   "Gemma P19": 99,
+   "Gemma F": 99
+  },
+  "loop_f": {
+   "qwen38|all": {
+    "tasks": 100,
+    "plain": 26.0,
+    "argus": 26.3,
+    "R": 41.0,
+    "F": 41.0,
+    "diff": 0.0,
+    "ci": [
+     -7.0,
+     7.0
+    ],
+    "fonly": 7,
+    "ronly": 7
+   },
+   "qwen38|excl api_error tasks": {
+    "tasks": 85,
+    "plain": 29.4,
+    "argus": 29.8,
+    "R": 44.7,
+    "F": 48.2,
+    "diff": 3.5,
+    "ci": [
+     -3.5,
+     11.8
+    ],
+    "fonly": 7,
+    "ronly": 4
+   },
+   "gemma26|all": {
+    "tasks": 99,
+    "plain": 25.6,
+    "argus": 31.6,
+    "R": 44.4,
+    "F": 43.4,
+    "diff": -1.0,
+    "ci": [
+     -6.1,
+     4.0
+    ],
+    "fonly": 3,
+    "ronly": 4
+   },
+   "gemma26|excl api_error tasks": {
+    "tasks": 92,
+    "plain": 27.2,
+    "argus": 33.7,
+    "R": 46.7,
+    "F": 46.7,
+    "diff": 0.0,
+    "ci": [
+     -5.4,
+     5.4
+    ],
+    "fonly": 3,
+    "ronly": 3
+   },
+   "gemini31|all": {
+    "tasks": 100,
+    "plain": 46.7,
+    "argus": 47.0,
+    "R": 53.0,
+    "F": 54.0,
+    "diff": 1.0,
+    "ci": [
+     -3.0,
+     5.0
+    ],
+    "fonly": 3,
+    "ronly": 2
+   },
+   "gemini31|excl api_error tasks": {
+    "tasks": 100,
+    "plain": 46.7,
+    "argus": 47.0,
+    "R": 53.0,
+    "F": 54.0,
+    "diff": 1.0,
+    "ci": [
+     -3.0,
+     5.0
+    ],
+    "fonly": 3,
+    "ronly": 2
+   },
+   "gemini35|all": {
+    "tasks": 100,
+    "plain": 50.0,
+    "argus": 51.7,
+    "R": 59.0,
+    "F": 59.0,
+    "diff": 0.0,
+    "ci": [
+     -5.0,
+     5.0
+    ],
+    "fonly": 3,
+    "ronly": 3
+   },
+   "gemini35|excl api_error tasks": {
+    "tasks": 100,
+    "plain": 50.0,
+    "argus": 51.7,
+    "R": 59.0,
+    "F": 59.0,
+    "diff": 0.0,
+    "ci": [
+     -5.0,
+     5.0
+    ],
+    "fonly": 3,
+    "ronly": 3
+   }
+  },
+  "loop_p17": {
+   "gemini31|all": {
+    "tasks": 100,
+    "plain": 46.7,
+    "argus": 47.0,
+    "R": 53.0,
+    "F": 62.0,
+    "diff": 9.0,
+    "ci": [
+     4.0,
+     15.0
+    ],
+    "fonly": 9,
+    "ronly": 0
+   },
+   "gemini31|excl api_error tasks": {
+    "tasks": 100,
+    "plain": 46.7,
+    "argus": 47.0,
+    "R": 53.0,
+    "F": 62.0,
+    "diff": 9.0,
+    "ci": [
+     4.0,
+     15.0
+    ],
+    "fonly": 9,
+    "ronly": 0
+   },
+   "gemini35|all": {
+    "tasks": 100,
+    "plain": 50.0,
+    "argus": 51.7,
+    "R": 59.0,
+    "F": 61.0,
+    "diff": 2.0,
+    "ci": [
+     -4.0,
+     8.0
+    ],
+    "fonly": 6,
+    "ronly": 4
+   },
+   "gemini35|excl api_error tasks": {
+    "tasks": 100,
+    "plain": 50.0,
+    "argus": 51.7,
+    "R": 59.0,
+    "F": 61.0,
+    "diff": 2.0,
+    "ci": [
+     -4.0,
+     8.0
+    ],
+    "fonly": 6,
+    "ronly": 4
+   }
+  },
+  "gemma_R_replay": 44.4,
+  "gemma_P_minus_Rreplay": 5.1,
+  "rev18": {
+   "gemini31:P-R": {
+    "diff": 2.0,
+    "ci": [
+     -2.5,
+     7.5
+    ],
+    "pred": [
+     3,
+     10
+    ],
+    "inside": false
+   },
+   "gemini31:P-F": {
+    "diff": 0.0,
+    "ci": [
+     -4.5,
+     4.5
+    ],
+    "pred": [
+     2,
+     10
+    ],
+    "inside": false
+   },
+   "gemini31:F-R": {
+    "diff": 2.0,
+    "ci": [
+     -3.0,
+     7.5
+    ],
+    "pred": [
+     -4,
+     4
+    ],
+    "inside": true
+   },
+   "gemini31:Pg-Fg": {
+    "diff": 4.0,
+    "ci": [
+     0.0,
+     9.0
+    ],
+    "pred": [
+     2,
+     99
+    ],
+    "inside": true
+   },
+   "gemini35:P-R": {
+    "diff": 6.5,
+    "ci": [
+     1.0,
+     12.5
+    ],
+    "pred": [
+     -3,
+     5
+    ],
+    "inside": false
+   },
+   "gemini35:P-F": {
+    "diff": 4.0,
+    "ci": [
+     0.5,
+     8.5
+    ],
+    "pred": [
+     -3,
+     5
+    ],
+    "inside": true
+   },
+   "gemini35:F-R": {
+    "diff": 2.5,
+    "ci": [
+     -1.5,
+     6.5
+    ],
+    "pred": [
+     -4,
+     4
+    ],
+    "inside": true
+   },
+   "gemini35:Pg-Fg": {
+    "diff": 2.0,
+    "ci": [
+     -4.0,
+     8.0
+    ],
+    "pred": [
+     -3,
+     5
+    ],
+    "inside": true
+   }
+  },
+  "rev18_means": {
+   "gemini31:r": [
+    57,
+    58
+   ],
+   "gemini31:f": [
+    59,
+    60
+   ],
+   "gemini31:p": [
+    59,
+    60
+   ],
+   "gemini35:r": [
+    56,
+    57
+   ],
+   "gemini35:f": [
+    58,
+    60
+   ],
+   "gemini35:p": [
+    63,
+    63
+   ]
+  },
+  "blind_n": 198,
+  "blind_gold_failed": [
+   "psf__requests-1724",
+   "psf__requests-1921"
+  ],
+  "blind": {
+   "gpt-oss-20b:R": 97,
+   "gpt-oss-20b:F": 110,
+   "gpt-oss-120b:R": 108,
+   "gpt-oss-120b:F": 117,
+   "gemma-4-26b-a4b-it:R": 80,
+   "gemma-4-26b-a4b-it:F": 82
+  },
+  "blind_report": {
+   "analysed": 198,
+   "gold_failed": [
+    "psf__requests-1724",
+    "psf__requests-1921"
+   ],
+   "results": {
+    "gpt-oss-20b": {
+     "all analysed (infra failures = unsolved)": {
+      "n": 198,
+      "R": 49.0,
+      "F": 55.6,
+      "diff": 6.6,
+      "ci": [
+       1.5,
+       11.6
+      ],
+      "ci_repo": [
+       1.4,
+       15.0
+      ],
+      "F_only": 20,
+      "R_only": 7
+     },
+     "excluding tasks with infra failures": {
+      "n": 193,
+      "R": 50.3,
+      "F": 57.0,
+      "diff": 6.7,
+      "ci": [
+       1.6,
+       11.9
+      ],
+      "ci_repo": [
+       1.5,
+       15.0
+      ],
+      "F_only": 20,
+      "R_only": 7
+     }
+    },
+    "gpt-oss-120b": {
+     "all analysed (infra failures = unsolved)": {
+      "n": 198,
+      "R": 54.5,
+      "F": 59.1,
+      "diff": 4.5,
+      "ci": [
+       0.0,
+       9.1
+      ],
+      "ci_repo": [
+       1.0,
+       10.3
+      ],
+      "F_only": 15,
+      "R_only": 6
+     },
+     "excluding tasks with infra failures": {
+      "n": 198,
+      "R": 54.5,
+      "F": 59.1,
+      "diff": 4.5,
+      "ci": [
+       0.0,
+       9.1
+      ],
+      "ci_repo": [
+       1.0,
+       10.3
+      ],
+      "F_only": 15,
+      "R_only": 6
+     }
+    },
+    "gemma-4-26b-a4b-it": {
+     "all analysed (infra failures = unsolved)": {
+      "n": 198,
+      "R": 40.4,
+      "F": 41.4,
+      "diff": 1.0,
+      "ci": [
+       -3.5,
+       5.6
+      ],
+      "ci_repo": [
+       -5.1,
+       4.3
+      ],
+      "F_only": 11,
+      "R_only": 9
+     },
+     "excluding tasks with infra failures": {
+      "n": 177,
+      "R": 45.2,
+      "F": 46.3,
+      "diff": 1.1,
+      "ci": [
+       -3.4,
+       6.2
+      ],
+      "ci_repo": [
+       -6.1,
+       4.6
+      ],
+      "F_only": 11,
+      "R_only": 9
+     }
+    }
+   },
+   "h4": {
+    "gpt-oss-20b": {
+     "n": 198,
+     "argus": 72.2,
+     "plain": 59.1,
+     "gain": 13.1
+    },
+    "gpt-oss-120b": {
+     "n": 198,
+     "argus": 84.3,
+     "plain": 78.8,
+     "gain": 5.6
+    },
+    "gemma-4-26b-a4b-it": {
+     "n": 193,
+     "argus": 61.1,
+     "plain": 43.5,
+     "gain": 17.6
+    }
+   }
+  },
+  "loc": {
+   "L-A Argus": {
+    "recall@1": 21,
+    "recall@3": 29,
+    "recall@5": 32,
+    "recall@10": 36,
+    "returned_nothing": 9
+   },
+   "L-B BM25": {
+    "recall@1": 27,
+    "recall@3": 55,
+    "recall@5": 70,
+    "recall@10": 82,
+    "returned_nothing": 0
+   },
+   "primary (LA, else LB)": {
+    "recall@1": 21,
+    "recall@3": 35,
+    "recall@5": 46,
+    "recall@10": 77,
+    "returned_nothing": 0
+   }
+  },
+  "e3_reviewed": {
+   "CORRECT": 154,
+   "PARTIAL": 15,
+   "WRONG_OR_FRAGILE": 46,
+   "JUNK_EQUIV": 1
+  },
+  "false_accept": {
+   "gpt-oss-20b": {
+    "applied": 231,
+    "target_test_pass": 125,
+    "resolved": 110,
+    "false_accepts": 15,
+    "false_accept_rate": 0.12,
+    "target_pass_rate_given_applied": 0.541,
+    "resolved_rate_given_applied": 0.476
+   },
+   "gpt-oss-120b": {
+    "applied": 259,
+    "target_test_pass": 156,
+    "resolved": 143,
+    "false_accepts": 13,
+    "false_accept_rate": 0.083,
+    "target_pass_rate_given_applied": 0.602,
+    "resolved_rate_given_applied": 0.552
+   },
+   "gemini-3.1-flash-lite": {
+    "applied": 273,
+    "target_test_pass": 157,
+    "resolved": 141,
+    "false_accepts": 16,
+    "false_accept_rate": 0.102,
+    "target_pass_rate_given_applied": 0.575,
+    "resolved_rate_given_applied": 0.516
+   },
+   "gemini-3.5-flash-lite": {
+    "applied": 255,
+    "target_test_pass": 166,
+    "resolved": 155,
+    "false_accepts": 11,
+    "false_accept_rate": 0.066,
+    "target_pass_rate_given_applied": 0.651,
+    "resolved_rate_given_applied": 0.608
+   }
+  },
+  "spearman": {
+   "points": {
+    "gemini-3.1": [
+     12.0,
+     3.0
+    ],
+    "gemini-3.5": [
+     17.7,
+     2.7
+    ],
+    "gpt-oss-120b": [
+     19.0,
+     5.3
+    ],
+    "Qwen3.5-9B": [
+     28.0,
+     10.0
+    ],
+    "Qwen3.5-4B": [
+     32.0,
+     10.0
+    ],
+    "gpt-oss-20b": [
+     33.7,
+     10.7
+    ],
+    "gemma-26b": [
+     50.7,
+     12.3
+    ],
+    "Qwen3.5-2B": [
+     73.0,
+     7.0
+    ]
+   },
+   "tie_corrected": 0.731,
+   "simple_formula": 0.732
+  },
+  "t0_plain_applied": {
+   "gpt-oss-20b": 58,
+   "gpt-oss-120b": 82
+  },
+  "arm_stats": {
+   "120B R": {
+    "n": 100,
+    "solved": 59,
+    "attempts": 1.93,
+    "usd": 0.320266
+   },
+   "120B F": {
+    "n": 100,
+    "solved": 57,
+    "attempts": 1.95,
+    "usd": 0.330301
+   },
+   "20B R": {
+    "n": 100,
+    "solved": 47,
+    "attempts": 2.11,
+    "usd": 0.278927
+   },
+   "20B F": {
+    "n": 100,
+    "solved": 55,
+    "attempts": 2.05,
+    "usd": 0.269223
+   },
+   "120B P19": {
+    "n": 100,
+    "solved": 56,
+    "attempts": 1.94,
+    "usd": 0.343387
+   },
+   "20B P19": {
+    "n": 100,
+    "solved": 53,
+    "attempts": 2.06,
+    "usd": 0.267617
+   },
+   "120B P8": {
+    "n": 100,
+    "solved": 57,
+    "attempts": 1.95,
+    "usd": 0.31780200000000003
+   },
+   "20B P9": {
+    "n": 100,
+    "solved": 52,
+    "attempts": 2.09,
+    "usd": 0.225184
+   }
+  },
+  "blind_stats": {
+   "gpt-oss-20b:R": {
+    "n": 198,
+    "solved": 97,
+    "attempts": 2.085858585858586,
+    "usd": 0.526511,
+    "attempt1_solved": 75
+   },
+   "gpt-oss-20b:F": {
+    "n": 198,
+    "solved": 110,
+    "attempts": 2.0606060606060606,
+    "usd": 0.497535,
+    "attempt1_solved": 75
+   },
+   "gpt-oss-120b:R": {
+    "n": 198,
+    "solved": 108,
+    "attempts": 1.9242424242424243,
+    "usd": 0.630393,
+    "attempt1_solved": 92
+   },
+   "gpt-oss-120b:F": {
+    "n": 198,
+    "solved": 117,
+    "attempts": 1.9191919191919191,
+    "usd": 0.657405,
+    "attempt1_solved": 92
+   },
+   "gemma-4-26b-a4b-it:R": {
+    "n": 198,
+    "solved": 80,
+    "attempts": 2.1666666666666665,
+    "usd": 0,
+    "attempt1_solved": 63
+   },
+   "gemma-4-26b-a4b-it:F": {
+    "n": 198,
+    "solved": 82,
+    "attempts": 2.176767676767677,
+    "usd": 0,
+    "attempt1_solved": 63
+   }
+  },
+  "rev19_stops": {
+   "120B": {
+    "n": 100,
+    "stops": {
+     "accepted_resolved": 56,
+     "continue": 35,
+     "accepted_regressed": 9
+    }
+   },
+   "20B": {
+    "n": 100,
+    "stops": {
+     "accepted_resolved": 53,
+     "continue": 40,
+     "accepted_regressed": 6,
+     "grade_error": 1
+    }
+   },
+   "Gemma": {
+    "n": 99,
+    "stops": {
+     "continue": 35,
+     "accepted_resolved": 49,
+     "accepted_regressed": 11,
+     "api_error": 4
+    }
+   }
+  },
+  "rev19": {
+   "120b:P-F": {
+    "n": 100,
+    "diff": -1.0,
+    "ci": [
+     -5.0,
+     3.0
+    ],
+    "only_first": 2,
+    "only_second": 3,
+    "without_losses": {
+     "n": 100,
+     "diff": -1.0,
+     "ci": [
+      -5.0,
+      3.0
+     ]
+    },
+    "pred": [
+     -5,
+     4
+    ]
+   },
+   "120b:P-R": {
+    "n": 100,
+    "diff": -3.0,
+    "ci": [
+     -9.0,
+     3.0
+    ],
+    "only_first": 4,
+    "only_second": 7,
+    "without_losses": {
+     "n": 100,
+     "diff": -3.0,
+     "ci": [
+      -9.0,
+      3.0
+     ]
+    },
+    "pred": [
+     -4,
+     6
+    ]
+   },
+   "120b:F-R": {
+    "n": 100,
+    "diff": -2.0,
+    "ci": [
+     -8.0,
+     3.0
+    ],
+    "only_first": 3,
+    "only_second": 5,
+    "without_losses": {
+     "n": 100,
+     "diff": -2.0,
+     "ci": [
+      -8.0,
+      3.0
+     ]
+    },
+    "pred": null
+   },
+   "20b:P-F": {
+    "n": 100,
+    "diff": -2.0,
+    "ci": [
+     -10.0,
+     6.0
+    ],
+    "only_first": 7,
+    "only_second": 9,
+    "without_losses": {
+     "n": 98,
+     "diff": -1.0,
+     "ci": [
+      -9.2,
+      7.1
+     ]
+    },
+    "pred": [
+     -5,
+     4
+    ]
+   },
+   "20b:P-R": {
+    "n": 100,
+    "diff": 6.0,
+    "ci": [
+     -1.0,
+     13.0
+    ],
+    "only_first": 10,
+    "only_second": 4,
+    "without_losses": {
+     "n": 99,
+     "diff": 6.1,
+     "ci": [
+      -1.0,
+      14.1
+     ]
+    },
+    "pred": [
+     -2,
+     8
+    ]
+   },
+   "20b:F-R": {
+    "n": 100,
+    "diff": 8.0,
+    "ci": [
+     2.0,
+     14.0
+    ],
+    "only_first": 9,
+    "only_second": 1,
+    "without_losses": {
+     "n": 99,
+     "diff": 8.1,
+     "ci": [
+      2.0,
+      14.1
+     ]
+    },
+    "pred": null
+   },
+   "gemma:P-F": {
+    "n": 99,
+    "diff": 6.1,
+    "ci": [
+     0.0,
+     12.1
+    ],
+    "only_first": 8,
+    "only_second": 2,
+    "without_losses": {
+     "n": 89,
+     "diff": 6.7,
+     "ci": [
+      0.0,
+      13.5
+     ]
+    },
+    "pred": [
+     -5,
+     5
+    ]
+   }
+  }
+ },
+ "checks": [
+  {
+   "what": "Pilot-100 T=0 gpt-oss-20b plain resolved of 99",
+   "quoted": 31,
+   "recomputed": 31,
+   "source": "data/phase1/*_apply_*.jsonl + results/grading/state.jsonl",
+   "how": "join on (task, sha1(diff)[:10]); scripts/report18_data.py",
+   "status": "match"
+  },
+  {
+   "what": "Pilot-100 T=0 gpt-oss-20b argus resolved of 99",
+   "quoted": 38,
+   "recomputed": 38,
+   "source": "data/phase1/*_apply_*.jsonl + results/grading/state.jsonl",
+   "how": "join on (task, sha1(diff)[:10]); scripts/report18_data.py",
+   "status": "match"
+  },
+  {
+   "what": "Pilot-100 T=0 gpt-oss-120b plain resolved of 99",
+   "quoted": 44,
+   "recomputed": 44,
+   "source": "data/phase1/*_apply_*.jsonl + results/grading/state.jsonl",
+   "how": "join on (task, sha1(diff)[:10]); scripts/report18_data.py",
+   "status": "match"
+  },
+  {
+   "what": "Pilot-100 T=0 gpt-oss-120b argus resolved of 99",
+   "quoted": 46,
+   "recomputed": 46,
+   "source": "data/phase1/*_apply_*.jsonl + results/grading/state.jsonl",
+   "how": "join on (task, sha1(diff)[:10]); scripts/report18_data.py",
+   "status": "match"
+  },
+  {
+   "what": "20B first-pass spend at T=0 in $ (Report 3: 0.128)",
+   "quoted": 0.128,
+   "recomputed": 0.128,
+   "source": "results/analysis/records.jsonl",
+   "how": "tokens x Groq list prices",
+   "status": "match"
+  },
+  {
+   "what": "20B loop share of spend at T=0 in % (Report 3: 46)",
+   "quoted": 46,
+   "recomputed": 46.0,
+   "source": "results/analysis/records.jsonl",
+   "how": "the 21 no-output truncated runs / all runs (counting the 22nd length-capped run with partial content gives 48%)",
+   "status": "match"
+  },
+  {
+   "what": "T=0 cost per solved task, 120B plain ($, Report 3)",
+   "quoted": 0.00349,
+   "recomputed": 0.00349,
+   "source": "results/analysis/records.jsonl",
+   "how": "tokens x Groq list prices / solved",
+   "status": "match"
+  },
+  {
+   "what": "T=0 cost per solved task, 120B Argus ($, Report 3)",
+   "quoted": 0.00334,
+   "recomputed": 0.00334,
+   "source": "results/analysis/records.jsonl",
+   "how": "tokens x Groq list prices / solved",
+   "status": "match"
+  },
+  {
+   "what": "T=0 cost per solved task, 20B plain ($, Report 3)",
+   "quoted": 0.00414,
+   "recomputed": 0.00414,
+   "source": "results/analysis/records.jsonl",
+   "how": "tokens x Groq list prices / solved",
+   "status": "match"
+  },
+  {
+   "what": "T=0 cost per solved task, 20B Argus ($, Report 3)",
+   "quoted": 0.00338,
+   "recomputed": 0.00338,
+   "source": "results/analysis/records.jsonl",
+   "how": "tokens x Groq list prices / solved",
+   "status": "match"
+  },
+  {
+   "what": "20B mean completion tokens T=0 (3094)",
+   "quoted": 3094,
+   "recomputed": 3094,
+   "source": "results/analysis/deep.json",
+   "how": "scripts/deep_dive.py",
+   "status": "match"
+  },
+  {
+   "what": "120B mean completion tokens T=0 (1360)",
+   "quoted": 1360,
+   "recomputed": 1360,
+   "source": "results/analysis/deep.json",
+   "how": "scripts/deep_dive.py",
+   "status": "match"
+  },
+  {
+   "what": "T=1 20B Argus minus plain (pp)",
+   "quoted": 5.7,
+   "recomputed": 5.72,
+   "source": "results/analysis/t1_summary.json",
+   "how": "python -X utf8 scripts/analyze_t1.py",
+   "status": "match"
+  },
+  {
+   "what": "T=1 120B Argus minus plain (pp)",
+   "quoted": 3.4,
+   "recomputed": 3.37,
+   "source": "results/analysis/t1_summary.json",
+   "how": "python -X utf8 scripts/analyze_t1.py",
+   "status": "match"
+  },
+  {
+   "what": "T=1 oracle O1 solves",
+   "quoted": 51.0,
+   "recomputed": 51.0,
+   "source": "results/analysis/t1_summary.json",
+   "how": "scripts/analyze_t1.py",
+   "status": "match"
+  },
+  {
+   "what": "T=1 test-gated cascade spend ($)",
+   "quoted": 0.222,
+   "recomputed": 0.2218,
+   "source": "results/analysis/t1_summary.json",
+   "how": "scripts/analyze_t1.py",
+   "status": "match"
+  },
+  {
+   "what": "Gemini 3.5 FL Argus minus plain per 100",
+   "quoted": 1.7,
+   "recomputed": 1.67,
+   "source": "results/analysis/sweep_summary.json",
+   "how": "python -X utf8 scripts/analyze_sweep.py",
+   "status": "match"
+  },
+  {
+   "what": "Design-set loop, solved within 3 attempts: 120B R (n=100)",
+   "quoted": 59,
+   "recomputed": 59,
+   "source": "data/loop2/trajectories.jsonl",
+   "how": "count solved==True per task (last record per task)",
+   "status": "match"
+  },
+  {
+   "what": "Design-set loop, solved within 3 attempts: 120B F (n=100)",
+   "quoted": 57,
+   "recomputed": 57,
+   "source": "data/loop2/trajectories.jsonl",
+   "how": "count solved==True per task (last record per task)",
+   "status": "match"
+  },
+  {
+   "what": "Design-set loop, solved within 3 attempts: 20B R (n=100)",
+   "quoted": 47,
+   "recomputed": 47,
+   "source": "data/loop2_20b/trajectories.jsonl",
+   "how": "count solved==True per task (last record per task)",
+   "status": "match"
+  },
+  {
+   "what": "Design-set loop, solved within 3 attempts: 20B F (n=100)",
+   "quoted": 55,
+   "recomputed": 55,
+   "source": "data/loop2_20b/trajectories.jsonl",
+   "how": "count solved==True per task (last record per task)",
+   "status": "match"
+  },
+  {
+   "what": "Design-set loop, solved within 3 attempts: 120B P8 (n=100)",
+   "quoted": 57,
+   "recomputed": 57,
+   "source": "data/loop3/trajectories.jsonl",
+   "how": "count solved==True per task (last record per task)",
+   "status": "match"
+  },
+  {
+   "what": "Design-set loop, solved within 3 attempts: 20B P9 (n=100)",
+   "quoted": 52,
+   "recomputed": 52,
+   "source": "data/loop3_20b/trajectories.jsonl",
+   "how": "count solved==True per task (last record per task)",
+   "status": "match"
+  },
+  {
+   "what": "Design-set loop, solved within 3 attempts: 120B P19 (n=100)",
+   "quoted": 56,
+   "recomputed": 56,
+   "source": "data/loop4/trajectories.jsonl",
+   "how": "count solved==True per task (last record per task)",
+   "status": "match"
+  },
+  {
+   "what": "Design-set loop, solved within 3 attempts: 20B P19 (n=100)",
+   "quoted": 53,
+   "recomputed": 53,
+   "source": "data/loop4_20b/trajectories.jsonl",
+   "how": "count solved==True per task (last record per task)",
+   "status": "match"
+  },
+  {
+   "what": "Design-set loop, solved within 3 attempts: Gemma P19 (n=99)",
+   "quoted": 49,
+   "recomputed": 49,
+   "source": "data/loop4_gemma26/trajectories.jsonl",
+   "how": "count solved==True per task (last record per task)",
+   "status": "match"
+  },
+  {
+   "what": "Design-set loop, solved within 3 attempts: Gemma F (n=99)",
+   "quoted": 43,
+   "recomputed": 43,
+   "source": "data/loop_f_gemma26/trajectories.jsonl",
+   "how": "count solved==True per task (last record per task)",
+   "status": "match"
+  },
+  {
+   "what": "Rev15 Gemma F-R (all tasks)",
+   "quoted": -1.0,
+   "recomputed": -1.0,
+   "source": "data/loop_f_gemma26 + data/gemma_sweep",
+   "how": "python -X utf8 scripts/analyze_loop_f.py",
+   "status": "match"
+  },
+  {
+   "what": "Rev15 Qwen3.8 F-R",
+   "quoted": 0.0,
+   "recomputed": 0.0,
+   "source": "data/loop_f_qwen38 + data/qwen38",
+   "how": "python -X utf8 scripts/analyze_loop_f.py",
+   "status": "match"
+  },
+  {
+   "what": "Rev17 Gemini 3.1 P-R (first session)",
+   "quoted": 9.0,
+   "recomputed": 9.0,
+   "source": "data/loop_p_gemini31",
+   "how": "ARM=P python -X utf8 scripts/analyze_loop_f.py",
+   "status": "match"
+  },
+  {
+   "what": "Rev18 gemini35 arm P mean of replicates (63)",
+   "quoted": 63,
+   "recomputed": 63.0,
+   "source": "data/loop_p_rep{1,2}_gemini35",
+   "how": "mean of solved per replicate",
+   "status": "match"
+  },
+  {
+   "what": "Rev18 gemini31 arm R mean of replicates (57.5)",
+   "quoted": 57.5,
+   "recomputed": 57.5,
+   "source": "data/loop_r_rep{1,2}_gemini31",
+   "how": "mean of solved per replicate",
+   "status": "match"
+  },
+  {
+   "what": "Blind solved of 198: gpt-oss-20b:R",
+   "quoted": 97,
+   "recomputed": 97,
+   "source": "data/blind/trajectories.jsonl",
+   "how": "count solved per arm over tasks whose gold control resolved",
+   "status": "match"
+  },
+  {
+   "what": "Blind solved of 198: gpt-oss-20b:F",
+   "quoted": 110,
+   "recomputed": 110,
+   "source": "data/blind/trajectories.jsonl",
+   "how": "count solved per arm over tasks whose gold control resolved",
+   "status": "match"
+  },
+  {
+   "what": "Blind solved of 198: gpt-oss-120b:R",
+   "quoted": 108,
+   "recomputed": 108,
+   "source": "data/blind/trajectories.jsonl",
+   "how": "count solved per arm over tasks whose gold control resolved",
+   "status": "match"
+  },
+  {
+   "what": "Blind solved of 198: gpt-oss-120b:F",
+   "quoted": 117,
+   "recomputed": 117,
+   "source": "data/blind/trajectories.jsonl",
+   "how": "count solved per arm over tasks whose gold control resolved",
+   "status": "match"
+  },
+  {
+   "what": "Blind solved of 198: gemma-4-26b-a4b-it:R",
+   "quoted": 80,
+   "recomputed": 80,
+   "source": "data/blind/trajectories.jsonl",
+   "how": "count solved per arm over tasks whose gold control resolved",
+   "status": "match"
+  },
+  {
+   "what": "Blind solved of 198: gemma-4-26b-a4b-it:F",
+   "quoted": 82,
+   "recomputed": 82,
+   "source": "data/blind/trajectories.jsonl",
+   "how": "count solved per arm over tasks whose gold control resolved",
+   "status": "match"
+  },
+  {
+   "what": "Blind tasks analysed",
+   "quoted": 198,
+   "recomputed": 198,
+   "source": "data/blind/trajectories.jsonl",
+   "how": "gold control resolved",
+   "status": "match"
+  },
+  {
+   "what": "Localization recall@1, BM25 (of 100 tasks)",
+   "quoted": 27,
+   "recomputed": 27,
+   "source": "data/loc/recall_summary.json",
+   "how": "python -X utf8 scripts/loc_recall.py (re-run: identical)",
+   "status": "match"
+  },
+  {
+   "what": "Localization recall@1, Argus localizer (of 100 tasks)",
+   "quoted": 21,
+   "recomputed": 21,
+   "source": "data/loc/recall_summary.json",
+   "how": "python -X utf8 scripts/loc_recall.py (re-run: identical)",
+   "status": "match"
+  },
+  {
+   "what": "E3 reviewed patches (not rescued, not identical to gold)",
+   "quoted": 216,
+   "recomputed": 216,
+   "source": "results/analysis/e3_all_verdicts.json",
+   "how": "count rows",
+   "status": "match"
+  },
+  {
+   "what": "E3 wrong or fragile among the 216",
+   "quoted": 46,
+   "recomputed": 46,
+   "source": "results/analysis/e3_all_verdicts.json",
+   "how": "count verdicts",
+   "status": "match"
+  },
+  {
+   "what": "False-accept rate, 20B (target test passes, other tests break)",
+   "quoted": 0.12,
+   "recomputed": 0.12,
+   "source": "results/analysis/policies_summary.json",
+   "how": "python -X utf8 scripts/analyze_policies.py",
+   "status": "match"
+  },
+  {
+   "what": "Spearman, plain not-applied rate vs Argus gain, 8 models (CLAIM_STATUS says 0.71)",
+   "quoted": 0.71,
+   "recomputed": 0.73,
+   "source": "the 8 value pairs listed in PILOT50_PROTOCOL.md Revision 13 (H5)",
+   "how": "Pearson on average ranks; the simple 1-6*sum(d^2)/(n(n^2-1)) formula gives 0.73",
+   "status": "DIFFERS (0.73 recomputed)"
+  },
+  {
+   "what": "T=0 plain applied patches 20B (Report 1: 58)",
+   "quoted": 58,
+   "recomputed": 58,
+   "source": "data/phase1/plain_apply_gpt-oss-20b.jsonl",
+   "how": "count status==applied (99 valid tasks)",
+   "status": "match"
+  },
+  {
+   "what": "T=0 plain applied patches 120B (Report 1: 82)",
+   "quoted": 82,
+   "recomputed": 82,
+   "source": "data/phase1/plain_apply_gpt-oss-120b.jsonl",
+   "how": "count status==applied (99 valid tasks)",
+   "status": "match"
+  },
+  {
+   "what": "Blind 20B F spend in $ (BLIND_REPORT: 0.498)",
+   "quoted": 0.498,
+   "recomputed": 0.498,
+   "source": "data/blind/trajectories.jsonl",
+   "how": "sum cost_usd",
+   "status": "match"
+  },
+  {
+   "what": "Blind 120B R spend in $ (BLIND_REPORT: 0.630)",
+   "quoted": 0.63,
+   "recomputed": 0.63,
+   "source": "data/blind/trajectories.jsonl",
+   "how": "sum cost_usd",
+   "status": "match"
+  },
+  {
+   "what": "Blind 20B attempt-1 solved (BLIND_REPORT: 75)",
+   "quoted": 75,
+   "recomputed": 75,
+   "source": "data/blind/trajectories.jsonl",
+   "how": "state of attempt 1",
+   "status": "match"
+  }
+ ]
+}

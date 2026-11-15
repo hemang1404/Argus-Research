@@ -1,0 +1,64 @@
+
+=== qwen38 [all] tasks=100
+  plain single-shot (mean of 3 draws)       26.0/100  CI(19.3, 33.0)
+  Argus-apply single-shot (mean of 3)       26.3/100  CI(19.7, 33.3)
+  R loop <=3                                41.0/100  CI(31.0, 51.0)
+  F loop <=3                                41.0/100  CI(32.0, 51.0)
+  F-R = +0.0  CI(-7.0, 7.0)   F-only 7  R-only 7
+
+=== qwen38 [excl api_error tasks] tasks=85
+  plain single-shot (mean of 3 draws)       29.4/100  CI(21.6, 37.6)
+  Argus-apply single-shot (mean of 3)       29.8/100  CI(22.0, 38.0)
+  R loop <=3                                44.7/100  CI(34.1, 55.3)
+  F loop <=3                                48.2/100  CI(37.6, 58.8)
+  F-R = +3.5  CI(-3.5, 11.8)   F-only 7  R-only 4
+  F stop states: {'accepted_resolved': 41, 'continue': 38, 'accepted_regressed': 6, 'api_error': 15}
+  F solved at attempt: {1: 31, 2: 6, 3: 4}
+
+=== gemma26 [all] tasks=99
+  plain single-shot (mean of 3 draws)       25.6/100  CI(18.5, 33.0)
+  Argus-apply single-shot (mean of 3)       31.6/100  CI(24.2, 39.4)
+  R loop <=3                                44.4/100  CI(34.3, 54.5)
+  F loop <=3                                43.4/100  CI(34.3, 53.5)
+  F-R = -1.0  CI(-6.1, 4.0)   F-only 3  R-only 4
+
+=== gemma26 [excl api_error tasks] tasks=92
+  plain single-shot (mean of 3 draws)       27.2/100  CI(19.9, 35.1)
+  Argus-apply single-shot (mean of 3)       33.7/100  CI(26.1, 42.0)
+  R loop <=3                                46.7/100  CI(37.0, 57.6)
+  F loop <=3                                46.7/100  CI(37.0, 56.5)
+  F-R = +0.0  CI(-5.4, 5.4)   F-only 3  R-only 3
+  F stop states: {'accepted_resolved': 43, 'continue': 40, 'accepted_regressed': 9, 'api_error': 7}
+  F solved at attempt: {1: 33, 3: 3, 2: 7}
+
+=== gemini31 [all] tasks=100
+  plain single-shot (mean of 3 draws)       46.7/100  CI(38.0, 55.7)
+  Argus-apply single-shot (mean of 3)       47.0/100  CI(38.0, 56.0)
+  R loop <=3                                53.0/100  CI(43.0, 63.0)
+  F loop <=3                                54.0/100  CI(44.0, 64.0)
+  F-R = +1.0  CI(-3.0, 5.0)   F-only 3  R-only 2
+
+=== gemini31 [excl api_error tasks] tasks=100
+  plain single-shot (mean of 3 draws)       46.7/100  CI(38.0, 55.7)
+  Argus-apply single-shot (mean of 3)       47.0/100  CI(38.0, 56.0)
+  R loop <=3                                53.0/100  CI(43.0, 63.0)
+  F loop <=3                                54.0/100  CI(44.0, 64.0)
+  F-R = +1.0  CI(-3.0, 5.0)   F-only 3  R-only 2
+  F stop states: {'accepted_resolved': 54, 'continue': 40, 'accepted_regressed': 6}
+  F solved at attempt: {1: 50, 3: 3, 2: 1}
+
+=== gemini35 [all] tasks=100
+  plain single-shot (mean of 3 draws)       50.0/100  CI(41.0, 59.0)
+  Argus-apply single-shot (mean of 3)       51.7/100  CI(42.7, 61.0)
+  R loop <=3                                59.0/100  CI(49.0, 69.0)
+  F loop <=3                                59.0/100  CI(49.0, 69.0)
+  F-R = +0.0  CI(-5.0, 5.0)   F-only 3  R-only 3
+
+=== gemini35 [excl api_error tasks] tasks=100
+  plain single-shot (mean of 3 draws)       50.0/100  CI(41.0, 59.0)
+  Argus-apply single-shot (mean of 3)       51.7/100  CI(42.7, 61.0)
+  R loop <=3                                59.0/100  CI(49.0, 69.0)
+  F loop <=3                                59.0/100  CI(49.0, 69.0)
+  F-R = +0.0  CI(-5.0, 5.0)   F-only 3  R-only 3
+  F stop states: {'accepted_resolved': 59, 'continue': 38, 'accepted_regressed': 3}
+  F solved at attempt: {1: 53, 2: 5, 3: 1}

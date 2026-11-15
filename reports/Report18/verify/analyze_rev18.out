@@ -1,0 +1,30 @@
+
+=== gemini31: 100 tasks with every arm complete
+  R   mean  57.5  per-replicate [57.0, 58.0]
+  F   mean  59.5  per-replicate [59.0, 60.0]
+  P   mean  59.5  per-replicate [59.0, 60.0]
+  Fg  mean  54.0  per-replicate [54.0]
+  Pg  mean  58.0  per-replicate [58.0]
+  P-R     +2.0  95% CI (-2.5, 7.5)  prediction [3,10] -> MISS  
+  P-F     +0.0  95% CI (-4.5, 4.5)  prediction [2,10] -> MISS  
+  F-R     +2.0  95% CI (-3.0, 7.5)  prediction [-4,4] -> inside  
+  Pg-Fg   +4.0  95% CI (0.0, 9.0)  prediction [2,inf] -> inside  
+  replicate-to-replicate noise R: rep1-rep2 -1.0 (tasks that flip: 7)
+  replicate-to-replicate noise F: rep1-rep2 -1.0 (tasks that flip: 5)
+  replicate-to-replicate noise P: rep1-rep2 -1.0 (tasks that flip: 5)
+  stops: {'R': {'accepted_resolved': 115, 'continue': 74, 'accepted_regressed': 11}, 'F': {'accepted_resolved': 119, 'continue': 68, 'accepted_regressed': 13}, 'P': {'accepted_resolved': 119, 'continue': 69, 'accepted_regressed': 12}, 'Fg': {'accepted_resolved': 54, 'continue': 41, 'accepted_regressed': 5}, 'Pg': {'accepted_resolved': 58, 'continue': 36, 'accepted_regressed': 6}}
+
+=== gemini35: 100 tasks with every arm complete
+  R   mean  56.5  per-replicate [56.0, 57.0]
+  F   mean  59.0  per-replicate [58.0, 60.0]
+  P   mean  63.0  per-replicate [63.0, 63.0]
+  Fg  mean  60.0  per-replicate [60.0]
+  Pg  mean  62.0  per-replicate [62.0]
+  P-R     +6.5  95% CI (1.0, 12.5)  prediction [-3,5] -> MISS  (CI excludes 0)
+  P-F     +4.0  95% CI (0.5, 8.5)  prediction [-3,5] -> inside  (CI excludes 0)
+  F-R     +2.5  95% CI (-1.5, 6.5)  prediction [-4,4] -> inside  
+  Pg-Fg   +2.0  95% CI (-4.0, 8.0)  prediction [-3,5] -> inside  
+  replicate-to-replicate noise R: rep1-rep2 -1.0 (tasks that flip: 3)
+  replicate-to-replicate noise F: rep1-rep2 -2.0 (tasks that flip: 4)
+  replicate-to-replicate noise P: rep1-rep2 +0.0 (tasks that flip: 4)
+  stops: {'R': {'accepted_resolved': 113, 'continue': 80, 'accepted_regressed': 7}, 'F': {'accepted_resolved': 118, 'continue': 72, 'accepted_regressed': 9, 'grade_error': 1}, 'P': {'accepted_resolved': 126, 'continue': 66, 'accepted_regressed': 8}, 'Fg': {'accepted_resolved': 60, 'continue': 36, 'accepted_regressed': 4}, 'Pg': {'accepted_resolved': 62, 'continue': 35, 'accepted_regressed': 3}}

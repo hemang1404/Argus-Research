@@ -1,0 +1,44 @@
+tasks recorded 200 of 200 sealed; gold control failed (excluded): 2 ['psf__requests-1724', 'psf__requests-1921']; analysed 198
+
+== Solved within 3 attempts (percent of tasks); F-R paired, task-clustered bootstrap
+  gpt-oss-20b [all analysed (infra failures = unsolved)] n=198: R 49.0  F 55.6  F-R +6.6  95% CI (1.5, 11.6)  (repo-clustered (1.4, 15.0))  F-only 20 R-only 7
+  gpt-oss-20b [excluding tasks with infra failures] n=193: R 50.3  F 57.0  F-R +6.7  95% CI (1.6, 11.9)  (repo-clustered (1.5, 15.0))  F-only 20 R-only 7
+  gpt-oss-120b [all analysed (infra failures = unsolved)] n=198: R 54.5  F 59.1  F-R +4.5  95% CI (0.0, 9.1)  (repo-clustered (1.0, 10.3))  F-only 15 R-only 6
+  gpt-oss-120b [excluding tasks with infra failures] n=198: R 54.5  F 59.1  F-R +4.5  95% CI (0.0, 9.1)  (repo-clustered (1.0, 10.3))  F-only 15 R-only 6
+  gemma-4-26b-a4b-it [all analysed (infra failures = unsolved)] n=198: R 40.4  F 41.4  F-R +1.0  95% CI (-3.5, 5.6)  (repo-clustered (-5.1, 4.3))  F-only 11 R-only 9
+  gemma-4-26b-a4b-it [excluding tasks with infra failures] n=177: R 45.2  F 46.3  F-R +1.1  95% CI (-3.4, 6.2)  (repo-clustered (-6.1, 4.6))  F-only 11 R-only 9
+
+== H1 (confirmatory): gpt-oss-20b F > R, CI excludes 0 in F's favour
+  H1 CONFIRMED (F-R +6.6, CI (1.5, 11.6)); design estimate was +8 (CI +2 to +14)
+
+== H2: gpt-oss-120b F-R upper 95% bound <= +5
+  H2 does not hold (F-R +4.5, CI (0.0, 9.1))
+
+== H3: cascade (20B arm F <= 2 attempts, then 120B arm R <= 2 attempts) vs 120B arm R <= 3 attempts; spend ratio <= 1.2
+  n=198: cascade 59.6 at $0.6913; 120B-R-3 54.5 at $0.6304; diff +5.1 CI (1.0, 9.1); spend ratio 1.10
+  H3 supported
+  note: attempt-1 cost is taken from the stored attempt records; 20B F attempt 1 is shared with R
+
+== H4: apply-layer gain on attempt-1 draws (Argus applied minus plain exact-match applied, percentage points)
+  gpt-oss-20b: n=198 plain applied 59.1%  Argus applied 72.2%  gain +13.1 pp
+  gpt-oss-120b: n=198 plain applied 78.8%  Argus applied 84.3%  gain +5.6 pp
+  gemma-4-26b-a4b-it: n=193 plain applied 43.5%  Argus applied 61.1%  gain +17.6 pp
+  H4 (applied-edit part): holds (design: +10.7 vs +5.3). Resolved-task ordering not computed here (exploratory).
+
+== Funnel, regressions, cost per arm
+  gpt-oss-20b              R: tasks 198 solved 97 (attempt-1 solved 75) stops {'continue': 92, 'accepted_resolved': 97, 'accepted_regressed': 9} cost $0.527 per solve $0.0054
+  gpt-oss-20b              F: tasks 198 solved 110 (attempt-1 solved 75) stops {'accepted_resolved': 110, 'continue': 76, 'accepted_regressed': 7, 'api_error': 4, 'grade_error': 1} cost $0.498 per solve $0.0045
+  gpt-oss-120b             R: tasks 198 solved 108 (attempt-1 solved 92) stops {'continue': 81, 'accepted_resolved': 108, 'accepted_regressed': 9} cost $0.630 per solve $0.0058
+  gpt-oss-120b             F: tasks 198 solved 117 (attempt-1 solved 92) stops {'continue': 73, 'accepted_resolved': 117, 'accepted_regressed': 8} cost $0.657 per solve $0.0056
+  gemma-4-26b-a4b-it       R: tasks 198 solved 80 (attempt-1 solved 63) stops {'continue': 102, 'accepted_resolved': 80, 'accepted_regressed': 7, 'api_error': 8, 'grade_error': 1} cost $0.000
+  gemma-4-26b-a4b-it       F: tasks 198 solved 82 (attempt-1 solved 63) stops {'continue': 89, 'api_error': 19, 'accepted_resolved': 82, 'accepted_regressed': 7, 'grade_error': 1} cost $0.000
+
+== Per-repo (django vs others) F-R
+  gpt-oss-20b [django] n=65: R 55.4  F 60.0  F-R +4.6  95% CI (-3.1, 12.3)  (repo-clustered (4.6, 4.6))  F-only 5 R-only 2
+  gpt-oss-20b [other repos] n=133: R 45.9  F 53.4  F-R +7.5  95% CI (1.5, 14.3)  (repo-clustered (0.5, 16.9))  F-only 15 R-only 5
+  gpt-oss-120b [django] n=65: R 63.1  F 67.7  F-R +4.6  95% CI (-3.1, 12.3)  (repo-clustered (4.6, 4.6))  F-only 5 R-only 2
+  gpt-oss-120b [other repos] n=133: R 50.4  F 54.9  F-R +4.5  95% CI (-0.8, 9.8)  (repo-clustered (0.0, 13.0))  F-only 10 R-only 4
+  gemma-4-26b-a4b-it [django] n=65: R 44.6  F 49.2  F-R +4.6  95% CI (-3.1, 12.3)  (repo-clustered (4.6, 4.6))  F-only 5 R-only 2
+  gemma-4-26b-a4b-it [other repos] n=133: R 38.3  F 37.6  F-R -0.8  95% CI (-6.0, 4.5)  (repo-clustered (-6.7, 4.0))  F-only 6 R-only 7
+
+wrote results/analysis/blind_report_data.json

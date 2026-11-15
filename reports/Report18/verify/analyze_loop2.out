@@ -1,0 +1,200 @@
+{
+ "within_1_attempts": {
+  "F_solved": 42,
+  "R_solved": 42,
+  "F_minus_R": {
+   "diff": 0,
+   "ci95": [
+    0,
+    0
+   ]
+  },
+  "F_usd": 0.1559,
+  "R_usd": 0.1559,
+  "F_only": [],
+  "R_only": []
+ },
+ "within_2_attempts": {
+  "F_solved": 52,
+  "R_solved": 56,
+  "F_minus_R": {
+   "diff": -4,
+   "ci95": [
+    -10,
+    2
+   ]
+  },
+  "F_usd": 0.2529,
+  "R_usd": 0.2511,
+  "F_only": [
+   "django__django-14534",
+   "django__django-16877",
+   "sympy__sympy-17139"
+  ],
+  "R_only": [
+   "django__django-14434",
+   "django__django-14771",
+   "django__django-15382",
+   "matplotlib__matplotlib-24637",
+   "pytest-dev__pytest-7521",
+   "sympy__sympy-15875",
+   "sympy__sympy-24443"
+  ]
+ },
+ "within_3_attempts": {
+  "F_solved": 57,
+  "R_solved": 59,
+  "F_minus_R": {
+   "diff": -2,
+   "ci95": [
+    -8,
+    3
+   ]
+  },
+  "F_usd": 0.3303,
+  "R_usd": 0.3203,
+  "F_only": [
+   "django__django-14534",
+   "django__django-16877",
+   "scikit-learn__scikit-learn-14983"
+  ],
+  "R_only": [
+   "django__django-14434",
+   "django__django-14771",
+   "pytest-dev__pytest-7521",
+   "sympy__sympy-15875",
+   "sympy__sympy-24443"
+  ]
+ },
+ "per_attempt": {
+  "attempt_2": {
+   "F": {
+    "tasks_reaching": 54,
+    "accepted_resolved": 10,
+    "accepted_regressed": 3,
+    "resolve_rate": 0.185,
+    "returned_an_answer": 54,
+    "applied": 39,
+    "truncated": 0
+   },
+   "R": {
+    "tasks_reaching": 54,
+    "accepted_resolved": 14,
+    "accepted_regressed": 1,
+    "resolve_rate": 0.259,
+    "returned_an_answer": 54,
+    "applied": 38,
+    "truncated": 0
+   }
+  },
+  "attempt_3": {
+   "F": {
+    "tasks_reaching": 41,
+    "accepted_resolved": 5,
+    "accepted_regressed": 0,
+    "resolve_rate": 0.122,
+    "returned_an_answer": 41,
+    "applied": 30,
+    "truncated": 0
+   },
+   "R": {
+    "tasks_reaching": 39,
+    "accepted_resolved": 3,
+    "accepted_regressed": 1,
+    "resolve_rate": 0.077,
+    "returned_an_answer": 39,
+    "applied": 26,
+    "truncated": 0
+   }
+  }
+ },
+ "F_feedback_types_and_next_outcome": {
+  "test_failure_output": {
+   "n": 61,
+   "continue": 47,
+   "accepted_resolved": 12,
+   "accepted_regressed": 2
+  },
+  "apply_refused": {
+   "n": 26,
+   "continue": 22,
+   "accepted_resolved": 3,
+   "accepted_regressed": 1
+  },
+  "no_blocks": {
+   "n": 5,
+   "continue": 5
+  },
+  "other": {
+   "n": 1,
+   "continue": 1
+  },
+  "suite_crashed": {
+   "n": 1,
+   "continue": 1
+  },
+  "patch_rejected": {
+   "n": 1,
+   "continue": 1
+  }
+ },
+ "F_total": {
+  "solved": 57,
+  "accepted_regressed": 7,
+  "never_accepted": 36,
+  "usd": 0.3303,
+  "usd_per_solve": 0.00579,
+  "mean_attempts": 1.95
+ },
+ "R_total": {
+  "solved": 59,
+  "accepted_regressed": 6,
+  "never_accepted": 35,
+  "usd": 0.3203,
+  "usd_per_solve": 0.00543,
+  "mean_attempts": 1.93
+ },
+ "tasks_failing_attempt_1": 54,
+ "of_which_solved_later": {
+  "F": 15,
+  "R": 17
+ },
+ "gold_region_check": {
+  "F_only_solves": [
+   [
+    "django__django-14534",
+    "touches_gold_region"
+   ],
+   [
+    "django__django-16877",
+    "elsewhere"
+   ],
+   [
+    "scikit-learn__scikit-learn-14983",
+    "elsewhere"
+   ]
+  ],
+  "R_only_solves": [
+   [
+    "django__django-14434",
+    "touches_gold_region"
+   ],
+   [
+    "django__django-14771",
+    "touches_gold_region"
+   ],
+   [
+    "pytest-dev__pytest-7521",
+    "touches_gold_region"
+   ],
+   [
+    "sympy__sympy-15875",
+    "elsewhere"
+   ],
+   [
+    "sympy__sympy-24443",
+    "touches_gold_region"
+   ]
+  ]
+ }
+}

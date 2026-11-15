@@ -1,0 +1,205 @@
+{
+ "within_1_attempts": {
+  "F_solved": 38,
+  "R_solved": 38,
+  "F_minus_R": {
+   "diff": 0,
+   "ci95": [
+    0,
+    0
+   ]
+  },
+  "F_usd": 0.1207,
+  "R_usd": 0.1207,
+  "F_only": [],
+  "R_only": []
+ },
+ "within_2_attempts": {
+  "F_solved": 49,
+  "R_solved": 43,
+  "F_minus_R": {
+   "diff": 6,
+   "ci95": [
+    1,
+    12
+   ]
+  },
+  "F_usd": 0.2032,
+  "R_usd": 0.2055,
+  "F_only": [
+   "django__django-12774",
+   "django__django-14434",
+   "matplotlib__matplotlib-20488",
+   "sympy__sympy-13798",
+   "sympy__sympy-15017",
+   "sympy__sympy-15875",
+   "sympy__sympy-18698"
+  ],
+  "R_only": [
+   "sympy__sympy-17139"
+  ]
+ },
+ "within_3_attempts": {
+  "F_solved": 55,
+  "R_solved": 47,
+  "F_minus_R": {
+   "diff": 8,
+   "ci95": [
+    2,
+    14
+   ]
+  },
+  "F_usd": 0.2692,
+  "R_usd": 0.2789,
+  "F_only": [
+   "django__django-12039",
+   "django__django-12774",
+   "django__django-14434",
+   "pytest-dev__pytest-7521",
+   "scikit-learn__scikit-learn-14983",
+   "sympy__sympy-13798",
+   "sympy__sympy-15017",
+   "sympy__sympy-15875",
+   "sympy__sympy-18698"
+  ],
+  "R_only": [
+   "pydata__xarray-4094"
+  ]
+ },
+ "per_attempt": {
+  "attempt_2": {
+   "F": {
+    "tasks_reaching": 59,
+    "accepted_resolved": 11,
+    "accepted_regressed": 1,
+    "resolve_rate": 0.186,
+    "returned_an_answer": 55,
+    "applied": 34,
+    "truncated": 3
+   },
+   "R": {
+    "tasks_reaching": 59,
+    "accepted_resolved": 5,
+    "accepted_regressed": 2,
+    "resolve_rate": 0.085,
+    "returned_an_answer": 52,
+    "applied": 35,
+    "truncated": 9
+   }
+  },
+  "attempt_3": {
+   "F": {
+    "tasks_reaching": 46,
+    "accepted_resolved": 6,
+    "accepted_regressed": 0,
+    "resolve_rate": 0.13,
+    "returned_an_answer": 40,
+    "applied": 27,
+    "truncated": 6
+   },
+   "R": {
+    "tasks_reaching": 52,
+    "accepted_resolved": 4,
+    "accepted_regressed": 3,
+    "resolve_rate": 0.077,
+    "returned_an_answer": 45,
+    "applied": 35,
+    "truncated": 7
+   }
+  }
+ },
+ "F_feedback_types_and_next_outcome": {
+  "no_blocks": {
+   "n": 4,
+   "continue": 4
+  },
+  "apply_refused": {
+   "n": 27,
+   "continue": 24,
+   "accepted_resolved": 3
+  },
+  "test_failure_output": {
+   "n": 59,
+   "continue": 44,
+   "accepted_resolved": 13,
+   "api_error": 1,
+   "accepted_regressed": 1
+  },
+  "truncated": {
+   "n": 14,
+   "continue": 13,
+   "accepted_resolved": 1
+  },
+  "other": {
+   "n": 1,
+   "continue": 1
+  }
+ },
+ "F_total": {
+  "solved": 55,
+  "accepted_regressed": 4,
+  "never_accepted": 40,
+  "usd": 0.2692,
+  "usd_per_solve": 0.00489,
+  "mean_attempts": 2.05
+ },
+ "R_total": {
+  "solved": 47,
+  "accepted_regressed": 8,
+  "never_accepted": 45,
+  "usd": 0.2789,
+  "usd_per_solve": 0.00593,
+  "mean_attempts": 2.11
+ },
+ "tasks_failing_attempt_1": 59,
+ "of_which_solved_later": {
+  "F": 17,
+  "R": 9
+ },
+ "gold_region_check": {
+  "F_only_solves": [
+   [
+    "django__django-12039",
+    "touches_gold_region"
+   ],
+   [
+    "django__django-12774",
+    "touches_gold_region"
+   ],
+   [
+    "django__django-14434",
+    "touches_gold_region"
+   ],
+   [
+    "pytest-dev__pytest-7521",
+    "touches_gold_region"
+   ],
+   [
+    "scikit-learn__scikit-learn-14983",
+    "elsewhere"
+   ],
+   [
+    "sympy__sympy-13798",
+    "touches_gold_region"
+   ],
+   [
+    "sympy__sympy-15017",
+    "elsewhere"
+   ],
+   [
+    "sympy__sympy-15875",
+    "elsewhere"
+   ],
+   [
+    "sympy__sympy-18698",
+    "elsewhere"
+   ]
+  ],
+  "R_only_solves": [
+   [
+    "pydata__xarray-4094",
+    "touches_gold_region"
+   ]
+  ]
+ }
+}

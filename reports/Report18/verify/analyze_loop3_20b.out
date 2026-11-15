@@ -1,0 +1,250 @@
+{
+ "infra_tasks_in_P": [
+  "django__django-13012",
+  "django__django-14771",
+  "django__django-15161",
+  "scikit-learn__scikit-learn-14710",
+  "sphinx-doc__sphinx-10435",
+  "sphinx-doc__sphinx-9258"
+ ],
+ "infra_reasons": {
+  "django__django-14771": [
+   "api_error"
+  ],
+  "sphinx-doc__sphinx-9258": [
+   "api_error"
+  ],
+  "django__django-13012": [
+   "api_error"
+  ],
+  "sphinx-doc__sphinx-10435": [
+   "api_error"
+  ],
+  "scikit-learn__scikit-learn-14710": [
+   "api_error"
+  ],
+  "django__django-15161": [
+   "api_error"
+  ]
+ },
+ "within_2_attempts": {
+  "P": {
+   "solved": 46,
+   "usd": 0.1804,
+   "solved_excluding_infra_tasks": 46,
+   "usd_excluding_infra_tasks": 0.1668
+  },
+  "F": {
+   "solved": 49,
+   "usd": 0.2032,
+   "solved_excluding_infra_tasks": 49,
+   "usd_excluding_infra_tasks": 0.1848
+  },
+  "R": {
+   "solved": 43,
+   "usd": 0.2055,
+   "solved_excluding_infra_tasks": 43,
+   "usd_excluding_infra_tasks": 0.1894
+  },
+  "P_minus_R": {
+   "diff": 3,
+   "ci95": [
+    -2,
+    8
+   ]
+  },
+  "P_minus_R_excl_infra": {
+   "diff": 3,
+   "ci95": [
+    -2,
+    8
+   ]
+  },
+  "P_minus_F": {
+   "diff": -3,
+   "ci95": [
+    -9,
+    3
+   ]
+  },
+  "P_minus_F_excl_infra": {
+   "diff": -3,
+   "ci95": [
+    -9,
+    3
+   ]
+  },
+  "P_only_vs_R": [
+   "django__django-14534",
+   "django__django-15315",
+   "django__django-15930",
+   "matplotlib__matplotlib-24570",
+   "sympy__sympy-15875"
+  ],
+  "R_only_vs_P": [
+   "sphinx-doc__sphinx-9230",
+   "sympy__sympy-17139"
+  ]
+ },
+ "within_3_attempts": {
+  "P": {
+   "solved": 52,
+   "usd": 0.2252,
+   "solved_excluding_infra_tasks": 52,
+   "usd_excluding_infra_tasks": 0.2116
+  },
+  "F": {
+   "solved": 55,
+   "usd": 0.2692,
+   "solved_excluding_infra_tasks": 54,
+   "usd_excluding_infra_tasks": 0.2458
+  },
+  "R": {
+   "solved": 47,
+   "usd": 0.2789,
+   "solved_excluding_infra_tasks": 46,
+   "usd_excluding_infra_tasks": 0.2548
+  },
+  "P_minus_R": {
+   "diff": 5,
+   "ci95": [
+    -2,
+    12
+   ]
+  },
+  "P_minus_R_excl_infra": {
+   "diff": 6,
+   "ci95": [
+    0,
+    13
+   ]
+  },
+  "P_minus_F": {
+   "diff": -3,
+   "ci95": [
+    -11,
+    5
+   ]
+  },
+  "P_minus_F_excl_infra": {
+   "diff": -2,
+   "ci95": [
+    -10,
+    6
+   ]
+  },
+  "P_only_vs_R": [
+   "django__django-14534",
+   "django__django-15315",
+   "django__django-15930",
+   "django__django-16642",
+   "matplotlib__matplotlib-24570",
+   "matplotlib__matplotlib-24637",
+   "pytest-dev__pytest-6197",
+   "scikit-learn__scikit-learn-14983",
+   "sympy__sympy-15875"
+  ],
+  "R_only_vs_P": [
+   "django__django-13012",
+   "matplotlib__matplotlib-20488",
+   "pydata__xarray-4094",
+   "sympy__sympy-17139"
+  ]
+ },
+ "per_attempt": {
+  "attempt_2": {
+   "P": {
+    "tasks_reaching": 58,
+    "accepted_resolved": 8,
+    "accepted_regressed": 0,
+    "resolve_rate": 0.138,
+    "applied": 27,
+    "truncated": 3
+   },
+   "F": {
+    "tasks_reaching": 58,
+    "accepted_resolved": 11,
+    "accepted_regressed": 1,
+    "resolve_rate": 0.19,
+    "applied": 34,
+    "truncated": 3
+   },
+   "R": {
+    "tasks_reaching": 59,
+    "accepted_resolved": 5,
+    "accepted_regressed": 2,
+    "resolve_rate": 0.085,
+    "applied": 35,
+    "truncated": 9
+   }
+  },
+  "attempt_3": {
+   "P": {
+    "tasks_reaching": 45,
+    "accepted_resolved": 6,
+    "accepted_regressed": 2,
+    "resolve_rate": 0.133,
+    "applied": 28,
+    "truncated": 0
+   },
+   "F": {
+    "tasks_reaching": 46,
+    "accepted_resolved": 6,
+    "accepted_regressed": 0,
+    "resolve_rate": 0.13,
+    "applied": 27,
+    "truncated": 6
+   },
+   "R": {
+    "tasks_reaching": 52,
+    "accepted_resolved": 4,
+    "accepted_regressed": 3,
+    "resolve_rate": 0.077,
+    "applied": 35,
+    "truncated": 7
+   }
+  }
+ },
+ "P_repeated_identical_patch": {
+  "patches": 133,
+  "repeats": 2
+ },
+ "P_feedback_types_and_next_outcome": {
+  "other": {
+   "n": 18,
+   "continue": 17,
+   "accepted_resolved": 1
+  },
+  "apply_refused": {
+   "n": 35,
+   "continue": 29,
+   "accepted_resolved": 5,
+   "api_error": 1
+  },
+  "test_failure_output": {
+   "n": 56,
+   "continue": 41,
+   "accepted_resolved": 8,
+   "accepted_regressed": 2,
+   "api_error": 5
+  }
+ },
+ "P_total": {
+  "solved": 52,
+  "accepted_regressed": 5,
+  "usd": 0.2252,
+  "usd_per_solve": 0.00433
+ },
+ "F_total": {
+  "solved": 55,
+  "accepted_regressed": 4,
+  "usd": 0.2692,
+  "usd_per_solve": 0.00489
+ },
+ "R_total": {
+  "solved": 47,
+  "accepted_regressed": 8,
+  "usd": 0.2789,
+  "usd_per_solve": 0.00593
+ }
+}
