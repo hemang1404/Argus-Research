@@ -1,0 +1,4 @@
+model gemma26; 100 tasks to run (0 done); out=C:\coding\Argus-pilot50\data\loop_f_gemma26; prompt_hash=56e5b02fa8ed
+  pulled astropy__astropy-12907 in 69s
+  [qwen38] astropy__astropy-13033 4260e4ef08 applied=True resolved=False
+  [qwen38] astropy__astropy-13033 8100bd49da applied=True resolved=False

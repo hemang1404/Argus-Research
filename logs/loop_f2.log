@@ -1,0 +1,299 @@
+models ['gemma26', 'qwen38']; 76 tasks to run; prompt_hash=56e5b02fa8ed
+[1/76] django__django-13406  SKIPPED ['gemma26'] 0s
+  pulled django__django-14771 in 101s
+  pulled django__django-15128 in 97s
+[2/76] django__django-14771 gemma26:accepted_resolved/n=2 qwen38:accepted_resolved/n=3 393s
+  pulled django__django-15161 in 15s
+  [qwen38] django__django-15161 8548077d4f applied=True resolved=False
+[3/76] django__django-15128 gemma26:api_error/n=2 qwen38:continue/n=3 1854s
+  pulled django__django-15280 in 12s
+  [qwen38] django__django-15280 3545501fb7 applied=True resolved=False
+[4/76] django__django-15161 gemma26:api_error/n=3 qwen38:api_error/n=2 2035s
+  pulled django__django-15315 in 12s
+  [qwen38] django__django-15315 909f7a72e2 applied=True resolved=False
+  [qwen38] django__django-15315 e8dec8a59d applied=True resolved=False
+[5/76] django__django-15280 gemma26:api_error/n=3 qwen38:continue/n=3 2285s
+  pulled django__django-15382 in 12s
+  [qwen38] django__django-15382 061a1de12d applied=True resolved=False
+  [qwen38] django__django-15382 4ca94f2f55 applied=True resolved=False
+[6/76] django__django-15382 gemma26:continue/n=3 qwen38:accepted_resolved/n=2 325s
+  pulled django__django-15930 in 12s
+  [qwen38] django__django-15930 32fcdab556 applied=True resolved=False
+  [qwen38] django__django-15930 6658d8b391 applied=True resolved=False
+[7/76] django__django-15315 gemma26:api_error/n=3 qwen38:continue/n=3 2220s
+  pulled django__django-16116 in 11s
+  [qwen38] django__django-16116 69f4f0be24 applied=True resolved=False
+[8/76] django__django-16116 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 46s
+  pulled django__django-16485 in 40s
+  [qwen38] django__django-16485 13cc49a035 applied=True resolved=True
+  [qwen38] django__django-16485 668786f276 applied=True resolved=False
+  [qwen38] django__django-16485 9b7ea65588 applied=True resolved=False
+[9/76] django__django-16485 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 135s
+  pulled django__django-16595 in 82s
+  [qwen38] django__django-16595 7f7250a3ef applied=True resolved=True
+[10/76] django__django-16595 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 125s
+  pulled django__django-16642 in 43s
+  [qwen38] django__django-16642 bee6a62002 applied=True resolved=False
+  [qwen38] django__django-16642 d866216998 applied=True resolved=False
+[11/76] django__django-16642 gemma26:accepted_resolved/n=1 qwen38:continue/n=3 160s
+  pulled django__django-16877 in 44s
+  [qwen38] django__django-16877 4db58dc460 applied=True resolved=False
+  [qwen38] django__django-16877 d638056e7e applied=True resolved=False
+  [qwen38] django__django-16877 e260800365 applied=True resolved=True
+[12/76] django__django-16877 gemma26:accepted_resolved/n=1 qwen38:api_error/n=2 127s
+  pulled matplotlib__matplotlib-13989 in 63s
+[13/76] django__django-15930 gemma26:continue/n=3 qwen38:api_error/n=2 978s
+  pulled matplotlib__matplotlib-20488 in 151s
+  [qwen38] matplotlib__matplotlib-20488 916b090c54 applied=True resolved=False
+[14/76] matplotlib__matplotlib-20488 gemma26:accepted_resolved/n=2 qwen38:accepted_resolved/n=1 493s
+  pulled matplotlib__matplotlib-20676 in 98s
+[15/76] matplotlib__matplotlib-13989 gemma26:continue/n=3 qwen38:continue/n=3 1745s
+  pulled matplotlib__matplotlib-23412 in 154s
+  [qwen38] matplotlib__matplotlib-23412 0409857625 applied=True resolved=False
+  [qwen38] matplotlib__matplotlib-23412 7f6b778d7e applied=True resolved=True
+  [qwen38] matplotlib__matplotlib-23412 8b476e1df3 applied=True resolved=False
+[16/76] matplotlib__matplotlib-20676 gemma26:continue/n=3 qwen38:continue/n=3 1756s
+  pulled matplotlib__matplotlib-24570 in 196s
+  [qwen38] matplotlib__matplotlib-24570 0b0d05af41 applied=True resolved=False
+[17/76] matplotlib__matplotlib-24570 gemma26:accepted_regressed/n=1 qwen38:api_error/n=2 310s
+[18/76] matplotlib__matplotlib-23412 gemma26:continue/n=3 qwen38:continue/n=3 1078s
+  pulled matplotlib__matplotlib-24637 in 217s
+  pulled matplotlib__matplotlib-24970 in 237s
+  [qwen38] matplotlib__matplotlib-24637 059f04059f applied=True resolved=False
+  [qwen38] matplotlib__matplotlib-24970 013906605e applied=True resolved=True
+  [qwen38] matplotlib__matplotlib-24637 23dcf1089d applied=True resolved=False
+  [qwen38] matplotlib__matplotlib-24970 41d6c0d8e7 applied=True resolved=False
+  [qwen38] matplotlib__matplotlib-24637 c85e7d7ac4 applied=True resolved=False
+  [qwen38] matplotlib__matplotlib-24970 5da13803ef applied=True resolved=False
+[19/76] matplotlib__matplotlib-24637 gemma26:accepted_resolved/n=2 qwen38:continue/n=3 736s
+  pulled matplotlib__matplotlib-25311 in 162s
+  [qwen38] matplotlib__matplotlib-25311 24376b9cf8 applied=True resolved=True
+  [qwen38] matplotlib__matplotlib-25311 68d63e9bf2 applied=True resolved=False
+  [qwen38] matplotlib__matplotlib-25311 d539c83a2c applied=True resolved=False
+[20/76] matplotlib__matplotlib-25311 gemma26:accepted_resolved/n=1 qwen38:api_error/n=2 375s
+[21/76] matplotlib__matplotlib-24970 gemma26:accepted_regressed/n=3 qwen38:accepted_regressed/n=2 1102s
+  pulled psf__requests-2931 in 48s
+  [qwen38] psf__requests-2931 250e64923d applied=True resolved=False
+  [qwen38] psf__requests-2931 a3c3a9ce7e applied=True resolved=False
+[22/76] psf__requests-2931 gemma26:accepted_regressed/n=1 qwen38:api_error/n=2 102s
+  pulled psf__requests-6028 in 31s
+  pulled matplotlib__matplotlib-25960 in 209s
+  [qwen38] psf__requests-6028 3a12557837 applied=True resolved=False
+  [qwen38] psf__requests-6028 bf24003fc3 applied=True resolved=False
+  [qwen38] matplotlib__matplotlib-25960 206389d453 applied=True resolved=False
+  [qwen38] matplotlib__matplotlib-25960 5f66ffc083 applied=True resolved=False
+  [qwen38] matplotlib__matplotlib-25960 8e580b5e35 applied=True resolved=False
+[23/76] psf__requests-6028 gemma26:continue/n=3 qwen38:api_error/n=2 358s
+  pulled pydata__xarray-3151 in 109s
+  [qwen38] pydata__xarray-3151 3762d6db1a applied=True resolved=True
+  [qwen38] pydata__xarray-3151 9b4ba876a8 applied=True resolved=True
+  [qwen38] pydata__xarray-3151 fd201d3d7f applied=True resolved=False
+[24/76] pydata__xarray-3151 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 186s
+  pulled pydata__xarray-4094 in 135s
+  [qwen38] pydata__xarray-4094 5979214d5a applied=True resolved=False
+[25/76] matplotlib__matplotlib-25960 gemma26:continue/n=3 qwen38:continue/n=3 966s
+  pulled pydata__xarray-4356 in 128s
+  [qwen38] pydata__xarray-4356 5a68c80f2b applied=True resolved=True
+  [qwen38] pydata__xarray-4356 cd5c741332 applied=True resolved=True
+[26/76] pydata__xarray-4356 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 188s
+  pulled pydata__xarray-4966 in 132s
+  [qwen38] pydata__xarray-4966 c3d835671d applied=True resolved=False
+[27/76] pydata__xarray-4966 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 161s
+  pulled pydata__xarray-6721 in 122s
+  [qwen38] pydata__xarray-6721 bb67f8fbf2 applied=True resolved=True
+[28/76] pydata__xarray-6721 gemma26:accepted_resolved/n=2 qwen38:accepted_resolved/n=1 231s
+[29/76] pydata__xarray-4094 gemma26:continue/n=3 qwen38:api_error/n=2 912s
+  pulled pylint-dev__pylint-7277 in 61s
+  pulled pytest-dev__pytest-10051 in 30s
+  [qwen38] pylint-dev__pylint-7277 1d30e29502 applied=True resolved=True
+[30/76] pylint-dev__pylint-7277 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 104s
+  [qwen38] pytest-dev__pytest-10051 70972d7c50 applied=True resolved=False
+  pulled pytest-dev__pytest-5262 in 29s
+  [qwen38] pytest-dev__pytest-10051 8bdace309b applied=True resolved=False
+  [qwen38] pytest-dev__pytest-10051 a22f909b5f applied=True resolved=False
+  [qwen38] pytest-dev__pytest-5262 534a3cc4c8 applied=True resolved=False
+  [qwen38] pytest-dev__pytest-5262 618d7c7d5f applied=True resolved=True
+[31/76] pytest-dev__pytest-5262 gemma26:accepted_resolved/n=1 qwen38:api_error/n=2 94s
+[32/76] pytest-dev__pytest-5809 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 0s
+  pulled pytest-dev__pytest-6197 in 29s
+  [qwen38] pytest-dev__pytest-6197 f7c12aa672 applied=True resolved=False
+  [qwen38] pytest-dev__pytest-6197 f947d3137e applied=True resolved=False
+  [qwen38] pytest-dev__pytest-6197 fdb0a9dd50 applied=False resolved=False
+[33/76] pytest-dev__pytest-6197 gemma26:continue/n=3 qwen38:continue/n=3 308s
+  pulled pytest-dev__pytest-7521 in 30s
+[34/76] pytest-dev__pytest-10051 gemma26:continue/n=3 qwen38:api_error/n=2 492s
+  [qwen38] pytest-dev__pytest-7521 bc5f9f1e55 applied=False resolved=False
+  pulled scikit-learn__scikit-learn-10844 in 59s
+  [qwen38] scikit-learn__scikit-learn-10844 18f004f03d applied=True resolved=True
+  [qwen38] scikit-learn__scikit-learn-10844 c80f89871f applied=True resolved=True
+  [qwen38] scikit-learn__scikit-learn-10844 eea86f82e2 applied=True resolved=False
+[35/76] scikit-learn__scikit-learn-10844 gemma26:accepted_resolved/n=1 qwen38:accepted_regressed/n=1 133s
+  pulled scikit-learn__scikit-learn-11578 in 60s
+  [qwen38] scikit-learn__scikit-learn-11578 e3a1c11f6c applied=True resolved=True
+[36/76] scikit-learn__scikit-learn-11578 gemma26:continue/n=3 qwen38:accepted_resolved/n=2 884s
+  pulled scikit-learn__scikit-learn-12973 in 59s
+  [qwen38] scikit-learn__scikit-learn-12973 e754de0260 applied=True resolved=False
+[37/76] pytest-dev__pytest-7521 gemma26:continue/n=3 qwen38:continue/n=3 2345s
+  pulled scikit-learn__scikit-learn-13496 in 87s
+  [qwen38] scikit-learn__scikit-learn-13496 1240d7d747 applied=True resolved=True
+  [qwen38] scikit-learn__scikit-learn-13496 3253604277 applied=True resolved=False
+  [qwen38] scikit-learn__scikit-learn-13496 f3a5aebc18 applied=True resolved=True
+[38/76] scikit-learn__scikit-learn-13496 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 166s
+  pulled scikit-learn__scikit-learn-14053 in 60s
+  [qwen38] scikit-learn__scikit-learn-14053 3123ee66ff applied=True resolved=False
+  [qwen38] scikit-learn__scikit-learn-14053 a0184ec9a4 applied=True resolved=False
+  [qwen38] scikit-learn__scikit-learn-14053 d4a93d0634 applied=True resolved=False
+[39/76] scikit-learn__scikit-learn-14053 gemma26:accepted_resolved/n=3 qwen38:api_error/n=2 673s
+  pulled scikit-learn__scikit-learn-14710 in 61s
+  [qwen38] scikit-learn__scikit-learn-14710 964aaf7711 applied=True resolved=False
+  [qwen38] scikit-learn__scikit-learn-14710 9ce75d63cd applied=True resolved=False
+[40/76] scikit-learn__scikit-learn-14710 gemma26:continue/n=3 qwen38:continue/n=3 422s
+[41/76] scikit-learn__scikit-learn-12973 gemma26:api_error/n=3 qwen38:continue/n=3 2606s
+  pulled scikit-learn__scikit-learn-14894 in 94s
+  pulled scikit-learn__scikit-learn-14983 in 25s
+  [qwen38] scikit-learn__scikit-learn-14983 7e5fc424e7 applied=True resolved=False
+  [qwen38] scikit-learn__scikit-learn-14894 10317c2bf1 applied=True resolved=False
+  [qwen38] scikit-learn__scikit-learn-14983 b1e447f9b9 applied=True resolved=False
+  [qwen38] scikit-learn__scikit-learn-14894 c90da82af2 applied=True resolved=True
+  [qwen38] scikit-learn__scikit-learn-14894 eea3ca13d2 applied=True resolved=False
+[42/76] scikit-learn__scikit-learn-14894 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 172s
+  pulled scikit-learn__scikit-learn-25973 in 113s
+  [qwen38] scikit-learn__scikit-learn-25973 525ee7e635 applied=True resolved=False
+[43/76] scikit-learn__scikit-learn-14983 gemma26:continue/n=3 qwen38:continue/n=3 269s
+  [qwen38] scikit-learn__scikit-learn-25973 99d8252792 applied=True resolved=False
+  [qwen38] scikit-learn__scikit-learn-25973 f5e7cfde74 applied=True resolved=False
+  pulled sphinx-doc__sphinx-10435 in 33s
+[44/76] scikit-learn__scikit-learn-25973 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=2 220s
+  [qwen38] sphinx-doc__sphinx-10435 77bddc4b37 applied=True resolved=False
+  pulled sphinx-doc__sphinx-10466 in 8s
+  [qwen38] sphinx-doc__sphinx-10466 6cce5fdb43 applied=True resolved=True
+  [qwen38] sphinx-doc__sphinx-10435 79233308b9 applied=True resolved=False
+  [qwen38] sphinx-doc__sphinx-10466 daaf80c6f0 applied=True resolved=False
+  [qwen38] sphinx-doc__sphinx-10435 e2ccb47df4 applied=True resolved=False
+  [qwen38] sphinx-doc__sphinx-10466 f11debbb6d applied=True resolved=True
+[45/76] sphinx-doc__sphinx-10466 gemma26:accepted_resolved/n=2 qwen38:accepted_resolved/n=1 116s
+  pulled sphinx-doc__sphinx-10614 in 38s
+  [qwen38] sphinx-doc__sphinx-10614 17f7682fef applied=True resolved=False
+  [qwen38] sphinx-doc__sphinx-10614 8405bf61f9 applied=True resolved=False
+  [qwen38] sphinx-doc__sphinx-10614 a784580d5d applied=True resolved=False
+[46/76] sphinx-doc__sphinx-10435 gemma26:continue/n=3 qwen38:api_error/n=2 401s
+  pulled sphinx-doc__sphinx-11445 in 62s
+  [qwen38] sphinx-doc__sphinx-11445 0929348920 applied=True resolved=False
+  [qwen38] sphinx-doc__sphinx-11445 89d4304f3e applied=True resolved=False
+  [qwen38] sphinx-doc__sphinx-11445 d0fc5fb99b applied=True resolved=False
+[47/76] sphinx-doc__sphinx-11445 gemma26:accepted_resolved/n=1 qwen38:continue/n=3 165s
+  pulled sphinx-doc__sphinx-8459 in 32s
+  [qwen38] sphinx-doc__sphinx-8459 4ea64711e9 applied=True resolved=False
+  [qwen38] sphinx-doc__sphinx-8459 83dc3f680f applied=True resolved=False
+  [qwen38] sphinx-doc__sphinx-8459 bd383327db applied=True resolved=False
+[48/76] sphinx-doc__sphinx-8459 gemma26:continue/n=3 qwen38:continue/n=3 520s
+  pulled sphinx-doc__sphinx-9230 in 36s
+[49/76] sphinx-doc__sphinx-10614 gemma26:continue/n=3 qwen38:continue/n=3 954s
+  pulled sphinx-doc__sphinx-9258 in 8s
+  [qwen38] sphinx-doc__sphinx-9230 ec9c8efcc5 applied=True resolved=False
+[50/76] sphinx-doc__sphinx-9230 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 63s
+  pulled sphinx-doc__sphinx-9281 in 7s
+  [qwen38] sphinx-doc__sphinx-9258 4c6211ecdd applied=True resolved=False
+  [qwen38] sphinx-doc__sphinx-9281 2116c5ab00 applied=True resolved=True
+  [qwen38] sphinx-doc__sphinx-9258 f1d61fb786 applied=True resolved=False
+  [qwen38] sphinx-doc__sphinx-9281 a2fc126d1f applied=True resolved=True
+  [qwen38] sphinx-doc__sphinx-9281 d27a8cfe8d applied=True resolved=False
+[51/76] sphinx-doc__sphinx-9281 gemma26:continue/n=3 qwen38:accepted_resolved/n=1 689s
+[52/76] sphinx-doc__sphinx-9258 gemma26:continue/n=3 qwen38:api_error/n=2 767s
+  pulled sphinx-doc__sphinx-9658 in 89s
+  [qwen38] sphinx-doc__sphinx-9658 3e336392c0 applied=True resolved=False
+  [qwen38] sphinx-doc__sphinx-9658 63e80a54d1 applied=True resolved=False
+  pulled sphinx-doc__sphinx-9698 in 91s
+  [qwen38] sphinx-doc__sphinx-9658 6be8388643 applied=True resolved=False
+  [qwen38] sphinx-doc__sphinx-9698 58144b6f9b applied=True resolved=False
+  [qwen38] sphinx-doc__sphinx-9698 818b04ca3d applied=True resolved=False
+[53/76] sphinx-doc__sphinx-9658 gemma26:continue/n=3 qwen38:continue/n=3 508s
+  pull failed (1) sphinx-doc__sphinx-9711: short read: expected 41396752 bytes but got 28779555: unexpected EOF
+  pulled sphinx-doc__sphinx-9711 in 9s
+  [qwen38] sphinx-doc__sphinx-9711 5f1668a9e9 applied=True resolved=True
+  [qwen38] sphinx-doc__sphinx-9711 ec4f4bece1 applied=True resolved=True
+[54/76] sphinx-doc__sphinx-9711 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 144s
+  pulled sympy__sympy-11618 in 31s
+  [qwen38] sympy__sympy-11618 89291ebe33 applied=True resolved=False
+  [qwen38] sympy__sympy-11618 ff1b6f2da6 applied=True resolved=False
+[55/76] sympy__sympy-11618 gemma26:accepted_resolved/n=1 qwen38:continue/n=3 110s
+[56/76] sympy__sympy-12481 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 0s
+[57/76] sympy__sympy-13480 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 0s
+  pulled sympy__sympy-13551 in 30s
+[58/76] sphinx-doc__sphinx-9698 gemma26:continue/n=3 qwen38:api_error/n=2 748s
+  [qwen38] sympy__sympy-13551 c990ed3393 applied=True resolved=False
+  pulled sympy__sympy-13798 in 31s
+  [qwen38] sympy__sympy-13551 cc1ecf35c2 applied=True resolved=False
+  [qwen38] sympy__sympy-13798 a5102cd35f applied=True resolved=False
+  [qwen38] sympy__sympy-13798 f54c7696c5 applied=True resolved=False
+  [qwen38] sympy__sympy-13798 fd968001be applied=True resolved=False
+[59/76] sympy__sympy-13551 gemma26:accepted_regressed/n=1 qwen38:continue/n=3 161s
+  pulled sympy__sympy-14531 in 33s
+  [qwen38] sympy__sympy-14531 3532bc3177 applied=True resolved=True
+  [qwen38] sympy__sympy-14531 8137d84393 applied=True resolved=True
+  [qwen38] sympy__sympy-14531 ac604b8765 applied=True resolved=False
+[60/76] sympy__sympy-14531 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 108s
+  pulled sympy__sympy-14711 in 31s
+[61/76] sympy__sympy-13798 gemma26:continue/n=3 qwen38:continue/n=3 284s
+  [qwen38] sympy__sympy-14711 52275f0e42 applied=True resolved=True
+[62/76] sympy__sympy-14711 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 57s
+  pulled sympy__sympy-15017 in 72s
+  pulled sympy__sympy-15875 in 67s
+  [qwen38] sympy__sympy-15017 60a632c56b applied=True resolved=True
+  [qwen38] sympy__sympy-15875 2b70978411 applied=True resolved=False
+  [qwen38] sympy__sympy-15017 ae61bbb34c applied=True resolved=False
+  [qwen38] sympy__sympy-15875 5668f9768e applied=True resolved=False
+  [qwen38] sympy__sympy-15017 e16eca7f54 applied=True resolved=False
+[63/76] sympy__sympy-15017 gemma26:continue/n=3 qwen38:accepted_resolved/n=1 162s
+  pulled sympy__sympy-16450 in 31s
+[64/76] sympy__sympy-15875 gemma26:continue/n=3 qwen38:accepted_resolved/n=1 521s
+  pulled sympy__sympy-16792 in 60s
+  [qwen38] sympy__sympy-16792 2525d1035f applied=True resolved=False
+[65/76] sympy__sympy-16450 gemma26:continue/n=3 qwen38:continue/n=3 765s
+  pulled sympy__sympy-17139 in 10s
+  [qwen38] sympy__sympy-17139 62db4336b2 applied=True resolved=False
+  [qwen38] sympy__sympy-17139 833d08c3dd applied=True resolved=False
+  [qwen38] sympy__sympy-17139 b2a1bde39f applied=True resolved=False
+[66/76] sympy__sympy-17139 gemma26:accepted_resolved/n=1 qwen38:continue/n=3 482s
+  pulled sympy__sympy-17655 in 9s
+  [qwen38] sympy__sympy-17655 a648c89870 applied=True resolved=True
+  [qwen38] sympy__sympy-17655 ae08f1e9f1 applied=True resolved=False
+[67/76] sympy__sympy-16792 gemma26:continue/n=3 qwen38:continue/n=3 1046s
+  pulled sympy__sympy-18698 in 9s
+  [qwen38] sympy__sympy-18698 9d8a767a09 applied=True resolved=False
+  [qwen38] sympy__sympy-18698 e6da14bfc7 applied=True resolved=False
+  [qwen38] sympy__sympy-18698 ea3ed61098 applied=True resolved=False
+[68/76] sympy__sympy-17655 gemma26:accepted_resolved/n=3 qwen38:accepted_resolved/n=1 710s
+  pulled sympy__sympy-19346 in 61s
+  [qwen38] sympy__sympy-19346 2e4bcbb8d0 applied=True resolved=True
+  [qwen38] sympy__sympy-19346 e2ba374335 applied=True resolved=False
+  [qwen38] sympy__sympy-19346 fc65ed93a3 applied=True resolved=True
+[69/76] sympy__sympy-19346 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 134s
+  pulled sympy__sympy-21596 in 58s
+  [qwen38] sympy__sympy-21596 109e74419e applied=True resolved=False
+  [qwen38] sympy__sympy-21596 b8550a983c applied=True resolved=False
+  [qwen38] sympy__sympy-21596 d38aaeaf0a applied=True resolved=False
+[70/76] sympy__sympy-18698 gemma26:continue/n=3 qwen38:continue/n=3 1131s
+  pulled sympy__sympy-22914 in 12s
+  [qwen38] sympy__sympy-22914 a830ff0f83 applied=True resolved=True
+  [qwen38] sympy__sympy-22914 e16c42470d applied=True resolved=False
+[71/76] sympy__sympy-22914 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=2 86s
+  pulled sympy__sympy-23262 in 68s
+  [qwen38] sympy__sympy-23262 339c8726a9 applied=True resolved=True
+  [qwen38] sympy__sympy-23262 78f3f544fa applied=True resolved=False
+  [qwen38] sympy__sympy-23262 b78b1eb80b applied=True resolved=True
+[72/76] sympy__sympy-23262 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 146s
+  pulled sympy__sympy-24066 in 63s
+  [qwen38] sympy__sympy-24066 69c45a44c6 applied=True resolved=True
+  [qwen38] sympy__sympy-24066 a269d65725 applied=True resolved=True
+  [qwen38] sympy__sympy-24066 a61bc7d6ee applied=True resolved=False
+[73/76] sympy__sympy-24066 gemma26:accepted_regressed/n=3 qwen38:accepted_resolved/n=1 660s
+  pulled sympy__sympy-24443 in 12s
+  [qwen38] sympy__sympy-24443 763d985cfb applied=True resolved=False
+  [qwen38] sympy__sympy-24443 c8629feb5d applied=True resolved=True
+  [qwen38] sympy__sympy-24443 f2187490a2 applied=True resolved=True
+[74/76] sympy__sympy-21596 gemma26:api_error/n=2 qwen38:continue/n=3 1879s
+  pulled sympy__sympy-24539 in 141s
+[75/76] sympy__sympy-24443 gemma26:continue/n=3 qwen38:continue/n=3 914s
+[76/76] sympy__sympy-24539 gemma26:api_error/n=2 qwen38:continue/n=3 1912s
+all done

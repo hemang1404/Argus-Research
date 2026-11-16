@@ -1,0 +1,127 @@
+apply_plain.py -> gemini-3.5-flash-lite {'applied': 26, 'empty_output': 2, 'no_match': 2} | applied but syntax-broken: 0 
+apply_argus.py -> gemini-3.5-flash-lite {'applied': 27, 'empty_output': 2, 'refused': 1} | max tier among applied: {1: 26, 3: 1} 
+48 distinct applied patches over 27 tasks; 48 to grade
+  pulled astropy__astropy-14182 in 75s
+  astropy__astropy-14182 bd89f9175e applied=True resolved=False
+  astropy__astropy-14182 2c3dbb12b9 applied=True resolved=False
+  pulled astropy__astropy-14508 in 65s
+  astropy__astropy-14508 312547b161 applied=True resolved=False
+  astropy__astropy-14508 75f1f584c1 applied=True resolved=True
+  pulled django__django-12039 in 70s
+  django__django-12039 f5fbbaaf88 applied=True resolved=False
+  django__django-12039 41998ae917 applied=True resolved=False
+  pulled django__django-12774 in 72s
+  django__django-12774 a2e9909530 applied=True resolved=False
+  django__django-12774 449ce4845a applied=True resolved=True
+  pulled django__django-13012 in 69s
+  django__django-13012 a858d5bff2 applied=True resolved=False
+  django__django-13012 f8080c4fca applied=True resolved=True
+  pulled django__django-14434 in 70s
+  django__django-14434 1edadc8dd2 applied=True resolved=True
+  pulled django__django-15382 in 84s
+  django__django-15382 d09035e9b2 applied=True resolved=True
+  django__django-15382 b4fc2a57dd applied=True resolved=True
+  pulled django__django-16116 in 77s
+  django__django-16116 559b75b671 applied=True resolved=True
+  pulled matplotlib__matplotlib-20676 in 133s
+  matplotlib__matplotlib-20676 0fc82ebc81 applied=True resolved=False
+  pulled matplotlib__matplotlib-25311 in 199s
+  matplotlib__matplotlib-25311 f6438c5026 applied=True resolved=False
+  matplotlib__matplotlib-25311 3f80d376c6 applied=True resolved=True
+  pulled psf__requests-2931 in 59s
+  psf__requests-2931 e8d75ef074 applied=True resolved=False
+  psf__requests-2931 706455ed1f applied=True resolved=False
+  pulled pydata__xarray-4094 in 141s
+  pydata__xarray-4094 124df039fd applied=True resolved=False
+  pydata__xarray-4094 7710a115b7 applied=True resolved=False
+  pulled pytest-dev__pytest-5809 in 64s
+  pytest-dev__pytest-5809 fcea0a3f9d applied=True resolved=True
+  pulled scikit-learn__scikit-learn-12973 in 90s
+  scikit-learn__scikit-learn-12973 dc33a74cca applied=True resolved=False
+  pulled scikit-learn__scikit-learn-14710 in 95s
+  scikit-learn__scikit-learn-14710 d80a6f1dcb applied=True resolved=False
+  scikit-learn__scikit-learn-14710 12fb2e0096 applied=True resolved=False
+  pulled scikit-learn__scikit-learn-14894 in 87s
+  scikit-learn__scikit-learn-14894 bed56c0fda applied=True resolved=True
+  scikit-learn__scikit-learn-14894 782426ee72 applied=True resolved=True
+  pulled scikit-learn__scikit-learn-25973 in 124s
+  scikit-learn__scikit-learn-25973 6b9ba5abb9 applied=True resolved=True
+  scikit-learn__scikit-learn-25973 a37cab068f applied=True resolved=True
+  pulled sphinx-doc__sphinx-10435 in 69s
+  sphinx-doc__sphinx-10435 cbe479768f applied=True resolved=False
+  sphinx-doc__sphinx-10435 16a2b2aaa4 applied=True resolved=False
+  pulled sphinx-doc__sphinx-10614 in 72s
+  sphinx-doc__sphinx-10614 a2d969f55f applied=True resolved=False
+  sphinx-doc__sphinx-10614 d1f68cf141 applied=True resolved=False
+  pulled sphinx-doc__sphinx-9711 in 66s
+  sphinx-doc__sphinx-9711 38b9745a78 applied=True resolved=True
+  sphinx-doc__sphinx-9711 ee0c79b177 applied=True resolved=True
+  pulled sympy__sympy-13551 in 65s
+  sympy__sympy-13551 84445c233a applied=True resolved=False
+  sympy__sympy-13551 1d8a6d68f0 applied=True resolved=True
+  pulled sympy__sympy-15017 in 70s
+  sympy__sympy-15017 60f0a16bd7 applied=True resolved=False
+  pulled sympy__sympy-17139 in 66s
+  sympy__sympy-17139 1e4d339dbd applied=True resolved=False
+  sympy__sympy-17139 27826ab8bd applied=True resolved=True
+  pulled sympy__sympy-17655 in 68s
+  sympy__sympy-17655 2f0226e2c7 applied=True resolved=False
+  sympy__sympy-17655 c9df223901 applied=True resolved=True
+  pulled sympy__sympy-21596 in 67s
+  sympy__sympy-21596 c404d4bb7d applied=True resolved=False
+  sympy__sympy-21596 89edcb3544 applied=True resolved=False
+  pulled sympy__sympy-22914 in 71s
+  sympy__sympy-22914 dd2162ba38 applied=True resolved=True
+  sympy__sympy-22914 fdbe1a12af applied=True resolved=True
+  pulled sympy__sympy-24066 in 68s
+  sympy__sympy-24066 26bf1b0924 applied=True resolved=True
+  sympy__sympy-24066 217b96d178 applied=True resolved=True
+{
+ "gemini-3.1-flash-lite": {
+  "n": 30,
+  "cost_usd": 0.084,
+  "truncated": 0,
+  "mean_visible_out": 418,
+  "mean_hidden_thought": 509,
+  "plain": {
+   "statuses": {
+    "applied": 22,
+    "no_match": 7,
+    "ambiguous": 1
+   },
+   "resolved": 9
+  },
+  "argus": {
+   "statuses": {
+    "applied": 24,
+    "refused": 6
+   },
+   "resolved": 9
+  },
+  "usd_per_solve_argus": 0.0093
+ },
+ "gemini-3.5-flash-lite": {
+  "n": 30,
+  "cost_usd": 0.371,
+  "truncated": 0,
+  "mean_visible_out": 372,
+  "mean_hidden_thought": 3898,
+  "plain": {
+   "statuses": {
+    "applied": 26,
+    "empty_output": 2,
+    "no_match": 2
+   },
+   "resolved": 16
+  },
+  "argus": {
+   "statuses": {
+    "applied": 27,
+    "empty_output": 2,
+    "refused": 1
+   },
+   "resolved": 16
+  },
+  "usd_per_solve_argus": 0.0232
+ }
+}

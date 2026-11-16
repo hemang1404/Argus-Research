@@ -1,0 +1,118 @@
+107 jobs (491 done); prior spend est $0.0000; cap $5.0; prompt_hash=56e5b02fa8ed
+[1/107 545s $0.000] django__django-14034 gemma-4-31b-it http=200 prompt=3382 out=295 reas=None finish=stop lat=269.42 err=
+[2/107 1207s $0.000] django__django-15280 gemma-4-31b-it http=-1 prompt=None out=None reas=None finish=None lat=270.17 err=Remote end closed connection without response
+[3/107 1461s $0.000] django__django-13406 gemma-4-31b-it http=-1 prompt=None out=None reas=None finish=None lat=270.13 err=Remote end closed connection without response
+[4/107 2031s $0.000] pytest-dev__pytest-10051 gemma-4-31b-it http=200 prompt=7371 out=251 reas=None finish=stop lat=267.69 err=
+[5/107 2272s $0.000] pylint-dev__pylint-7277 gemma-4-31b-it http=-1 prompt=None out=None reas=None finish=None lat=270.11 err=Remote end closed connection without response
+[6/107 2838s $0.000] django__django-13406 gemma-4-31b-it http=200 prompt=7001 out=250 reas=None finish=stop lat=245.34 err=
+[7/107 3073s $0.000] astropy__astropy-13033 gemma-4-31b-it http=200 prompt=1811 out=469 reas=None finish=stop lat=235.39 err=
+[8/107 3075s $0.000] sympy__sympy-24066 gemma-4-31b-it http=200 prompt=2312 out=380 reas=None finish=stop lat=248.02 err=
+[9/107 3124s $0.000] sphinx-doc__sphinx-9258 gemma-4-31b-it http=200 prompt=6915 out=431 reas=None finish=stop lat=252.06 err=
+[10/107 3288s $0.000] astropy__astropy-14508 gemma-4-31b-it http=200 prompt=6756 out=269 reas=None finish=stop lat=164.48 err=
+[11/107 3326s $0.000] astropy__astropy-14182 gemma-4-31b-it http=200 prompt=1327 out=336 reas=None finish=stop lat=250.79 err=
+[12/107 3339s $0.000] astropy__astropy-13579 gemma-4-31b-it http=200 prompt=5230 out=547 reas=None finish=stop lat=265.45 err=
+[13/107 3450s $0.000] django__django-10880 gemma-4-31b-it http=200 prompt=1795 out=257 reas=None finish=stop lat=100.43 err=
+[14/107 3519s $0.000] astropy__astropy-8872 gemma-4-31b-it http=200 prompt=6690 out=376 reas=None finish=stop lat=193.24 err=
+[15/107 3625s $0.000] django__django-11087 gemma-4-31b-it http=200 prompt=5833 out=379 reas=None finish=stop lat=175.65 err=
+[16/107 3653s $0.000] django__django-11141 gemma-4-31b-it http=200 prompt=3939 out=180 reas=None finish=stop lat=133.46 err=
+[17/107 3685s $0.000] astropy__astropy-14995 gemma-4-31b-it http=200 prompt=6568 out=211 reas=None finish=stop lat=121.3 err=
+[18/107 3826s $0.000] django__django-11964 gemma-4-31b-it http=200 prompt=1505 out=230 reas=None finish=stop lat=172.86 err=
+[19/107 3941s $0.000] django__django-12039 gemma-4-31b-it http=200 prompt=2264 out=579 reas=None finish=stop lat=256.54 err=
+[20/107 4102s $0.000] django__django-11790 gemma-4-31b-it http=200 prompt=4343 out=283 reas=None finish=stop lat=200.81 err=
+[21/107 4179s $0.000] django__django-12774 gemma-4-31b-it http=200 prompt=7048 out=430 reas=None finish=stop lat=236.96 err=
+[22/107 4326s $0.000] django__django-12209 gemma-4-31b-it http=200 prompt=7126 out=239 reas=None finish=stop lat=225.32 err=
+[23/107 4339s $0.000] django__django-13012 gemma-4-31b-it http=200 prompt=7414 out=352 reas=None finish=stop lat=237.4 err=
+[24/107 4463s $0.000] django__django-13810 gemma-4-31b-it http=200 prompt=3961 out=275 reas=None finish=stop lat=124.24 err=
+[25/107 4496s $0.000] django__django-13551 gemma-4-31b-it http=200 prompt=1406 out=638 reas=None finish=stop lat=169.91 err=
+[26/107 4558s $0.000] django__django-13933 gemma-4-31b-it http=200 prompt=7112 out=264 reas=None finish=stop lat=94.84 err=
+[27/107 4634s $0.000] django__django-14017 gemma-4-31b-it http=200 prompt=3761 out=247 reas=None finish=stop lat=127.14 err=
+[28/107 4732s $0.000] django__django-14238 gemma-4-31b-it http=200 prompt=7214 out=189 reas=None finish=stop lat=97.96 err=
+[29/107 4821s $0.000] django__django-14434 gemma-4-31b-it http=200 prompt=7457 out=142 reas=None finish=stop lat=89.73 err=
+[30/107 5003s $0.000] django__django-14534 gemma-4-31b-it http=200 prompt=3475 out=161 reas=None finish=stop lat=181.52 err=
+[31/107 5120s $0.000] django__django-14771 gemma-4-31b-it http=200 prompt=6757 out=210 reas=None finish=stop lat=117.49 err=
+[32/107 5905s $0.000] django__django-13406 gemma-4-31b-it http=-1 prompt=None out=None reas=None finish=None lat=270.14 err=Remote end closed connection without response
+[33/107 6035s $0.000] django__django-15161 gemma-4-31b-it http=200 prompt=7569 out=118 reas=None finish=stop lat=130.8 err=
+[34/107 6196s $0.000] django__django-15128 gemma-4-31b-it http=200 prompt=6900 out=384 reas=None finish=stop lat=233.28 err=
+[35/107 6285s $0.000] django__django-14034 gemma-4-31b-it http=-1 prompt=None out=None reas=None finish=None lat=270.19 err=Remote end closed connection without response
+[36/107 6455s $0.000] django__django-15315 gemma-4-31b-it http=200 prompt=7166 out=264 reas=None finish=stop lat=259.12 err=
+[37/107 6501s $0.000] django__django-15382 gemma-4-31b-it http=200 prompt=7470 out=404 reas=None finish=stop lat=216.5 err=
+[38/107 6685s $0.000] django__django-16116 gemma-4-31b-it http=200 prompt=5379 out=117 reas=None finish=stop lat=184.05 err=
+[39/107 6974s $0.000] django__django-15930 gemma-4-31b-it http=200 prompt=7407 out=363 reas=None finish=stop lat=244.16 err=
+[40/107 7137s $0.000] django__django-16595 gemma-4-31b-it http=200 prompt=4171 out=197 reas=None finish=stop lat=162.65 err=
+[41/107 7217s $0.000] django__django-16485 gemma-4-31b-it http=200 prompt=7194 out=289 reas=None finish=stop lat=256.38 err=
+[42/107 7329s $0.000] django__django-16877 gemma-4-31b-it http=200 prompt=7260 out=209 reas=None finish=stop lat=111.91 err=
+[43/107 7629s $0.000] django__django-16642 gemma-4-31b-it http=200 prompt=6878 out=264 reas=None finish=stop lat=216.46 err=
+[44/107 7750s $0.000] matplotlib__matplotlib-20488 gemma-4-31b-it http=200 prompt=6825 out=262 reas=None finish=stop lat=121.2 err=
+[45/107 7762s $0.000] django__django-15280 gemma-4-31b-it http=-1 prompt=None out=None reas=None finish=None lat=270.15 err=Remote end closed connection without response
+[46/107 7947s $0.000] matplotlib__matplotlib-23412 gemma-4-31b-it http=200 prompt=6786 out=177 reas=None finish=stop lat=185.21 err=
+[47/107 8116s $0.000] matplotlib__matplotlib-24570 gemma-4-31b-it http=200 prompt=6832 out=279 reas=None finish=stop lat=169.03 err=
+[48/107 8244s $0.000] matplotlib__matplotlib-20676 gemma-4-31b-it http=200 prompt=6675 out=381 reas=None finish=stop lat=218.56 err=
+[49/107 8337s $0.000] matplotlib__matplotlib-24637 gemma-4-31b-it http=200 prompt=6812 out=234 reas=None finish=stop lat=220.45 err=
+[50/107 8489s $0.000] matplotlib__matplotlib-24970 gemma-4-31b-it http=200 prompt=6705 out=459 reas=None finish=stop lat=245.61 err=
+[51/107 8558s $0.000] matplotlib__matplotlib-25311 gemma-4-31b-it http=200 prompt=6980 out=481 reas=None finish=stop lat=221.42 err=
+<unknown>:785: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[52/107 8675s $0.000] matplotlib__matplotlib-25960 gemma-4-31b-it http=200 prompt=6545 out=237 reas=None finish=stop lat=185.63 err=
+[53/107 8826s $0.000] psf__requests-2931 gemma-4-31b-it http=200 prompt=7028 out=254 reas=None finish=stop lat=268.12 err=
+[54/107 8944s $0.000] psf__requests-6028 gemma-4-31b-it http=200 prompt=7127 out=279 reas=None finish=stop lat=268.92 err=
+[55/107 8987s $0.000] pydata__xarray-3151 gemma-4-31b-it http=200 prompt=6689 out=338 reas=None finish=stop lat=160.49 err=
+[56/107 9056s $0.000] matplotlib__matplotlib-13989 gemma-4-31b-it http=-1 prompt=None out=None reas=None finish=None lat=270.76 err=Remote end closed connection without response
+[57/107 9199s $0.000] pydata__xarray-4094 gemma-4-31b-it http=200 prompt=6901 out=383 reas=None finish=stop lat=253.38 err=
+[58/107 9223s $0.000] pydata__xarray-4356 gemma-4-31b-it http=200 prompt=2741 out=248 reas=None finish=stop lat=235.96 err=
+[59/107 9303s $0.000] pydata__xarray-4966 gemma-4-31b-it http=200 prompt=4937 out=505 reas=None finish=stop lat=246.17 err=
+[60/107 9410s $0.000] pydata__xarray-6721 gemma-4-31b-it http=200 prompt=7012 out=241 reas=None finish=stop lat=210.69 err=
+54 jobs (544 done); prior spend est $0.0000; cap $5.0; prompt_hash=56e5b02fa8ed
+[1/54 802s $0.000] pylint-dev__pylint-7277 gemma-4-31b-it http=200 prompt=1544 out=376 reas=None finish=stop lat=246.29 err=
+[2/54 1477s $0.000] django__django-15280 gemma-4-31b-it http=-1 prompt=None out=None reas=None finish=None lat=270.18 err=Remote end closed connection without response
+[3/54 1726s $0.000] django__django-13406 gemma-4-31b-it http=-1 prompt=None out=None reas=None finish=None lat=270.15 err=Remote end closed connection without response
+[4/54 1981s $0.000] django__django-14034 gemma-4-31b-it http=200 prompt=3382 out=597 reas=None finish=stop lat=228.95 err=
+[5/54 2192s $0.000] matplotlib__matplotlib-13989 gemma-4-31b-it http=200 prompt=6408 out=670 reas=None finish=stop lat=211.29 err=
+[6/54 2461s $0.000] pylint-dev__pylint-7277 gemma-4-31b-it http=200 prompt=1544 out=338 reas=None finish=stop lat=268.79 err=
+[7/54 2528s $0.000] django__django-13406 gemma-4-31b-it http=-1 prompt=None out=None reas=None finish=None lat=270.18 err=Remote end closed connection without response
+[8/54 2611s $0.000] pytest-dev__pytest-5262 gemma-4-31b-it http=200 prompt=7370 out=227 reas=None finish=stop lat=82.96 err=
+[9/54 2635s $0.000] pytest-dev__pytest-5809 gemma-4-31b-it http=200 prompt=1552 out=172 reas=None finish=stop lat=24.01 err=
+[10/54 2991s $0.000] pytest-dev__pytest-10051 gemma-4-31b-it http=200 prompt=7371 out=215 reas=None finish=stop lat=254.55 err=
+[11/54 3247s $0.000] pytest-dev__pytest-7521 gemma-4-31b-it http=200 prompt=7273 out=221 reas=None finish=stop lat=256.26 err=
+[12/54 3428s $0.000] scikit-learn__scikit-learn-10844 gemma-4-31b-it http=200 prompt=6706 out=197 reas=None finish=stop lat=180.53 err=
+[13/54 3452s $0.000] django__django-15280 gemma-4-31b-it http=-1 prompt=None out=None reas=None finish=None lat=270.15 err=Remote end closed connection without response
+[14/54 3589s $0.000] scikit-learn__scikit-learn-11578 gemma-4-31b-it http=200 prompt=6847 out=143 reas=None finish=stop lat=160.88 err=
+[15/54 3718s $0.000] scikit-learn__scikit-learn-12973 gemma-4-31b-it http=200 prompt=6338 out=228 reas=None finish=stop lat=265.47 err=
+[16/54 3766s $0.000] scikit-learn__scikit-learn-13496 gemma-4-31b-it http=200 prompt=5549 out=625 reas=None finish=stop lat=177.95 err=
+[17/54 3879s $0.000] scikit-learn__scikit-learn-14053 gemma-4-31b-it http=200 prompt=6953 out=327 reas=None finish=stop lat=161.35 err=
+[18/54 3960s $0.000] scikit-learn__scikit-learn-14710 gemma-4-31b-it http=200 prompt=6842 out=472 reas=None finish=stop lat=193.06 err=
+[19/54 4007s $0.000] scikit-learn__scikit-learn-14894 gemma-4-31b-it http=200 prompt=7002 out=287 reas=None finish=stop lat=127.48 err=
+[20/54 4179s $0.000] scikit-learn__scikit-learn-14983 gemma-4-31b-it http=200 prompt=6690 out=288 reas=None finish=stop lat=219.19 err=
+[21/54 4269s $0.000] scikit-learn__scikit-learn-25973 gemma-4-31b-it http=200 prompt=4097 out=213 reas=None finish=stop lat=261.95 err=
+[22/54 4347s $0.000] sphinx-doc__sphinx-10435 gemma-4-31b-it http=200 prompt=6886 out=290 reas=None finish=stop lat=168.0 err=
+[23/54 4361s $0.000] pytest-dev__pytest-6197 gemma-4-31b-it http=-1 prompt=None out=None reas=None finish=None lat=270.14 err=Remote end closed connection without response
+[24/54 4529s $0.000] sphinx-doc__sphinx-10466 gemma-4-31b-it http=200 prompt=4394 out=324 reas=None finish=stop lat=260.13 err=
+[25/54 4543s $0.000] sphinx-doc__sphinx-11445 gemma-4-31b-it http=200 prompt=1838 out=257 reas=None finish=stop lat=181.97 err=
+[26/54 4613s $0.000] sphinx-doc__sphinx-9230 gemma-4-31b-it http=200 prompt=4358 out=243 reas=None finish=stop lat=69.62 err=
+[27/54 5122s $0.000] sphinx-doc__sphinx-10614 gemma-4-31b-it http=200 prompt=5831 out=468 reas=None finish=stop lat=219.04 err=
+[28/54 5293s $0.000] sphinx-doc__sphinx-9281 gemma-4-31b-it http=200 prompt=7106 out=330 reas=None finish=stop lat=170.98 err=
+[29/54 5595s $0.000] sphinx-doc__sphinx-8459 gemma-4-31b-it http=200 prompt=1965 out=588 reas=None finish=stop lat=225.44 err=
+[30/54 5822s $0.000] sphinx-doc__sphinx-9698 gemma-4-31b-it http=200 prompt=6902 out=296 reas=None finish=stop lat=226.8 err=
+[31/54 5832s $0.000] sphinx-doc__sphinx-9658 gemma-4-31b-it http=200 prompt=2782 out=258 reas=None finish=stop lat=264.19 err=
+[32/54 5978s $0.000] sphinx-doc__sphinx-9711 gemma-4-31b-it http=200 prompt=1296 out=174 reas=None finish=stop lat=155.6 err=
+[33/54 6079s $0.000] sympy__sympy-11618 gemma-4-31b-it http=200 prompt=6518 out=1018 reas=None finish=stop lat=246.97 err=
+[34/54 6101s $0.000] sympy__sympy-12481 gemma-4-31b-it http=200 prompt=6323 out=203 reas=None finish=stop lat=123.16 err=
+[35/54 6134s $0.000] sympy__sympy-13480 gemma-4-31b-it http=200 prompt=6876 out=238 reas=None finish=stop lat=55.17 err=
+[36/54 6272s $0.000] sympy__sympy-13798 gemma-4-31b-it http=200 prompt=6514 out=272 reas=None finish=stop lat=137.45 err=
+[37/54 6339s $0.000] sphinx-doc__sphinx-9258 gemma-4-31b-it http=-1 prompt=None out=None reas=None finish=None lat=270.29 err=Remote end closed connection without response
+[38/54 6507s $0.000] sympy__sympy-14711 gemma-4-31b-it http=200 prompt=6746 out=206 reas=None finish=stop lat=167.19 err=
+[39/54 6531s $0.000] sympy__sympy-14531 gemma-4-31b-it http=200 prompt=7409 out=647 reas=None finish=stop lat=258.45 err=
+[40/54 6708s $0.000] sympy__sympy-15017 gemma-4-31b-it http=200 prompt=2358 out=482 reas=None finish=stop lat=201.76 err=
+[41/54 6762s $0.000] sympy__sympy-15875 gemma-4-31b-it http=200 prompt=6873 out=218 reas=None finish=stop lat=230.84 err=
+[42/54 6839s $0.000] sympy__sympy-13551 gemma-4-31b-it http=200 prompt=5435 out=299 reas=None finish=stop lat=183.35 err=
+[43/54 6907s $0.000] sympy__sympy-16450 gemma-4-31b-it http=200 prompt=6538 out=330 reas=None finish=stop lat=197.66 err=
+[44/54 6962s $0.000] sympy__sympy-16792 gemma-4-31b-it http=200 prompt=6727 out=446 reas=None finish=stop lat=199.98 err=
+[45/54 7025s $0.000] sympy__sympy-17139 gemma-4-31b-it http=200 prompt=6661 out=239 reas=None finish=stop lat=185.42 err=
+[46/54 7046s $0.000] sympy__sympy-17655 gemma-4-31b-it http=200 prompt=6529 out=157 reas=None finish=stop lat=139.7 err=
+[47/54 7246s $0.000] sympy__sympy-19346 gemma-4-31b-it http=200 prompt=4011 out=315 reas=None finish=stop lat=221.4 err=
+[48/54 7274s $0.000] sympy__sympy-21596 gemma-4-31b-it http=200 prompt=5738 out=636 reas=None finish=stop lat=227.19 err=
+[49/54 7343s $0.000] sympy__sympy-23262 gemma-4-31b-it http=200 prompt=6064 out=303 reas=None finish=stop lat=69.21 err=
+[50/54 7408s $0.000] sympy__sympy-22914 gemma-4-31b-it http=200 prompt=6512 out=296 reas=None finish=stop lat=161.43 err=
+[51/54 7426s $0.000] sympy__sympy-18698 gemma-4-31b-it http=200 prompt=6749 out=368 reas=None finish=stop lat=188.67 err=
+[52/54 7853s $0.000] sympy__sympy-24066 gemma-4-31b-it http=200 prompt=2312 out=372 reas=None finish=stop lat=235.38 err=
+[53/54 7863s $0.000] sympy__sympy-24539 gemma-4-31b-it http=200 prompt=6641 out=280 reas=None finish=stop lat=161.84 err=
+[54/54 7897s $0.000] sympy__sympy-24443 gemma-4-31b-it http=200 prompt=5521 out=610 reas=None finish=stop lat=214.15 err=
+done 7897s; estimated spend $0.0000; stopped_by_cap=False

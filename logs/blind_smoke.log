@@ -1,0 +1,4 @@
+17 keys; 1 tasks to run (0 done); out=C:\coding\Argus-pilot50\data\blind_smoke; prompt_hash=56e5b02fa8ed
+  pulled astropy__astropy-12907 in 150s
+[1/1] astropy__astropy-12907 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=2, F accepted_resolved n=2 529s
+all done

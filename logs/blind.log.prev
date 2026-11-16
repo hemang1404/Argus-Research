@@ -1,0 +1,84 @@
+17 keys; 200 tasks to run (0 done); out=C:\coding\Argus-pilot50\data\blind; prompt_hash=56e5b02fa8ed
+  pulled astropy__astropy-13236 in 63s
+  pulled astropy__astropy-13977 in 70s
+  pulled astropy__astropy-13453 in 102s
+[1/200] astropy__astropy-13236 gpt-oss-20b: R continue n=3, F accepted_resolved n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1940s
+  pulled astropy__astropy-14309 in 10s
+[2/200] astropy__astropy-14309 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 197s
+  pulled astropy__astropy-14365 in 43s
+[3/200] astropy__astropy-13453 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F api_error n=2 2477s
+  pulled astropy__astropy-14539 in 17s
+[4/200] astropy__astropy-14365 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 382s
+  pulled astropy__astropy-14598 in 14s
+[5/200] astropy__astropy-14539 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 212s
+  pulled astropy__astropy-7166 in 60s
+[6/200] astropy__astropy-7166 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 177s
+  pulled astropy__astropy-7336 in 73s
+[7/200] astropy__astropy-7336 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 140s
+  pulled astropy__astropy-7606 in 32s
+[8/200] astropy__astropy-13977 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F api_error n=3 3166s
+  pulled astropy__astropy-7671 in 11s
+[9/200] astropy__astropy-14598 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 925s
+[10/200] astropy__astropy-7606 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F continue n=3 446s
+  pulled django__django-10914 in 52s
+  pulled django__django-11095 in 49s
+[11/200] django__django-11095 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 112s
+  pulled django__django-11163 in 57s
+[12/200] django__django-11163 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 120s
+[13/200] astropy__astropy-7671 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F continue n=3 533s
+  pulled django__django-11239 in 44s
+  pulled django__django-11265 in 35s
+[14/200] django__django-10914 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 563s
+  pulled django__django-11433 in 11s
+[15/200] django__django-11265 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 331s
+  pulled django__django-11477 in 11s
+[16/200] django__django-11239 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 742s
+  pulled django__django-11551 in 10s
+[17/200] django__django-11477 gpt-oss-20b: R accepted_resolved n=3, F accepted_resolved n=3 | gpt-oss-120b: R continue n=3, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 470s
+  pulled django__django-11603 in 12s
+[18/200] django__django-11551 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 82s
+[19/200] django__django-11433 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 545s
+[20/200] django__django-11603 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 76s
+  pulled django__django-11951 in 22s
+  pulled django__django-11815 in 65s
+  pulled django__django-12193 in 17s
+[21/200] django__django-11815 gpt-oss-20b: R continue n=3, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 181s
+  pulled django__django-12262 in 12s
+[22/200] django__django-12193 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=2, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 143s
+  pulled django__django-12273 in 11s
+[23/200] django__django-12262 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F accepted_resolved n=2 123s
+  pulled django__django-12419 in 12s
+[24/200] django__django-12419 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 312s
+  pulled django__django-12663 in 13s
+[25/200] django__django-11951 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 596s
+  pulled django__django-12754 in 35s
+[26/200] django__django-12273 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 591s
+  pulled django__django-13023 in 13s
+[27/200] django__django-12663 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 441s
+  pulled django__django-13089 in 12s
+[28/200] django__django-13089 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 215s
+  pulled django__django-13128 in 11s
+[29/200] django__django-13128 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 136s
+  pulled django__django-13297 in 13s
+[30/200] django__django-13297 gpt-oss-20b: R accepted_regressed n=2, F accepted_regressed n=3 | gpt-oss-120b: R accepted_regressed n=1, F accepted_regressed n=1 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=2 315s
+  pulled django__django-13315 in 72s
+[31/200] django__django-13315 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 132s
+  pulled django__django-13401 in 18s
+[32/200] django__django-12754 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=2, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1562s
+  pulled django__django-13410 in 11s
+[33/200] django__django-13410 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 67s
+  pulled django__django-13569 in 15s
+[34/200] django__django-13401 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 539s
+[35/200] django__django-13569 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 135s
+  pulled django__django-13670 in 13s
+  pulled django__django-13786 in 16s
+[36/200] django__django-13670 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 70s
+  pulled django__django-13807 in 41s
+[37/200] django__django-13786 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_regressed n=1, F accepted_regressed n=1 114s
+  pulled django__django-13837 in 38s
+[38/200] django__django-13807 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=3 711s
+  pulled django__django-13925 in 84s
+[39/200] django__django-13023 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=2, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 2519s
+  pulled django__django-13964 in 86s
+[40/200] django__django-13837 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=3, F continue n=3 869s
+  pulled django__django-14053 in 222s

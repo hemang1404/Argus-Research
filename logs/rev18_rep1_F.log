@@ -1,0 +1,174 @@
+models ['gemini31', 'gemini35']; 100 tasks to run; prompt_hash=56e5b02fa8ed
+[1/100] astropy__astropy-12907 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+[2/100] astropy__astropy-13579 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+  pulled astropy__astropy-13033 in 51s
+  pulled astropy__astropy-14182 in 58s
+[3/100] astropy__astropy-14182 gemini31:continue/n=3 gemini35:continue/n=3 214s
+[4/100] astropy__astropy-14508 gemini31:accepted_regressed/n=1 gemini35:accepted_resolved/n=1 0s
+[5/100] astropy__astropy-14995 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+[6/100] astropy__astropy-8872 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+[7/100] django__django-10880 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+  pulled django__django-11087 in 34s
+[8/100] django__django-11087 gemini31:continue/n=3 gemini35:continue/n=3 117s
+[9/100] django__django-11141 gemini31:accepted_regressed/n=1 gemini35:accepted_regressed/n=1 0s
+[10/100] django__django-11790 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+[11/100] astropy__astropy-13033 gemini31:continue/n=3 gemini35:continue/n=3 360s
+  pulled django__django-11964 in 183s
+  pulled django__django-12039 in 174s
+[12/100] django__django-11964 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=2 281s
+[13/100] django__django-12209 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+  pulled django__django-12774 in 21s
+[14/100] django__django-12039 gemini31:accepted_resolved/n=2 gemini35:accepted_resolved/n=2 305s
+[15/100] django__django-13012 gemini31:accepted_regressed/n=1 gemini35:accepted_resolved/n=1 4s
+[16/100] django__django-12774 gemini31:accepted_resolved/n=2 gemini35:accepted_resolved/n=1 74s
+  pulled django__django-13406 in 54s
+  pulled django__django-13551 in 141s
+[17/100] django__django-13406 gemini31:continue/n=3 gemini35:continue/n=3 163s
+[18/100] django__django-13810 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+[19/100] django__django-13933 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+  pulled django__django-14017 in 23s
+[20/100] django__django-13551 gemini31:continue/n=3 gemini35:continue/n=3 321s
+[21/100] django__django-14017 gemini31:continue/n=3 gemini35:continue/n=3 178s
+[22/100] django__django-14238 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+[23/100] django__django-14434 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+  pulled django__django-14534 in 22s
+  pulled django__django-14034 in 45s
+[24/100] django__django-14534 gemini31:accepted_resolved/n=2 gemini35:continue/n=3 44s
+[25/100] django__django-14771 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+  pulled django__django-15128 in 96s
+[26/100] django__django-14034 gemini31:continue/n=3 gemini35:continue/n=3 200s
+  pulled django__django-15161 in 38s
+[27/100] django__django-15161 gemini31:continue/n=3 gemini35:continue/n=3 98s
+  pulled django__django-15280 in 22s
+[28/100] django__django-15280 gemini31:continue/n=3 gemini35:continue/n=3 214s
+  pulled django__django-15315 in 14s
+[29/100] django__django-15315 gemini31:accepted_resolved/n=2 gemini35:continue/n=3 75s
+[30/100] django__django-15382 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+[31/100] django__django-15128 gemini31:continue/n=3 gemini35:grade_error/n=3 2107s
+[32/100] django__django-16116 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+[33/100] django__django-16485 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+[34/100] django__django-16595 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+  pull failed (1) django__django-16642: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) django__django-16642: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) django__django-16642: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[35/100] django__django-16642 IMAGE PULL FAILED (retried on the next run)
+  pull failed (1) django__django-16877: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) django__django-16877: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) django__django-16877: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[36/100] django__django-16877 IMAGE PULL FAILED (retried on the next run)
+  pull failed (1) matplotlib__matplotlib-13989: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-13989: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-13989: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[37/100] matplotlib__matplotlib-13989 IMAGE PULL FAILED (retried on the next run)
+[38/100] matplotlib__matplotlib-20488 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+  pull failed (1) matplotlib__matplotlib-20676: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-20676: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-20676: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[39/100] matplotlib__matplotlib-20676 IMAGE PULL FAILED (retried on the next run)
+  pull failed (1) matplotlib__matplotlib-23412: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-23412: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-23412: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[40/100] matplotlib__matplotlib-23412 IMAGE PULL FAILED (retried on the next run)
+[41/100] matplotlib__matplotlib-24570 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+  pull failed (1) matplotlib__matplotlib-24637: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-24637: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-24637: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[42/100] matplotlib__matplotlib-24637 IMAGE PULL FAILED (retried on the next run)
+[43/100] matplotlib__matplotlib-24970 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+  pull failed (1) matplotlib__matplotlib-25311: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-25311: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-25311: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[44/100] matplotlib__matplotlib-25311 IMAGE PULL FAILED (retried on the next run)
+  pull failed (1) matplotlib__matplotlib-25960: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-25960: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-25960: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[45/100] matplotlib__matplotlib-25960 IMAGE PULL FAILED (retried on the next run)
+[46/100] psf__requests-2931 gemini31:accepted_regressed/n=1 gemini35:accepted_regressed/n=1 0s
+  pull failed (1) psf__requests-6028: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) psf__requests-6028: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) psf__requests-6028: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[47/100] psf__requests-6028 IMAGE PULL FAILED (retried on the next run)
+[48/100] pydata__xarray-3151 gemini31:accepted_resolved/n=1 gemini35:accepted_resolved/n=1 0s
+models ['gemini31', 'gemini35']; 61 tasks to run; prompt_hash=56e5b02fa8ed
+  pulled django__django-15930 in 7s
+  pulled django__django-16642 in 386s
+[1/61] django__django-15930 gemini31:continue/n=3 gemini35:continue/n=3 600s
+  low disk (12.9 GB), waiting
+  low disk (11.5 GB), waiting
+  low disk (10.2 GB), waiting
+  low disk (9.3 GB), waiting
+[2/61] django__django-16642 gemini31:accepted_resolved/n=2 gemini35:continue/n=3 808s
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.3 GB), waiting
+  low disk (9.3 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  pulled matplotlib__matplotlib-13989 in 158s
+[3/61] matplotlib__matplotlib-13989 gemini31:continue/n=3 gemini35:continue/n=3 2132s
+  pulled django__django-16877 in 244s
+[4/61] django__django-16877 gemini31:continue/n=3 gemini35:continue/n=3 2400s
+  pulled matplotlib__matplotlib-20676 in 285s
+  pulled matplotlib__matplotlib-23412 in 226s
+[5/61] matplotlib__matplotlib-23412 gemini31:continue/n=3 gemini35:continue/n=3 390s
+[6/61] matplotlib__matplotlib-20676 gemini31:continue/n=3 gemini35:continue/n=3 455s
+  pulled matplotlib__matplotlib-24637 in 147s
+  pulled matplotlib__matplotlib-25311 in 278s
+[7/61] matplotlib__matplotlib-24637 gemini31:accepted_resolved/n=1 gemini35:continue/n=3 512s
+[8/61] matplotlib__matplotlib-25311 gemini31:continue/n=3 gemini35:accepted_resolved/n=1 551s

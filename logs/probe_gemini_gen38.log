@@ -1,0 +1,13 @@
+30 jobs (60 done); prior spend est $0.4551; cap $1.0; prompt_hash=56e5b02fa8ed
+[1/30 117s $0.517] django__django-12039 gemini-3.8-flash http=200 prompt=2264 out=640 reas=None finish=length lat=116.95 err=
+[2/30 120s $0.578] astropy__astropy-14182 gemini-3.8-flash http=200 prompt=1327 out=638 reas=None finish=length lat=119.98 err=
+[3/30 123s $0.643] django__django-12774 gemini-3.8-flash http=200 prompt=7048 out=635 reas=None finish=length lat=123.32 err=
+[4/30 212s $0.698] django__django-13012 gemini-3.8-flash http=200 prompt=7414 out=229 reas=None finish=stop lat=95.0 err=
+[5/30 230s $0.818] astropy__astropy-14508 gemini-3.8-flash http=200 prompt=6756 out=8 reas=None finish=length lat=229.45 err=
+[6/30 237s $0.882] django__django-14434 gemini-3.8-flash http=200 prompt=7457 out=213 reas=None finish=stop lat=113.16 err=
+[7/30 328s $0.948] django__django-15161 gemini-3.8-flash http=200 prompt=7569 out=638 reas=None finish=length lat=115.56 err=
+[8/30 357s $1.013] django__django-15382 gemini-3.8-flash http=200 prompt=7470 out=636 reas=None finish=length lat=127.51 err=
+[28/30 358s $1.019] django__django-13406 gemini-3.8-flash http=200 prompt=7001 out=0 reas=None finish=function_call_filter: MALFORMED_FUNCTION_CALL lat=237.57 err=
+[29/30 359s $1.083] django__django-16116 gemini-3.8-flash http=200 prompt=5379 out=638 reas=None finish=length lat=122.84 err=
+[30/30 447s $1.148] matplotlib__matplotlib-20676 gemini-3.8-flash http=200 prompt=6675 out=640 reas=None finish=length lat=119.21 err=
+done 447s; estimated spend $1.1475; stopped_by_cap=True

@@ -1,0 +1,2 @@
+qwen: 300 outputs for 100 tasks
+apply_plain.py -> Qwen3.5-9B {'applied': 72, 'no_match': 23, 'no_blocks': 5} | applied but syntax-broken: 2 

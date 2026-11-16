@@ -1,0 +1,17 @@
+5 tasks to grade; 5 distinct patches; free disk 30 GB
+  pulled pytest-dev_1776_pytest-6197:latest in 74s
+  pulled sphinx-doc_1776_sphinx-9698:latest in 92s
+  pulled scikit-learn_1776_scikit-learn-12973:latest in 159s
+scikit-learn__scikit-learn-12973 509b389fa5 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 40.8s
+[1/5] scikit-learn__scikit-learn-12973 done in 202s; free disk 30 GB
+sphinx-doc__sphinx-9698 040fec38cc plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 109.5s
+[2/5] sphinx-doc__sphinx-9698 done in 202s; free disk 30 GB
+pytest-dev__pytest-6197 dd6802b1db plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 2/2 133.6s
+[3/5] pytest-dev__pytest-6197 done in 208s; free disk 30 GB
+  pulled sympy_1776_sympy-19346:latest in 63s
+  pulled sympy_1776_sympy-24443:latest in 63s
+sympy__sympy-19346 10b3acfe7e plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 103.4s
+sympy__sympy-24443 0c731bf6d2 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 103.2s
+[4/5] sympy__sympy-19346 done in 169s; free disk 30 GB
+[5/5] sympy__sympy-24443 done in 168s; free disk 30 GB
+all done

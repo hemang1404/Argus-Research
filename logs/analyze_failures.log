@@ -1,0 +1,268 @@
+{
+ "A_edit_failure_causes": {
+  "gpt-oss-20b": {
+   "n": 67,
+   "by_cause": {
+    "whitespace_or_blank_lines_only": 37,
+    "near_miss_changed_lines": 7,
+    "ambiguous_multiple_exact_matches": 5,
+    "partial_overlap_0.5_0.82": 13,
+    "text_absent_under_0.5": 3,
+    "near_miss_missing_or_extra_lines": 2
+   },
+   "cause_x_argus": {
+    "ambiguous_multiple_exact_matches | refused_REFUSED_AMBIGUOUS_MULTIPLE_EXACT_MATCHES": 5,
+    "near_miss_changed_lines | refused_REFUSED_AMBIGUOUS_FUZZY_MATCH": 3,
+    "near_miss_changed_lines | refused_REFUSED_ANCHOR_INTERIOR_MISMATCH": 1,
+    "near_miss_changed_lines | refused_REFUSED_NO_MATCH": 1,
+    "near_miss_changed_lines | refused_REFUSED_SYNTAX_ERROR": 1,
+    "near_miss_changed_lines | rescued_tier3": 1,
+    "near_miss_missing_or_extra_lines | refused_REFUSED_ANCHOR_INTERIOR_MISMATCH": 1,
+    "near_miss_missing_or_extra_lines | rescued_tier3": 1,
+    "partial_overlap_0.5_0.82 | refused_REFUSED_NO_MATCH": 13,
+    "text_absent_under_0.5 | refused_REFUSED_NO_MATCH": 3,
+    "whitespace_or_blank_lines_only | refused_REFUSED_AMBIGUOUS_MULTIPLE_EXACT_MATCHES": 4,
+    "whitespace_or_blank_lines_only | refused_REFUSED_NO_MATCH": 1,
+    "whitespace_or_blank_lines_only | rescued_tier1": 3,
+    "whitespace_or_blank_lines_only | rescued_tier2": 29
+   },
+   "mean_blocks_in_failed_patch": 1.3
+  },
+  "gpt-oss-120b": {
+   "n": 51,
+   "by_cause": {
+    "ambiguous_multiple_exact_matches": 9,
+    "partial_overlap_0.5_0.82": 19,
+    "elision_marker_in_search": 1,
+    "whitespace_or_blank_lines_only": 16,
+    "near_miss_changed_lines": 3,
+    "text_absent_under_0.5": 3
+   },
+   "cause_x_argus": {
+    "ambiguous_multiple_exact_matches | refused_REFUSED_AMBIGUOUS_MULTIPLE_EXACT_MATCHES": 9,
+    "elision_marker_in_search | refused_REFUSED_NO_MATCH": 1,
+    "near_miss_changed_lines | rescued_tier3": 3,
+    "partial_overlap_0.5_0.82 | refused_REFUSED_NO_MATCH": 19,
+    "text_absent_under_0.5 | refused_REFUSED_NO_MATCH": 3,
+    "whitespace_or_blank_lines_only | refused_REFUSED_SYNTAX_ERROR": 1,
+    "whitespace_or_blank_lines_only | rescued_tier2": 15
+   },
+   "mean_blocks_in_failed_patch": 1.22
+  },
+  "gemini-3.1-flash-lite": {
+   "n": 35,
+   "by_cause": {
+    "near_miss_changed_lines": 12,
+    "whitespace_or_blank_lines_only": 3,
+    "partial_overlap_0.5_0.82": 11,
+    "near_miss_missing_or_extra_lines": 2,
+    "ambiguous_multiple_exact_matches": 5,
+    "text_absent_under_0.5": 2
+   },
+   "cause_x_argus": {
+    "ambiguous_multiple_exact_matches | refused_REFUSED_AMBIGUOUS_MULTIPLE_EXACT_MATCHES": 5,
+    "near_miss_changed_lines | refused_REFUSED_NO_MATCH": 7,
+    "near_miss_changed_lines | rescued_tier3": 5,
+    "near_miss_missing_or_extra_lines | refused_REFUSED_SYNTAX_ERROR": 1,
+    "near_miss_missing_or_extra_lines | rescued_tier3": 1,
+    "partial_overlap_0.5_0.82 | refused_REFUSED_NO_MATCH": 10,
+    "partial_overlap_0.5_0.82 | refused_REFUSED_SYNTAX_ERROR": 1,
+    "text_absent_under_0.5 | refused_REFUSED_NO_MATCH": 2,
+    "whitespace_or_blank_lines_only | rescued_tier2": 3
+   },
+   "mean_blocks_in_failed_patch": 1.63
+  },
+  "gemini-3.5-flash-lite": {
+   "n": 34,
+   "by_cause": {
+    "partial_overlap_0.5_0.82": 12,
+    "near_miss_changed_lines": 9,
+    "near_miss_missing_or_extra_lines": 4,
+    "text_absent_under_0.5": 4,
+    "ambiguous_multiple_exact_matches": 5
+   },
+   "cause_x_argus": {
+    "ambiguous_multiple_exact_matches | refused_REFUSED_AMBIGUOUS_MULTIPLE_EXACT_MATCHES": 5,
+    "near_miss_changed_lines | refused_REFUSED_AMBIGUOUS_FUZZY_MATCH": 1,
+    "near_miss_changed_lines | refused_REFUSED_ANCHOR_INTERIOR_MISMATCH": 2,
+    "near_miss_changed_lines | refused_REFUSED_NO_MATCH": 2,
+    "near_miss_changed_lines | rescued_tier3": 4,
+    "near_miss_missing_or_extra_lines | rescued_tier3": 4,
+    "partial_overlap_0.5_0.82 | refused_REFUSED_NO_MATCH": 11,
+    "partial_overlap_0.5_0.82 | refused_REFUSED_SYNTAX_ERROR": 1,
+    "text_absent_under_0.5 | refused_REFUSED_NO_MATCH": 4
+   },
+   "mean_blocks_in_failed_patch": 2.38
+  }
+ },
+ "B_failure_rate_by_blocks_in_patch": {
+  "gpt-oss-20b": {
+   "1": {
+    "draws": 242,
+    "plain_edit_failed": 57,
+    "rate": 0.236
+   },
+   "2": {
+    "draws": 19,
+    "plain_edit_failed": 8,
+    "rate": 0.421
+   },
+   "3-4": {
+    "draws": 3,
+    "plain_edit_failed": 1,
+    "rate": 0.333
+   },
+   "5+": {
+    "draws": 3,
+    "plain_edit_failed": 1,
+    "rate": 0.333
+   }
+  },
+  "gpt-oss-120b": {
+   "1": {
+    "draws": 258,
+    "plain_edit_failed": 42,
+    "rate": 0.163
+   },
+   "2": {
+    "draws": 34,
+    "plain_edit_failed": 8,
+    "rate": 0.235
+   },
+   "3-4": {
+    "draws": 2,
+    "plain_edit_failed": 1,
+    "rate": 0.5
+   },
+   "5+": {
+    "draws": 2,
+    "plain_edit_failed": 0,
+    "rate": 0.0
+   }
+  },
+  "gemini-3.1-flash-lite": {
+   "1": {
+    "draws": 264,
+    "plain_edit_failed": 26,
+    "rate": 0.098
+   },
+   "2": {
+    "draws": 30,
+    "plain_edit_failed": 7,
+    "rate": 0.233
+   },
+   "3-4": {
+    "draws": 3,
+    "plain_edit_failed": 0,
+    "rate": 0.0
+   },
+   "5+": {
+    "draws": 3,
+    "plain_edit_failed": 2,
+    "rate": 0.667
+   }
+  },
+  "gemini-3.5-flash-lite": {
+   "1": {
+    "draws": 240,
+    "plain_edit_failed": 28,
+    "rate": 0.117
+   },
+   "2": {
+    "draws": 25,
+    "plain_edit_failed": 1,
+    "rate": 0.04
+   },
+   "3-4": {
+    "draws": 8,
+    "plain_edit_failed": 1,
+    "rate": 0.125
+   },
+   "5+": {
+    "draws": 8,
+    "plain_edit_failed": 4,
+    "rate": 0.5
+   }
+  }
+ },
+ "B_location_of_applied": {
+  "gpt-oss-20b": {
+   "counts": {
+    "resolved | elsewhere": 13,
+    "resolved | touches_gold_region": 97,
+    "unresolved | elsewhere": 44,
+    "unresolved | touches_gold_region": 77
+   },
+   "median_patch_size_over_gold_size": {
+    "resolved": 0.67,
+    "unresolved": 0.77
+   }
+  },
+  "gpt-oss-120b": {
+   "counts": {
+    "resolved | elsewhere": 21,
+    "resolved | touches_gold_region": 122,
+    "unresolved | elsewhere": 38,
+    "unresolved | touches_gold_region": 78
+   },
+   "median_patch_size_over_gold_size": {
+    "unresolved": 1.1,
+    "resolved": 1.0
+   }
+  },
+  "gemini-3.1-flash-lite": {
+   "counts": {
+    "resolved | elsewhere": 10,
+    "resolved | touches_gold_region": 131,
+    "unresolved | elsewhere": 44,
+    "unresolved | touches_gold_region": 88
+   },
+   "median_patch_size_over_gold_size": {
+    "unresolved": 0.67,
+    "resolved": 0.67
+   }
+  },
+  "gemini-3.5-flash-lite": {
+   "counts": {
+    "resolved | elsewhere": 18,
+    "resolved | touches_gold_region": 137,
+    "unresolved | elsewhere": 34,
+    "unresolved | touches_gold_region": 66
+   },
+   "median_patch_size_over_gold_size": {
+    "unresolved": 0.67,
+    "resolved": 0.67
+   }
+  }
+ },
+ "C_ceiling": {
+  "gpt-oss-20b": {
+   "argus_refused_draws": 35,
+   "refused_with_recoverable_cause": 12,
+   "pass_rate_given_applied": 0.476,
+   "est_extra_solves_per_draw_index": 1.9,
+   "est_extra_solves_if_all_refused_applied": 5.56
+  },
+  "gpt-oss-120b": {
+   "argus_refused_draws": 35,
+   "refused_with_recoverable_cause": 2,
+   "pass_rate_given_applied": 0.552,
+   "est_extra_solves_per_draw_index": 0.37,
+   "est_extra_solves_if_all_refused_applied": 6.44
+  },
+  "gemini-3.1-flash-lite": {
+   "argus_refused_draws": 26,
+   "refused_with_recoverable_cause": 8,
+   "pass_rate_given_applied": 0.516,
+   "est_extra_solves_per_draw_index": 1.38,
+   "est_extra_solves_if_all_refused_applied": 4.48
+  },
+  "gemini-3.5-flash-lite": {
+   "argus_refused_draws": 26,
+   "refused_with_recoverable_cause": 5,
+   "pass_rate_given_applied": 0.608,
+   "est_extra_solves_per_draw_index": 1.01,
+   "est_extra_solves_if_all_refused_applied": 5.27
+  }
+ }
+}

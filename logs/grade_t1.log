@@ -1,0 +1,613 @@
+92 tasks to grade; 444 distinct patches; free disk 36 GB
+  pulled astropy_1776_astropy-13033:latest in 106s
+  pulled astropy_1776_astropy-14182:latest in 227s
+  pulled astropy_1776_astropy-12907:latest in 228s
+astropy__astropy-13033 825b97a8ca plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 234.8s
+astropy__astropy-12907 6419e7e775 plain:gpt-oss-20b,plain:gpt-oss-20b,plain:gpt-oss-20b,plain:gpt-oss-120b,argus:gpt-oss-20b,argus:gpt-oss-20b,argus:gpt-oss-20b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 117.6s
+astropy__astropy-14182 41cac5524e plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 118.4s
+astropy__astropy-13033 06c7407201 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 70.1s
+astropy__astropy-14182 bd89f9175e plain:gpt-oss-20b,plain:gpt-oss-120b,argus:gpt-oss-20b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 69.4s
+astropy__astropy-12907 fe241b8618 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 69.8s
+astropy__astropy-13033 dbaea818c3 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 69.9s
+astropy__astropy-14182 5b77048491 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 68.9s
+astropy__astropy-12907 a9350444e3 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 69.0s
+[1/92] astropy__astropy-12907 done in 485s; free disk 32 GB
+  pulled astropy_1776_astropy-14508:latest in 14s
+astropy__astropy-13033 f79ffe4f84 argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 69.3s
+astropy__astropy-14508 0fe00720c1 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 54.9s
+astropy__astropy-14182 370195877c plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 70.0s
+[2/92] astropy__astropy-14182 done in 556s; free disk 32 GB
+astropy__astropy-14508 5230eb1a30 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 59.4s
+  pulled astropy_1776_astropy-14995:latest in 71s
+astropy__astropy-13033 659c54e7bc argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 76.7s
+[3/92] astropy__astropy-13033 done in 627s; free disk 36 GB
+astropy__astropy-14508 eeacedbf21 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 58.4s
+  pulled astropy_1776_astropy-8872:latest in 47s
+astropy__astropy-14995 f6a5178416 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 60.8s
+astropy__astropy-8872 c6b1f77c66 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 26.6s
+astropy__astropy-14508 83bcc09b5d plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 55.1s
+astropy__astropy-8872 4cebf377fc plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 26.6s
+astropy__astropy-14995 c29cce925f plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 54.0s
+astropy__astropy-8872 ab6bdbb3bf plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 26.5s
+astropy__astropy-14508 a63ac683c7 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 53.6s
+astropy__astropy-8872 542db94b96 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 27.4s
+astropy__astropy-14995 55334bf26f plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 53.9s
+astropy__astropy-8872 b15bda841a argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 26.2s
+[4/92] astropy__astropy-8872 done in 181s; free disk 36 GB
+  pulled django_1776_django-11087:latest in 15s
+astropy__astropy-14508 45d9e3ca5a plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 54.5s
+[5/92] astropy__astropy-14508 done in 351s; free disk 36 GB
+  pulled django_1776_django-11141:latest in 3s
+astropy__astropy-14995 b8a5c8c5ac plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 55.0s
+django__django-11087 2d376ca955 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 26.9s
+django__django-11141 7babecff22 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 1/1 26.5s
+django__django-11087 93d72b4cd0 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 25.7s
+django__django-11141 b6949a7cad argus:gpt-oss-20b: applied=True resolved=False f2p 1/1 25.5s
+django__django-11087 b6359a4581 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 25.8s
+astropy__astropy-14995 e6605ef768 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 52.9s
+[6/92] astropy__astropy-14995 done in 349s; free disk 36 GB
+django__django-11141 91c76f2f2c argus:gpt-oss-20b: applied=True resolved=False f2p 1/1 25.3s
+[7/92] django__django-11141 done in 81s; free disk 36 GB
+  pulled django_1776_django-11790:latest in 14s
+django__django-11087 e505f5ed58 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 26.1s
+django__django-11790 45a5698868 plain:gpt-oss-20b,plain:gpt-oss-20b,plain:gpt-oss-20b,argus:gpt-oss-20b,argus:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 2/2 27.3s
+django__django-11087 917926ed51 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 27.2s
+django__django-11790 d5836ddc36 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 27.2s
+django__django-11087 f39133b13c plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 27.5s
+[8/92] django__django-11087 done in 175s; free disk 36 GB
+  pulled django_1776_django-11964:latest in 70s
+  pulled django_1776_django-12039:latest in 13s
+django__django-11790 52e34c1d8c plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 26.6s
+django__django-11964 038334eb7f plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/2 28.4s
+django__django-12039 42c572dfbc plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 25.9s
+django__django-11790 782904495e plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 24.9s
+[9/92] django__django-11790 done in 121s; free disk 36 GB
+  pulled django_1776_django-12209:latest in 13s
+django__django-11964 7620734554 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 2/2 25.9s
+django__django-12039 6d5dda79aa plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 25.2s
+django__django-12209 d0957c66f8 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 26.2s
+django__django-11964 479213c50b plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 24.6s
+[10/92] django__django-11964 done in 151s; free disk 36 GB
+django__django-12039 d0484c772b plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 24.9s
+  pulled django_1776_django-12774:latest in 13s
+django__django-12209 1819e47172 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 26.7s
+django__django-12039 8e23d9560b plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 25.8s
+django__django-12774 2685e2b552 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 24.4s
+django__django-12209 0d3e2faf0b plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 26.3s
+django__django-12039 5a33d0c6de plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 24.3s
+django__django-12774 76b121b335 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 24.3s
+django__django-12209 38bdca8ad5 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 26.0s
+django__django-12039 77081bde89 argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 24.2s
+[11/92] django__django-12039 done in 164s; free disk 36 GB
+django__django-12774 1dcb316c30 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 24.0s
+django__django-12209 f29df56e05 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 26.1s
+django__django-12774 dafa26896e plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 26.2s
+  pulled django_1776_django-13012:latest in 40s
+django__django-12209 13cda5968f plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 27.6s
+[12/92] django__django-12209 done in 172s; free disk 36 GB
+django__django-12774 705b16f891 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 25.5s
+  pulled django_1776_django-13406:latest in 14s
+django__django-13012 3b46b44050 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 1/2 25.8s
+django__django-12774 791a2f23fe plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 26.2s
+[13/92] django__django-12774 done in 165s; free disk 36 GB
+django__django-13406 eb091c66ac plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/3 24.3s
+[14/92] django__django-13406 done in 39s; free disk 36 GB
+django__django-13012 c4f352afac plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 2/2 24.6s
+django__django-13012 53413554ec plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 27.8s
+  pulled django_1776_django-13810:latest in 46s
+django__django-13012 750568cb74 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 27.9s
+  pulled django_1776_django-13551:latest in 72s
+django__django-13810 26cec39c62 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 26.8s
+django__django-13012 482d4f5307 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 31.7s
+[15/92] django__django-13012 done in 178s; free disk 36 GB
+django__django-13551 b182bc6cc1 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/2 26.7s
+django__django-13810 dc089be2ae plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 24.4s
+django__django-13551 5118c81de6 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/2 28.9s
+django__django-13810 35c953021b plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 26.2s
+django__django-13810 376c77e4ae plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 27.6s
+django__django-13551 4db7bdb8cb plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 30.1s
+  pulled django_1776_django-13933:latest in 73s
+django__django-13810 d44644f1a8 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 25.8s
+django__django-13551 e29ac8a338 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 26.8s
+django__django-13933 085a2ed6eb plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 24.4s
+django__django-13810 bba1b256d8 argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 25.5s
+[16/92] django__django-13810 done in 203s; free disk 36 GB
+django__django-13551 56d2d0e5c5 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 25.8s
+[17/92] django__django-13551 done in 211s; free disk 36 GB
+django__django-13933 63faccd292 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 24.1s
+  pulled django_1776_django-14017:latest in 15s
+django__django-13933 83e646c379 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 25.8s
+django__django-14017 766c7ef85d plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/2 27.6s
+  pulled django_1776_django-14034:latest in 45s
+django__django-13933 45645be867 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 26.2s
+django__django-14017 32d515096e plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 1/2 25.8s
+django__django-14034 1142ccce9a plain:gpt-oss-120b,argus:gpt-oss-120b: applied=False resolved=False f2p 0/0 23.8s
+django__django-13933 7d9890c764 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 24.7s
+[18/92] django__django-13933 done in 199s; free disk 36 GB
+django__django-14017 b9d792fbaa plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/2 26.5s
+django__django-14034 3065c7ccdd plain:gpt-oss-120b,argus:gpt-oss-120b: applied=False resolved=False f2p 0/0 24.0s
+  pulled django_1776_django-14238:latest in 11s
+[19/92] django__django-14034 done in 94s; free disk 36 GB
+django__django-14017 adc63ee435 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 28.8s
+django__django-14238 087cbf3dfb plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 2/2 27.2s
+  pulled django_1776_django-14434:latest in 41s
+django__django-14017 310d8300f4 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 27.6s
+django__django-14238 040e24bf7d plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 2/2 27.4s
+django__django-14434 40900f27f8 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 26.7s
+django__django-14238 8bc51b8502 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=False resolved=False f2p 0/0 26.3s
+django__django-14017 ee955f642e plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 26.7s
+[20/92] django__django-14017 done in 179s; free disk 36 GB
+django__django-14434 b4b3105ac2 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 26.1s
+  pulled django_1776_django-14534:latest in 15s
+django__django-14238 3f21818b40 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 26.7s
+django__django-14434 75f99abdf7 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=False resolved=False f2p 0/0 25.6s
+[21/92] django__django-14434 done in 120s; free disk 36 GB
+django__django-14534 eff7fb8158 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 1/2 25.2s
+django__django-14238 c350d88e97 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 26.5s
+django__django-14534 996b41fabe plain:gpt-oss-20b,plain:gpt-oss-20b,argus:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 1/2 29.3s
+django__django-14238 25853bad15 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 28.8s
+[22/92] django__django-14238 done in 175s; free disk 36 GB
+  pulled django_1776_django-14771:latest in 44s
+  pulled django_1776_django-15128:latest in 13s
+django__django-14534 8a53440f5c plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 1/2 29.7s
+django__django-14771 f1cdb8de81 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 27.4s
+django__django-15128 78efd6d610 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 27.2s
+django__django-14534 f9d4692e7a plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 1/2 25.8s
+django__django-14771 87cd0a5261 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 26.3s
+django__django-15128 f2a337a41c plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 27.0s
+django__django-14534 a1829e2df4 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 1/2 25.2s
+[23/92] django__django-14534 done in 152s; free disk 36 GB
+django__django-14771 03f567f54c plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 26.2s
+  pulled django_1776_django-15161:latest in 12s
+django__django-15128 7a9e857300 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 27.4s
+[24/92] django__django-15128 done in 96s; free disk 36 GB
+  pulled django_1776_django-15280:latest in 11s
+django__django-14771 f6ddb730a2 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 27.4s
+django__django-15161 d6f1c43c89 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 2/3 26.2s
+django__django-15280 60a0c44c12 plain:gpt-oss-120b: applied=False resolved=False f2p 0/0 26.0s
+[25/92] django__django-15280 done in 37s; free disk 36 GB
+django__django-15161 9d5c232577 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 2/3 25.2s
+django__django-14771 723240a80c plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 26.1s
+  pulled django_1776_django-15315:latest in 15s
+django__django-15161 89689ca327 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 2/3 26.9s
+[26/92] django__django-15161 done in 90s; free disk 36 GB
+django__django-14771 7c3dd4bc93 argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 27.2s
+[27/92] django__django-14771 done in 205s; free disk 36 GB
+django__django-15315 1b82045d3b plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 26.5s
+[28/92] django__django-15315 done in 42s; free disk 36 GB
+  pulled django_1776_django-15382:latest in 15s
+  pulled django_1776_django-15930:latest in 19s
+  pulled django_1776_django-16116:latest in 15s
+django__django-15382 3d66c864cb plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 27.7s
+django__django-15930 4d54990d67 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 26.1s
+django__django-16116 c34a5d0427 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 30.8s
+django__django-15382 2f1a7f2a76 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 1/1 26.6s
+django__django-15930 e3d947069b plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 24.7s
+django__django-16116 22c46dea7f plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 31.3s
+django__django-15382 f561f7a32a plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 26.5s
+django__django-15930 be91c0d59f plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 25.8s
+django__django-15382 c56948af48 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 25.0s
+django__django-15930 22b7525717 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 25.1s
+django__django-16116 1297b9874e plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 31.8s
+django__django-15382 1ed6b48c3e plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 26.5s
+django__django-15930 328974e03c plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 26.8s
+django__django-16116 80421e4027 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 29.6s
+[29/92] django__django-16116 done in 139s; free disk 36 GB
+  pulled django_1776_django-16485:latest in 4s
+django__django-15930 e0d0ddf421 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 26.2s
+django__django-15382 15c0e2f2c3 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 26.8s
+[30/92] django__django-15930 done in 174s; free disk 36 GB
+[31/92] django__django-15382 done in 176s; free disk 36 GB
+django__django-16485 f19130df1d plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 26.7s
+django__django-16485 3437b22c31 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 1/1 29.3s
+  pulled django_1776_django-16642:latest in 42s
+django__django-16485 70c06f467e plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 28.0s
+django__django-16642 84810138b4 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 27.6s
+  pulled django_1776_django-16595:latest in 82s
+django__django-16485 194ed63452 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 26.6s
+[32/92] django__django-16485 done in 115s; free disk 36 GB
+django__django-16642 1b60b0183b plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 25.4s
+  pulled django_1776_django-16877:latest in 15s
+django__django-16595 b73563e6f5 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 27.5s
+django__django-16642 6cb345c104 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 28.7s
+django__django-16595 d9f553ff94 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 25.6s
+django__django-16877 2399f9aa84 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 2/4 27.1s
+django__django-16642 d5eea21e1b argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 25.9s
+django__django-16877 7de3206757 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/4 25.6s
+django__django-16595 aea2d1ee85 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 26.1s
+django__django-16642 b9e7a810a8 argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 25.2s
+[33/92] django__django-16642 done in 175s; free disk 36 GB
+django__django-16877 4177310b58 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 2/4 26.0s
+django__django-16595 1fd280c70b plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 26.0s
+django__django-16877 43318edaf4 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 4/4 28.6s
+django__django-16595 82a2f8f506 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 30.2s
+django__django-16877 23ac09c785 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 4/4 29.7s
+django__django-16595 1d83ed86d6 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 29.0s
+[34/92] django__django-16595 done in 249s; free disk 36 GB
+  pulled matplotlib_1776_matplotlib-20488:latest in 94s
+django__django-16877 5e89ef95c7 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 2/4 29.5s
+[35/92] django__django-16877 done in 182s; free disk 36 GB
+matplotlib__matplotlib-20488 a7ee535b98 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 40.3s
+matplotlib__matplotlib-20488 bb50b8d6a9 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 36.9s
+matplotlib__matplotlib-20488 c8af05eeac plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 38.4s
+matplotlib__matplotlib-20488 9caa2e93c1 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 37.3s
+matplotlib__matplotlib-20488 5d36d91f52 argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 37.3s
+  pulled matplotlib_1776_matplotlib-23412:latest in 256s
+matplotlib__matplotlib-20488 f14f1dbb7f argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 61.5s
+[36/92] matplotlib__matplotlib-20488 done in 353s; free disk 36 GB
+  pulled matplotlib_1776_matplotlib-24570:latest in 283s
+matplotlib__matplotlib-23412 7e6fda72b5 plain:gpt-oss-20b,plain:gpt-oss-20b,argus:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 81.6s
+matplotlib__matplotlib-23412 be48b7ba58 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 32.2s
+  pulled matplotlib_1776_matplotlib-24637:latest in 92s
+matplotlib__matplotlib-24570 6db3134900 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/2 75.5s
+matplotlib__matplotlib-23412 ff501696ec plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 31.5s
+[37/92] matplotlib__matplotlib-23412 done in 405s; free disk 36 GB
+matplotlib__matplotlib-24637 cb06e63031 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 76.6s
+matplotlib__matplotlib-24570 31ce2b5104 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/2 69.8s
+matplotlib__matplotlib-24570 c1941e3113 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 72.5s
+[38/92] matplotlib__matplotlib-24570 done in 502s; free disk 36 GB
+matplotlib__matplotlib-24637 d12a76dec0 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 83.6s
+matplotlib__matplotlib-24637 914e374424 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 81.8s
+[39/92] matplotlib__matplotlib-24637 done in 338s; free disk 36 GB
+  pulled matplotlib_1776_matplotlib-24970:latest in 229s
+matplotlib__matplotlib-24970 85a0dbada3 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 82.7s
+  pulled matplotlib_1776_matplotlib-25311:latest in 281s
+  pulled matplotlib_1776_matplotlib-25960:latest in 286s
+matplotlib__matplotlib-24970 c340ea0e86 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 216.0s
+matplotlib__matplotlib-25311 4445827cee plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 170.1s
+matplotlib__matplotlib-25960 78cc39af2f plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 84.7s
+matplotlib__matplotlib-24970 3e4644d0de plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 72.0s
+matplotlib__matplotlib-25311 fcd8b3bb36 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 70.8s
+matplotlib__matplotlib-25960 03bc74c89f plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 81.2s
+matplotlib__matplotlib-24970 30e4284695 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 71.5s
+matplotlib__matplotlib-25311 4ea4aa98e4 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 72.1s
+matplotlib__matplotlib-24970 7f2ffbaecc plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 70.4s
+matplotlib__matplotlib-25960 c46eeb2005 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 82.6s
+matplotlib__matplotlib-25311 e09a794fe7 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 70.9s
+matplotlib__matplotlib-24970 f6d37219c7 argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 71.4s
+[40/92] matplotlib__matplotlib-24970 done in 817s; free disk 34 GB
+matplotlib__matplotlib-25960 3fda37e5bb plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 80.7s
+  pulled psf_1776_requests-1766:latest in 35s
+matplotlib__matplotlib-25311 c11fcbd6e1 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 73.3s
+[41/92] matplotlib__matplotlib-25311 done in 743s; free disk 34 GB
+  pulled psf_1776_requests-2931:latest in 7s
+psf__requests-2931 cd67923ce9 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 23.2s
+matplotlib__matplotlib-25960 d9a1355318 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 81.2s
+[42/92] matplotlib__matplotlib-25960 done in 700s; free disk 34 GB
+psf__requests-1766 a5cbcf6503 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 6/6 65.3s
+psf__requests-2931 64411b4b53 plain:gpt-oss-120b,plain:gpt-oss-120b,argus:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 1/1 23.2s
+psf__requests-2931 6bce8b9ba3 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 1/1 22.9s
+  pulled psf_1776_requests-6028:latest in 30s
+psf__requests-2931 20db48256d argus:gpt-oss-20b: applied=True resolved=False f2p 1/1 23.2s
+psf__requests-6028 f494bc8944 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/2 22.6s
+[43/92] psf__requests-2931 done in 100s; free disk 34 GB
+psf__requests-1766 ff6643610d plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 6/6 66.2s
+psf__requests-6028 024d6b47bf plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 23.3s
+psf__requests-6028 fee63bd075 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 23.8s
+psf__requests-6028 c010fb0f9d plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 23.2s
+[44/92] psf__requests-6028 done in 124s; free disk 34 GB
+psf__requests-1766 d2e5168d4a plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 6/6 72.5s
+[45/92] psf__requests-1766 done in 240s; free disk 34 GB
+  pulled pydata_1776_xarray-3151:latest in 113s
+pydata__xarray-3151 f7ece88277 plain:gpt-oss-20b,plain:gpt-oss-20b,argus:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 29.2s
+pydata__xarray-3151 4cfea6d0a4 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 27.2s
+pydata__xarray-3151 17ab6352dc plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 29.5s
+pydata__xarray-3151 143c4ca151 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 28.7s
+  pulled pydata_1776_xarray-4356:latest in 188s
+pydata__xarray-3151 418ce8e571 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 52.1s
+[46/92] pydata__xarray-3151 done in 289s; free disk 34 GB
+  pulled pydata_1776_xarray-4094:latest in 223s
+pydata__xarray-4356 66b3340f1d plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 8/8 49.2s
+pydata__xarray-4094 d2088dc9fc plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 40.1s
+pydata__xarray-4356 bc498e6892 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 8/8 35.1s
+pydata__xarray-4094 1982b5d0a4 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 36.3s
+pydata__xarray-4356 01c00ca3a4 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 8/8 34.5s
+pydata__xarray-4094 f853a3fa92 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 36.0s
+  pulled pydata_1776_xarray-4966:latest in 121s
+pydata__xarray-4356 6b1fcdfb87 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 8/8 31.8s
+pydata__xarray-4966 48834899c4 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 4/4 28.3s
+pydata__xarray-4094 f555b76ed5 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 34.9s
+pydata__xarray-4356 31af9a954b plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/8 31.6s
+pydata__xarray-4966 b10d68cb6c plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 4/4 28.8s
+pydata__xarray-4094 6755c91ccb plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 34.0s
+[47/92] pydata__xarray-4094 done in 408s; free disk 34 GB
+pydata__xarray-4356 01166813ad plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 8/8 32.3s
+[48/92] pydata__xarray-4356 done in 406s; free disk 34 GB
+pydata__xarray-4966 bcc59a238b plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 4/4 29.6s
+pydata__xarray-4966 d00e38a373 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 4/4 32.1s
+  pulled pylint-dev_1776_pylint-7277:latest in 55s
+pydata__xarray-4966 71c0f86d50 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 4/4 32.0s
+[49/92] pydata__xarray-4966 done in 275s; free disk 34 GB
+  pulled pydata_1776_xarray-6721:latest in 118s
+  pulled pytest-dev_1776_pytest-10051:latest in 33s
+pylint-dev__pylint-7277 2914127e4d plain:gpt-oss-20b: applied=True resolved=True f2p 1/1 49.2s
+pytest-dev__pytest-10051 2915a6b381 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 25.4s
+pylint-dev__pylint-7277 a6569d9f6f plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 38.7s
+pytest-dev__pytest-10051 7dad2a8d3e plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 25.7s
+pydata__xarray-6721 2c64005653 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 65.6s
+pytest-dev__pytest-10051 3bb0171e27 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 24.9s
+pylint-dev__pylint-7277 dcc4bba200 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 39.1s
+pytest-dev__pytest-10051 f497bbf96a plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 25.3s
+pylint-dev__pylint-7277 0e6eafe764 plain:gpt-oss-120b: applied=True resolved=True f2p 1/1 37.6s
+pytest-dev__pytest-10051 2e87c4eb37 argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 26.3s
+[50/92] pytest-dev__pytest-10051 done in 162s; free disk 34 GB
+pydata__xarray-6721 885bd42ba5 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 1/1 65.1s
+  pulled pytest-dev_1776_pytest-5262:latest in 31s
+pylint-dev__pylint-7277 7484793b6a plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 41.7s
+pytest-dev__pytest-5262 97223aea41 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 31.1s
+pylint-dev__pylint-7277 2899c90592 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 39.1s
+[51/92] pylint-dev__pylint-7277 done in 301s; free disk 34 GB
+pydata__xarray-6721 a0dd153d85 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 70.6s
+pytest-dev__pytest-5262 c557d5a307 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 1/1 33.4s
+  pulled pytest-dev_1776_pytest-6197:latest in 34s
+pytest-dev__pytest-5262 d589705821 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 1/1 32.7s
+pytest-dev__pytest-6197 c2a142b808 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/2 31.1s
+pydata__xarray-6721 b5a8f6c114 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 68.3s
+pytest-dev__pytest-5262 f6725a8f29 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 31.3s
+pytest-dev__pytest-6197 886fcc3e21 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/2 29.7s
+pytest-dev__pytest-5262 b808f8bcbc plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 32.8s
+pytest-dev__pytest-6197 5cf4808030 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 31.6s
+pydata__xarray-6721 c94ccf83a8 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 65.8s
+[52/92] pydata__xarray-6721 done in 455s; free disk 34 GB
+pytest-dev__pytest-5262 6497986cca plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 30.4s
+[53/92] pytest-dev__pytest-5262 done in 224s; free disk 34 GB
+pytest-dev__pytest-6197 143d3ea0a7 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 2/2 28.7s
+  pulled pytest-dev_1776_pytest-7521:latest in 32s
+pytest-dev__pytest-6197 76a7faca1b plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 35.0s
+[54/92] pytest-dev__pytest-6197 done in 190s; free disk 34 GB
+pytest-dev__pytest-7521 1a2f97a9c5 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 32.4s
+pytest-dev__pytest-7521 2b9e4e60a0 argus:gpt-oss-20b: applied=True resolved=False f2p 2/2 42.0s
+  pulled scikit-learn_1776_scikit-learn-10844:latest in 93s
+  pulled scikit-learn_1776_scikit-learn-11578:latest in 72s
+scikit-learn__scikit-learn-10844 d37cd435c9 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 25.4s
+pytest-dev__pytest-7521 9f19d82656 argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 33.2s
+[55/92] pytest-dev__pytest-7521 done in 141s; free disk 34 GB
+scikit-learn__scikit-learn-11578 00535d0ad6 argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 26.5s
+  pulled scikit-learn_1776_scikit-learn-12973:latest in 13s
+[56/92] scikit-learn__scikit-learn-11578 done in 100s; free disk 34 GB
+scikit-learn__scikit-learn-10844 a6b8973cef plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 22.5s
+scikit-learn__scikit-learn-10844 7525c89ad3 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 24.2s
+scikit-learn__scikit-learn-12973 e9771bb053 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 26.5s
+scikit-learn__scikit-learn-10844 cd58d08b81 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 28.1s
+scikit-learn__scikit-learn-12973 7c10196d4c plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 28.4s
+scikit-learn__scikit-learn-10844 07139a4321 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 26.3s
+scikit-learn__scikit-learn-12973 e877e1a43a plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 26.0s
+[57/92] scikit-learn__scikit-learn-12973 done in 94s; free disk 34 GB
+  pulled scikit-learn_1776_scikit-learn-13496:latest in 87s
+scikit-learn__scikit-learn-10844 09a60927b9 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 24.3s
+[58/92] scikit-learn__scikit-learn-10844 done in 245s; free disk 34 GB
+scikit-learn__scikit-learn-13496 b56a3a588e plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 26.8s
+  pulled scikit-learn_1776_scikit-learn-14053:latest in 65s
+  pulled scikit-learn_1776_scikit-learn-14710:latest in 41s
+scikit-learn__scikit-learn-13496 82902b02b8 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 37.8s
+scikit-learn__scikit-learn-14053 5c888cf657 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 27.0s
+scikit-learn__scikit-learn-13496 b03984fe6d plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 27.1s
+scikit-learn__scikit-learn-14710 97e422342b plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 36.8s
+scikit-learn__scikit-learn-14053 2eac1e37d9 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 24.4s
+scikit-learn__scikit-learn-13496 388e951660 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 25.5s
+[59/92] scikit-learn__scikit-learn-13496 done in 205s; free disk 34 GB
+scikit-learn__scikit-learn-14710 9c4034d29e plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 27.5s
+scikit-learn__scikit-learn-14053 13ad061230 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 24.3s
+scikit-learn__scikit-learn-14053 9bd0fe8469 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 28.7s
+scikit-learn__scikit-learn-14053 2d8042db40 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 30.4s
+scikit-learn__scikit-learn-14053 66871c779b plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 28.3s
+[60/92] scikit-learn__scikit-learn-14053 done in 229s; free disk 34 GB
+  pulled scikit-learn_1776_scikit-learn-14894:latest in 124s
+  pulled scikit-learn_1776_scikit-learn-14983:latest in 28s
+scikit-learn__scikit-learn-14894 80196054de plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 31.5s
+scikit-learn__scikit-learn-14983 0996e157a2 plain:gpt-oss-20b,plain:gpt-oss-20b,argus:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/2 26.0s
+scikit-learn__scikit-learn-14710 47c1a59fff plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 155.1s
+scikit-learn__scikit-learn-14983 f85257d048 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/2 24.1s
+scikit-learn__scikit-learn-14894 e542e38ca6 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 27.6s
+scikit-learn__scikit-learn-14710 15a112877f plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 32.3s
+scikit-learn__scikit-learn-14983 469fdf64cc plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 26.1s
+scikit-learn__scikit-learn-14894 378d07cdde plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 27.1s
+scikit-learn__scikit-learn-14710 7e5fb80be0 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 31.1s
+[61/92] scikit-learn__scikit-learn-14710 done in 325s; free disk 34 GB
+scikit-learn__scikit-learn-14983 2a17397389 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 25.6s
+scikit-learn__scikit-learn-14894 05430cdf31 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 25.5s
+scikit-learn__scikit-learn-14983 f5c1f51dba plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 28.5s
+[62/92] scikit-learn__scikit-learn-14983 done in 159s; free disk 34 GB
+scikit-learn__scikit-learn-14894 642b492ba5 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 28.4s
+scikit-learn__scikit-learn-14894 fa1778c9e4 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 28.8s
+[63/92] scikit-learn__scikit-learn-14894 done in 296s; free disk 34 GB
+  pulled sphinx-doc_1776_sphinx-10435:latest in 68s
+  pulled sphinx-doc_1776_sphinx-10466:latest in 37s
+  pulled scikit-learn_1776_scikit-learn-25973:latest in 118s
+sphinx-doc__sphinx-10466 227881ce8f plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 36.3s
+scikit-learn__scikit-learn-25973 a993629c25 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 29.0s
+sphinx-doc__sphinx-10435 f9dcb9c7ac plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 42.6s
+sphinx-doc__sphinx-10466 5c414db726 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 27.3s
+scikit-learn__scikit-learn-25973 3a7ad79881 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 27.5s
+sphinx-doc__sphinx-10435 aa938bf9c7 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 29.9s
+sphinx-doc__sphinx-10466 6393aa93e8 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 25.9s
+scikit-learn__scikit-learn-25973 15593b3235 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 27.7s
+sphinx-doc__sphinx-10435 884e310eaf plain:gpt-oss-120b,plain:gpt-oss-120b,argus:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 28.8s
+sphinx-doc__sphinx-10466 d2c335d4c6 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 25.4s
+scikit-learn__scikit-learn-25973 f51729801d plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 27.1s
+sphinx-doc__sphinx-10435 df316388fd plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 28.5s
+[64/92] sphinx-doc__sphinx-10435 done in 199s; free disk 34 GB
+sphinx-doc__sphinx-10466 41cfc46a28 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 25.0s
+scikit-learn__scikit-learn-25973 f9a3ac0ccb plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 1/1 24.8s
+sphinx-doc__sphinx-10466 d3f55b507f plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 28.4s
+  pulled sphinx-doc_1776_sphinx-10614:latest in 40s
+[65/92] sphinx-doc__sphinx-10466 done in 206s; free disk 34 GB
+scikit-learn__scikit-learn-25973 f111672ae6 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 1/1 26.1s
+[66/92] scikit-learn__scikit-learn-25973 done in 282s; free disk 34 GB
+sphinx-doc__sphinx-10614 528cdd0e89 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 28.1s
+sphinx-doc__sphinx-10614 681b47e654 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 29.0s
+  pulled sphinx-doc_1776_sphinx-8459:latest in 76s
+  pulled sphinx-doc_1776_sphinx-11445:latest in 85s
+sphinx-doc__sphinx-10614 4e229ded7e argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 32.2s
+[67/92] sphinx-doc__sphinx-10614 done in 130s; free disk 34 GB
+sphinx-doc__sphinx-8459 8f0fdfc27a plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 28.0s
+sphinx-doc__sphinx-11445 603822b4d5 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 2/2 24.3s
+  pulled sphinx-doc_1776_sphinx-9230:latest in 35s
+sphinx-doc__sphinx-11445 587a2bd3cd plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 2/2 27.0s
+sphinx-doc__sphinx-8459 cdf09144c6 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 27.2s
+sphinx-doc__sphinx-9230 8898a8e43e plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 26.7s
+sphinx-doc__sphinx-8459 f8fed19282 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 24.5s
+sphinx-doc__sphinx-11445 7212610184 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 2/2 25.1s
+sphinx-doc__sphinx-9230 ea211bb8c6 argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 25.9s
+sphinx-doc__sphinx-8459 d8aba3ef96 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 23.2s
+sphinx-doc__sphinx-11445 aaad35170a plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 23.6s
+sphinx-doc__sphinx-9230 f524c63b70 argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 25.1s
+sphinx-doc__sphinx-8459 be1753663c argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 23.2s
+[68/92] sphinx-doc__sphinx-8459 done in 203s; free disk 34 GB
+sphinx-doc__sphinx-11445 2bb549dbf4 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 23.6s
+  pulled sphinx-doc_1776_sphinx-9258:latest in 9s
+sphinx-doc__sphinx-9230 50012e0348 argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 25.1s
+[69/92] sphinx-doc__sphinx-9230 done in 139s; free disk 34 GB
+sphinx-doc__sphinx-11445 069652e20a argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 24.1s
+[70/92] sphinx-doc__sphinx-11445 done in 234s; free disk 34 GB
+  pulled sphinx-doc_1776_sphinx-9281:latest in 9s
+sphinx-doc__sphinx-9258 52b0a79566 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 24.9s
+  pulled sphinx-doc_1776_sphinx-9658:latest in 9s
+sphinx-doc__sphinx-9281 a1dc1b7f9b plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 24.5s
+sphinx-doc__sphinx-9658 24de755339 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 22.2s
+sphinx-doc__sphinx-9258 1af9160322 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 24.2s
+sphinx-doc__sphinx-9281 11516cda9f plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 23.5s
+sphinx-doc__sphinx-9658 9e4987954b plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 23.4s
+sphinx-doc__sphinx-9258 ee3b0e0e1b plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 23.8s
+sphinx-doc__sphinx-9281 8da44d2c73 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 24.8s
+sphinx-doc__sphinx-9658 182d21ccfb plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 23.3s
+sphinx-doc__sphinx-9258 142c49cf51 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 25.1s
+sphinx-doc__sphinx-9658 82ac5e6152 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 23.9s
+sphinx-doc__sphinx-9281 acef8000c3 plain:gpt-oss-120b,argus:gpt-oss-20b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 27.1s
+sphinx-doc__sphinx-9258 6b6f7e4491 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 24.5s
+[71/92] sphinx-doc__sphinx-9258 done in 132s; free disk 34 GB
+  pulled sphinx-doc_1776_sphinx-9698:latest in 9s
+sphinx-doc__sphinx-9658 331374af22 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 23.6s
+sphinx-doc__sphinx-9281 60b18e407a plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 22.8s
+[72/92] sphinx-doc__sphinx-9281 done in 132s; free disk 34 GB
+  pulled sphinx-doc_1776_sphinx-9711:latest in 10s
+sphinx-doc__sphinx-9698 4f50f4ac56 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 25.4s
+sphinx-doc__sphinx-9658 bc3514255b plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 23.2s
+[73/92] sphinx-doc__sphinx-9658 done in 149s; free disk 34 GB
+  pulled sympy_1776_sympy-11618:latest in 10s
+sphinx-doc__sphinx-9711 93941da2b8 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 23.6s
+sphinx-doc__sphinx-9698 bd8482925d plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 24.1s
+sympy__sympy-11618 5207f2d4a9 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 23.9s
+sphinx-doc__sphinx-9711 d9f74a9d3c plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 23.4s
+sphinx-doc__sphinx-9698 d8af10eceb plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 24.1s
+sympy__sympy-11618 91a5910d8f plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 23.8s
+sphinx-doc__sphinx-9711 a29c0beb51 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 24.6s
+sphinx-doc__sphinx-9698 c4eed63c57 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 23.9s
+sympy__sympy-11618 32afccd03a plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 24.5s
+sphinx-doc__sphinx-9711 d53495eba9 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 24.4s
+sphinx-doc__sphinx-9698 05e9273ad8 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 24.1s
+[74/92] sphinx-doc__sphinx-9698 done in 131s; free disk 34 GB
+sympy__sympy-11618 daba036ff8 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 24.6s
+sphinx-doc__sphinx-9711 6a926f3933 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 23.9s
+sympy__sympy-11618 fffff1e1a9 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 29.9s
+sphinx-doc__sphinx-9711 d8803ef01b plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 29.7s
+[75/92] sphinx-doc__sphinx-9711 done in 160s; free disk 34 GB
+  pulled sympy_1776_sympy-13551:latest in 10s
+  pulled sympy_1776_sympy-12481:latest in 62s
+sympy__sympy-11618 92864265ec plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 26.3s
+[76/92] sympy__sympy-11618 done in 163s; free disk 34 GB
+sympy__sympy-12481 5aecbf91c9 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 23.7s
+sympy__sympy-13551 563a2b39ed plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 1/1 33.0s
+  pulled sympy_1776_sympy-13798:latest in 32s
+sympy__sympy-12481 39a3324f1a plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 27.1s
+sympy__sympy-13551 0bd98ae87f plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 1/1 31.5s
+sympy__sympy-13798 422ddd1499 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 25.4s
+sympy__sympy-12481 72d01c9609 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 22.9s
+[77/92] sympy__sympy-12481 done in 138s; free disk 34 GB
+  pulled sympy_1776_sympy-14531:latest in 10s
+sympy__sympy-13551 ae369c87c9 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 31.2s
+sympy__sympy-13798 f5f1cd5c17 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 24.0s
+sympy__sympy-14531 fcbf81ad73 plain:gpt-oss-20b,plain:gpt-oss-120b,argus:gpt-oss-20b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 25.4s
+sympy__sympy-13798 1837279eed plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 23.6s
+sympy__sympy-13551 4c30141d01 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 1/1 30.7s
+[78/92] sympy__sympy-13551 done in 137s; free disk 34 GB
+  pulled sympy_1776_sympy-14711:latest in 10s
+sympy__sympy-14531 008457c362 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 2/2 25.1s
+sympy__sympy-13798 97c50c8e97 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 23.5s
+sympy__sympy-14711 001f46feb0 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 25.6s
+sympy__sympy-14531 65fdb40ed0 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 24.2s
+sympy__sympy-13798 b02ddedd89 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 23.4s
+sympy__sympy-14531 17dd17327d plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 25.7s
+[79/92] sympy__sympy-14531 done in 111s; free disk 34 GB
+sympy__sympy-14711 6d43dc47b2 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 27.5s
+sympy__sympy-13798 708cf1f9d1 argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 24.0s
+[80/92] sympy__sympy-13798 done in 177s; free disk 34 GB
+  pulled sympy_1776_sympy-15017:latest in 11s
+  pulled sympy_1776_sympy-15875:latest in 11s
+sympy__sympy-14711 3f05ca0355 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 27.0s
+sympy__sympy-15017 b1e9d7ba77 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 25.7s
+[81/92] sympy__sympy-15017 done in 37s; free disk 34 GB
+sympy__sympy-15875 aa53b64d72 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 28.5s
+sympy__sympy-14711 d663fb694d plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 26.5s
+sympy__sympy-15875 5a297945d7 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 33.2s
+sympy__sympy-14711 c21a7d4756 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 27.7s
+  pulled sympy_1776_sympy-17139:latest in 62s
+sympy__sympy-14711 55e7f2f3e5 argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 25.6s
+[82/92] sympy__sympy-14711 done in 170s; free disk 34 GB
+sympy__sympy-15875 01c214e03d plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 34.2s
+  pulled sympy_1776_sympy-17655:latest in 11s
+sympy__sympy-15875 adc9730b09 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 31.0s
+sympy__sympy-17655 acac6b83a8 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/2 33.0s
+sympy__sympy-15875 8dc521f39e plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 29.7s
+sympy__sympy-17655 f36afb5445 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 33.1s
+sympy__sympy-15875 acfa328429 argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 29.3s
+[83/92] sympy__sympy-15875 done in 197s; free disk 34 GB
+sympy__sympy-17139 a1bf19fc4f plain:gpt-oss-20b,plain:gpt-oss-20b,argus:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 1/2 101.5s
+  pulled sympy_1776_sympy-18698:latest in 9s
+sympy__sympy-17655 41c8d637ad plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 2/2 32.1s
+sympy__sympy-18698 8dbe9c3fc0 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 32.1s
+sympy__sympy-17655 1f10a31286 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/2 30.7s
+sympy__sympy-18698 9bb85f59be plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 32.6s
+sympy__sympy-17655 d8bbbdfd66 argus:gpt-oss-20b: applied=True resolved=False f2p 0/2 31.3s
+[84/92] sympy__sympy-17655 done in 172s; free disk 34 GB
+  pulled sympy_1776_sympy-19346:latest in 3s
+sympy__sympy-17139 b745cf1afd plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 1/2 98.5s
+sympy__sympy-18698 e14d0225b3 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 32.3s
+sympy__sympy-19346 992460451c plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 23.9s
+sympy__sympy-19346 5e8c44915d plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 23.8s
+sympy__sympy-18698 41061e898b plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 31.2s
+[85/92] sympy__sympy-18698 done in 137s; free disk 34 GB
+  pulled sympy_1776_sympy-21596:latest in 11s
+sympy__sympy-19346 a7dbb5e1f3 plain:gpt-oss-20b: applied=None resolved=None f2p None/0 22.4s
+sympy__sympy-19346 6f937fe0c1 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 23.2s
+sympy__sympy-21596 e18724f8c3 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 31.2s
+sympy__sympy-17139 3b3c5a3bce plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 1/2 96.3s
+sympy__sympy-19346 7b2387e7b1 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 25.2s
+sympy__sympy-21596 0aa41b9899 argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 28.6s
+sympy__sympy-19346 c7822854fe plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 22.8s
+[86/92] sympy__sympy-19346 done in 145s; free disk 34 GB
+  pulled sympy_1776_sympy-22914:latest in 15s
+sympy__sympy-21596 8d38284694 argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 30.3s
+sympy__sympy-22914 f0f2eabfad plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 23.7s
+sympy__sympy-21596 156919caeb argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 30.0s
+sympy__sympy-22914 3c6fa927c9 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 23.4s
+sympy__sympy-17139 49ec145b21 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 1/2 100.2s
+sympy__sympy-21596 804cf622d8 argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 28.5s
+[87/92] sympy__sympy-21596 done in 160s; free disk 34 GB
+  pulled sympy_1776_sympy-23262:latest in 10s
+sympy__sympy-22914 3323ab4956 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 23.4s
+sympy__sympy-22914 89d687a422 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 24.3s
+sympy__sympy-23262 587914aa47 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 26.4s
+sympy__sympy-22914 9c828c0c7a plain:gpt-oss-120b,argus:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 24.0s
+[88/92] sympy__sympy-22914 done in 134s; free disk 34 GB
+sympy__sympy-23262 e674627987 plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 25.2s
+  pulled sympy_1776_sympy-24066:latest in 13s
+sympy__sympy-23262 d3f6af62dd plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 0/1 27.6s
+sympy__sympy-17139 ebc2526605 argus:gpt-oss-20b: applied=True resolved=False f2p 0/2 97.8s
+[89/92] sympy__sympy-17139 done in 557s; free disk 34 GB
+  pulled sympy_1776_sympy-24443:latest in 3s
+sympy__sympy-24066 60c878395b plain:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=False f2p 1/1 26.2s
+sympy__sympy-23262 f26daeec15 plain:gpt-oss-120b,argus:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 26.5s
+sympy__sympy-24443 461e0c6857 plain:gpt-oss-20b,plain:gpt-oss-20b,argus:gpt-oss-20b,argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 24.8s
+sympy__sympy-24066 815b9980b7 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 1/1 25.4s
+sympy__sympy-23262 3888c55fc0 argus:gpt-oss-20b: applied=True resolved=True f2p 1/1 27.0s
+[90/92] sympy__sympy-23262 done in 144s; free disk 34 GB
+sympy__sympy-24443 8520646850 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 23.1s
+sympy__sympy-24066 de73da0864 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 24.3s
+sympy__sympy-24443 cd18238b79 plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=True f2p 1/1 24.1s
+sympy__sympy-24066 c089393a7c plain:gpt-oss-120b,argus:gpt-oss-120b: applied=True resolved=False f2p 1/1 24.0s
+sympy__sympy-24443 b7bb8130d5 argus:gpt-oss-20b: applied=True resolved=False f2p 0/1 24.5s
+sympy__sympy-24066 b2e68aa3b0 argus:gpt-oss-20b: applied=True resolved=False f2p 1/1 24.2s
+[91/92] sympy__sympy-24443 done in 102s; free disk 34 GB
+[92/92] sympy__sympy-24066 done in 139s; free disk 34 GB
+all done

@@ -1,0 +1,4 @@
+17 keys; 1 tasks to run (0 done); 995 cached calls seeded; out=C:\coding\Argus-pilot50\data\dev_fix; prompt_hash=56e5b02fa8ed
+  pulled astropy__astropy-12907 in 74s
+[1/1] astropy__astropy-12907 gpt-oss-20b: F accepted_resolved/n1 P accepted_resolved/n1 | gpt-oss-120b: F accepted_resolved/n2 P accepted_resolved/n3 pulled=True newcalls=3 227s
+all done

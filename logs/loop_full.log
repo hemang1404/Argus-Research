@@ -1,0 +1,166 @@
+17 keys; 99 tasks to run (0 done); out=C:\coding\Argus-pilot50\data\loop; prompt_hash=56e5b02fa8ed
+[1/99] astropy__astropy-14182 stop=max_turns turns=4 resolved=False cost=$0.0128 48s
+  pulled astropy__astropy-13033 in 135s
+  pulled astropy__astropy-14508 in 102s
+  pulled astropy__astropy-12907 in 142s
+[2/99] astropy__astropy-14508 stop=resolved turns=1 resolved=True cost=$0.0011 170s
+[3/99] astropy__astropy-13033 stop=max_turns turns=4 resolved=False cost=$0.0098 250s
+  pulled astropy__astropy-14995 in 16s
+[4/99] astropy__astropy-14995 stop=resolved turns=3 resolved=True cost=$0.0068 106s
+[5/99] astropy__astropy-12907 stop=resolved turns=4 resolved=True cost=$0.0124 350s
+  pulled astropy__astropy-8872 in 119s
+  pulled django__django-11087 in 52s
+  pulled django__django-10880 in 81s
+[6/99] astropy__astropy-8872 stop=resolved turns=1 resolved=True cost=$0.0022 180s
+[7/99] django__django-10880 stop=stopped_f2p_pass_regressed turns=1 resolved=False cost=$0.0003 117s
+[8/99] django__django-11790 stop=resolved turns=1 resolved=True cost=$0.0012 5s
+[9/99] django__django-11964 stop=resolved turns=1 resolved=True cost=$0.0005 2s
+  pulled django__django-11141 in 19s
+  pulled django__django-12039 in 15s
+[10/99] django__django-11141 stop=stopped_f2p_pass_regressed turns=1 resolved=False cost=$0.0005 48s
+  pulled django__django-12209 in 17s
+[11/99] django__django-11087 stop=max_turns turns=4 resolved=False cost=$0.0122 152s
+  pulled django__django-12774 in 15s
+[12/99] django__django-12209 stop=resolved turns=1 resolved=True cost=$0.0008 48s
+[13/99] django__django-12774 stop=stopped_f2p_pass_regressed turns=1 resolved=False cost=$0.0006 43s
+[14/99] django__django-12039 stop=max_turns turns=4 resolved=False cost=$0.0131 116s
+  pulled django__django-13012 in 54s
+[15/99] django__django-13406 stop=max_turns turns=4 resolved=False cost=$0.0171 60s
+  pulled django__django-13810 in 21s
+  pulled django__django-13551 in 69s
+[16/99] django__django-13012 stop=max_turns turns=4 resolved=False cost=$0.0153 131s
+[17/99] django__django-13933 stop=resolved turns=1 resolved=True cost=$0.0006 2s
+[18/99] django__django-13810 stop=resolved turns=1 resolved=True cost=$0.0005 55s
+[19/99] django__django-14034 stop=max_turns turns=4 resolved=False cost=$0.0142 50s
+  pulled django__django-14238 in 29s
+  pulled django__django-14017 in 78s
+[20/99] django__django-14238 stop=resolved turns=1 resolved=True cost=$0.0009 65s
+[21/99] django__django-13551 stop=max_turns turns=4 resolved=False cost=$0.0050 215s
+[22/99] django__django-14434 stop=resolved turns=3 resolved=True cost=$0.0084 27s
+  pulled django__django-14534 in 14s
+[23/99] django__django-14017 stop=resolved turns=3 resolved=True cost=$0.0088 170s
+[24/99] django__django-14534 stop=max_turns turns=4 resolved=False cost=$0.0097 77s
+  pulled django__django-14771 in 80s
+  pulled django__django-15128 in 26s
+[25/99] django__django-15161 stop=max_turns turns=4 resolved=False cost=$0.0153 48s
+[26/99] django__django-15128 stop=max_turns turns=4 resolved=False cost=$0.0151 105s
+  pulled django__django-15315 in 15s
+[27/99] django__django-15280 stop=max_turns turns=4 resolved=False cost=$0.0171 55s
+[28/99] django__django-14771 stop=resolved turns=3 resolved=True cost=$0.0073 159s
+  pulled django__django-15382 in 14s
+  pulled django__django-15930 in 17s
+[29/99] django__django-15315 stop=resolved turns=4 resolved=True cost=$0.0143 113s
+[30/99] django__django-16116 stop=resolved turns=1 resolved=True cost=$0.0006 2s
+[31/99] django__django-15930 stop=max_turns turns=4 resolved=False cost=$0.0164 95s
+[32/99] django__django-15382 stop=resolved turns=4 resolved=True cost=$0.0163 121s
+[33/99] django__django-16485 stop=max_turns turns=4 resolved=False cost=$0.0172 58s
+  pulled django__django-16595 in 127s
+  pulled django__django-16642 in 124s
+  pulled django__django-16877 in 99s
+[34/99] django__django-16595 stop=resolved turns=1 resolved=True cost=$0.0007 180s
+[35/99] matplotlib__matplotlib-13989 stop=max_turns turns=4 resolved=False cost=$0.0171 55s
+[36/99] django__django-16877 stop=max_turns turns=4 resolved=False cost=$0.0119 188s
+[37/99] django__django-16642 stop=max_turns turns=4 resolved=False cost=$0.0136 220s
+[38/99] matplotlib__matplotlib-20676 stop=max_turns turns=4 resolved=False cost=$0.0171 57s
+[39/99] matplotlib__matplotlib-23412 stop=max_turns turns=4 resolved=False cost=$0.0150 51s
+  pulled matplotlib__matplotlib-20488 in 95s
+[40/99] matplotlib__matplotlib-24570 stop=max_turns turns=4 resolved=False cost=$0.0171 55s
+[41/99] matplotlib__matplotlib-20488 stop=resolved turns=1 resolved=True cost=$0.0009 135s
+  pulled matplotlib__matplotlib-24637 in 450s
+  pulled matplotlib__matplotlib-24970 in 486s
+  pulled matplotlib__matplotlib-25311 in 490s
+[42/99] matplotlib__matplotlib-24637 stop=resolved turns=4 resolved=True cost=$0.0154 649s
+[43/99] matplotlib__matplotlib-25311 stop=resolved turns=1 resolved=True cost=$0.0010 577s
+[44/99] psf__requests-2931 stop=stopped_f2p_pass_regressed turns=1 resolved=False cost=$0.0005 1s
+[45/99] matplotlib__matplotlib-24970 stop=resolved turns=1 resolved=True cost=$0.0012 602s
+[46/99] pydata__xarray-3151 stop=resolved turns=1 resolved=True cost=$0.0008 2s
+[47/99] matplotlib__matplotlib-25960 stop=max_turns turns=4 resolved=False cost=$0.0171 55s
+  pulled psf__requests-6028 in 110s
+[48/99] psf__requests-6028 stop=max_turns turns=4 resolved=False cost=$0.0120 197s
+  pulled pydata__xarray-4094 in 218s
+  pulled pydata__xarray-4356 in 198s
+[49/99] pydata__xarray-4356 stop=resolved turns=1 resolved=True cost=$0.0009 250s
+  pulled pydata__xarray-4966 in 111s
+[50/99] pydata__xarray-4966 stop=resolved turns=1 resolved=True cost=$0.0008 153s
+  pulled pylint-dev__pylint-7277 in 52s
+  pulled pydata__xarray-6721 in 111s
+[51/99] pydata__xarray-4094 stop=max_turns turns=4 resolved=False cost=$0.0142 422s
+[52/99] pylint-dev__pylint-7277 stop=resolved turns=1 resolved=True cost=$0.0007 99s
+  pulled pytest-dev__pytest-10051 in 31s
+  pulled pytest-dev__pytest-5262 in 28s
+[53/99] pydata__xarray-6721 stop=resolved turns=1 resolved=True cost=$0.0012 194s
+[54/99] pytest-dev__pytest-10051 stop=stopped_f2p_pass_regressed turns=1 resolved=False cost=$0.0015 69s
+[55/99] pytest-dev__pytest-5809 stop=resolved turns=1 resolved=True cost=$0.0002 1s
+[56/99] pytest-dev__pytest-5262 stop=resolved turns=1 resolved=True cost=$0.0008 62s
+[57/99] scikit-learn__scikit-learn-10844 stop=resolved turns=1 resolved=True cost=$0.0007 2s
+[58/99] scikit-learn__scikit-learn-11578 stop=resolved turns=1 resolved=True cost=$0.0006 2s
+  pulled pytest-dev__pytest-7521 in 29s
+[59/99] pytest-dev__pytest-7521 stop=stopped_f2p_pass_regressed turns=1 resolved=False cost=$0.0017 66s
+[60/99] scikit-learn__scikit-learn-12973 stop=max_turns turns=4 resolved=False cost=$0.0156 49s
+[61/99] scikit-learn__scikit-learn-13496 stop=resolved turns=1 resolved=True cost=$0.0006 1s
+  pulled pytest-dev__pytest-6197 in 36s
+[62/99] pytest-dev__pytest-6197 stop=resolved turns=4 resolved=True cost=$0.0169 124s
+  pulled scikit-learn__scikit-learn-14053 in 79s
+  pulled scikit-learn__scikit-learn-14710 in 33s
+[63/99] scikit-learn__scikit-learn-14053 stop=resolved turns=1 resolved=True cost=$0.0007 116s
+  pulled scikit-learn__scikit-learn-14983 in 29s
+  pulled scikit-learn__scikit-learn-14894 in 124s
+[64/99] scikit-learn__scikit-learn-14710 stop=max_turns turns=4 resolved=False cost=$0.0151 203s
+[65/99] scikit-learn__scikit-learn-14983 stop=resolved turns=4 resolved=True cost=$0.0127 97s
+[66/99] scikit-learn__scikit-learn-14894 stop=resolved turns=1 resolved=True cost=$0.0012 160s
+[67/99] sphinx-doc__sphinx-10435 stop=max_turns turns=4 resolved=False cost=$0.0150 48s
+  pulled sphinx-doc__sphinx-10466 in 82s
+  pulled sphinx-doc__sphinx-10614 in 66s
+[68/99] sphinx-doc__sphinx-10466 stop=resolved turns=1 resolved=True cost=$0.0005 117s
+  pulled scikit-learn__scikit-learn-25973 in 152s
+[69/99] scikit-learn__scikit-learn-25973 stop=resolved turns=1 resolved=True cost=$0.0010 189s
+  pulled sphinx-doc__sphinx-11445 in 77s
+  pulled sphinx-doc__sphinx-8459 in 51s
+[70/99] sphinx-doc__sphinx-11445 stop=resolved turns=3 resolved=True cost=$0.0080 135s
+[71/99] sphinx-doc__sphinx-10614 stop=max_turns turns=4 resolved=False cost=$0.0139 207s
+[72/99] sphinx-doc__sphinx-9230 stop=resolved turns=1 resolved=True cost=$0.0006 2s
+  pulled sphinx-doc__sphinx-9281 in 35s
+  pulled sphinx-doc__sphinx-9258 in 36s
+[73/99] sphinx-doc__sphinx-8459 stop=max_turns turns=4 resolved=False cost=$0.0118 143s
+  pulled sphinx-doc__sphinx-9658 in 9s
+[74/99] sphinx-doc__sphinx-9658 stop=resolved turns=1 resolved=True cost=$0.0009 34s
+[75/99] sphinx-doc__sphinx-9281 stop=resolved turns=3 resolved=True cost=$0.0073 130s
+[76/99] sphinx-doc__sphinx-9258 stop=max_turns turns=4 resolved=False cost=$0.0150 134s
+[77/99] sphinx-doc__sphinx-9698 stop=max_turns turns=4 resolved=False cost=$0.0171 56s
+[78/99] sympy__sympy-12481 stop=resolved turns=4 resolved=True cost=$0.0124 39s
+[79/99] sympy__sympy-13480 stop=resolved turns=1 resolved=True cost=$0.0006 2s
+  pulled sphinx-doc__sphinx-9711 in 102s
+  pulled sympy__sympy-13551 in 41s
+  pulled sympy__sympy-11618 in 96s
+[80/99] sphinx-doc__sphinx-9711 stop=resolved turns=1 resolved=True cost=$0.0003 135s
+[81/99] sympy__sympy-13551 stop=stopped_f2p_pass_regressed turns=1 resolved=False cost=$0.0009 77s
+[82/99] sympy__sympy-14531 stop=resolved turns=1 resolved=True cost=$0.0011 3s
+[83/99] sympy__sympy-14711 stop=resolved turns=1 resolved=True cost=$0.0011 3s
+  pulled sympy__sympy-13798 in 31s
+[84/99] sympy__sympy-11618 stop=resolved turns=3 resolved=True cost=$0.0065 169s
+  pulled sympy__sympy-15875 in 31s
+  pulled sympy__sympy-15017 in 20s
+[85/99] sympy__sympy-15017 stop=max_turns turns=4 resolved=False cost=$0.0104 81s
+[86/99] sympy__sympy-13798 stop=max_turns turns=4 resolved=False cost=$0.0144 125s
+[87/99] sympy__sympy-16450 stop=max_turns turns=4 resolved=False cost=$0.0151 48s
+[88/99] sympy__sympy-15875 stop=max_turns turns=4 resolved=False cost=$0.0151 110s
+[89/99] sympy__sympy-16792 stop=max_turns turns=4 resolved=False cost=$0.0124 37s
+  pulled sympy__sympy-17139 in 89s
+  pulled sympy__sympy-18698 in 74s
+  pulled sympy__sympy-17655 in 97s
+[90/99] sympy__sympy-17655 stop=resolved turns=1 resolved=True cost=$0.0009 137s
+[91/99] sympy__sympy-18698 stop=max_turns turns=4 resolved=False cost=$0.0169 166s
+  pulled sympy__sympy-19346 in 64s
+  pulled sympy__sympy-21596 in 13s
+[92/99] sympy__sympy-17139 stop=resolved turns=1 resolved=True cost=$0.0009 214s
+[93/99] sympy__sympy-22914 stop=resolved turns=1 resolved=True cost=$0.0007 2s
+[94/99] sympy__sympy-19346 stop=resolved turns=1 resolved=True cost=$0.0007 92s
+  pulled sympy__sympy-23262 in 72s
+  pulled sympy__sympy-24066 in 26s
+[95/99] sympy__sympy-21596 stop=max_turns turns=4 resolved=False cost=$0.0156 131s
+[96/99] sympy__sympy-24066 stop=resolved turns=3 resolved=True cost=$0.0086 85s
+[97/99] sympy__sympy-23262 stop=resolved turns=1 resolved=True cost=$0.0009 103s
+[98/99] sympy__sympy-24539 stop=max_turns turns=4 resolved=False cost=$0.0145 45s
+  pulled sympy__sympy-24443 in 66s
+[99/99] sympy__sympy-24443 stop=max_turns turns=4 resolved=False cost=$0.0148 140s
+all done

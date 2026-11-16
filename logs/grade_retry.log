@@ -1,0 +1,14 @@
+qwen: 300 outputs for 100 tasks
+apply_plain.py -> Qwen3.5-9B {'applied': 72, 'no_match': 23, 'no_blocks': 5} | applied but syntax-broken: 2 
+apply_argus.py -> Qwen3.5-9B {'applied': 82, 'refused': 13, 'no_blocks': 5} | max tier among applied: {1: 71, 3: 10, 2: 1} 
+gemma26: 297 outputs for 100 tasks
+apply_plain.py -> gemma-4-26b-a4b-it {'applied': 146, 'no_match': 145, 'ambiguous': 5, 'no_blocks': 1} | applied but syntax-broken: 1 
+apply_argus.py -> gemma-4-26b-a4b-it {'applied': 182, 'refused': 112, 'path_refused': 2, 'no_blocks': 1} | max tier among applied: {1: 145, 3: 36, 2: 1} 
+338 distinct applied patches over 95 tasks; 4 to grade; groups ['qwen', 'gemma26']
+  pulled scikit-learn__scikit-learn-13496 in 92s
+  [1/4] scikit-learn__scikit-learn-13496 9613c1e169 applied=True resolved=False
+  [2/4] scikit-learn__scikit-learn-13496 f095c20927 applied=True resolved=False
+  [3/4] scikit-learn__scikit-learn-13496 713113f69c applied=True resolved=True
+  pulled sympy__sympy-13798 in 65s
+  [4/4] sympy__sympy-13798 e333cea645 applied=True resolved=False
+grading complete

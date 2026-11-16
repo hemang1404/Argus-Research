@@ -1,0 +1,290 @@
+17 keys; 200 tasks to run (0 done); out=C:\coding\Argus-pilot50\data\blind; prompt_hash=56e5b02fa8ed
+  pulled astropy__astropy-13236 in 63s
+  pulled astropy__astropy-13977 in 70s
+  pulled astropy__astropy-13453 in 102s
+[1/200] astropy__astropy-13236 gpt-oss-20b: R continue n=3, F accepted_resolved n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1940s
+  pulled astropy__astropy-14309 in 10s
+[2/200] astropy__astropy-14309 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 197s
+  pulled astropy__astropy-14365 in 43s
+[3/200] astropy__astropy-13453 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F api_error n=2 2477s
+  pulled astropy__astropy-14539 in 17s
+[4/200] astropy__astropy-14365 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 382s
+  pulled astropy__astropy-14598 in 14s
+[5/200] astropy__astropy-14539 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 212s
+  pulled astropy__astropy-7166 in 60s
+[6/200] astropy__astropy-7166 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 177s
+  pulled astropy__astropy-7336 in 73s
+[7/200] astropy__astropy-7336 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 140s
+  pulled astropy__astropy-7606 in 32s
+[8/200] astropy__astropy-13977 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F api_error n=3 3166s
+  pulled astropy__astropy-7671 in 11s
+[9/200] astropy__astropy-14598 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 925s
+[10/200] astropy__astropy-7606 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F continue n=3 446s
+  pulled django__django-10914 in 52s
+  pulled django__django-11095 in 49s
+[11/200] django__django-11095 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 112s
+  pulled django__django-11163 in 57s
+[12/200] django__django-11163 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 120s
+[13/200] astropy__astropy-7671 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F continue n=3 533s
+  pulled django__django-11239 in 44s
+  pulled django__django-11265 in 35s
+[14/200] django__django-10914 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 563s
+  pulled django__django-11433 in 11s
+[15/200] django__django-11265 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 331s
+  pulled django__django-11477 in 11s
+[16/200] django__django-11239 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 742s
+  pulled django__django-11551 in 10s
+[17/200] django__django-11477 gpt-oss-20b: R accepted_resolved n=3, F accepted_resolved n=3 | gpt-oss-120b: R continue n=3, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 470s
+  pulled django__django-11603 in 12s
+[18/200] django__django-11551 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 82s
+[19/200] django__django-11433 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 545s
+[20/200] django__django-11603 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 76s
+  pulled django__django-11951 in 22s
+  pulled django__django-11815 in 65s
+  pulled django__django-12193 in 17s
+[21/200] django__django-11815 gpt-oss-20b: R continue n=3, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 181s
+  pulled django__django-12262 in 12s
+[22/200] django__django-12193 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=2, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 143s
+  pulled django__django-12273 in 11s
+[23/200] django__django-12262 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F accepted_resolved n=2 123s
+  pulled django__django-12419 in 12s
+[24/200] django__django-12419 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 312s
+  pulled django__django-12663 in 13s
+[25/200] django__django-11951 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 596s
+  pulled django__django-12754 in 35s
+[26/200] django__django-12273 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 591s
+  pulled django__django-13023 in 13s
+[27/200] django__django-12663 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 441s
+  pulled django__django-13089 in 12s
+[28/200] django__django-13089 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 215s
+  pulled django__django-13128 in 11s
+[29/200] django__django-13128 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 136s
+  pulled django__django-13297 in 13s
+[30/200] django__django-13297 gpt-oss-20b: R accepted_regressed n=2, F accepted_regressed n=3 | gpt-oss-120b: R accepted_regressed n=1, F accepted_regressed n=1 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=2 315s
+  pulled django__django-13315 in 72s
+[31/200] django__django-13315 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 132s
+  pulled django__django-13401 in 18s
+[32/200] django__django-12754 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=2, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1562s
+  pulled django__django-13410 in 11s
+[33/200] django__django-13410 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 67s
+  pulled django__django-13569 in 15s
+[34/200] django__django-13401 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 539s
+[35/200] django__django-13569 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 135s
+  pulled django__django-13670 in 13s
+  pulled django__django-13786 in 16s
+[36/200] django__django-13670 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 70s
+  pulled django__django-13807 in 41s
+[37/200] django__django-13786 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_regressed n=1, F accepted_regressed n=1 114s
+  pulled django__django-13837 in 38s
+[38/200] django__django-13807 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=3 711s
+  pulled django__django-13925 in 84s
+[39/200] django__django-13023 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=2, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 2519s
+  pulled django__django-13964 in 86s
+[40/200] django__django-13837 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=3, F continue n=3 869s
+  pulled django__django-14053 in 222s
+17 keys; 160 tasks to run (40 done); out=C:\coding\Argus-pilot50\data\blind; prompt_hash=56e5b02fa8ed
+[1/160] django__django-13964 gpt-oss-20b: R accepted_regressed n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_regressed n=1, F accepted_regressed n=1 77s
+  pulled django__django-14155 in 14s
+[2/160] django__django-13925 gpt-oss-20b: R accepted_resolved n=2, F continue n=3 | gpt-oss-120b: R continue n=3, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 265s
+[3/160] django__django-14053 gpt-oss-20b: R accepted_regressed n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_regressed n=1, F accepted_regressed n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F accepted_resolved n=3 286s
+  pulled django__django-14311 in 41s
+  pulled django__django-14351 in 38s
+[4/160] django__django-14311 gpt-oss-20b: R accepted_regressed n=1, F accepted_regressed n=1 | gpt-oss-120b: R accepted_regressed n=1, F accepted_regressed n=1 | gemma-4-26b-a4b-it: R accepted_regressed n=1, F accepted_regressed n=1 418s
+  pulled django__django-14404 in 20s
+[5/160] django__django-14351 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 518s
+  pulled django__django-14559 in 23s
+[6/160] django__django-14155 gpt-oss-20b: R continue n=3, F api_error n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 806s
+  pulled django__django-14855 in 19s
+[7/160] django__django-14855 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 188s
+  pulled django__django-14915 in 73s
+[8/160] django__django-14559 gpt-oss-20b: R accepted_resolved n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F continue n=3 404s
+  pulled django__django-14999 in 20s
+[9/160] django__django-14404 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=3 581s
+  pulled django__django-15022 in 91s
+[10/160] django__django-15022 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 210s
+  pulled django__django-15037 in 51s
+[11/160] django__django-15037 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 614s
+  pulled django__django-15098 in 46s
+[12/160] django__django-14999 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1080s
+  pulled django__django-15104 in 13s
+[13/160] django__django-15098 gpt-oss-20b: R continue n=3, F api_error n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 626s
+  pulled django__django-15268 in 12s
+[14/160] django__django-15104 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 885s
+  pulled django__django-15277 in 14s
+[15/160] django__django-14915 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 2580s
+  pulled django__django-15375 in 12s
+[16/160] django__django-15375 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 493s
+  pulled django__django-15499 in 11s
+[17/160] django__django-15499 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 204s
+  pulled django__django-15503 in 11s
+[18/160] django__django-15503 gpt-oss-20b: R continue n=3, F accepted_resolved n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 489s
+  pulled django__django-15525 in 12s
+[19/160] django__django-15525 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=3 754s
+  pulled django__django-15695 in 106s
+[20/160] django__django-15277 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R api_error n=2, F continue n=3 2668s
+  pulled django__django-15731 in 27s
+[21/160] django__django-15731 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 121s
+  pulled django__django-15987 in 36s
+[22/160] django__django-15987 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F accepted_resolved n=2 215s
+  pulled django__django-16139 in 24s
+[23/160] django__django-16139 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 209s
+  pulled django__django-16454 in 86s
+[24/160] django__django-15695 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1305s
+  pulled django__django-16493 in 25s
+[25/160] django__django-16493 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 92s
+[26/160] django__django-16454 gpt-oss-20b: R accepted_regressed n=1, F accepted_regressed n=1 | gpt-oss-120b: R accepted_regressed n=1, F accepted_regressed n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 590s
+  pulled django__django-16502 in 15s
+  pulled django__django-16527 in 107s
+[27/160] django__django-16527 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 190s
+  pulled django__django-16569 in 17s
+[28/160] django__django-16569 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 77s
+  pulled django__django-16612 in 32s
+[29/160] django__django-16612 gpt-oss-20b: R accepted_regressed n=1, F accepted_regressed n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 177s
+  pulled django__django-16667 in 14s
+[30/160] django__django-15268 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R api_error n=1, F api_error n=3 4819s
+  pulled django__django-16801 in 13s
+[31/160] django__django-16801 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 87s
+  pulled django__django-16901 in 21s
+[32/160] django__django-16901 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=2, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 174s
+  pulled django__django-17084 in 43s
+[33/160] django__django-16667 gpt-oss-20b: R continue n=3, F accepted_resolved n=2 | gpt-oss-120b: R continue n=3, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=2 648s
+  pulled django__django-7530 in 46s
+[34/160] django__django-7530 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 360s
+[35/160] django__django-16502 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1519s
+  pulled matplotlib__matplotlib-20826 in 225s
+  pulled matplotlib__matplotlib-20859 in 199s
+[36/160] django__django-17084 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 904s
+  pulled matplotlib__matplotlib-21568 in 89s
+[37/160] matplotlib__matplotlib-20859 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 316s
+  pulled matplotlib__matplotlib-22719 in 272s
+[38/160] matplotlib__matplotlib-22719 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 375s
+[39/160] matplotlib__matplotlib-21568 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 648s
+  pulled matplotlib__matplotlib-22865 in 193s
+  pulled matplotlib__matplotlib-22871 in 222s
+[40/160] matplotlib__matplotlib-22871 gpt-oss-20b: R accepted_regressed n=1, F accepted_regressed n=1 | gpt-oss-120b: R accepted_regressed n=1, F accepted_regressed n=1 | gemma-4-26b-a4b-it: R accepted_regressed n=1, F accepted_regressed n=1 309s
+[41/160] matplotlib__matplotlib-22865 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R grade_error n=2, F grade_error n=2 676s
+  pull failed (1) matplotlib__matplotlib-24026: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-24026: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-24026: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[42/160] matplotlib__matplotlib-24026 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (1) matplotlib__matplotlib-24149: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-24149: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-24149: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[43/160] matplotlib__matplotlib-24149 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (1) matplotlib__matplotlib-24177: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[44/160] matplotlib__matplotlib-20826 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R api_error n=2, F api_error n=2 1873s
+  pull failed (2) matplotlib__matplotlib-24177: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) matplotlib__matplotlib-24627: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-24177: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-24627: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[45/160] matplotlib__matplotlib-24177 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) matplotlib__matplotlib-24627: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) matplotlib__matplotlib-25122: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[46/160] matplotlib__matplotlib-24627 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) matplotlib__matplotlib-25122: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) matplotlib__matplotlib-25332: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-25122: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-25332: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[47/160] matplotlib__matplotlib-25122 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) matplotlib__matplotlib-25332: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) matplotlib__matplotlib-26113: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[48/160] matplotlib__matplotlib-25332 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) matplotlib__matplotlib-26113: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) matplotlib__matplotlib-26208: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-26113: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-26208: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[49/160] matplotlib__matplotlib-26113 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) matplotlib__matplotlib-26208: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) matplotlib__matplotlib-26291: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[50/160] matplotlib__matplotlib-26208 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) matplotlib__matplotlib-26291: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) matplotlib__matplotlib-26342: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-26291: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-26342: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[51/160] matplotlib__matplotlib-26291 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) matplotlib__matplotlib-26342: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) matplotlib__matplotlib-26466: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[52/160] matplotlib__matplotlib-26342 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) matplotlib__matplotlib-26466: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) mwaskom__seaborn-3069: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-26466: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) mwaskom__seaborn-3069: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[53/160] matplotlib__matplotlib-26466 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) mwaskom__seaborn-3069: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pallets__flask-5014: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[54/160] mwaskom__seaborn-3069 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) pallets__flask-5014: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) psf__requests-1142: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) pallets__flask-5014: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) psf__requests-1142: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[55/160] pallets__flask-5014 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) psf__requests-1142: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) psf__requests-1724: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[56/160] psf__requests-1142 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) psf__requests-1724: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) psf__requests-1921: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) psf__requests-1724: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) psf__requests-1921: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[57/160] psf__requests-1724 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) psf__requests-1921: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) psf__requests-5414: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[58/160] psf__requests-1921 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) psf__requests-5414: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-2905: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) psf__requests-5414: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) pydata__xarray-2905: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[59/160] psf__requests-5414 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) pydata__xarray-2905: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-3677: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[60/160] pydata__xarray-2905 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) pydata__xarray-3677: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-4075: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) pydata__xarray-3677: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) pydata__xarray-4075: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[61/160] pydata__xarray-3677 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) pydata__xarray-4075: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-4629: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[62/160] pydata__xarray-4075 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) pydata__xarray-4629: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-4687: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) pydata__xarray-4629: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) pydata__xarray-4687: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[63/160] pydata__xarray-4629 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) pydata__xarray-4687: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-4695: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[64/160] pydata__xarray-4687 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) pydata__xarray-4695: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-6461: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) pydata__xarray-4695: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) pydata__xarray-6461: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[65/160] pydata__xarray-4695 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) pydata__xarray-6461: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-6599: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[66/160] pydata__xarray-6461 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) pydata__xarray-6599: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-7229: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) pydata__xarray-6599: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) pydata__xarray-7229: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[67/160] pydata__xarray-6599 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) pydata__xarray-7229: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-7233: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[68/160] pydata__xarray-7229 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) pydata__xarray-7233: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pylint-dev__pylint-4970: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) pydata__xarray-7233: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) pylint-dev__pylint-4970: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[69/160] pydata__xarray-7233 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) pylint-dev__pylint-4970: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pylint-dev__pylint-7080: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[70/160] pylint-dev__pylint-4970 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) pylint-dev__pylint-7080: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pytest-dev__pytest-10356: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) pylint-dev__pylint-7080: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) pytest-dev__pytest-10356: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[71/160] pylint-dev__pylint-7080 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) pytest-dev__pytest-10356: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pytest-dev__pytest-5787: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[72/160] pytest-dev__pytest-10356 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) pytest-dev__pytest-5787: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pytest-dev__pytest-6202: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) pytest-dev__pytest-5787: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do

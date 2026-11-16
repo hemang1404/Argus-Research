@@ -1,0 +1,602 @@
+17 keys; 200 tasks to run (0 done); out=C:\coding\Argus-pilot50\data\blind; prompt_hash=56e5b02fa8ed
+  pulled astropy__astropy-13236 in 63s
+  pulled astropy__astropy-13977 in 70s
+  pulled astropy__astropy-13453 in 102s
+[1/200] astropy__astropy-13236 gpt-oss-20b: R continue n=3, F accepted_resolved n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1940s
+  pulled astropy__astropy-14309 in 10s
+[2/200] astropy__astropy-14309 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 197s
+  pulled astropy__astropy-14365 in 43s
+[3/200] astropy__astropy-13453 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F api_error n=2 2477s
+  pulled astropy__astropy-14539 in 17s
+[4/200] astropy__astropy-14365 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 382s
+  pulled astropy__astropy-14598 in 14s
+[5/200] astropy__astropy-14539 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 212s
+  pulled astropy__astropy-7166 in 60s
+[6/200] astropy__astropy-7166 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 177s
+  pulled astropy__astropy-7336 in 73s
+[7/200] astropy__astropy-7336 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 140s
+  pulled astropy__astropy-7606 in 32s
+[8/200] astropy__astropy-13977 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F api_error n=3 3166s
+  pulled astropy__astropy-7671 in 11s
+[9/200] astropy__astropy-14598 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 925s
+[10/200] astropy__astropy-7606 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F continue n=3 446s
+  pulled django__django-10914 in 52s
+  pulled django__django-11095 in 49s
+[11/200] django__django-11095 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 112s
+  pulled django__django-11163 in 57s
+[12/200] django__django-11163 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 120s
+[13/200] astropy__astropy-7671 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F continue n=3 533s
+  pulled django__django-11239 in 44s
+  pulled django__django-11265 in 35s
+[14/200] django__django-10914 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 563s
+  pulled django__django-11433 in 11s
+[15/200] django__django-11265 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 331s
+  pulled django__django-11477 in 11s
+[16/200] django__django-11239 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 742s
+  pulled django__django-11551 in 10s
+[17/200] django__django-11477 gpt-oss-20b: R accepted_resolved n=3, F accepted_resolved n=3 | gpt-oss-120b: R continue n=3, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 470s
+  pulled django__django-11603 in 12s
+[18/200] django__django-11551 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 82s
+[19/200] django__django-11433 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 545s
+[20/200] django__django-11603 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 76s
+  pulled django__django-11951 in 22s
+  pulled django__django-11815 in 65s
+  pulled django__django-12193 in 17s
+[21/200] django__django-11815 gpt-oss-20b: R continue n=3, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 181s
+  pulled django__django-12262 in 12s
+[22/200] django__django-12193 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=2, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 143s
+  pulled django__django-12273 in 11s
+[23/200] django__django-12262 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F accepted_resolved n=2 123s
+  pulled django__django-12419 in 12s
+[24/200] django__django-12419 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 312s
+  pulled django__django-12663 in 13s
+[25/200] django__django-11951 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 596s
+  pulled django__django-12754 in 35s
+[26/200] django__django-12273 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 591s
+  pulled django__django-13023 in 13s
+[27/200] django__django-12663 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 441s
+  pulled django__django-13089 in 12s
+[28/200] django__django-13089 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 215s
+  pulled django__django-13128 in 11s
+[29/200] django__django-13128 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 136s
+  pulled django__django-13297 in 13s
+[30/200] django__django-13297 gpt-oss-20b: R accepted_regressed n=2, F accepted_regressed n=3 | gpt-oss-120b: R accepted_regressed n=1, F accepted_regressed n=1 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=2 315s
+  pulled django__django-13315 in 72s
+[31/200] django__django-13315 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 132s
+  pulled django__django-13401 in 18s
+[32/200] django__django-12754 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=2, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1562s
+  pulled django__django-13410 in 11s
+[33/200] django__django-13410 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 67s
+  pulled django__django-13569 in 15s
+[34/200] django__django-13401 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 539s
+[35/200] django__django-13569 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 135s
+  pulled django__django-13670 in 13s
+  pulled django__django-13786 in 16s
+[36/200] django__django-13670 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 70s
+  pulled django__django-13807 in 41s
+[37/200] django__django-13786 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_regressed n=1, F accepted_regressed n=1 114s
+  pulled django__django-13837 in 38s
+[38/200] django__django-13807 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=3 711s
+  pulled django__django-13925 in 84s
+[39/200] django__django-13023 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=2, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 2519s
+  pulled django__django-13964 in 86s
+[40/200] django__django-13837 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=3, F continue n=3 869s
+  pulled django__django-14053 in 222s
+17 keys; 160 tasks to run (40 done); out=C:\coding\Argus-pilot50\data\blind; prompt_hash=56e5b02fa8ed
+[1/160] django__django-13964 gpt-oss-20b: R accepted_regressed n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_regressed n=1, F accepted_regressed n=1 77s
+  pulled django__django-14155 in 14s
+[2/160] django__django-13925 gpt-oss-20b: R accepted_resolved n=2, F continue n=3 | gpt-oss-120b: R continue n=3, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 265s
+[3/160] django__django-14053 gpt-oss-20b: R accepted_regressed n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_regressed n=1, F accepted_regressed n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F accepted_resolved n=3 286s
+  pulled django__django-14311 in 41s
+  pulled django__django-14351 in 38s
+[4/160] django__django-14311 gpt-oss-20b: R accepted_regressed n=1, F accepted_regressed n=1 | gpt-oss-120b: R accepted_regressed n=1, F accepted_regressed n=1 | gemma-4-26b-a4b-it: R accepted_regressed n=1, F accepted_regressed n=1 418s
+  pulled django__django-14404 in 20s
+[5/160] django__django-14351 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 518s
+  pulled django__django-14559 in 23s
+[6/160] django__django-14155 gpt-oss-20b: R continue n=3, F api_error n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 806s
+  pulled django__django-14855 in 19s
+[7/160] django__django-14855 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 188s
+  pulled django__django-14915 in 73s
+[8/160] django__django-14559 gpt-oss-20b: R accepted_resolved n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F continue n=3 404s
+  pulled django__django-14999 in 20s
+[9/160] django__django-14404 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=3 581s
+  pulled django__django-15022 in 91s
+[10/160] django__django-15022 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 210s
+  pulled django__django-15037 in 51s
+[11/160] django__django-15037 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 614s
+  pulled django__django-15098 in 46s
+[12/160] django__django-14999 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1080s
+  pulled django__django-15104 in 13s
+[13/160] django__django-15098 gpt-oss-20b: R continue n=3, F api_error n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 626s
+  pulled django__django-15268 in 12s
+[14/160] django__django-15104 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 885s
+  pulled django__django-15277 in 14s
+[15/160] django__django-14915 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 2580s
+  pulled django__django-15375 in 12s
+[16/160] django__django-15375 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 493s
+  pulled django__django-15499 in 11s
+[17/160] django__django-15499 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 204s
+  pulled django__django-15503 in 11s
+[18/160] django__django-15503 gpt-oss-20b: R continue n=3, F accepted_resolved n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 489s
+  pulled django__django-15525 in 12s
+[19/160] django__django-15525 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=3 754s
+  pulled django__django-15695 in 106s
+[20/160] django__django-15277 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R api_error n=2, F continue n=3 2668s
+  pulled django__django-15731 in 27s
+[21/160] django__django-15731 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 121s
+  pulled django__django-15987 in 36s
+[22/160] django__django-15987 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F accepted_resolved n=2 215s
+  pulled django__django-16139 in 24s
+[23/160] django__django-16139 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 209s
+  pulled django__django-16454 in 86s
+[24/160] django__django-15695 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1305s
+  pulled django__django-16493 in 25s
+[25/160] django__django-16493 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 92s
+[26/160] django__django-16454 gpt-oss-20b: R accepted_regressed n=1, F accepted_regressed n=1 | gpt-oss-120b: R accepted_regressed n=1, F accepted_regressed n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 590s
+  pulled django__django-16502 in 15s
+  pulled django__django-16527 in 107s
+[27/160] django__django-16527 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 190s
+  pulled django__django-16569 in 17s
+[28/160] django__django-16569 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 77s
+  pulled django__django-16612 in 32s
+[29/160] django__django-16612 gpt-oss-20b: R accepted_regressed n=1, F accepted_regressed n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 177s
+  pulled django__django-16667 in 14s
+[30/160] django__django-15268 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R api_error n=1, F api_error n=3 4819s
+  pulled django__django-16801 in 13s
+[31/160] django__django-16801 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 87s
+  pulled django__django-16901 in 21s
+[32/160] django__django-16901 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=2, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 174s
+  pulled django__django-17084 in 43s
+[33/160] django__django-16667 gpt-oss-20b: R continue n=3, F accepted_resolved n=2 | gpt-oss-120b: R continue n=3, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=2 648s
+  pulled django__django-7530 in 46s
+[34/160] django__django-7530 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 360s
+[35/160] django__django-16502 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1519s
+  pulled matplotlib__matplotlib-20826 in 225s
+  pulled matplotlib__matplotlib-20859 in 199s
+[36/160] django__django-17084 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 904s
+  pulled matplotlib__matplotlib-21568 in 89s
+[37/160] matplotlib__matplotlib-20859 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 316s
+  pulled matplotlib__matplotlib-22719 in 272s
+[38/160] matplotlib__matplotlib-22719 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 375s
+[39/160] matplotlib__matplotlib-21568 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 648s
+  pulled matplotlib__matplotlib-22865 in 193s
+  pulled matplotlib__matplotlib-22871 in 222s
+[40/160] matplotlib__matplotlib-22871 gpt-oss-20b: R accepted_regressed n=1, F accepted_regressed n=1 | gpt-oss-120b: R accepted_regressed n=1, F accepted_regressed n=1 | gemma-4-26b-a4b-it: R accepted_regressed n=1, F accepted_regressed n=1 309s
+[41/160] matplotlib__matplotlib-22865 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R grade_error n=2, F grade_error n=2 676s
+  pull failed (1) matplotlib__matplotlib-24026: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-24026: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-24026: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[42/160] matplotlib__matplotlib-24026 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (1) matplotlib__matplotlib-24149: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-24149: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-24149: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[43/160] matplotlib__matplotlib-24149 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (1) matplotlib__matplotlib-24177: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[44/160] matplotlib__matplotlib-20826 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R api_error n=2, F api_error n=2 1873s
+  pull failed (2) matplotlib__matplotlib-24177: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) matplotlib__matplotlib-24627: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-24177: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-24627: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[45/160] matplotlib__matplotlib-24177 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) matplotlib__matplotlib-24627: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) matplotlib__matplotlib-25122: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[46/160] matplotlib__matplotlib-24627 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) matplotlib__matplotlib-25122: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) matplotlib__matplotlib-25332: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-25122: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-25332: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[47/160] matplotlib__matplotlib-25122 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) matplotlib__matplotlib-25332: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) matplotlib__matplotlib-26113: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[48/160] matplotlib__matplotlib-25332 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) matplotlib__matplotlib-26113: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) matplotlib__matplotlib-26208: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-26113: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-26208: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[49/160] matplotlib__matplotlib-26113 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) matplotlib__matplotlib-26208: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) matplotlib__matplotlib-26291: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[50/160] matplotlib__matplotlib-26208 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) matplotlib__matplotlib-26291: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) matplotlib__matplotlib-26342: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-26291: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) matplotlib__matplotlib-26342: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[51/160] matplotlib__matplotlib-26291 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) matplotlib__matplotlib-26342: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) matplotlib__matplotlib-26466: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[52/160] matplotlib__matplotlib-26342 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) matplotlib__matplotlib-26466: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) mwaskom__seaborn-3069: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) matplotlib__matplotlib-26466: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) mwaskom__seaborn-3069: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[53/160] matplotlib__matplotlib-26466 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) mwaskom__seaborn-3069: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pallets__flask-5014: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[54/160] mwaskom__seaborn-3069 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) pallets__flask-5014: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) psf__requests-1142: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) pallets__flask-5014: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) psf__requests-1142: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[55/160] pallets__flask-5014 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) psf__requests-1142: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) psf__requests-1724: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[56/160] psf__requests-1142 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) psf__requests-1724: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) psf__requests-1921: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) psf__requests-1724: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) psf__requests-1921: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[57/160] psf__requests-1724 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) psf__requests-1921: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) psf__requests-5414: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[58/160] psf__requests-1921 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) psf__requests-5414: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-2905: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) psf__requests-5414: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) pydata__xarray-2905: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[59/160] psf__requests-5414 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) pydata__xarray-2905: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-3677: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[60/160] pydata__xarray-2905 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) pydata__xarray-3677: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-4075: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) pydata__xarray-3677: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) pydata__xarray-4075: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[61/160] pydata__xarray-3677 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) pydata__xarray-4075: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-4629: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[62/160] pydata__xarray-4075 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) pydata__xarray-4629: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-4687: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) pydata__xarray-4629: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) pydata__xarray-4687: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[63/160] pydata__xarray-4629 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) pydata__xarray-4687: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-4695: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[64/160] pydata__xarray-4687 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) pydata__xarray-4695: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-6461: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) pydata__xarray-4695: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) pydata__xarray-6461: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[65/160] pydata__xarray-4695 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) pydata__xarray-6461: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-6599: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[66/160] pydata__xarray-6461 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) pydata__xarray-6599: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-7229: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) pydata__xarray-6599: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) pydata__xarray-7229: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[67/160] pydata__xarray-6599 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) pydata__xarray-7229: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pydata__xarray-7233: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[68/160] pydata__xarray-7229 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) pydata__xarray-7233: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pylint-dev__pylint-4970: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) pydata__xarray-7233: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) pylint-dev__pylint-4970: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[69/160] pydata__xarray-7233 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) pylint-dev__pylint-4970: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pylint-dev__pylint-7080: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[70/160] pylint-dev__pylint-4970 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) pylint-dev__pylint-7080: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pytest-dev__pytest-10356: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) pylint-dev__pylint-7080: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (2) pytest-dev__pytest-10356: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[71/160] pylint-dev__pylint-7080 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (3) pytest-dev__pytest-10356: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pytest-dev__pytest-5787: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+[72/160] pytest-dev__pytest-10356 IMAGE PULL FAILED (will be retried on the next run)
+  pull failed (2) pytest-dev__pytest-5787: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (1) pytest-dev__pytest-6202: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+  pull failed (3) pytest-dev__pytest-5787: request returned 500 Internal Server Error for API route and version http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.52/images/create?fromImage=do
+17 keys; 118 tasks to run (82 done); out=C:\coding\Argus-pilot50\data\blind; prompt_hash=56e5b02fa8ed
+  pulled matplotlib__matplotlib-23299 in 492s
+  pulled matplotlib__matplotlib-24026 in 758s
+  pulled matplotlib__matplotlib-24149 in 758s
+[1/118] matplotlib__matplotlib-24149 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 1022s
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+[2/118] matplotlib__matplotlib-24026 gpt-oss-20b: R accepted_resolved n=2, F continue n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=3, F continue n=3 1299s
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+[3/118] matplotlib__matplotlib-23299 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1512s
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  low disk (9.2 GB), waiting
+  pulled matplotlib__matplotlib-25122 in 500s
+  pulled matplotlib__matplotlib-24177 in 571s
+  pulled matplotlib__matplotlib-24627 in 596s
+[4/118] matplotlib__matplotlib-25122 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 2276s
+17 keys; 114 tasks to run (86 done); out=C:\coding\Argus-pilot50\data\blind; prompt_hash=56e5b02fa8ed
+  pulled matplotlib__matplotlib-25332 in 379s
+  pulled matplotlib__matplotlib-24627 in 401s
+  pulled matplotlib__matplotlib-24177 in 402s
+[1/114] matplotlib__matplotlib-24627 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1339s
+[2/114] matplotlib__matplotlib-24177 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F api_error n=2 1476s
+[3/114] matplotlib__matplotlib-25332 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1491s
+  pulled matplotlib__matplotlib-26113 in 302s
+  pulled matplotlib__matplotlib-26208 in 180s
+  pulled matplotlib__matplotlib-26291 in 169s
+[4/114] matplotlib__matplotlib-26291 gpt-oss-20b: R continue n=3, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1257s
+  pulled matplotlib__matplotlib-26342 in 176s
+[5/114] matplotlib__matplotlib-26113 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1624s
+  pulled matplotlib__matplotlib-26466 in 92s
+[6/114] matplotlib__matplotlib-26342 gpt-oss-20b: R continue n=3, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 766s
+  pulled mwaskom__seaborn-3069 in 55s
+[7/114] matplotlib__matplotlib-26466 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 699s
+  pulled pallets__flask-5014 in 46s
+[8/114] pallets__flask-5014 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 101s
+  pulled psf__requests-1142 in 31s
+[9/114] psf__requests-1142 gpt-oss-20b: R accepted_resolved n=3, F accepted_resolved n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F accepted_resolved n=2 100s
+  pulled psf__requests-1724 in 32s
+[10/114] psf__requests-1724 EXCLUDED: gold_failed
+[11/114] matplotlib__matplotlib-26208 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F api_error n=3 2496s
+  pulled psf__requests-1921 in 38s
+  pulled psf__requests-5414 in 41s
+[12/114] psf__requests-1921 EXCLUDED: gold_failed
+  pulled pydata__xarray-2905 in 120s
+[13/114] mwaskom__seaborn-3069 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 915s
+  pulled pydata__xarray-3677 in 9s
+[14/114] pydata__xarray-3677 gpt-oss-20b: R continue n=3, F accepted_resolved n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F accepted_resolved n=3 670s
+  pulled pydata__xarray-4075 in 10s
+[15/114] pydata__xarray-2905 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1144s
+  pulled pydata__xarray-4629 in 7s
+[16/114] pydata__xarray-4075 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F continue n=3 432s
+  pulled pydata__xarray-4687 in 8s
+[17/114] psf__requests-5414 gpt-oss-20b: R accepted_regressed n=2, F accepted_resolved n=2 | gpt-oss-120b: R continue n=3, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1858s
+  pulled pydata__xarray-4695 in 129s
+[18/114] pydata__xarray-4629 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=3 | gpt-oss-120b: R accepted_resolved n=2, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1619s
+  pulled pydata__xarray-6461 in 114s
+[19/114] pydata__xarray-6461 gpt-oss-20b: R continue n=3, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=2 527s
+  pulled pydata__xarray-6599 in 119s
+[20/114] pydata__xarray-4695 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 2446s
+  pulled pydata__xarray-7229 in 108s
+[21/114] pydata__xarray-4687 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R api_error n=1, F api_error n=2 3841s
+  pulled pydata__xarray-7233 in 104s
+[22/114] pydata__xarray-7233 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 171s
+  pulled pylint-dev__pylint-4970 in 36s
+[23/114] pydata__xarray-7229 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1400s
+  pulled pylint-dev__pylint-7080 in 64s
+[24/114] pylint-dev__pylint-4970 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 314s
+  pulled pytest-dev__pytest-10356 in 30s
+[25/114] pylint-dev__pylint-7080 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=3 | gpt-oss-120b: R continue n=3, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 386s
+  pulled pytest-dev__pytest-5787 in 34s
+[26/114] pytest-dev__pytest-10356 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 273s
+  pulled pytest-dev__pytest-6202 in 6s
+[27/114] pydata__xarray-6599 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R api_error n=1, F api_error n=2 2888s
+  pulled pytest-dev__pytest-7205 in 35s
+[28/114] pytest-dev__pytest-7205 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 93s
+  pulled pytest-dev__pytest-7236 in 36s
+[29/114] pytest-dev__pytest-7236 gpt-oss-20b: R continue n=3, F accepted_resolved n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_regressed n=1, F accepted_regressed n=1 137s
+  pulled pytest-dev__pytest-7324 in 33s
+[30/114] pytest-dev__pytest-7324 gpt-oss-20b: R continue n=3, F accepted_resolved n=2 | gpt-oss-120b: R continue n=3, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 593s
+  pulled pytest-dev__pytest-7432 in 67s
+[31/114] pytest-dev__pytest-7432 gpt-oss-20b: R continue n=3, F accepted_resolved n=3 | gpt-oss-120b: R accepted_regressed n=1, F accepted_regressed n=1 | gemma-4-26b-a4b-it: R accepted_regressed n=1, F accepted_regressed n=1 165s
+[32/114] pytest-dev__pytest-5787 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1176s
+  pulled pytest-dev__pytest-7571 in 64s
+  pulled pytest-dev__pytest-7490 in 74s
+[33/114] pytest-dev__pytest-7571 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 153s
+  pulled pytest-dev__pytest-7982 in 35s
+[34/114] pytest-dev__pytest-7982 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 92s
+  pulled scikit-learn__scikit-learn-10908 in 70s
+[35/114] scikit-learn__scikit-learn-10908 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=2, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 155s
+  pulled scikit-learn__scikit-learn-11310 in 65s
+[36/114] pytest-dev__pytest-7490 gpt-oss-20b: R accepted_resolved n=3, F accepted_regressed n=2 | gpt-oss-120b: R accepted_regressed n=2, F continue n=3 | gemma-4-26b-a4b-it: R accepted_regressed n=3, F accepted_regressed n=3 1083s
+[37/114] pytest-dev__pytest-6202 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 2176s
+  pulled scikit-learn__scikit-learn-12585 in 15s
+  pulled scikit-learn__scikit-learn-13124 in 16s
+[38/114] scikit-learn__scikit-learn-12585 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 70s
+  pulled scikit-learn__scikit-learn-13135 in 13s
+[39/114] scikit-learn__scikit-learn-13135 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=3, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 116s
+  pulled scikit-learn__scikit-learn-13142 in 91s
+[40/114] scikit-learn__scikit-learn-13142 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=2 259s
+  pulled scikit-learn__scikit-learn-13328 in 12s
+[41/114] scikit-learn__scikit-learn-13328 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 68s
+  pulled scikit-learn__scikit-learn-13439 in 84s
+[42/114] scikit-learn__scikit-learn-13439 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 146s
+  pulled scikit-learn__scikit-learn-13779 in 89s
+[43/114] scikit-learn__scikit-learn-13779 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 147s
+  pulled scikit-learn__scikit-learn-14141 in 65s
+[44/114] scikit-learn__scikit-learn-14141 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 124s
+  pulled scikit-learn__scikit-learn-14496 in 67s
+[45/114] scikit-learn__scikit-learn-14496 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=3 210s
+  pulled scikit-learn__scikit-learn-14629 in 68s
+[46/114] scikit-learn__scikit-learn-14629 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_regressed n=1, F accepted_regressed n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 160s
+  pulled scikit-learn__scikit-learn-15100 in 66s
+[47/114] scikit-learn__scikit-learn-15100 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 127s
+  pulled scikit-learn__scikit-learn-25232 in 96s
+[48/114] scikit-learn__scikit-learn-13124 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1823s
+  pulled scikit-learn__scikit-learn-25931 in 17s
+[49/114] scikit-learn__scikit-learn-25931 gpt-oss-20b: R accepted_regressed n=1, F accepted_regressed n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 125s
+  pulled scikit-learn__scikit-learn-26194 in 22s
+[50/114] scikit-learn__scikit-learn-25232 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 941s
+  pulled scikit-learn__scikit-learn-26323 in 13s
+[51/114] scikit-learn__scikit-learn-26323 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 764s
+  pulled scikit-learn__scikit-learn-9288 in 66s
+[52/114] scikit-learn__scikit-learn-11310 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R api_error n=1, F api_error n=3 3882s
+  pulled sphinx-doc__sphinx-10323 in 44s
+[53/114] scikit-learn__scikit-learn-9288 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 180s
+  pulled sphinx-doc__sphinx-10449 in 37s
+[54/114] sphinx-doc__sphinx-10323 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=2, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 155s
+  pulled sphinx-doc__sphinx-11510 in 40s
+[55/114] scikit-learn__scikit-learn-26194 gpt-oss-20b: R continue n=3, F accepted_resolved n=3 | gpt-oss-120b: R continue n=3, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1542s
+  pulled sphinx-doc__sphinx-7440 in 36s
+[56/114] sphinx-doc__sphinx-10449 gpt-oss-20b: R accepted_resolved n=2, F continue n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=3, F continue n=3 495s
+  pulled sphinx-doc__sphinx-7454 in 8s
+[57/114] sphinx-doc__sphinx-7440 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F accepted_resolved n=3 484s
+  pulled sphinx-doc__sphinx-7748 in 8s
+[58/114] sphinx-doc__sphinx-7454 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 886s
+  pulled sphinx-doc__sphinx-7757 in 9s
+[59/114] sphinx-doc__sphinx-7748 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F api_error n=2 1234s
+  pulled sphinx-doc__sphinx-7910 in 11s
+[60/114] sphinx-doc__sphinx-7757 gpt-oss-20b: R continue n=3, F accepted_resolved n=2 | gpt-oss-120b: R continue n=3, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 525s
+  pulled sphinx-doc__sphinx-7985 in 8s
+[61/114] sphinx-doc__sphinx-7910 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 60s
+  pulled sphinx-doc__sphinx-8035 in 37s
+[62/114] sphinx-doc__sphinx-8035 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_regressed n=2, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 412s
+  pulled sphinx-doc__sphinx-8056 in 8s
+[63/114] sphinx-doc__sphinx-11510 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F api_error n=3 2491s
+  pulled sphinx-doc__sphinx-8269 in 8s
+[64/114] sphinx-doc__sphinx-8269 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 62s
+  pulled sphinx-doc__sphinx-8475 in 39s
+[65/114] sphinx-doc__sphinx-8475 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=2, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 98s
+[66/114] sphinx-doc__sphinx-7985 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 820s
+  pulled sphinx-doc__sphinx-8595 in 72s
+  pulled sphinx-doc__sphinx-8621 in 49s
+[67/114] sphinx-doc__sphinx-8621 gpt-oss-20b: R continue n=3, F accepted_resolved n=2 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 497s
+  pulled sphinx-doc__sphinx-8638 in 38s
+[68/114] sphinx-doc__sphinx-8638 gpt-oss-20b: R continue n=3, F accepted_resolved n=2 | gpt-oss-120b: R continue n=3, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 195s
+  pulled sphinx-doc__sphinx-8721 in 9s
+[69/114] sphinx-doc__sphinx-8595 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 818s
+[70/114] sphinx-doc__sphinx-8721 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 99s
+  pulled sphinx-doc__sphinx-9320 in 41s
+  pulled sphinx-doc__sphinx-9591 in 32s
+[71/114] sphinx-doc__sphinx-9320 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 103s
+  pulled sphinx-doc__sphinx-9602 in 7s
+[72/114] sphinx-doc__sphinx-8056 gpt-oss-20b: R continue n=3, F accepted_resolved n=2 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F api_error n=2 1469s
+  pulled sphinx-doc__sphinx-9673 in 8s
+[73/114] sphinx-doc__sphinx-9673 gpt-oss-20b: R continue n=3, F accepted_resolved n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 96s
+[74/114] sphinx-doc__sphinx-9602 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F accepted_regressed n=2 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 330s
+  pulled sympy__sympy-12096 in 39s
+  pulled sympy__sympy-12419 in 74s
+[75/114] sphinx-doc__sphinx-9591 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 604s
+  pulled sympy__sympy-12489 in 12s
+[76/114] sympy__sympy-12096 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F accepted_resolved n=2 273s
+  pulled sympy__sympy-13031 in 8s
+[77/114] sympy__sympy-12419 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=3, F continue n=3 514s
+  pulled sympy__sympy-13372 in 50s
+[78/114] sympy__sympy-13372 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R continue n=3, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F continue n=3 280s
+  pulled sympy__sympy-13615 in 10s
+[79/114] sympy__sympy-13031 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R continue n=3, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 781s
+  pulled sympy__sympy-13647 in 70s
+[80/114] sympy__sympy-12489 gpt-oss-20b: R continue n=3, F api_error n=2 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1513s
+  pulled sympy__sympy-13757 in 10s
+[81/114] sympy__sympy-13615 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=2, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F api_error n=2 2050s
+  pulled sympy__sympy-13852 in 9s
+[82/114] sympy__sympy-13852 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 587s
+  pulled sympy__sympy-13974 in 35s
+[83/114] sympy__sympy-13647 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=3, F accepted_resolved n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 2689s
+  pulled sympy__sympy-15345 in 59s
+[84/114] sympy__sympy-13757 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 2292s
+  pulled sympy__sympy-15349 in 35s
+[85/114] sympy__sympy-15349 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 107s
+  pulled sympy__sympy-15599 in 34s
+[86/114] sympy__sympy-15345 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 473s
+  pulled sympy__sympy-15809 in 11s
+[87/114] sympy__sympy-15599 gpt-oss-20b: R accepted_resolved n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 165s
+  pulled sympy__sympy-15976 in 8s
+[88/114] sympy__sympy-15809 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 93s
+  pulled sympy__sympy-16766 in 9s
+[89/114] sympy__sympy-16766 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 164s
+  pulled sympy__sympy-16886 in 10s
+[90/114] sympy__sympy-13974 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R api_error n=2, F api_error n=2 1425s
+  pulled sympy__sympy-17630 in 65s
+[91/114] sympy__sympy-17630 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 567s
+  pulled sympy__sympy-18199 in 70s
+[92/114] sympy__sympy-15976 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=2, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1449s
+  pulled sympy__sympy-18763 in 10s
+[93/114] sympy__sympy-18199 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 488s
+  pulled sympy__sympy-19040 in 11s
+[94/114] sympy__sympy-18763 gpt-oss-20b: R continue n=3, F api_error n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 662s
+  pulled sympy__sympy-19495 in 40s
+[95/114] sympy__sympy-19495 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 93s
+  pulled sympy__sympy-19637 in 9s
+[96/114] sympy__sympy-19637 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 67s
+  pulled sympy__sympy-20154 in 62s
+[97/114] sympy__sympy-20154 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 117s
+  pulled sympy__sympy-20590 in 63s
+[98/114] sympy__sympy-20590 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=3 270s
+  pulled sympy__sympy-20801 in 9s
+[99/114] sympy__sympy-16886 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F api_error n=2 3293s
+  pulled sympy__sympy-20916 in 12s
+[100/114] sympy__sympy-19040 gpt-oss-20b: R continue n=3, F grade_error n=2 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1881s
+  pulled sympy__sympy-21379 in 69s
+[101/114] sympy__sympy-21379 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 464s
+  pulled sympy__sympy-21612 in 69s
+[102/114] sympy__sympy-20916 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=2 1023s
+  pulled sympy__sympy-21847 in 12s
+[103/114] sympy__sympy-21847 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=2, F accepted_resolved n=2 | gemma-4-26b-a4b-it: R accepted_resolved n=2, F accepted_resolved n=2 123s
+  pulled sympy__sympy-21930 in 11s
+[104/114] sympy__sympy-20801 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F api_error n=3 2112s
+  pulled sympy__sympy-22456 in 12s
+[105/114] sympy__sympy-22456 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 64s
+  pulled sympy__sympy-22714 in 11s
+[106/114] sympy__sympy-22714 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 261s
+  pulled sympy__sympy-23413 in 11s
+[107/114] sympy__sympy-21612 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=2, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 1953s
+  pulled sympy__sympy-23534 in 12s
+[108/114] sympy__sympy-23534 gpt-oss-20b: R accepted_resolved n=2, F accepted_resolved n=2 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 106s
+[109/114] sympy__sympy-21930 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F api_error n=2 1423s
+  pulled sympy__sympy-23824 in 13s
+  pulled sympy__sympy-23950 in 14s
+[110/114] sympy__sympy-23824 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R accepted_resolved n=1, F accepted_resolved n=1 91s
+  pulled sympy__sympy-24213 in 66s
+[111/114] sympy__sympy-23413 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R continue n=3, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F api_error n=2 1908s
+[112/114] sympy__sympy-24213 gpt-oss-20b: R accepted_resolved n=2, F continue n=3 | gpt-oss-120b: R accepted_resolved n=1, F accepted_resolved n=1 | gemma-4-26b-a4b-it: R continue n=3, F accepted_resolved n=3 858s
+  pulled sympy__sympy-24562 in 14s
+[113/114] sympy__sympy-23950 gpt-oss-20b: R accepted_resolved n=1, F accepted_resolved n=1 | gpt-oss-120b: R accepted_resolved n=2, F continue n=3 | gemma-4-26b-a4b-it: R continue n=3, F continue n=3 2938s
+[114/114] sympy__sympy-24562 gpt-oss-20b: R continue n=3, F continue n=3 | gpt-oss-120b: R accepted_resolved n=3, F continue n=3 | gemma-4-26b-a4b-it: R api_error n=1, F api_error n=1 3495s
+all done

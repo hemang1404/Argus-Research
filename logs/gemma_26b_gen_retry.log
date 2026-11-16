@@ -1,0 +1,14 @@
+12 jobs (288 done); prior spend est $0.0000; cap $5.0; prompt_hash=56e5b02fa8ed
+[1/12 8s $0.000] astropy__astropy-14995 gemma-4-26b-a4b-it http=200 prompt=6568 out=280 reas=None finish=stop lat=7.55 err=
+[2/12 956s $0.000] django__django-15315 gemma-4-26b-a4b-it http=-1 prompt=None out=None reas=None finish=None lat=270.27 err=Remote end closed connection without response
+[3/12 1030s $0.000] pytest-dev__pytest-7521 gemma-4-26b-a4b-it http=200 prompt=7273 out=3399 reas=None finish=stop lat=74.39 err=
+[4/12 1226s $0.000] django__django-15315 gemma-4-26b-a4b-it http=200 prompt=7166 out=9114 reas=None finish=stop lat=195.46 err=
+[5/12 1726s $0.000] django__django-13406 gemma-4-26b-a4b-it http=-1 prompt=None out=None reas=None finish=None lat=270.26 err=Remote end closed connection without response
+[6/12 1801s $0.000] pytest-dev__pytest-7521 gemma-4-26b-a4b-it http=200 prompt=7273 out=865 reas=None finish=stop lat=19.92 err=
+[7/12 1942s $0.000] scikit-learn__scikit-learn-12973 gemma-4-26b-a4b-it http=200 prompt=6338 out=10033 reas=None finish=stop lat=215.97 err=
+[8/12 2129s $0.000] django__django-15280 gemma-4-26b-a4b-it http=200 prompt=7322 out=8723 reas=None finish=stop lat=186.35 err=
+[9/12 2138s $0.000] django__django-16595 gemma-4-26b-a4b-it http=200 prompt=4171 out=329 reas=None finish=stop lat=8.73 err=
+[10/12 2757s $0.000] sympy__sympy-13798 gemma-4-26b-a4b-it http=200 prompt=6514 out=546 reas=None finish=stop lat=14.21 err=
+[11/12 3241s $0.000] sympy__sympy-16450 gemma-4-26b-a4b-it http=200 prompt=6538 out=9733 reas=None finish=stop lat=209.02 err=
+[12/12 3857s $0.000] django__django-13406 gemma-4-26b-a4b-it http=-1 prompt=None out=None reas=None finish=None lat=270.26 err=Remote end closed connection without response
+done 3857s; estimated spend $0.0000; stopped_by_cap=False

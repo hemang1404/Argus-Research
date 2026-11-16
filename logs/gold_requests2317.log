@@ -1,0 +1,5 @@
+1 tasks to grade; 1 distinct patches; free disk 34 GB
+  pulled psf_1776_requests-2317:latest in 66s
+psf__requests-2317 21aa7657dc gold: applied=True resolved=False f2p 7/8 159.4s
+[1/1] psf__requests-2317 done in 227s; free disk 34 GB
+all done

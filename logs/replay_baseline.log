@@ -1,0 +1,192 @@
+{
+ "replay1_20B_feedback_then_120B": {
+  "target": {
+   "20B-F<=0 then 120B-R<=1": {
+    "solved": 42,
+    "usd": 0.1559,
+    "mean_attempts": 1.0
+   },
+   "20B-F<=0 then 120B-R<=2": {
+    "solved": 56,
+    "usd": 0.2511,
+    "mean_attempts": 1.54
+   },
+   "20B-F<=0 then 120B-R<=3": {
+    "solved": 59,
+    "usd": 0.3203,
+    "mean_attempts": 1.93
+   },
+   "20B-F<=1 then 120B-R<=0": {
+    "solved": 38,
+    "usd": 0.1207,
+    "mean_attempts": 1.0
+   },
+   "20B-F<=1 then 120B-R<=1": {
+    "solved": 46,
+    "usd": 0.2204,
+    "mean_attempts": 1.59
+   },
+   "20B-F<=1 then 120B-R<=2": {
+    "solved": 58,
+    "usd": 0.3091,
+    "mean_attempts": 2.09
+   },
+   "20B-F<=1 then 120B-R<=3": {
+    "solved": 60,
+    "usd": 0.3749,
+    "mean_attempts": 2.46
+   },
+   "20B-F<=2 then 120B-R<=0": {
+    "solved": 49,
+    "usd": 0.2032,
+    "mean_attempts": 1.59
+   },
+   "20B-F<=2 then 120B-R<=1": {
+    "solved": 54,
+    "usd": 0.2831,
+    "mean_attempts": 2.06
+   },
+   "20B-F<=2 then 120B-R<=2": {
+    "solved": 63,
+    "usd": 0.3572,
+    "mean_attempts": 2.48
+   },
+   "20B-F<=2 then 120B-R<=3": {
+    "solved": 65,
+    "usd": 0.4174,
+    "mean_attempts": 2.81
+   },
+   "20B-F<=3 then 120B-R<=0": {
+    "solved": 55,
+    "usd": 0.2692,
+    "mean_attempts": 2.05
+   },
+   "20B-F<=3 then 120B-R<=1": {
+    "solved": 58,
+    "usd": 0.3397,
+    "mean_attempts": 2.46
+   },
+   "20B-F<=3 then 120B-R<=2": {
+    "solved": 65,
+    "usd": 0.4075,
+    "mean_attempts": 2.84
+   },
+   "20B-F<=3 then 120B-R<=3": {
+    "solved": 66,
+    "usd": 0.4648,
+    "mean_attempts": 3.15
+   }
+  },
+  "perfect": {
+   "20B-F<=0 then 120B-R<=1": {
+    "solved": 42,
+    "usd": 0.1559,
+    "mean_attempts": 1.0
+   },
+   "20B-F<=0 then 120B-R<=2": {
+    "solved": 56,
+    "usd": 0.2511,
+    "mean_attempts": 1.54
+   },
+   "20B-F<=0 then 120B-R<=3": {
+    "solved": 59,
+    "usd": 0.3203,
+    "mean_attempts": 1.93
+   },
+   "20B-F<=1 then 120B-R<=0": {
+    "solved": 38,
+    "usd": 0.1207,
+    "mean_attempts": 1.0
+   },
+   "20B-F<=1 then 120B-R<=1": {
+    "solved": 47,
+    "usd": 0.2232,
+    "mean_attempts": 1.62
+   },
+   "20B-F<=1 then 120B-R<=2": {
+    "solved": 59,
+    "usd": 0.3119,
+    "mean_attempts": 2.12
+   },
+   "20B-F<=1 then 120B-R<=3": {
+    "solved": 61,
+    "usd": 0.3777,
+    "mean_attempts": 2.49
+   },
+   "20B-F<=2 then 120B-R<=0": {
+    "solved": 49,
+    "usd": 0.2032,
+    "mean_attempts": 1.59
+   },
+   "20B-F<=2 then 120B-R<=1": {
+    "solved": 55,
+    "usd": 0.2875,
+    "mean_attempts": 2.1
+   },
+   "20B-F<=2 then 120B-R<=2": {
+    "solved": 64,
+    "usd": 0.3644,
+    "mean_attempts": 2.53
+   },
+   "20B-F<=2 then 120B-R<=3": {
+    "solved": 66,
+    "usd": 0.4246,
+    "mean_attempts": 2.86
+   },
+   "20B-F<=3 then 120B-R<=0": {
+    "solved": 55,
+    "usd": 0.2692,
+    "mean_attempts": 2.05
+   },
+   "20B-F<=3 then 120B-R<=1": {
+    "solved": 59,
+    "usd": 0.3441,
+    "mean_attempts": 2.5
+   },
+   "20B-F<=3 then 120B-R<=2": {
+    "solved": 66,
+    "usd": 0.4147,
+    "mean_attempts": 2.89
+   },
+   "20B-F<=3 then 120B-R<=3": {
+    "solved": 67,
+    "usd": 0.472,
+    "mean_attempts": 3.2
+   }
+  }
+ },
+ "replay2_majority_vote_no_tests": {
+  "gpt-oss-20b": {
+   "single_draw_mean_solved": 36.67,
+   "majority_vote_solved": 42,
+   "pass_at_3_oracle": 50,
+   "tasks_with_applied_patch": 91,
+   "tasks_with_2_of_3_agreeing": 15,
+   "of_which_resolved": 10
+  },
+  "gpt-oss-120b": {
+   "single_draw_mean_solved": 47.67,
+   "majority_vote_solved": 54,
+   "pass_at_3_oracle": 61,
+   "tasks_with_applied_patch": 91,
+   "tasks_with_2_of_3_agreeing": 10,
+   "of_which_resolved": 7
+  },
+  "gemini-3.1-flash-lite": {
+   "single_draw_mean_solved": 47.0,
+   "majority_vote_solved": 51,
+   "pass_at_3_oracle": 55,
+   "tasks_with_applied_patch": 95,
+   "tasks_with_2_of_3_agreeing": 37,
+   "of_which_resolved": 25
+  },
+  "gemini-3.5-flash-lite": {
+   "single_draw_mean_solved": 51.67,
+   "majority_vote_solved": 55,
+   "pass_at_3_oracle": 59,
+   "tasks_with_applied_patch": 92,
+   "tasks_with_2_of_3_agreeing": 39,
+   "of_which_resolved": 27
+  }
+ }
+}

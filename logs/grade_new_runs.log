@@ -1,0 +1,401 @@
+qwen: 300 outputs for 100 tasks
+apply_plain.py -> Qwen3.5-9B {'applied': 72, 'no_match': 23, 'no_blocks': 5} | applied but syntax-broken: 2 
+apply_argus.py -> Qwen3.5-9B {'applied': 82, 'refused': 13, 'no_blocks': 5} | max tier among applied: {1: 71, 3: 10, 2: 1} 
+gemma26: 292 outputs for 100 tasks
+apply_plain.py -> gemma-4-26b-a4b-it {'applied': 144, 'no_match': 142, 'ambiguous': 5, 'no_blocks': 1} | applied but syntax-broken: 1 
+apply_argus.py -> gemma-4-26b-a4b-it {'applied': 180, 'refused': 109, 'path_refused': 2, 'no_blocks': 1} | max tier among applied: {1: 143, 3: 36, 2: 1} 
+336 distinct applied patches over 95 tasks; 298 to grade; groups ['qwen', 'gemma26']
+  pulled astropy__astropy-12907 in 98s
+  [1/298] astropy__astropy-12907 1a2ccc0faf applied=True resolved=False
+  [2/298] astropy__astropy-12907 803221933a applied=True resolved=False
+  [3/298] astropy__astropy-12907 e4af7c7d9a applied=True resolved=False
+  pulled astropy__astropy-13033 in 81s
+  [4/298] astropy__astropy-13033 96e17565fb applied=True resolved=False
+  [5/298] astropy__astropy-13033 ddf9c85460 applied=True resolved=False
+  [6/298] astropy__astropy-13033 83aaa02215 applied=True resolved=False
+  [7/298] astropy__astropy-13033 56b9ea58a7 applied=True resolved=False
+  pulled astropy__astropy-13579 in 73s
+  [8/298] astropy__astropy-13579 5445024f80 applied=True resolved=False
+  [9/298] astropy__astropy-13579 8e96260e40 applied=True resolved=False
+  pulled astropy__astropy-14182 in 67s
+  [10/298] astropy__astropy-14182 93ca97e0ec applied=True resolved=False
+  [11/298] astropy__astropy-14182 ef390cd216 applied=True resolved=False
+  pulled astropy__astropy-14508 in 68s
+  [12/298] astropy__astropy-14508 2ceae01295 applied=True resolved=False
+  [13/298] astropy__astropy-14508 f28dd07bc1 applied=True resolved=False
+  [14/298] astropy__astropy-14508 7e8d14fb5e applied=True resolved=False
+  [15/298] astropy__astropy-14508 d9ab6375ab applied=True resolved=False
+  pulled astropy__astropy-14995 in 66s
+  [16/298] astropy__astropy-14995 89e112ee7b applied=True resolved=False
+  [17/298] astropy__astropy-14995 1f280597a8 applied=True resolved=True
+  [18/298] astropy__astropy-14995 320d7a1cca applied=True resolved=True
+  [19/298] astropy__astropy-14995 97e2117a5b applied=True resolved=True
+  [20/298] astropy__astropy-14995 5d28a48d5b applied=True resolved=False
+  pulled astropy__astropy-8872 in 71s
+  [21/298] astropy__astropy-8872 10bb68bd78 applied=True resolved=True
+  [22/298] astropy__astropy-8872 2d7a20a0c6 applied=True resolved=False
+  [23/298] astropy__astropy-8872 28462e70bc applied=True resolved=False
+  [24/298] astropy__astropy-8872 87d08a0f95 applied=True resolved=False
+  [25/298] astropy__astropy-8872 5cffdc25d5 applied=True resolved=False
+  pulled django__django-10880 in 71s
+  [26/298] django__django-10880 db4fcf4d04 applied=True resolved=False
+  [27/298] django__django-10880 a2faa69d3c applied=True resolved=False
+  [28/298] django__django-10880 2ee0a32eb8 applied=True resolved=False
+  [29/298] django__django-10880 7489ec6a8e applied=True resolved=False
+  pulled django__django-11087 in 69s
+  [30/298] django__django-11087 1f261b0b72 applied=False resolved=False
+  [31/298] django__django-11087 4ea4c05186 applied=True resolved=False
+  pulled django__django-11141 in 69s
+  [32/298] django__django-11141 875dcdf689 applied=True resolved=False
+  [33/298] django__django-11141 97ef3e54d9 applied=True resolved=False
+  pulled django__django-11790 in 73s
+  [34/298] django__django-11790 031b0bcfff applied=True resolved=False
+  [35/298] django__django-11790 6924bd11c2 applied=True resolved=False
+  pulled django__django-11964 in 71s
+  [36/298] django__django-11964 15871e1157 applied=True resolved=False
+  [37/298] django__django-11964 8a799a3d5b applied=True resolved=True
+  [38/298] django__django-11964 a0be54b47f applied=True resolved=True
+  [39/298] django__django-11964 b9fd4f5392 applied=True resolved=True
+  pulled django__django-12039 in 66s
+  [40/298] django__django-12039 5f62964d28 applied=True resolved=False
+  [41/298] django__django-12039 d20dc5225a applied=True resolved=False
+  [42/298] django__django-12039 e7b937a311 applied=True resolved=False
+  [43/298] django__django-12039 59cfc59f3a applied=True resolved=False
+  [44/298] django__django-12039 6eb6c03f8a applied=True resolved=False
+  pulled django__django-12209 in 81s
+  [45/298] django__django-12209 19ff772089 applied=False resolved=False
+  [46/298] django__django-12209 4193657dd9 applied=True resolved=True
+  [47/298] django__django-12209 4b22defd4d applied=True resolved=True
+  [48/298] django__django-12209 9a886deb29 applied=True resolved=True
+  [49/298] django__django-12209 584aa0de16 applied=True resolved=False
+  pulled django__django-12774 in 76s
+  [50/298] django__django-12774 0fdf456b64 applied=True resolved=False
+  [51/298] django__django-12774 981879cfd8 applied=True resolved=False
+  pulled django__django-13012 in 73s
+  [52/298] django__django-13012 82afd59e3b applied=True resolved=False
+  [53/298] django__django-13012 2dc2a28927 applied=True resolved=False
+  [54/298] django__django-13012 c8017a8051 applied=True resolved=False
+  [55/298] django__django-13012 8161b6af9c applied=True resolved=False
+  pulled django__django-13406 in 69s
+  [56/298] django__django-13406 b72c234332 applied=False resolved=False
+  [57/298] django__django-13406 961a10755b applied=True resolved=False
+  [58/298] django__django-13406 05bc06844f applied=False resolved=False
+  pulled django__django-13551 in 68s
+  [59/298] django__django-13551 07f1a37cb6 applied=True resolved=False
+  [60/298] django__django-13551 a2a840fc1a applied=True resolved=False
+  [61/298] django__django-13551 8fc142a5e8 applied=True resolved=False
+  [62/298] django__django-13551 d3efd75838 applied=True resolved=False
+  pulled django__django-13810 in 71s
+  [63/298] django__django-13810 401c370741 applied=True resolved=False
+  [64/298] django__django-13810 76c460851c applied=True resolved=True
+  [65/298] django__django-13810 51450e0eb3 applied=True resolved=False
+  [66/298] django__django-13810 2ccbdf687d applied=True resolved=True
+  pulled django__django-13933 in 70s
+  [67/298] django__django-13933 4b6a34effa applied=True resolved=False
+  [68/298] django__django-13933 dddf621965 applied=True resolved=False
+  [69/298] django__django-13933 7258957be6 applied=True resolved=True
+  pulled django__django-14017 in 73s
+  [70/298] django__django-14017 cf5f3a14d2 applied=False resolved=False
+  [71/298] django__django-14017 bcb2e66b0a applied=True resolved=False
+  [72/298] django__django-14017 a337b83206 applied=True resolved=False
+  [73/298] django__django-14017 29ab38d0e8 applied=True resolved=False
+  [74/298] django__django-14017 fa08c1ccd1 applied=True resolved=False
+  pulled django__django-14034 in 70s
+  [75/298] django__django-14034 f148a4a19d applied=False resolved=False
+  [76/298] django__django-14034 f489094b45 applied=True resolved=False
+  pulled django__django-14434 in 78s
+  [77/298] django__django-14434 907ef0d304 applied=False resolved=False
+  [78/298] django__django-14434 98de58d2b1 applied=False resolved=False
+  [79/298] django__django-14434 ef02bbf181 applied=True resolved=True
+  [80/298] django__django-14434 64f353dfef applied=False resolved=False
+  pulled django__django-14534 in 74s
+  [81/298] django__django-14534 82c471c097 applied=True resolved=False
+  [82/298] django__django-14534 6cddce215f applied=True resolved=False
+  [83/298] django__django-14534 8e95121240 applied=True resolved=False
+  pulled django__django-14771 in 74s
+  [84/298] django__django-14771 24990dc692 applied=True resolved=False
+  [85/298] django__django-14771 64da32da8f applied=True resolved=False
+  [86/298] django__django-14771 2076778c08 applied=True resolved=False
+  [87/298] django__django-14771 2d44485b7f applied=True resolved=False
+  pulled django__django-15128 in 76s
+  [88/298] django__django-15128 b71665a764 applied=True resolved=False
+  [89/298] django__django-15128 6c1c40ecd2 applied=True resolved=False
+  [90/298] django__django-15128 9b25a3e197 applied=True resolved=False
+  pulled django__django-15161 in 72s
+  [91/298] django__django-15161 c7cc9eb45d applied=True resolved=False
+  [92/298] django__django-15161 e2c234b0f6 applied=True resolved=False
+  [93/298] django__django-15161 00f67e8712 applied=True resolved=False
+  [94/298] django__django-15161 746d5159c6 applied=True resolved=False
+  [95/298] django__django-15161 905d649074 applied=True resolved=False
+  [96/298] django__django-15161 9de1387ade applied=True resolved=False
+  pulled django__django-15280 in 76s
+  [97/298] django__django-15280 fc2ae2b3ed applied=False resolved=False
+  [98/298] django__django-15280 86103463a1 applied=True resolved=False
+  pulled django__django-15315 in 76s
+  [99/298] django__django-15315 71561a4589 applied=True resolved=False
+  [100/298] django__django-15315 fe09aec24d applied=True resolved=True
+  pulled django__django-15382 in 73s
+  [101/298] django__django-15382 c017859557 applied=True resolved=False
+  [102/298] django__django-15382 5d37f9feba applied=True resolved=False
+  pulled django__django-15930 in 70s
+  [103/298] django__django-15930 06e7a602a2 applied=True resolved=False
+  [104/298] django__django-15930 753eb116d6 applied=True resolved=False
+  [105/298] django__django-15930 8337d149cf applied=True resolved=False
+  pulled django__django-16116 in 74s
+  [106/298] django__django-16116 297257f141 applied=True resolved=False
+  [107/298] django__django-16116 cc4c4a01d5 applied=True resolved=False
+  [108/298] django__django-16116 55e1846653 applied=True resolved=False
+  [109/298] django__django-16116 9b25034288 applied=True resolved=True
+  [110/298] django__django-16116 faf003647f applied=True resolved=False
+  pulled django__django-16485 in 82s
+  [111/298] django__django-16485 e8890f65bf applied=True resolved=False
+  [112/298] django__django-16485 24019ed194 applied=True resolved=True
+  [113/298] django__django-16485 8bcc028d81 applied=True resolved=True
+  pulled django__django-16595 in 74s
+  [114/298] django__django-16595 c76ee2cbcc applied=True resolved=False
+  [115/298] django__django-16595 3fc73529e8 applied=True resolved=True
+  [116/298] django__django-16595 784c041871 applied=True resolved=True
+  [117/298] django__django-16595 244e32b640 applied=True resolved=False
+  pulled django__django-16642 in 75s
+  [118/298] django__django-16642 d5d99a519d applied=True resolved=False
+  [119/298] django__django-16642 759fabdce0 applied=True resolved=False
+  pulled django__django-16877 in 75s
+  [120/298] django__django-16877 fb0eff9fb2 applied=True resolved=False
+  [121/298] django__django-16877 ae329d35a9 applied=True resolved=True
+  [122/298] django__django-16877 efdbca12d9 applied=True resolved=True
+  pulled matplotlib__matplotlib-20488 in 126s
+  [123/298] matplotlib__matplotlib-20488 a852c4cae9 applied=True resolved=False
+  [124/298] matplotlib__matplotlib-20488 9d5fe11a4b applied=True resolved=False
+  [125/298] matplotlib__matplotlib-20488 108509b67b applied=True resolved=False
+  pulled matplotlib__matplotlib-20676 in 145s
+  [126/298] matplotlib__matplotlib-20676 e493f7f108 applied=True resolved=False
+  [127/298] matplotlib__matplotlib-20676 c336ed3a14 applied=True resolved=False
+  [128/298] matplotlib__matplotlib-20676 d2c0266ba8 applied=True resolved=False
+  [129/298] matplotlib__matplotlib-20676 ddb7acf13c applied=True resolved=False
+  pulled matplotlib__matplotlib-23412 in 203s
+  [130/298] matplotlib__matplotlib-23412 80f342545d applied=True resolved=False
+  [131/298] matplotlib__matplotlib-23412 e4c878f1a5 applied=True resolved=False
+  pulled matplotlib__matplotlib-24570 in 211s
+  [132/298] matplotlib__matplotlib-24570 1db2feab45 applied=True resolved=False
+  [133/298] matplotlib__matplotlib-24570 2fa93f2768 applied=True resolved=False
+  [134/298] matplotlib__matplotlib-24570 a0dc3e160f applied=True resolved=False
+  pulled matplotlib__matplotlib-24637 in 235s
+  [135/298] matplotlib__matplotlib-24637 0748bc9580 applied=True resolved=False
+  [136/298] matplotlib__matplotlib-24637 9099a5538f applied=True resolved=False
+  [137/298] matplotlib__matplotlib-24637 c9344187ae applied=True resolved=True
+  [138/298] matplotlib__matplotlib-24637 8571ce8315 applied=True resolved=True
+  [139/298] matplotlib__matplotlib-24637 0e51cd37bb applied=True resolved=False
+  pulled matplotlib__matplotlib-24970 in 180s
+  [140/298] matplotlib__matplotlib-24970 940b118b47 applied=False resolved=False
+  [141/298] matplotlib__matplotlib-24970 5cf9d054bd applied=True resolved=False
+  [142/298] matplotlib__matplotlib-24970 9e92a60427 applied=True resolved=True
+  pull failed (1) matplotlib__matplotlib-25311: failed to copy: httpReadSeeker: failed open: failed to do request: Get "https://production.cloudfront.docker.com/registry-v2/docker/registry/v2/blobs/
+  pull failed (2) matplotlib__matplotlib-25311: failed to copy: httpReadSeeker: failed open: failed to do request: Get "https://production.cloudfront.docker.com/registry-v2/docker/registry/v2/blobs/
+  pulled matplotlib__matplotlib-25311 in 196s
+  [143/298] matplotlib__matplotlib-25311 d594381d8a applied=True resolved=True
+  [144/298] matplotlib__matplotlib-25311 2961a473d5 applied=True resolved=False
+  [145/298] matplotlib__matplotlib-25311 767fbd8941 applied=True resolved=False
+  [146/298] matplotlib__matplotlib-25311 546607d792 applied=True resolved=False
+  [147/298] matplotlib__matplotlib-25311 7801717f63 applied=True resolved=True
+  pulled matplotlib__matplotlib-25960 in 193s
+  [148/298] matplotlib__matplotlib-25960 0980e5f844 applied=True resolved=False
+  [149/298] matplotlib__matplotlib-25960 6c4d5cbe72 applied=True resolved=False
+  pulled psf__requests-2931 in 67s
+  [150/298] psf__requests-2931 53d40f8967 applied=True resolved=False
+  pulled psf__requests-6028 in 69s
+  [151/298] psf__requests-6028 6a558bcb0f applied=True resolved=False
+  [152/298] psf__requests-6028 fc163c5423 applied=True resolved=False
+  pulled pydata__xarray-3151 in 142s
+  [153/298] pydata__xarray-3151 16e72be9f6 applied=True resolved=False
+  [154/298] pydata__xarray-3151 55d19da187 applied=True resolved=False
+  [155/298] pydata__xarray-3151 c6b7d765f2 applied=True resolved=False
+  pulled pydata__xarray-4094 in 139s
+  [156/298] pydata__xarray-4094 2f92b20975 applied=True resolved=False
+  [157/298] pydata__xarray-4094 ae22901d47 applied=True resolved=False
+  [158/298] pydata__xarray-4094 b08bf01f64 applied=True resolved=False
+  pulled pydata__xarray-4356 in 134s
+  [159/298] pydata__xarray-4356 fc1245d346 applied=True resolved=False
+  [160/298] pydata__xarray-4356 edf287e3ff applied=True resolved=False
+  [161/298] pydata__xarray-4356 ca6b7ebc73 applied=True resolved=True
+  [162/298] pydata__xarray-4356 19e6d86a1a applied=True resolved=True
+  [163/298] pydata__xarray-4356 c30ec57f2b applied=True resolved=True
+  pulled pydata__xarray-4966 in 140s
+  [164/298] pydata__xarray-4966 fe1465c64b applied=False resolved=False
+  [165/298] pydata__xarray-4966 91d2ccece6 applied=False resolved=False
+  pulled pydata__xarray-6721 in 125s
+  [166/298] pydata__xarray-6721 c05162b204 applied=True resolved=False
+  [167/298] pydata__xarray-6721 01797cff91 applied=True resolved=False
+  pulled pylint-dev__pylint-7277 in 75s
+  [168/298] pylint-dev__pylint-7277 6e26d810e4 applied=True resolved=False
+  [169/298] pylint-dev__pylint-7277 e5f6cac026 applied=True resolved=False
+  [170/298] pylint-dev__pylint-7277 ac59b0a70a applied=True resolved=True
+  [171/298] pylint-dev__pylint-7277 732a60cb66 applied=True resolved=True
+  [172/298] pylint-dev__pylint-7277 bf2741ed27 applied=True resolved=True
+  pulled pytest-dev__pytest-10051 in 65s
+  [173/298] pytest-dev__pytest-10051 7a31332aaa applied=True resolved=False
+  [174/298] pytest-dev__pytest-10051 9ccffd7c01 applied=True resolved=False
+  [175/298] pytest-dev__pytest-10051 43296a257a applied=True resolved=False
+  [176/298] pytest-dev__pytest-10051 b3cebe61da applied=True resolved=False
+  pulled pytest-dev__pytest-5262 in 62s
+  [177/298] pytest-dev__pytest-5262 c0b8515560 applied=True resolved=False
+  [178/298] pytest-dev__pytest-5262 987a0adb67 applied=False resolved=False
+  [179/298] pytest-dev__pytest-5262 f1d08a0a64 applied=True resolved=True
+  pulled pytest-dev__pytest-6197 in 78s
+  [180/298] pytest-dev__pytest-6197 cf26138c26 applied=True resolved=True
+  [181/298] pytest-dev__pytest-6197 f3e2c5d400 applied=True resolved=False
+  [182/298] pytest-dev__pytest-6197 617be855c6 applied=True resolved=False
+  [183/298] pytest-dev__pytest-6197 568ade99b3 applied=True resolved=False
+  pulled scikit-learn__scikit-learn-10844 in 94s
+  [184/298] scikit-learn__scikit-learn-10844 6c4a7f2764 applied=True resolved=True
+  [185/298] scikit-learn__scikit-learn-10844 881fa59842 applied=True resolved=True
+  pulled scikit-learn__scikit-learn-12973 in 101s
+  [186/298] scikit-learn__scikit-learn-12973 9f21524326 applied=True resolved=False
+  [187/298] scikit-learn__scikit-learn-12973 855c4ddba9 applied=True resolved=False
+  pull failed (1) scikit-learn__scikit-learn-13496: failed to copy: httpReadSeeker: failed open: failed to do request: Get "https://production.cloudfront.docker.com/registry-v2/docker/registry/v2/blobs/
+  pull failed (2) scikit-learn__scikit-learn-13496: failed to copy: httpReadSeeker: failed open: failed to do request: Get "https://production.cloudfront.docker.com/registry-v2/docker/registry/v2/blobs/
+  pull failed (3) scikit-learn__scikit-learn-13496: failed to copy: httpReadSeeker: failed open: failed to do request: Get "https://production.cloudfront.docker.com/registry-v2/docker/registry/v2/blobs/
+  pull failed scikit-learn__scikit-learn-13496
+  pulled scikit-learn__scikit-learn-14053 in 96s
+  [188/298] scikit-learn__scikit-learn-14053 7e3cf00158 applied=True resolved=False
+  [189/298] scikit-learn__scikit-learn-14053 da923f904b applied=True resolved=False
+  [190/298] scikit-learn__scikit-learn-14053 dc854c5b90 applied=True resolved=True
+  pulled scikit-learn__scikit-learn-14710 in 99s
+  [191/298] scikit-learn__scikit-learn-14710 50cdbb2689 applied=True resolved=False
+  [192/298] scikit-learn__scikit-learn-14710 518923908b applied=True resolved=False
+  [193/298] scikit-learn__scikit-learn-14710 34a42449e6 applied=True resolved=False
+  pulled scikit-learn__scikit-learn-14894 in 93s
+  [194/298] scikit-learn__scikit-learn-14894 c33db2c09c applied=True resolved=False
+  [195/298] scikit-learn__scikit-learn-14894 72d2ff2149 applied=True resolved=False
+  [196/298] scikit-learn__scikit-learn-14894 59f50fd1db applied=True resolved=True
+  pulled scikit-learn__scikit-learn-14983 in 91s
+  [197/298] scikit-learn__scikit-learn-14983 67dc0521e1 applied=True resolved=False
+  [198/298] scikit-learn__scikit-learn-14983 11a5192007 applied=True resolved=False
+  [199/298] scikit-learn__scikit-learn-14983 5a7c99e93e applied=True resolved=False
+  pulled scikit-learn__scikit-learn-25973 in 131s
+  [200/298] scikit-learn__scikit-learn-25973 96eeeee4dd applied=True resolved=False
+  [201/298] scikit-learn__scikit-learn-25973 14512fbaf7 applied=True resolved=False
+  [202/298] scikit-learn__scikit-learn-25973 a19a6bc490 applied=True resolved=True
+  pulled sphinx-doc__sphinx-10435 in 76s
+  [203/298] sphinx-doc__sphinx-10435 be167a2e8b applied=True resolved=False
+  [204/298] sphinx-doc__sphinx-10435 2c8b41c435 applied=True resolved=False
+  [205/298] sphinx-doc__sphinx-10435 b3b6e39bf1 applied=True resolved=False
+  [206/298] sphinx-doc__sphinx-10435 55708db215 applied=True resolved=False
+  [207/298] sphinx-doc__sphinx-10435 7bb4b20435 applied=True resolved=False
+  pulled sphinx-doc__sphinx-10466 in 73s
+  [208/298] sphinx-doc__sphinx-10466 d0bfde116f applied=True resolved=False
+  [209/298] sphinx-doc__sphinx-10466 31fa1cdaaf applied=True resolved=True
+  [210/298] sphinx-doc__sphinx-10466 afccf4cdef applied=True resolved=False
+  pulled sphinx-doc__sphinx-10614 in 75s
+  [211/298] sphinx-doc__sphinx-10614 c14b1baeaa applied=True resolved=False
+  [212/298] sphinx-doc__sphinx-10614 4f3ed3f1ee applied=True resolved=False
+  pulled sphinx-doc__sphinx-11445 in 69s
+  [213/298] sphinx-doc__sphinx-11445 65c7c3f4c9 applied=True resolved=False
+  [214/298] sphinx-doc__sphinx-11445 7370c34a73 applied=True resolved=True
+  pulled sphinx-doc__sphinx-8459 in 73s
+  [215/298] sphinx-doc__sphinx-8459 37a611d91e applied=True resolved=False
+  [216/298] sphinx-doc__sphinx-8459 c1bbea3b20 applied=True resolved=False
+  [217/298] sphinx-doc__sphinx-8459 43f24963e6 applied=True resolved=False
+  [218/298] sphinx-doc__sphinx-8459 2ba7f1d51f applied=True resolved=False
+  pulled sphinx-doc__sphinx-9230 in 74s
+  [219/298] sphinx-doc__sphinx-9230 b119ad7ed1 applied=True resolved=False
+  [220/298] sphinx-doc__sphinx-9230 f2893177bf applied=True resolved=False
+  pulled sphinx-doc__sphinx-9258 in 68s
+  [221/298] sphinx-doc__sphinx-9258 59df0a18cf applied=True resolved=False
+  pulled sphinx-doc__sphinx-9281 in 73s
+  [222/298] sphinx-doc__sphinx-9281 7907ef1f2b applied=True resolved=False
+  [223/298] sphinx-doc__sphinx-9281 fee015d43a applied=True resolved=False
+  pulled sphinx-doc__sphinx-9658 in 78s
+  [224/298] sphinx-doc__sphinx-9658 ce42c6b213 applied=True resolved=False
+  [225/298] sphinx-doc__sphinx-9658 b1a4331871 applied=True resolved=False
+  [226/298] sphinx-doc__sphinx-9658 39fa86ccc9 applied=True resolved=False
+  [227/298] sphinx-doc__sphinx-9658 f74c51f07e applied=True resolved=False
+  [228/298] sphinx-doc__sphinx-9658 c5fa89d392 applied=True resolved=False
+  pulled sphinx-doc__sphinx-9698 in 63s
+  [229/298] sphinx-doc__sphinx-9698 3c1b760223 applied=True resolved=False
+  [230/298] sphinx-doc__sphinx-9698 288e1e0ec0 applied=True resolved=False
+  [231/298] sphinx-doc__sphinx-9698 614285731d applied=True resolved=False
+  [232/298] sphinx-doc__sphinx-9698 67b9539874 applied=True resolved=False
+  pulled sphinx-doc__sphinx-9711 in 70s
+  [233/298] sphinx-doc__sphinx-9711 76ec85eb18 applied=True resolved=False
+  [234/298] sphinx-doc__sphinx-9711 0ea31edaa0 applied=True resolved=True
+  [235/298] sphinx-doc__sphinx-9711 dc65651115 applied=True resolved=True
+  [236/298] sphinx-doc__sphinx-9711 2bf4cca2bf applied=True resolved=True
+  [237/298] sphinx-doc__sphinx-9711 2f5f5f8b50 applied=True resolved=True
+  pulled sympy__sympy-11618 in 73s
+  [238/298] sympy__sympy-11618 c48f42a958 applied=True resolved=False
+  [239/298] sympy__sympy-11618 c89f2f55c6 applied=True resolved=False
+  [240/298] sympy__sympy-11618 5989f4c174 applied=False resolved=False
+  [241/298] sympy__sympy-11618 68c6f673e4 applied=True resolved=True
+  pulled sympy__sympy-12481 in 67s
+  [242/298] sympy__sympy-12481 0a5c42080f applied=True resolved=False
+  [243/298] sympy__sympy-12481 416911b54e applied=True resolved=True
+  pulled sympy__sympy-13480 in 76s
+  [244/298] sympy__sympy-13480 dda398847c applied=True resolved=False
+  pulled sympy__sympy-13551 in 74s
+  [245/298] sympy__sympy-13551 df21d876e7 applied=True resolved=False
+  [246/298] sympy__sympy-13551 680e0455bc applied=False resolved=False
+  pulled sympy__sympy-13798 in 67s
+  [247/298] sympy__sympy-13798 3df85006d8 applied=True resolved=False
+  [248/298] sympy__sympy-13798 897a0f3468 applied=True resolved=False
+  [249/298] sympy__sympy-13798 a459fe5bfb applied=True resolved=False
+  [250/298] sympy__sympy-13798 4e96109f64 applied=True resolved=True
+  pulled sympy__sympy-14531 in 369s
+  [251/298] sympy__sympy-14531 b8af1d9afc applied=False resolved=False
+  [252/298] sympy__sympy-14531 9aa4b36c61 applied=True resolved=True
+  [253/298] sympy__sympy-14531 11d4d9e4ff applied=True resolved=True
+  pulled sympy__sympy-14711 in 68s
+  [254/298] sympy__sympy-14711 c8986a7e4a applied=True resolved=True
+  pulled sympy__sympy-15017 in 66s
+  [255/298] sympy__sympy-15017 e44c8f59ff applied=True resolved=False
+  [256/298] sympy__sympy-15017 9c791f58b8 applied=True resolved=False
+  pulled sympy__sympy-15875 in 70s
+  [257/298] sympy__sympy-15875 1b3cc312c7 applied=True resolved=False
+  [258/298] sympy__sympy-15875 f115004c21 applied=True resolved=False
+  [259/298] sympy__sympy-15875 a6b72a5719 applied=True resolved=False
+  [260/298] sympy__sympy-15875 4022ad4b87 applied=True resolved=True
+  pulled sympy__sympy-16792 in 67s
+  [261/298] sympy__sympy-16792 559fa8feff applied=True resolved=False
+  [262/298] sympy__sympy-16792 f198dd84b5 applied=True resolved=False
+  [263/298] sympy__sympy-16792 52c6a475a5 applied=True resolved=False
+  [264/298] sympy__sympy-16792 8df2878f99 applied=True resolved=False
+  [265/298] sympy__sympy-16792 ae640073f7 applied=True resolved=False
+  pulled sympy__sympy-17139 in 69s
+  [266/298] sympy__sympy-17139 11c92ca170 applied=True resolved=False
+  [267/298] sympy__sympy-17139 15c81625c1 applied=True resolved=False
+  [268/298] sympy__sympy-17139 190b667917 applied=True resolved=False
+  [269/298] sympy__sympy-17139 6c4cac4164 applied=True resolved=True
+  pulled sympy__sympy-17655 in 76s
+  [270/298] sympy__sympy-17655 5c078f8c19 applied=True resolved=False
+  [271/298] sympy__sympy-17655 2919e6bbd1 applied=True resolved=False
+  [272/298] sympy__sympy-17655 4eae9510cd applied=True resolved=False
+  [273/298] sympy__sympy-17655 279aed86c8 applied=True resolved=False
+  pulled sympy__sympy-18698 in 66s
+  [274/298] sympy__sympy-18698 1fcf724d53 applied=True resolved=False
+  [275/298] sympy__sympy-18698 efa1f280f1 applied=True resolved=False
+  pulled sympy__sympy-19346 in 71s
+  [276/298] sympy__sympy-19346 4525ea00cd applied=True resolved=False
+  [277/298] sympy__sympy-19346 b038aff8a0 applied=True resolved=False
+  [278/298] sympy__sympy-19346 e774cb34ab applied=True resolved=True
+  [279/298] sympy__sympy-19346 9dc23925a0 applied=True resolved=False
+  pulled sympy__sympy-21596 in 66s
+  [280/298] sympy__sympy-21596 81e0a6b288 applied=True resolved=False
+  [281/298] sympy__sympy-21596 236bb325ae applied=True resolved=False
+  [282/298] sympy__sympy-21596 c8f927b3e5 applied=True resolved=False
+  pulled sympy__sympy-22914 in 70s
+  [283/298] sympy__sympy-22914 905fa5b9f1 applied=False resolved=False
+  [284/298] sympy__sympy-22914 584dddf9b2 applied=True resolved=True
+  pulled sympy__sympy-23262 in 67s
+  [285/298] sympy__sympy-23262 59a960bc02 applied=False resolved=False
+  [286/298] sympy__sympy-23262 7ba3ecdc14 applied=True resolved=False
+  [287/298] sympy__sympy-23262 a93bb29287 applied=True resolved=False
+  [288/298] sympy__sympy-23262 c570c1d41d applied=True resolved=True
+  pulled sympy__sympy-24066 in 64s
+  [289/298] sympy__sympy-24066 8d5049b335 applied=True resolved=False
+  [290/298] sympy__sympy-24066 701f83f92a applied=True resolved=False
+  [291/298] sympy__sympy-24066 6eff07551e applied=True resolved=False
+  [292/298] sympy__sympy-24066 247c206791 applied=True resolved=False
+  pulled sympy__sympy-24443 in 68s
+  [293/298] sympy__sympy-24443 8a7115e8da applied=True resolved=False
+  [294/298] sympy__sympy-24443 f22f05b9bf applied=None resolved=None
+  [295/298] sympy__sympy-24443 5877be17c5 applied=True resolved=False
+grading complete

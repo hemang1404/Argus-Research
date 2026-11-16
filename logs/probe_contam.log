@@ -1,0 +1,10 @@
+90 jobs
+estimated Gemini spend $0.0668
+Traceback (most recent call last):
+  File "C:\coding\Argus-pilot50\scripts\probe_contam.py", line 130, in <module>
+    rows.setdefault(r["model"], {})[r["iid"]] = score(r)
+                                                ~~~~~^^^
+  File "C:\coding\Argus-pilot50\scripts\probe_contam.py", line 120, in score
+    g = added(t["patch"])
+              ~^^^^^^^^^
+KeyError: 'patch'

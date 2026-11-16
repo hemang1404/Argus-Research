@@ -1,0 +1,6 @@
+17 keys; 2 tasks to run (30 done); 995 cached calls seeded; out=C:\coding\Argus-pilot50\data\dev_fix; prompt_hash=56e5b02fa8ed
+  pulled sphinx-doc__sphinx-9258 in 59s
+  pulled scikit-learn__scikit-learn-14710 in 76s
+[1/2] sphinx-doc__sphinx-9258 gpt-oss-20b: F continue/n3 P continue/n3 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=True newcalls=1 103s
+[2/2] scikit-learn__scikit-learn-14710 gpt-oss-20b: F grade_error/n2 P grade_error/n2 | gpt-oss-120b: F grade_error/n2 P accepted_resolved/n2 pulled=True newcalls=1 1922s
+all done

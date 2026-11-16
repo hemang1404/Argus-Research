@@ -1,0 +1,197 @@
+apply_plain.py raw.jsonl -> gemini-3.5-flash-lite {'applied': 247, 'empty_output': 12, 'no_match': 29, 'no_blocks': 5, 'ambiguous': 5, 'truncated_no_output': 2} | applied but syntax-broken: 0 
+apply_argus.py raw.jsonl -> gemini-3.5-flash-lite {'applied': 255, 'empty_output': 12, 'refused': 26, 'no_blocks': 5, 'truncated_no_output': 2} | max tier among applied: {1: 247, 3: 8} 
+apply_plain.py phase2_t1_repl.jsonl -> gpt-oss-20b {'applied': 3} | applied but syntax-broken: 0 
+apply_argus.py phase2_t1_repl.jsonl -> gpt-oss-20b {'applied': 3} | max tier among applied: {1: 3} 
+396 distinct applied patches over 98 tasks; 147 to grade
+  pulled pydata__xarray-4966 in 60s
+  [1/147] pydata__xarray-4966 5d5fb8e3d0 applied=True resolved=True
+  [2/147] pydata__xarray-4966 ced062adb3 applied=False resolved=False
+  [3/147] pydata__xarray-4966 6b345ee76d applied=True resolved=True
+  [4/147] pydata__xarray-4966 2b34ec893a applied=True resolved=True
+  [5/147] pydata__xarray-4966 1c63391b5f applied=True resolved=True
+  pulled pydata__xarray-6721 in 108s
+  [6/147] pydata__xarray-6721 1026c57832 applied=True resolved=True
+  [7/147] pydata__xarray-6721 98d93e83d7 applied=True resolved=True
+  [8/147] pydata__xarray-6721 decf54aaad applied=True resolved=False
+  [9/147] pydata__xarray-6721 2587ed1cd5 applied=True resolved=True
+  pulled pylint-dev__pylint-7277 in 38s
+  [10/147] pylint-dev__pylint-7277 d0707284de applied=True resolved=True
+  [11/147] pylint-dev__pylint-7277 e6b7550d98 applied=True resolved=True
+  [12/147] pylint-dev__pylint-7277 a97baf66b1 applied=True resolved=True
+  [13/147] pylint-dev__pylint-7277 ec4243a3c9 applied=True resolved=True
+  pulled pytest-dev__pytest-10051 in 32s
+  [14/147] pytest-dev__pytest-10051 826b05025e applied=True resolved=True
+  [15/147] pytest-dev__pytest-10051 8bb8e019c6 applied=True resolved=False
+  [16/147] pytest-dev__pytest-10051 d1a5b0c8b1 applied=True resolved=False
+  [17/147] pytest-dev__pytest-10051 9108c9889f applied=True resolved=False
+  pulled pytest-dev__pytest-5262 in 29s
+  [18/147] pytest-dev__pytest-5262 c26ff7f7ae applied=True resolved=True
+  [19/147] pytest-dev__pytest-5262 b05bd87b93 applied=True resolved=True
+  [20/147] pytest-dev__pytest-5262 644fcfa1e1 applied=True resolved=True
+  [21/147] pytest-dev__pytest-5262 042f2f7874 applied=True resolved=True
+  pulled pytest-dev__pytest-6197 in 33s
+  [22/147] pytest-dev__pytest-6197 6c1d25f486 applied=True resolved=False
+  [23/147] pytest-dev__pytest-6197 42dd903ce6 applied=True resolved=False
+  [24/147] pytest-dev__pytest-6197 d16dbd510a applied=True resolved=False
+  [25/147] pytest-dev__pytest-6197 86c84e6cf7 applied=True resolved=False
+  [26/147] pytest-dev__pytest-6197 2f3219589e applied=True resolved=False
+  [27/147] pytest-dev__pytest-6197 e3cdbf7689 applied=True resolved=False
+  pulled pytest-dev__pytest-7521 in 30s
+  [28/147] pytest-dev__pytest-7521 e804898781 applied=True resolved=False
+  [29/147] pytest-dev__pytest-7521 80faf3a03d applied=True resolved=True
+  pulled scikit-learn__scikit-learn-10844 in 61s
+  [30/147] scikit-learn__scikit-learn-10844 c371b2c69f applied=True resolved=True
+  pulled scikit-learn__scikit-learn-12973 in 62s
+  [31/147] scikit-learn__scikit-learn-12973 2093631dbb applied=True resolved=False
+  pulled scikit-learn__scikit-learn-13496 in 93s
+  [32/147] scikit-learn__scikit-learn-13496 ed00b511db applied=True resolved=True
+  [33/147] scikit-learn__scikit-learn-13496 f83f6931dc applied=True resolved=True
+  [34/147] scikit-learn__scikit-learn-13496 540a145081 applied=True resolved=True
+  pulled scikit-learn__scikit-learn-14053 in 63s
+  [35/147] scikit-learn__scikit-learn-14053 0872805a29 applied=True resolved=True
+  [36/147] scikit-learn__scikit-learn-14053 eacd84710d applied=True resolved=True
+  [37/147] scikit-learn__scikit-learn-14053 f6ef772fc9 applied=True resolved=True
+  pulled scikit-learn__scikit-learn-14710 in 62s
+  [38/147] scikit-learn__scikit-learn-14710 24c2067ec0 applied=True resolved=False
+  [39/147] scikit-learn__scikit-learn-14710 a73346c318 applied=True resolved=False
+  pulled scikit-learn__scikit-learn-14894 in 87s
+  [40/147] scikit-learn__scikit-learn-14894 90d67fe729 applied=True resolved=True
+  [41/147] scikit-learn__scikit-learn-14894 a35e3ffe76 applied=True resolved=True
+  pulled scikit-learn__scikit-learn-14983 in 84s
+  [42/147] scikit-learn__scikit-learn-14983 2255fb9a5c applied=True resolved=False
+  [43/147] scikit-learn__scikit-learn-14983 07fc9225cf applied=True resolved=False
+  [44/147] scikit-learn__scikit-learn-14983 4ae8fd6155 applied=True resolved=False
+  [45/147] scikit-learn__scikit-learn-14983 e5ea24d44c applied=True resolved=False
+  [46/147] scikit-learn__scikit-learn-14983 8fff2148d9 applied=True resolved=True
+  pulled scikit-learn__scikit-learn-25973 in 88s
+  [47/147] scikit-learn__scikit-learn-25973 084f647ee8 applied=True resolved=False
+  [48/147] scikit-learn__scikit-learn-25973 ea01c7c0a6 applied=True resolved=True
+  [49/147] scikit-learn__scikit-learn-25973 ad2ac9d3c1 applied=True resolved=True
+  [50/147] scikit-learn__scikit-learn-25973 5fba265694 applied=True resolved=True
+  pulled sphinx-doc__sphinx-10435 in 35s
+  [51/147] sphinx-doc__sphinx-10435 0d6e19d448 applied=True resolved=False
+  pulled sphinx-doc__sphinx-10466 in 34s
+  [52/147] sphinx-doc__sphinx-10466 3e490d6146 applied=True resolved=True
+  [53/147] sphinx-doc__sphinx-10466 8d122c22cb applied=True resolved=True
+  [54/147] sphinx-doc__sphinx-10466 5e62eb8fcb applied=True resolved=True
+  pulled sphinx-doc__sphinx-10614 in 39s
+  [55/147] sphinx-doc__sphinx-10614 3dde005b0e applied=True resolved=False
+  [56/147] sphinx-doc__sphinx-10614 3450398173 applied=True resolved=False
+  [57/147] sphinx-doc__sphinx-10614 bd12d30376 applied=True resolved=False
+  [58/147] sphinx-doc__sphinx-10614 f04451f89e applied=True resolved=False
+  pulled sphinx-doc__sphinx-11445 in 68s
+  [59/147] sphinx-doc__sphinx-11445 183bf7d317 applied=True resolved=True
+  [60/147] sphinx-doc__sphinx-11445 99d51dbfdd applied=True resolved=True
+  [61/147] sphinx-doc__sphinx-11445 72385a5df0 applied=True resolved=False
+  [62/147] sphinx-doc__sphinx-11445 15d979b1e5 applied=True resolved=True
+  [63/147] sphinx-doc__sphinx-11445 7763f2a018 applied=True resolved=True
+  [64/147] sphinx-doc__sphinx-11445 1e78e827d2 applied=True resolved=True
+  pulled sphinx-doc__sphinx-8459 in 35s
+  [65/147] sphinx-doc__sphinx-8459 49e03961ba applied=True resolved=False
+  [66/147] sphinx-doc__sphinx-8459 965cf0ca9a applied=True resolved=False
+  [67/147] sphinx-doc__sphinx-8459 7aea0b73e6 applied=True resolved=False
+  pulled sphinx-doc__sphinx-9230 in 34s
+  [68/147] sphinx-doc__sphinx-9230 3a04a094b8 applied=True resolved=True
+  pulled sphinx-doc__sphinx-9258 in 35s
+  [69/147] sphinx-doc__sphinx-9258 873359c794 applied=True resolved=False
+  [70/147] sphinx-doc__sphinx-9258 de215168b6 applied=True resolved=False
+  [71/147] sphinx-doc__sphinx-9258 c2e4743cf7 applied=True resolved=False
+  [72/147] sphinx-doc__sphinx-9258 5d1c440d89 applied=True resolved=False
+  [73/147] sphinx-doc__sphinx-9258 4bbd9bb3cc applied=True resolved=False
+  pulled sphinx-doc__sphinx-9281 in 36s
+  [74/147] sphinx-doc__sphinx-9281 8d38787310 applied=True resolved=True
+  [75/147] sphinx-doc__sphinx-9281 176eb02fb7 applied=True resolved=True
+  [76/147] sphinx-doc__sphinx-9281 cc6e3a056f applied=True resolved=True
+  pulled sphinx-doc__sphinx-9658 in 34s
+  [77/147] sphinx-doc__sphinx-9658 5f163dfc4f applied=True resolved=False
+  [78/147] sphinx-doc__sphinx-9658 f0c7534f62 applied=True resolved=False
+  [79/147] sphinx-doc__sphinx-9658 bbc5cbe41d applied=True resolved=False
+  [80/147] sphinx-doc__sphinx-9658 962c86981f applied=True resolved=False
+  [81/147] sphinx-doc__sphinx-9658 2d9b914f97 applied=True resolved=False
+  pulled sphinx-doc__sphinx-9698 in 35s
+  [82/147] sphinx-doc__sphinx-9698 f98eeed81f applied=True resolved=False
+  pulled sphinx-doc__sphinx-9711 in 32s
+  [83/147] sphinx-doc__sphinx-9711 529dc796b3 applied=True resolved=True
+  [84/147] sphinx-doc__sphinx-9711 527cd51e01 applied=True resolved=True
+  [85/147] sphinx-doc__sphinx-9711 b83e622a5a applied=True resolved=True
+  pulled sympy__sympy-11618 in 33s
+  [86/147] sympy__sympy-11618 63ee74acef applied=True resolved=False
+  [87/147] sympy__sympy-11618 44e7fb3359 applied=True resolved=True
+  [88/147] sympy__sympy-11618 451fb75937 applied=True resolved=True
+  [89/147] sympy__sympy-11618 fb5b623d21 applied=True resolved=True
+  [90/147] sympy__sympy-11618 1b0e7825fb applied=True resolved=True
+  [91/147] sympy__sympy-11618 e6fe7e9c1f applied=True resolved=True
+  pulled sympy__sympy-12481 in 62s
+  [92/147] sympy__sympy-12481 64c4c71893 applied=True resolved=True
+  [93/147] sympy__sympy-12481 83177e0e0b applied=True resolved=True
+  [94/147] sympy__sympy-12481 1283e06c88 applied=True resolved=True
+  pulled sympy__sympy-13551 in 29s
+  [95/147] sympy__sympy-13551 296fcc308c applied=True resolved=False
+  [96/147] sympy__sympy-13551 614f10133c applied=True resolved=True
+  pulled sympy__sympy-13798 in 31s
+  [97/147] sympy__sympy-13798 010ddee00d applied=True resolved=False
+  [98/147] sympy__sympy-13798 a64a542412 applied=True resolved=True
+  [99/147] sympy__sympy-13798 d89e042a64 applied=True resolved=False
+  [100/147] sympy__sympy-13798 4483bd0ba2 applied=True resolved=False
+  [101/147] sympy__sympy-13798 d5ed1940bb applied=True resolved=False
+  pulled sympy__sympy-14531 in 33s
+  [102/147] sympy__sympy-14531 ee7c5582b8 applied=True resolved=True
+  [103/147] sympy__sympy-14531 74ffceab26 applied=True resolved=True
+  [104/147] sympy__sympy-14531 c7a00ebf73 applied=True resolved=True
+  pulled sympy__sympy-14711 in 31s
+  [105/147] sympy__sympy-14711 5a51adabeb applied=True resolved=False
+  [106/147] sympy__sympy-14711 7b53009f4f applied=True resolved=True
+  [107/147] sympy__sympy-14711 3166023269 applied=True resolved=True
+  [108/147] sympy__sympy-14711 9ca690ede7 applied=True resolved=True
+  pulled sympy__sympy-15017 in 31s
+  [109/147] sympy__sympy-15017 0bf9592d13 applied=True resolved=False
+  pulled sympy__sympy-15875 in 29s
+  [110/147] sympy__sympy-15875 fd69138427 applied=True resolved=True
+  [111/147] sympy__sympy-15875 9030a85bfb applied=True resolved=False
+  [112/147] sympy__sympy-15875 758de66894 applied=True resolved=True
+  [113/147] sympy__sympy-15875 e931de30e6 applied=True resolved=True
+  [114/147] sympy__sympy-15875 65485186ec applied=True resolved=False
+  [115/147] sympy__sympy-15875 27e1879041 applied=True resolved=True
+  pulled sympy__sympy-16792 in 67s
+  [116/147] sympy__sympy-16792 a2d4a18b47 applied=True resolved=False
+  pulled sympy__sympy-17139 in 64s
+  [117/147] sympy__sympy-17139 8e991ee1d7 applied=True resolved=False
+  [118/147] sympy__sympy-17139 94f622dffa applied=True resolved=False
+  pulled sympy__sympy-17655 in 58s
+  [119/147] sympy__sympy-17655 45c3bef6d9 applied=True resolved=True
+  pulled sympy__sympy-18698 in 59s
+  [120/147] sympy__sympy-18698 44d16012ba applied=True resolved=True
+  [121/147] sympy__sympy-18698 e78eb45c46 applied=True resolved=False
+  [122/147] sympy__sympy-18698 ad603fe40d applied=True resolved=False
+  [123/147] sympy__sympy-18698 7c051bb161 applied=True resolved=True
+  pulled sympy__sympy-19346 in 32s
+  [124/147] sympy__sympy-19346 34c1ef4e1b applied=False resolved=False
+  [125/147] sympy__sympy-19346 d62b55d0c8 applied=False resolved=False
+  [126/147] sympy__sympy-19346 7346e123cc applied=False resolved=False
+  [127/147] sympy__sympy-19346 5a073bba4c applied=False resolved=False
+  [128/147] sympy__sympy-19346 e4d41aa890 applied=False resolved=False
+  [129/147] sympy__sympy-19346 b2ef96ac40 applied=False resolved=False
+  pulled sympy__sympy-21596 in 33s
+  [130/147] sympy__sympy-21596 f8fc189075 applied=True resolved=False
+  [131/147] sympy__sympy-21596 dba47bd0bf applied=True resolved=False
+  [132/147] sympy__sympy-21596 d31a271872 applied=True resolved=False
+  pulled sympy__sympy-22914 in 32s
+  [133/147] sympy__sympy-22914 f8268f4d86 applied=True resolved=True
+  [134/147] sympy__sympy-22914 6eb3c77249 applied=True resolved=True
+  pulled sympy__sympy-23262 in 59s
+  [135/147] sympy__sympy-23262 75ffc2a1be applied=True resolved=True
+  [136/147] sympy__sympy-23262 fe280d8d6b applied=True resolved=True
+  [137/147] sympy__sympy-23262 29569ee6f4 applied=True resolved=True
+  [138/147] sympy__sympy-23262 804160735f applied=True resolved=True
+  pulled sympy__sympy-24066 in 62s
+  [139/147] sympy__sympy-24066 861ba844dc applied=True resolved=False
+  [140/147] sympy__sympy-24066 69440e9fe2 applied=True resolved=False
+  [141/147] sympy__sympy-24066 57c011a64b applied=True resolved=True
+  pulled sympy__sympy-24443 in 33s
+  [142/147] sympy__sympy-24443 8062b54a30 applied=True resolved=False
+  [143/147] sympy__sympy-24443 579a1739f0 applied=True resolved=False
+  [144/147] sympy__sympy-24443 a8f99b77db applied=True resolved=False
+  [145/147] sympy__sympy-24443 a7abbfb789 applied=True resolved=True
+  [146/147] sympy__sympy-24443 f18a338a91 applied=True resolved=False
+  [147/147] sympy__sympy-24443 9bb44adcee applied=True resolved=True
+grading complete

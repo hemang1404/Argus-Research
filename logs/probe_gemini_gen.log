@@ -1,0 +1,185 @@
+90 jobs (0 done); prior spend est $0.0000; cap $1.0; prompt_hash=56e5b02fa8ed
+[1/90 1s $0.000] astropy__astropy-14182 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.65 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[2/90 1s $0.000] django__django-12039 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.67 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[3/90 1s $0.000] astropy__astropy-14508 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.67 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[4/90 1s $0.000] django__django-12774 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.67 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[5/90 1s $0.000] django__django-13012 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.69 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[6/90 1s $0.000] django__django-14434 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.6 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[7/90 1s $0.000] django__django-13406 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.69 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[8/90 2s $0.000] django__django-15161 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.79 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[9/90 2s $0.000] django__django-16116 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.62 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+<unknown>:785: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[10/90 2s $0.000] django__django-15382 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.64 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[11/90 2s $0.000] matplotlib__matplotlib-20676 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.58 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[12/90 2s $0.000] matplotlib__matplotlib-25311 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.69 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[13/90 3s $0.000] pytest-dev__pytest-5809 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.6 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[14/90 3s $0.000] psf__requests-2931 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.63 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[15/90 3s $0.000] pydata__xarray-4094 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.67 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[16/90 3s $0.000] scikit-learn__scikit-learn-12973 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.59 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[17/90 3s $0.000] scikit-learn__scikit-learn-14894 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.61 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[18/90 3s $0.000] scikit-learn__scikit-learn-14710 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.64 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[19/90 3s $0.000] scikit-learn__scikit-learn-25973 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.61 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[20/90 4s $0.000] sphinx-doc__sphinx-10435 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.62 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[21/90 4s $0.000] sphinx-doc__sphinx-9711 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.61 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[22/90 4s $0.000] sphinx-doc__sphinx-10614 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.65 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[23/90 4s $0.000] sympy__sympy-13551 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.64 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[24/90 4s $0.000] sympy__sympy-15017 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.62 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[25/90 5s $0.000] sympy__sympy-17655 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.6 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[26/90 5s $0.000] sympy__sympy-17139 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.69 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[27/90 5s $0.000] sympy__sympy-21596 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.66 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[28/90 5s $0.000] sympy__sympy-22914 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.63 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[29/90 5s $0.000] sympy__sympy-24066 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.54 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[30/90 5s $0.000] sympy__sympy-24539 gemini-2.5-flash-lite http=404 prompt=None out=None reas=None finish=None lat=0.72 err=[{
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash-lite is no longer available to new u
+[31/90 8s $0.002] django__django-12039 gemini-3.1-flash-lite http=200 prompt=2264 out=356 reas=None finish=stop lat=2.52 err=
+[32/90 8s $0.004] django__django-12774 gemini-3.1-flash-lite http=200 prompt=7048 out=248 reas=None finish=stop lat=2.48 err=
+[33/90 8s $0.006] astropy__astropy-14182 gemini-3.1-flash-lite http=200 prompt=1327 out=138 reas=None finish=stop lat=3.48 err=
+[34/90 10s $0.010] astropy__astropy-14508 gemini-3.1-flash-lite http=200 prompt=6756 out=344 reas=None finish=stop lat=4.77 err=
+[35/90 11s $0.012] django__django-13012 gemini-3.1-flash-lite http=200 prompt=7414 out=534 reas=None finish=stop lat=3.1 err=
+[36/90 13s $0.016] django__django-13406 gemini-3.1-flash-lite http=200 prompt=7001 out=684 reas=None finish=stop lat=4.89 err=
+[37/90 13s $0.020] django__django-15161 gemini-3.1-flash-lite http=200 prompt=7569 out=918 reas=None finish=stop lat=3.37 err=
+[38/90 13s $0.023] django__django-14434 gemini-3.1-flash-lite http=200 prompt=7457 out=576 reas=None finish=stop lat=5.0 err=
+[39/90 15s $0.026] django__django-15382 gemini-3.1-flash-lite http=200 prompt=7470 out=421 reas=None finish=stop lat=3.85 err=
+<unknown>:785: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[40/90 16s $0.029] django__django-16116 gemini-3.1-flash-lite http=200 prompt=5379 out=327 reas=None finish=stop lat=2.78 err=
+[41/90 17s $0.032] matplotlib__matplotlib-25311 gemini-3.1-flash-lite http=200 prompt=6980 out=568 reas=None finish=stop lat=3.63 err=
+[42/90 18s $0.035] psf__requests-2931 gemini-3.1-flash-lite http=200 prompt=7028 out=154 reas=None finish=stop lat=3.01 err=
+[43/90 18s $0.038] matplotlib__matplotlib-20676 gemini-3.1-flash-lite http=200 prompt=6675 out=843 reas=None finish=stop lat=4.74 err=
+[44/90 19s $0.039] pytest-dev__pytest-5809 gemini-3.1-flash-lite http=200 prompt=1552 out=163 reas=None finish=stop lat=2.04 err=
+[45/90 20s $0.043] pydata__xarray-4094 gemini-3.1-flash-lite http=200 prompt=6901 out=256 reas=None finish=stop lat=4.22 err=
+[46/90 21s $0.046] scikit-learn__scikit-learn-12973 gemini-3.1-flash-lite http=200 prompt=6338 out=606 reas=None finish=stop lat=3.25 err=
+[47/90 21s $0.049] scikit-learn__scikit-learn-14710 gemini-3.1-flash-lite http=200 prompt=6842 out=576 reas=None finish=stop lat=3.34 err=
+[48/90 22s $0.052] scikit-learn__scikit-learn-14894 gemini-3.1-flash-lite http=200 prompt=7002 out=420 reas=None finish=stop lat=2.96 err=
+[49/90 23s $0.055] sphinx-doc__sphinx-10435 gemini-3.1-flash-lite http=200 prompt=6886 out=362 reas=None finish=stop lat=2.49 err=
+[50/90 25s $0.058] scikit-learn__scikit-learn-25973 gemini-3.1-flash-lite http=200 prompt=4097 out=423 reas=None finish=stop lat=5.05 err=
+[51/90 25s $0.061] sphinx-doc__sphinx-10614 gemini-3.1-flash-lite http=200 prompt=5831 out=510 reas=None finish=stop lat=4.08 err=
+[52/90 25s $0.063] sphinx-doc__sphinx-9711 gemini-3.1-flash-lite http=200 prompt=1296 out=281 reas=None finish=stop lat=3.4 err=
+[53/90 28s $0.065] sympy__sympy-13551 gemini-3.1-flash-lite http=200 prompt=5435 out=631 reas=None finish=stop lat=4.18 err=
+[54/90 28s $0.067] sympy__sympy-15017 gemini-3.1-flash-lite http=200 prompt=2358 out=289 reas=None finish=stop lat=2.76 err=
+[55/90 28s $0.070] sympy__sympy-17655 gemini-3.1-flash-lite http=200 prompt=6529 out=320 reas=None finish=stop lat=3.0 err=
+[56/90 29s $0.073] sympy__sympy-17139 gemini-3.1-flash-lite http=200 prompt=6661 out=199 reas=None finish=stop lat=3.73 err=
+[57/90 30s $0.075] sympy__sympy-22914 gemini-3.1-flash-lite http=200 prompt=6512 out=236 reas=None finish=stop lat=1.89 err=
+[58/90 31s $0.078] sympy__sympy-21596 gemini-3.1-flash-lite http=200 prompt=5738 out=507 reas=None finish=stop lat=3.44 err=
+[59/90 32s $0.081] sympy__sympy-24066 gemini-3.1-flash-lite http=200 prompt=2312 out=329 reas=None finish=stop lat=3.99 err=
+[60/90 32s $0.084] sympy__sympy-24539 gemini-3.1-flash-lite http=200 prompt=6641 out=314 reas=None finish=stop lat=3.34 err=
+[61/90 40s $0.092] django__django-12039 gemini-3.5-flash-lite http=200 prompt=2264 out=339 reas=None finish=stop lat=7.39 err=
+[62/90 44s $0.107] astropy__astropy-14508 gemini-3.5-flash-lite http=200 prompt=6756 out=802 reas=None finish=stop lat=13.0 err=
+[63/90 48s $0.109] django__django-13406 gemini-3.5-flash-lite http=200 prompt=7001 out=0 reas=None finish=function_call_filter: MALFORMED_FUNCTION_CALL lat=3.47 err=
+[64/90 48s $0.125] django__django-12774 gemini-3.5-flash-lite http=200 prompt=7048 out=218 reas=None finish=stop lat=15.32 err=
+[65/90 49s $0.136] django__django-13012 gemini-3.5-flash-lite http=200 prompt=7414 out=219 reas=None finish=stop lat=9.23 err=
+[66/90 54s $0.144] django__django-14434 gemini-3.5-flash-lite http=200 prompt=7457 out=151 reas=None finish=stop lat=6.07 err=
+[67/90 60s $0.160] django__django-15161 gemini-3.5-flash-lite http=200 prompt=7569 out=968 reas=None finish=stop lat=12.06 err=
+[68/90 62s $0.169] django__django-16116 gemini-3.5-flash-lite http=200 prompt=5379 out=193 reas=None finish=stop lat=8.27 err=
+[69/90 64s $0.183] django__django-15382 gemini-3.5-flash-lite http=200 prompt=7470 out=340 reas=None finish=stop lat=14.63 err=
+<unknown>:785: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[70/90 64s $0.216] astropy__astropy-14182 gemini-3.5-flash-lite http=200 prompt=1327 out=278 reas=None finish=stop lat=34.29 err=
+[71/90 69s $0.222] psf__requests-2931 gemini-3.5-flash-lite http=200 prompt=7028 out=137 reas=None finish=stop lat=5.14 err=
+[72/90 71s $0.224] pytest-dev__pytest-5809 gemini-3.5-flash-lite http=200 prompt=1552 out=164 reas=None finish=stop lat=1.79 err=
+[73/90 73s $0.235] matplotlib__matplotlib-25311 gemini-3.5-flash-lite http=200 prompt=6980 out=453 reas=None finish=stop lat=11.17 err=
+[74/90 81s $0.257] matplotlib__matplotlib-20676 gemini-3.5-flash-lite http=200 prompt=6675 out=737 reas=None finish=stop lat=20.92 err=
+[75/90 82s $0.267] scikit-learn__scikit-learn-14710 gemini-3.5-flash-lite http=200 prompt=6842 out=541 reas=None finish=stop lat=8.69 err=
+[76/90 88s $0.277] scikit-learn__scikit-learn-14894 gemini-3.5-flash-lite http=200 prompt=7002 out=516 reas=None finish=stop lat=7.54 err=
+[77/90 90s $0.299] scikit-learn__scikit-learn-12973 gemini-3.5-flash-lite http=200 prompt=6338 out=483 reas=None finish=stop lat=19.47 err=
+[78/90 94s $0.312] scikit-learn__scikit-learn-25973 gemini-3.5-flash-lite http=200 prompt=4097 out=1267 reas=None finish=stop lat=11.89 err=
+[79/90 95s $0.342] pydata__xarray-4094 gemini-3.5-flash-lite http=200 prompt=6901 out=271 reas=None finish=stop lat=30.71 err=
+[80/90 99s $0.346] sphinx-doc__sphinx-9711 gemini-3.5-flash-lite http=200 prompt=1296 out=193 reas=None finish=stop lat=5.65 err=
+[81/90 100s $0.360] sphinx-doc__sphinx-10435 gemini-3.5-flash-lite http=200 prompt=6886 out=221 reas=None finish=stop lat=11.29 err=
+[82/90 106s $0.366] sympy__sympy-15017 gemini-3.5-flash-lite http=200 prompt=2358 out=181 reas=None finish=stop lat=6.71 err=
+[83/90 107s $0.374] sympy__sympy-17139 gemini-3.5-flash-lite http=200 prompt=6661 out=186 reas=None finish=stop lat=7.11 err=
+[84/90 111s $0.395] sphinx-doc__sphinx-10614 gemini-3.5-flash-lite http=200 prompt=5831 out=461 reas=None finish=stop lat=20.65 err=
+[85/90 112s $0.413] sympy__sympy-13551 gemini-3.5-flash-lite http=200 prompt=5435 out=396 reas=None finish=stop lat=17.3 err=
+[86/90 113s $0.421] sympy__sympy-17655 gemini-3.5-flash-lite http=200 prompt=6529 out=612 reas=None finish=stop lat=6.61 err=
+[87/90 114s $0.425] sympy__sympy-22914 gemini-3.5-flash-lite http=200 prompt=6512 out=213 reas=None finish=stop lat=2.9 err=
+[88/90 121s $0.441] sympy__sympy-21596 gemini-3.5-flash-lite http=200 prompt=5738 out=314 reas=None finish=stop lat=13.67 err=
+[89/90 124s $0.453] sympy__sympy-24066 gemini-3.5-flash-lite http=200 prompt=2312 out=310 reas=None finish=stop lat=12.4 err=
+[90/90 135s $0.455] sympy__sympy-24539 gemini-3.5-flash-lite http=200 prompt=6641 out=0 reas=None finish=function_call_filter: MALFORMED_FUNCTION_CALL lat=21.8 err=
+done 135s; estimated spend $0.4551; stopped_by_cap=False

@@ -1,0 +1,6 @@
+models ['gemini31', 'gemini35']; specs [('F', 1, 1.0)]; 2 tasks to run; prompt_hash=56e5b02fa8ed
+  pulled django__django-12039 in 224s
+  pulled django__django-11087 in 225s
+[1/2] django__django-11087 gemini31|F|1|1:continue/n=3 gemini35|F|1|1:continue/n=3 307s
+[2/2] django__django-12039 gemini31|F|1|1:continue/n=3 gemini35|F|1|1:accepted_resolved/n=3 339s
+all done

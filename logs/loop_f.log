@@ -1,0 +1,97 @@
+models ['gemma26', 'qwen38']; 100 tasks to run; prompt_hash=56e5b02fa8ed
+  [qwen38] astropy__astropy-13033 bc67c07842 applied=True resolved=False
+[1/100] astropy__astropy-12907 gemma26:accepted_resolved/n=3 qwen38:accepted_resolved/n=1 98s
+  pulled astropy__astropy-13579 in 13s
+  [qwen38] astropy__astropy-13579 09fc80caba applied=True resolved=True
+  [qwen38] astropy__astropy-13579 a9f419782d applied=True resolved=False
+  [qwen38] astropy__astropy-13579 fefdb9396b applied=True resolved=False
+[2/100] astropy__astropy-13033 gemma26:continue/n=3 qwen38:continue/n=3 348s
+  pulled astropy__astropy-14182 in 71s
+[3/100] astropy__astropy-13579 gemma26:continue/n=3 qwen38:accepted_resolved/n=1 556s
+[4/100] astropy__astropy-14182 gemma26:continue/n=3 qwen38:continue/n=3 365s
+  pulled astropy__astropy-14508 in 73s
+  pulled astropy__astropy-14995 in 86s
+  [qwen38] astropy__astropy-14508 1c7dd70cb1 applied=True resolved=False
+  [qwen38] astropy__astropy-14995 a947581ce8 applied=True resolved=False
+  [qwen38] astropy__astropy-14508 57601aa3e0 applied=True resolved=False
+  [qwen38] astropy__astropy-14995 aa7b094135 applied=True resolved=False
+  [qwen38] astropy__astropy-14508 795896a4d5 applied=True resolved=False
+[5/100] astropy__astropy-14508 gemma26:accepted_regressed/n=1 qwen38:accepted_regressed/n=1 266s
+  pulled astropy__astropy-8872 in 67s
+  [qwen38] astropy__astropy-8872 246eeb5e60 applied=False resolved=False
+  [qwen38] astropy__astropy-8872 89b61a6728 applied=True resolved=False
+[6/100] astropy__astropy-14995 gemma26:accepted_resolved/n=2 qwen38:accepted_resolved/n=2 351s
+[7/100] django__django-10880 gemma26:accepted_regressed/n=1 qwen38:accepted_resolved/n=1 0s
+  [qwen38] astropy__astropy-8872 e408a23cf0 applied=True resolved=False
+  pulled django__django-11087 in 40s
+[8/100] astropy__astropy-8872 gemma26:accepted_regressed/n=1 qwen38:accepted_regressed/n=2 184s
+  pulled django__django-11141 in 15s
+  [qwen38] django__django-11087 416897c48f applied=True resolved=False
+  [qwen38] django__django-11141 26f15dd7d1 applied=True resolved=False
+[9/100] django__django-11141 gemma26:accepted_regressed/n=1 qwen38:accepted_regressed/n=1 42s
+  [qwen38] django__django-11087 55a3c9a636 applied=True resolved=False
+  pulled django__django-11790 in 14s
+  [qwen38] django__django-11087 e147a2df08 applied=True resolved=False
+  [qwen38] django__django-11790 89e23b67ca applied=True resolved=False
+  [qwen38] django__django-11790 b7b6b66d9a applied=True resolved=False
+[10/100] django__django-11790 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=2 92s
+  pulled django__django-11964 in 72s
+  [qwen38] django__django-11964 c9d0b89098 applied=True resolved=False
+  [qwen38] django__django-11964 e9dbb0e959 applied=True resolved=False
+[11/100] django__django-11964 gemma26:accepted_resolved/n=1 qwen38:continue/n=3 213s
+  pulled django__django-12039 in 11s
+  [qwen38] django__django-12039 2ab7f13728 applied=True resolved=False
+  [qwen38] django__django-12039 65d780f20e applied=True resolved=False
+[12/100] django__django-11087 gemma26:continue/n=3 qwen38:continue/n=3 837s
+  pulled django__django-12209 in 11s
+  [qwen38] django__django-12209 a87909476a applied=True resolved=True
+[13/100] django__django-12209 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=1 39s
+  pulled django__django-12774 in 11s
+  [qwen38] django__django-12774 4e361b7ae7 applied=True resolved=False
+  [qwen38] django__django-12774 76e26a7483 applied=True resolved=False
+  [qwen38] django__django-12774 b0d56c01d3 applied=True resolved=False
+[14/100] django__django-12039 gemma26:continue/n=3 qwen38:continue/n=3 636s
+  pulled django__django-13012 in 40s
+  [qwen38] django__django-13012 4406b2c760 applied=True resolved=False
+[15/100] django__django-12774 gemma26:continue/n=3 qwen38:continue/n=3 328s
+[16/100] django__django-13012 gemma26:continue/n=3 qwen38:api_error/n=2 178s
+  pulled django__django-13551 in 114s
+  pulled django__django-13406 in 128s
+  [qwen38] django__django-13406 e63564a94b applied=True resolved=False
+  [qwen38] django__django-13551 2e09fbd4fa applied=True resolved=False
+[17/100] django__django-13406 qwen38:continue/n=3 SKIPPED ['gemma26'] 166s
+  [qwen38] django__django-13551 7f49e8d124 applied=True resolved=False
+  pulled django__django-13810 in 72s
+  [qwen38] django__django-13810 55c46e51fe applied=True resolved=False
+  [qwen38] django__django-13810 5c3029861b applied=True resolved=False
+  [qwen38] django__django-13810 87cfc3b033 applied=True resolved=False
+[18/100] django__django-13810 gemma26:accepted_resolved/n=1 qwen38:accepted_regressed/n=1 158s
+  pulled django__django-13933 in 74s
+  [qwen38] django__django-13933 3b3943b4cc applied=True resolved=True
+  [qwen38] django__django-13933 7e42b8e9eb applied=True resolved=True
+[19/100] django__django-13933 gemma26:accepted_resolved/n=2 qwen38:accepted_resolved/n=1 262s
+[20/100] django__django-13551 gemma26:continue/n=3 qwen38:continue/n=3 650s
+  pulled django__django-14017 in 72s
+  [qwen38] django__django-14017 345bdd13a3 applied=True resolved=False
+  pulled django__django-14034 in 90s
+  [qwen38] django__django-14017 5c7012d1ab applied=True resolved=False
+  [qwen38] django__django-14034 033a27ec27 applied=True resolved=False
+  [qwen38] django__django-14034 1fd3254635 applied=True resolved=False
+  [qwen38] django__django-14034 6b16137397 applied=True resolved=False
+[21/100] django__django-14034 gemma26:continue/n=3 qwen38:continue/n=3 728s
+  pulled django__django-14238 in 13s
+[22/100] django__django-14017 gemma26:continue/n=3 qwen38:continue/n=3 834s
+  [qwen38] django__django-14238 cef8eb0d0a applied=False resolved=False
+  pulled django__django-14434 in 76s
+[23/100] django__django-14238 gemma26:continue/n=3 qwen38:accepted_resolved/n=3 141s
+  [qwen38] django__django-14434 454827ecc9 applied=False resolved=False
+  [qwen38] django__django-14434 8d03474035 applied=False resolved=False
+[24/100] django__django-14434 gemma26:accepted_resolved/n=1 qwen38:accepted_resolved/n=3 163s
+  pulled django__django-14534 in 88s
+  pulled django__django-14771 in 98s
+  [qwen38] django__django-14771 6362b23733 applied=True resolved=False
+  [qwen38] django__django-14771 927b094433 applied=False resolved=False
+  [qwen38] django__django-14771 a55624bef1 applied=True resolved=False
+[25/100] django__django-14534 gemma26:continue/n=3 qwen38:accepted_resolved/n=3 258s
+  pulled django__django-15128 in 16s
+  [qwen38] django__django-15128 faec1be4d1 applied=True resolved=False

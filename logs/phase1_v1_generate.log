@@ -1,0 +1,205 @@
+17 keys; prompt_hash=56e5b02fa8ed; manifest=pilot100
+200 jobs (0 already done)
+job error: PermissionError(13, 'Access is denied')
+job error: PermissionError(13, 'Access is denied')
+job error: PermissionError(13, 'Access is denied')
+job error: PermissionError(13, 'Access is denied')
+job error: PermissionError(13, 'Access is denied')
+job error: PermissionError(13, 'Permission denied')
+job error: PermissionError(13, 'Access is denied')
+job error: PermissionError(13, 'Permission denied')
+job error: PermissionError(13, 'Access is denied')
+[10/200 1s] django__django-10880 gpt-oss-120b http=200 prompt=1611 out=242 reas=181 finish=stop cov=1.0 tries=1
+[11/200 2s] astropy__astropy-14182 gpt-oss-20b http=200 prompt=1195 out=525 reas=441 finish=stop cov=1.0 tries=1
+[12/200 2s] django__django-12039 gpt-oss-20b http=200 prompt=1905 out=690 reas=500 finish=stop cov=1.0 tries=1
+[13/200 3s] django__django-11141 gpt-oss-20b http=200 prompt=3387 out=771 reas=715 finish=stop cov=1.0 tries=1
+[14/200 3s] astropy__astropy-14995 gpt-oss-20b http=200 prompt=5928 out=1184 reas=906 finish=stop cov=1.0 tries=1
+[15/200 3s] astropy__astropy-13033 gpt-oss-20b http=200 prompt=1608 out=1782 reas=1653 finish=stop cov=1.0 tries=1
+[16/200 3s] django__django-11087 gpt-oss-120b http=200 prompt=4697 out=848 reas=636 finish=stop cov=1.0 tries=1
+[17/200 3s] django__django-11964 gpt-oss-20b http=200 prompt=1333 out=1127 reas=1036 finish=stop cov=1.0 tries=1
+[18/200 3s] django__django-11141 gpt-oss-120b http=200 prompt=3387 out=698 reas=540 finish=stop cov=1.0 tries=1
+job error: PermissionError(13, 'Access is denied')
+[20/200 4s] django__django-12039 gpt-oss-120b http=200 prompt=1905 out=937 reas=676 finish=stop cov=1.0 tries=1
+job error: PermissionError(13, 'Access is denied')
+[22/200 4s] astropy__astropy-8872 gpt-oss-120b http=200 prompt=5955 out=1303 reas=1182 finish=stop cov=1.0 tries=1
+job error: PermissionError(13, 'Access is denied')
+[24/200 5s] astropy__astropy-14508 gpt-oss-120b http=200 prompt=5945 out=1651 reas=1044 finish=stop cov=1.0 tries=2
+job error: PermissionError(13, 'Permission denied')
+[26/200 6s] astropy__astropy-12907 gpt-oss-20b http=200 prompt=3012 out=4530 reas=4189 finish=stop cov=1.0 tries=2
+[27/200 7s] astropy__astropy-14182 gpt-oss-120b http=200 prompt=1195 out=2297 reas=2166 finish=stop cov=1.0 tries=1
+[28/200 15s] django__django-12774 gpt-oss-20b http=200 prompt=5966 out=1312 reas=1090 finish=stop cov=1.0 tries=2
+[29/200 21s] django__django-12774 gpt-oss-120b http=200 prompt=5966 out=922 reas=692 finish=stop cov=1.0 tries=1
+[30/200 22s] django__django-14017 gpt-oss-20b http=200 prompt=3211 out=857 reas=743 finish=stop cov=1.0 tries=1
+[31/200 23s] django__django-13551 gpt-oss-120b http=200 prompt=1257 out=264 reas=184 finish=stop cov=1.0 tries=1
+[32/200 23s] django__django-13551 gpt-oss-20b http=200 prompt=1257 out=411 reas=337 finish=stop cov=1.0 tries=1
+[33/200 23s] django__django-14238 gpt-oss-120b http=200 prompt=6071 out=582 reas=432 finish=stop cov=0.5 tries=1
+job error: PermissionError(13, 'Permission denied')
+job error: PermissionError(13, 'Access is denied')
+[36/200 25s] django__django-13012 gpt-oss-120b http=200 prompt=6250 out=794 reas=543 finish=stop cov=0.0 tries=1
+[37/200 31s] django__django-14034 gpt-oss-20b http=200 prompt=2761 out=8000 reas=7998 finish=length cov=1.0 tries=2
+[38/200 35s] django__django-12209 gpt-oss-20b http=200 prompt=5969 out=1719 reas=1563 finish=stop cov=1.0 tries=1
+[39/200 44s] django__django-14771 gpt-oss-120b http=200 prompt=5702 out=848 reas=692 finish=stop cov=1.0 tries=1
+[40/200 48s] django__django-15161 gpt-oss-120b http=200 prompt=6441 out=651 reas=590 finish=stop cov=0.333 tries=1
+[41/200 49s] django__django-11790 gpt-oss-20b http=200 prompt=3473 out=884 reas=802 finish=stop cov=1.0 tries=5
+[42/200 53s] django__django-14434 gpt-oss-20b http=200 prompt=5951 out=1099 reas=1019 finish=stop cov=1.0 tries=1
+[43/200 56s] django__django-14534 gpt-oss-120b http=200 prompt=2829 out=554 reas=369 finish=stop cov=1.0 tries=1
+[44/200 56s] django__django-12209 gpt-oss-120b http=200 prompt=5969 out=2833 reas=2479 finish=stop cov=1.0 tries=1
+[45/200 57s] django__django-15280 gpt-oss-20b http=200 prompt=5917 out=2935 reas=2722 finish=stop cov=0.0 tries=1
+[46/200 64s] django__django-14238 gpt-oss-20b http=200 prompt=6071 out=1469 reas=1279 finish=stop cov=0.5 tries=3
+[47/200 66s] django__django-14434 gpt-oss-120b http=200 prompt=5951 out=1977 reas=1852 finish=stop cov=1.0 tries=1
+[48/200 69s] django__django-15930 gpt-oss-20b http=200 prompt=6186 out=8000 reas=7663 finish=length cov=0.0 tries=1
+[49/200 71s] django__django-14034 gpt-oss-120b http=200 prompt=2761 out=3607 reas=2954 finish=stop cov=1.0 tries=1
+[50/200 71s] django__django-15128 gpt-oss-20b http=200 prompt=5934 out=8000 reas=7773 finish=length cov=0.263 tries=1
+job error: PermissionError(13, 'Access is denied')
+[52/200 72s] django__django-16116 gpt-oss-120b http=200 prompt=4414 out=1003 reas=689 finish=stop cov=1.0 tries=1
+[53/200 73s] django__django-15128 gpt-oss-120b http=200 prompt=5934 out=2011 reas=1405 finish=stop cov=0.263 tries=1
+[54/200 76s] django__django-15382 gpt-oss-120b http=200 prompt=6247 out=1572 reas=1349 finish=stop cov=1.0 tries=1
+[55/200 77s] django__django-13810 gpt-oss-20b http=200 prompt=3337 out=725 reas=409 finish=stop cov=1.0 tries=1
+[56/200 85s] django__django-16595 gpt-oss-20b http=200 prompt=3163 out=1923 reas=1841 finish=stop cov=1.0 tries=1
+[57/200 93s] django__django-15280 gpt-oss-120b http=200 prompt=5917 out=4011 reas=3698 finish=stop cov=0.0 tries=1
+[58/200 96s] django__django-16642 gpt-oss-20b http=200 prompt=5756 out=1393 reas=1191 finish=stop cov=1.0 tries=1
+[59/200 97s] django__django-13933 gpt-oss-20b http=200 prompt=6001 out=779 reas=599 finish=stop cov=1.0 tries=2
+[60/200 102s] django__django-16116 gpt-oss-20b http=200 prompt=4414 out=1120 reas=819 finish=stop cov=1.0 tries=1
+[61/200 105s] django__django-15315 gpt-oss-120b http=200 prompt=6119 out=692 reas=633 finish=stop cov=0.0 tries=1
+[62/200 113s] matplotlib__matplotlib-13989 gpt-oss-120b http=200 prompt=5912 out=2742 reas=2667 finish=stop cov=0.0 tries=1
+[63/200 113s] matplotlib__matplotlib-20488 gpt-oss-120b http=200 prompt=5918 out=1303 reas=1173 finish=stop cov=1.0 tries=1
+[64/200 114s] django__django-16877 gpt-oss-120b http=200 prompt=6182 out=981 reas=767 finish=stop cov=0.5 tries=1
+[65/200 120s] matplotlib__matplotlib-20676 gpt-oss-20b http=200 prompt=5947 out=8000 reas=7878 finish=length cov=0.0 tries=1
+[66/200 122s] django__django-15161 gpt-oss-20b http=200 prompt=6441 out=1407 reas=825 finish=stop cov=0.333 tries=2
+[67/200 126s] matplotlib__matplotlib-24570 gpt-oss-120b http=200 prompt=6022 out=1215 reas=1043 finish=stop cov=1.0 tries=1
+[68/200 127s] matplotlib__matplotlib-20676 gpt-oss-120b http=200 prompt=5947 out=2692 reas=2335 finish=stop cov=0.0 tries=1
+job error: PermissionError(13, 'Access is denied')
+[70/200 128s] matplotlib__matplotlib-13989 gpt-oss-20b http=200 prompt=5912 out=8000 reas=7703 finish=length cov=0.0 tries=1
+[71/200 132s] django__django-15315 gpt-oss-20b http=200 prompt=6119 out=8000 reas=7903 finish=length cov=0.0 tries=3
+[72/200 136s] matplotlib__matplotlib-23412 gpt-oss-20b http=200 prompt=5966 out=8000 reas=7933 finish=length cov=0.0 tries=1
+[73/200 139s] django__django-16642 gpt-oss-120b http=200 prompt=5756 out=1589 reas=1301 finish=stop cov=1.0 tries=1
+[74/200 144s] django__django-15382 gpt-oss-20b http=200 prompt=6247 out=3529 reas=3309 finish=stop cov=1.0 tries=2
+[75/200 146s] matplotlib__matplotlib-24970 gpt-oss-120b http=200 prompt=5957 out=946 reas=749 finish=stop cov=1.0 tries=1
+[76/200 162s] psf__requests-1766 gpt-oss-20b http=200 prompt=1966 out=333 reas=245 finish=stop cov=1.0 tries=2
+[77/200 164s] django__django-16595 gpt-oss-120b http=200 prompt=3163 out=830 reas=542 finish=stop cov=1.0 tries=1
+<unknown>:785: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[78/200 165s] matplotlib__matplotlib-25311 gpt-oss-20b http=200 prompt=6090 out=1362 reas=1166 finish=stop cov=0.333 tries=1
+<unknown>:785: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+[79/200 166s] psf__requests-1766 gpt-oss-120b http=200 prompt=1966 out=413 reas=328 finish=stop cov=1.0 tries=1
+[80/200 171s] matplotlib__matplotlib-25960 gpt-oss-20b http=200 prompt=5953 out=8000 reas=7567 finish=length cov=1.0 tries=2
+[81/200 178s] matplotlib__matplotlib-24970 gpt-oss-20b http=200 prompt=5957 out=2035 reas=1824 finish=stop cov=1.0 tries=1
+[82/200 178s] django__django-13012 gpt-oss-20b http=200 prompt=6250 out=4782 reas=4422 finish=stop cov=0.0 tries=3
+job error: PermissionError(13, 'Access is denied')
+[84/200 184s] django__django-15930 gpt-oss-120b http=200 prompt=6186 out=2606 reas=2432 finish=stop cov=0.0 tries=2
+[85/200 185s] django__django-16485 gpt-oss-20b http=200 prompt=6134 out=8000 reas=7998 finish=length cov=1.0 tries=4
+[86/200 187s] pydata__xarray-4356 gpt-oss-20b http=200 prompt=2340 out=809 reas=606 finish=stop cov=1.0 tries=1
+[87/200 194s] matplotlib__matplotlib-25311 gpt-oss-120b http=200 prompt=6090 out=1050 reas=710 finish=stop cov=0.333 tries=3
+[88/200 195s] pydata__xarray-4356 gpt-oss-120b http=200 prompt=2340 out=978 reas=712 finish=stop cov=1.0 tries=1
+[89/200 198s] matplotlib__matplotlib-23412 gpt-oss-120b http=200 prompt=5966 out=1248 reas=1097 finish=stop cov=0.0 tries=1
+[90/200 199s] pydata__xarray-4966 gpt-oss-120b http=200 prompt=4140 out=999 reas=502 finish=stop cov=1.0 tries=1
+[91/200 199s] pydata__xarray-3151 gpt-oss-120b http=200 prompt=5937 out=722 reas=485 finish=stop cov=1.0 tries=1
+[92/200 204s] psf__requests-2931 gpt-oss-20b http=200 prompt=6057 out=739 reas=674 finish=stop cov=1.0 tries=1
+[93/200 210s] pylint-dev__pylint-7277 gpt-oss-20b http=200 prompt=1396 out=1538 reas=1304 finish=stop cov=1.0 tries=1
+[94/200 211s] pydata__xarray-6721 gpt-oss-20b http=200 prompt=5929 out=1836 reas=1564 finish=stop cov=1.0 tries=2
+[95/200 213s] psf__requests-6028 gpt-oss-20b http=200 prompt=6042 out=8000 reas=7998 finish=length cov=0.0 tries=4
+[96/200 215s] psf__requests-2931 gpt-oss-120b http=200 prompt=6057 out=461 reas=396 finish=stop cov=1.0 tries=1
+[97/200 215s] django__django-16877 gpt-oss-20b http=200 prompt=6182 out=850 reas=599 finish=stop cov=0.5 tries=1
+[98/200 222s] pytest-dev__pytest-10051 gpt-oss-120b http=200 prompt=6131 out=1547 reas=1358 finish=stop cov=0.6 tries=2
+[99/200 225s] pytest-dev__pytest-5809 gpt-oss-120b http=200 prompt=1395 out=286 reas=230 finish=stop cov=1.0 tries=1
+[100/200 228s] pydata__xarray-6721 gpt-oss-120b http=200 prompt=5929 out=1230 reas=671 finish=stop cov=1.0 tries=1
+[101/200 230s] pydata__xarray-4094 gpt-oss-120b http=200 prompt=5945 out=2164 reas=1942 finish=stop cov=1.0 tries=1
+[102/200 235s] matplotlib__matplotlib-24637 gpt-oss-20b http=200 prompt=6001 out=2561 reas=2448 finish=stop cov=0.0 tries=1
+[103/200 237s] pytest-dev__pytest-5262 gpt-oss-120b http=200 prompt=6198 out=839 reas=705 finish=stop cov=0.5 tries=1
+[104/200 239s] pytest-dev__pytest-7521 gpt-oss-120b http=200 prompt=6188 out=806 reas=702 finish=stop cov=1.0 tries=1
+[105/200 243s] pytest-dev__pytest-10051 gpt-oss-20b http=200 prompt=6131 out=8000 reas=5618 finish=length cov=0.6 tries=3
+[106/200 246s] scikit-learn__scikit-learn-10844 gpt-oss-120b http=200 prompt=5934 out=773 reas=680 finish=stop cov=0.75 tries=1
+[107/200 256s] pydata__xarray-4966 gpt-oss-20b http=200 prompt=4140 out=2044 reas=1593 finish=stop cov=1.0 tries=2
+[108/200 259s] pydata__xarray-4094 gpt-oss-20b http=200 prompt=5945 out=8000 reas=7998 finish=length cov=1.0 tries=1
+[109/200 262s] pylint-dev__pylint-7277 gpt-oss-120b http=200 prompt=1396 out=672 reas=577 finish=stop cov=1.0 tries=1
+[110/200 264s] scikit-learn__scikit-learn-11578 gpt-oss-20b http=200 prompt=5890 out=1196 reas=1095 finish=stop cov=0.0 tries=1
+[111/200 270s] matplotlib__matplotlib-20488 gpt-oss-20b http=200 prompt=5918 out=1329 reas=1124 finish=stop cov=1.0 tries=2
+[112/200 271s] scikit-learn__scikit-learn-11578 gpt-oss-120b http=200 prompt=5890 out=396 reas=332 finish=stop cov=0.0 tries=1
+[113/200 276s] scikit-learn__scikit-learn-14053 gpt-oss-120b http=200 prompt=5951 out=816 reas=632 finish=stop cov=1.0 tries=1
+[114/200 276s] pytest-dev__pytest-6197 gpt-oss-120b http=200 prompt=6007 out=2118 reas=1897 finish=stop cov=0.053 tries=1
+[115/200 281s] pytest-dev__pytest-5809 gpt-oss-20b http=200 prompt=1395 out=227 reas=131 finish=stop cov=1.0 tries=1
+[116/200 283s] scikit-learn__scikit-learn-12973 gpt-oss-120b http=200 prompt=5862 out=352 reas=283 finish=stop cov=0.0 tries=1
+[117/200 285s] scikit-learn__scikit-learn-14710 gpt-oss-120b http=200 prompt=5954 out=1431 reas=988 finish=stop cov=1.0 tries=1
+[118/200 294s] scikit-learn__scikit-learn-14710 gpt-oss-20b http=200 prompt=5954 out=1538 reas=1126 finish=stop cov=1.0 tries=1
+[119/200 296s] scikit-learn__scikit-learn-13496 gpt-oss-120b http=200 prompt=4894 out=613 reas=270 finish=stop cov=1.0 tries=1
+[120/200 301s] pytest-dev__pytest-7521 gpt-oss-20b http=200 prompt=6188 out=8000 reas=7423 finish=length cov=1.0 tries=2
+[121/200 302s] psf__requests-6028 gpt-oss-120b http=200 prompt=6042 out=1210 reas=891 finish=stop cov=0.0 tries=2
+[122/200 302s] scikit-learn__scikit-learn-14983 gpt-oss-20b http=200 prompt=5944 out=1478 reas=1131 finish=stop cov=0.0 tries=1
+[123/200 306s] pytest-dev__pytest-6197 gpt-oss-20b http=200 prompt=6007 out=8000 reas=7843 finish=length cov=0.053 tries=1
+[124/200 306s] scikit-learn__scikit-learn-25973 gpt-oss-120b http=200 prompt=3534 out=1354 reas=1097 finish=stop cov=1.0 tries=1
+[125/200 310s] sphinx-doc__sphinx-10466 gpt-oss-120b http=200 prompt=3585 out=685 reas=467 finish=stop cov=1.0 tries=1
+[126/200 314s] sphinx-doc__sphinx-10614 gpt-oss-20b http=200 prompt=4951 out=1797 reas=1505 finish=stop cov=1.0 tries=1
+[127/200 320s] sphinx-doc__sphinx-10466 gpt-oss-20b http=200 prompt=3585 out=551 reas=350 finish=stop cov=1.0 tries=2
+[128/200 325s] sphinx-doc__sphinx-10614 gpt-oss-120b http=200 prompt=4951 out=1341 reas=961 finish=stop cov=1.0 tries=1
+[129/200 328s] sphinx-doc__sphinx-10435 gpt-oss-20b http=200 prompt=5998 out=1946 reas=1675 finish=stop cov=1.0 tries=2
+[130/200 338s] scikit-learn__scikit-learn-14894 gpt-oss-20b http=200 prompt=5969 out=3008 reas=2668 finish=stop cov=0.833 tries=2
+[131/200 338s] sphinx-doc__sphinx-11445 gpt-oss-120b http=200 prompt=1657 out=2243 reas=2118 finish=stop cov=1.0 tries=1
+[132/200 343s] sphinx-doc__sphinx-9230 gpt-oss-20b http=200 prompt=3744 out=1619 reas=1464 finish=stop cov=1.0 tries=1
+[133/200 346s] scikit-learn__scikit-learn-14894 gpt-oss-120b http=200 prompt=5969 out=1183 reas=859 finish=stop cov=0.833 tries=1
+[134/200 346s] scikit-learn__scikit-learn-13496 gpt-oss-20b http=200 prompt=4894 out=1613 reas=1280 finish=stop cov=1.0 tries=1
+[135/200 351s] sphinx-doc__sphinx-11445 gpt-oss-20b http=200 prompt=1657 out=4617 reas=4562 finish=stop cov=1.0 tries=1
+[136/200 351s] scikit-learn__scikit-learn-12973 gpt-oss-20b http=200 prompt=5862 out=8000 reas=7233 finish=length cov=0.0 tries=1
+[137/200 353s] sphinx-doc__sphinx-9258 gpt-oss-120b http=200 prompt=5981 out=2009 reas=1330 finish=stop cov=0.0 tries=1
+[138/200 355s] sphinx-doc__sphinx-8459 gpt-oss-120b http=200 prompt=1689 out=1583 reas=1393 finish=stop cov=1.0 tries=1
+[139/200 356s] scikit-learn__scikit-learn-14983 gpt-oss-120b http=200 prompt=5944 out=759 reas=615 finish=stop cov=0.0 tries=1
+[140/200 356s] sphinx-doc__sphinx-9281 gpt-oss-120b http=200 prompt=6093 out=1091 reas=393 finish=stop cov=1.0 tries=1
+job error: PermissionError(13, 'Access is denied')
+[142/200 358s] sphinx-doc__sphinx-9230 gpt-oss-120b http=200 prompt=3744 out=960 reas=770 finish=stop cov=1.0 tries=1
+[143/200 359s] sphinx-doc__sphinx-9658 gpt-oss-20b http=200 prompt=2395 out=3984 reas=3897 finish=stop cov=1.0 tries=1
+[144/200 363s] sphinx-doc__sphinx-9658 gpt-oss-120b http=200 prompt=2395 out=2462 reas=2185 finish=stop cov=1.0 tries=1
+[145/200 371s] matplotlib__matplotlib-24570 gpt-oss-20b http=200 prompt=6022 out=3913 reas=3761 finish=stop cov=1.0 tries=9
+[146/200 373s] sphinx-doc__sphinx-9711 gpt-oss-120b http=200 prompt=1183 out=517 reas=420 finish=stop cov=1.0 tries=1
+[147/200 376s] sympy__sympy-12481 gpt-oss-20b http=200 prompt=5924 out=1887 reas=1776 finish=stop cov=1.0 tries=2
+[148/200 381s] sphinx-doc__sphinx-9711 gpt-oss-20b http=200 prompt=1183 out=1258 reas=915 finish=stop cov=1.0 tries=1
+[149/200 385s] sphinx-doc__sphinx-9698 gpt-oss-120b http=200 prompt=6012 out=1754 reas=1419 finish=stop cov=0.0 tries=1
+[150/200 386s] matplotlib__matplotlib-25960 gpt-oss-120b http=200 prompt=5953 out=3059 reas=2692 finish=stop cov=1.0 tries=1
+[151/200 387s] sympy__sympy-12481 gpt-oss-120b http=200 prompt=5924 out=858 reas=665 finish=stop cov=1.0 tries=1
+[152/200 392s] sphinx-doc__sphinx-8459 gpt-oss-20b http=200 prompt=1689 out=860 reas=722 finish=stop cov=1.0 tries=1
+[153/200 394s] sympy__sympy-13798 gpt-oss-20b http=200 prompt=5966 out=590 reas=271 finish=stop cov=1.0 tries=3
+[154/200 398s] sympy__sympy-13551 gpt-oss-120b http=200 prompt=4971 out=2683 reas=2171 finish=stop cov=1.0 tries=1
+[155/200 401s] sympy__sympy-13480 gpt-oss-120b http=200 prompt=6091 out=472 reas=365 finish=stop cov=1.0 tries=1
+[156/200 404s] sympy__sympy-13798 gpt-oss-120b http=200 prompt=5966 out=1082 reas=704 finish=stop cov=1.0 tries=1
+[157/200 405s] scikit-learn__scikit-learn-25973 gpt-oss-20b http=200 prompt=3534 out=2012 reas=1889 finish=stop cov=1.0 tries=1
+[158/200 405s] pytest-dev__pytest-5262 gpt-oss-20b http=200 prompt=6198 out=1864 reas=1620 finish=stop cov=0.5 tries=2
+[159/200 407s] sympy__sympy-13551 gpt-oss-20b http=200 prompt=4971 out=1825 reas=1551 finish=stop cov=1.0 tries=1
+[160/200 408s] sphinx-doc__sphinx-9281 gpt-oss-20b http=200 prompt=6093 out=861 reas=642 finish=stop cov=1.0 tries=1
+[161/200 420s] sympy__sympy-15017 gpt-oss-20b http=200 prompt=2150 out=790 reas=642 finish=stop cov=1.0 tries=1
+[162/200 421s] sympy__sympy-14711 gpt-oss-120b http=200 prompt=6030 out=885 reas=668 finish=stop cov=1.0 tries=1
+[163/200 428s] sphinx-doc__sphinx-10435 gpt-oss-120b http=200 prompt=5998 out=1877 reas=1541 finish=stop cov=1.0 tries=1
+[164/200 441s] django__django-13406 gpt-oss-20b http=200 prompt=5937 out=8000 reas=7858 finish=length cov=0.0 tries=2
+[165/200 441s] sympy__sympy-11618 gpt-oss-20b http=200 prompt=6072 out=692 reas=507 finish=stop cov=1.0 tries=4
+[166/200 443s] sympy__sympy-14531 gpt-oss-20b http=200 prompt=6367 out=3247 reas=2659 finish=stop cov=0.645 tries=4
+[167/200 445s] sympy__sympy-14711 gpt-oss-20b http=200 prompt=6030 out=8000 reas=7998 finish=length cov=1.0 tries=1
+[168/200 449s] sympy__sympy-17655 gpt-oss-20b http=200 prompt=5983 out=907 reas=795 finish=stop cov=0.0 tries=1
+[169/200 450s] sympy__sympy-15875 gpt-oss-20b http=200 prompt=5981 out=3738 reas=3189 finish=stop cov=1.0 tries=1
+[170/200 453s] sympy__sympy-11618 gpt-oss-120b http=200 prompt=6072 out=1173 reas=1001 finish=stop cov=1.0 tries=1
+[171/200 460s] sympy__sympy-16792 gpt-oss-20b http=200 prompt=5943 out=2267 reas=2043 finish=stop cov=1.0 tries=3
+[172/200 466s] sympy__sympy-16450 gpt-oss-120b http=200 prompt=5889 out=729 reas=588 finish=stop cov=0.0 tries=1
+[173/200 467s] sympy__sympy-15017 gpt-oss-120b http=200 prompt=2150 out=858 reas=714 finish=stop cov=1.0 tries=1
+[174/200 474s] scikit-learn__scikit-learn-14053 gpt-oss-20b http=200 prompt=5951 out=679 reas=541 finish=stop cov=1.0 tries=3
+[175/200 476s] sympy__sympy-17139 gpt-oss-120b http=200 prompt=5973 out=765 reas=654 finish=stop cov=1.0 tries=1
+[176/200 481s] sympy__sympy-14531 gpt-oss-120b http=200 prompt=6367 out=1449 reas=859 finish=stop cov=0.645 tries=2
+[177/200 482s] sympy__sympy-18698 gpt-oss-120b http=200 prompt=5958 out=2474 reas=1978 finish=stop cov=1.0 tries=2
+[178/200 486s] sympy__sympy-21596 gpt-oss-20b http=200 prompt=4929 out=3671 reas=3415 finish=stop cov=1.0 tries=1
+[179/200 489s] sympy__sympy-19346 gpt-oss-20b http=200 prompt=3482 out=8000 reas=7998 finish=length cov=1.0 tries=1
+[180/200 494s] sympy__sympy-24066 gpt-oss-20b http=200 prompt=1993 out=1999 reas=1766 finish=stop cov=1.0 tries=1
+[181/200 494s] sympy__sympy-23262 gpt-oss-20b http=200 prompt=5414 out=1451 reas=1205 finish=stop cov=1.0 tries=1
+[182/200 498s] sympy__sympy-19346 gpt-oss-120b http=200 prompt=3482 out=765 reas=505 finish=stop cov=1.0 tries=1
+[183/200 509s] sympy__sympy-24443 gpt-oss-120b http=200 prompt=5037 out=2602 reas=2029 finish=stop cov=1.0 tries=1
+[184/200 509s] sympy__sympy-23262 gpt-oss-120b http=200 prompt=5414 out=590 reas=351 finish=stop cov=1.0 tries=1
+job error: PermissionError(13, 'Access is denied')
+[186/200 511s] sympy__sympy-17655 gpt-oss-120b http=200 prompt=5983 out=1203 reas=698 finish=stop cov=0.0 tries=2
+[187/200 515s] sphinx-doc__sphinx-9258 gpt-oss-20b http=200 prompt=5981 out=2843 reas=2713 finish=stop cov=0.0 tries=3
+[188/200 519s] sympy__sympy-15875 gpt-oss-120b http=200 prompt=5981 out=2609 reas=2346 finish=stop cov=1.0 tries=3
+[189/200 519s] sympy__sympy-24443 gpt-oss-20b http=200 prompt=5037 out=8000 reas=7998 finish=length cov=1.0 tries=2
+[190/200 522s] sympy__sympy-24539 gpt-oss-120b http=200 prompt=6022 out=1324 reas=1084 finish=stop cov=0.0 tries=1
+[191/200 525s] sympy__sympy-13480 gpt-oss-20b http=200 prompt=6091 out=403 reas=288 finish=stop cov=1.0 tries=1
+[192/200 525s] sympy__sympy-17139 gpt-oss-20b http=200 prompt=5973 out=1568 reas=1117 finish=stop cov=1.0 tries=1
+[193/200 525s] sympy__sympy-24066 gpt-oss-120b http=200 prompt=1993 out=2183 reas=1942 finish=stop cov=1.0 tries=1
+[194/200 530s] sympy__sympy-22914 gpt-oss-120b http=200 prompt=5585 out=669 reas=559 finish=stop cov=1.0 tries=1
+[195/200 542s] sympy__sympy-18698 gpt-oss-20b http=200 prompt=5958 out=4173 reas=3982 finish=stop cov=1.0 tries=5
+[196/200 550s] sympy__sympy-16792 gpt-oss-120b http=200 prompt=5943 out=809 reas=617 finish=stop cov=1.0 tries=1
+[197/200 557s] sympy__sympy-22914 gpt-oss-20b http=200 prompt=5585 out=1196 reas=1088 finish=stop cov=1.0 tries=5
+[198/200 562s] sympy__sympy-21596 gpt-oss-120b http=200 prompt=4929 out=1925 reas=1709 finish=stop cov=1.0 tries=1
+[199/200 569s] sympy__sympy-16450 gpt-oss-20b http=200 prompt=5889 out=8000 reas=7013 finish=length cov=0.0 tries=4
+[200/200 574s] scikit-learn__scikit-learn-10844 gpt-oss-20b http=200 prompt=5934 out=681 reas=583 finish=stop cov=0.75 tries=8
+done 574 s

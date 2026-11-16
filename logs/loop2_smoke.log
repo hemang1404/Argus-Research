@@ -1,0 +1,4 @@
+17 keys; 1 tasks to run (0 done); out=C:\coding\Argus-pilot50\data\loop2_smoke; prompt_hash=56e5b02fa8ed
+  pulled astropy__astropy-12907 in 68s
+[1/1] astropy__astropy-12907 R: continue n=3 $0.0049 | F: continue n=3 $0.0053 431s
+all done

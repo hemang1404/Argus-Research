@@ -1,0 +1,64 @@
+17 keys; 31 tasks to run (1 done); 995 cached calls seeded; out=C:\coding\Argus-pilot50\data\dev_fix; prompt_hash=56e5b02fa8ed
+  pulled astropy__astropy-13033 in 67s
+  pulled astropy__astropy-14182 in 95s
+[1/31] astropy__astropy-13033 gpt-oss-20b: F continue/n3 P continue/n3 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=True newcalls=13 251s
+  pulled django__django-11964 in 78s
+[2/31] astropy__astropy-14182 gpt-oss-20b: F continue/n3 P continue/n3 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=True newcalls=15 334s
+  pulled django__django-13012 in 37s
+[3/31] django__django-11964 gpt-oss-20b: F accepted_resolved/n2 P accepted_resolved/n3 | gpt-oss-120b: F accepted_resolved/n1 P accepted_resolved/n1 pulled=True newcalls=19 146s
+[4/31] django__django-13012 gpt-oss-20b: F accepted_resolved/n2 P accepted_resolved/n3 | gpt-oss-120b: F accepted_resolved/n1 P accepted_resolved/n1 pulled=True newcalls=19 68s
+[5/31] django__django-15128 gpt-oss-20b: F continue/n3 P continue/n3 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=False newcalls=32 20s
+  pulled django__django-13406 in 39s
+  pulled django__django-15382 in 44s
+[6/31] django__django-13406 gpt-oss-20b: F continue/n3 P continue/n3 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=True newcalls=39 110s
+  pull failed (1) matplotlib__matplotlib-20488: short read: expected 974759899 bytes but got 62089897: unexpected EOF
+[7/31] django__django-15382 gpt-oss-20b: F accepted_resolved/n3 P accepted_regressed/n3 | gpt-oss-120b: F accepted_resolved/n2 P continue/n3 pulled=True newcalls=43 133s
+  pulled matplotlib__matplotlib-20488 in 164s
+  pulled matplotlib__matplotlib-20676 in 155s
+[8/31] matplotlib__matplotlib-20676 gpt-oss-20b: F continue/n3 P continue/n3 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=True newcalls=51 216s
+[9/31] matplotlib__matplotlib-20488 gpt-oss-20b: F accepted_resolved/n3 P accepted_resolved/n3 | gpt-oss-120b: F accepted_resolved/n1 P accepted_resolved/n1 pulled=True newcalls=59 309s
+  pulled matplotlib__matplotlib-23412 in 305s
+  pulled matplotlib__matplotlib-24570 in 368s
+[10/31] matplotlib__matplotlib-23412 gpt-oss-20b: F continue/n3 P continue/n3 | gpt-oss-120b: F accepted_resolved/n2 P continue/n3 pulled=True newcalls=63 491s
+[11/31] matplotlib__matplotlib-24570 gpt-oss-20b: F continue/n3 P continue/n3 | gpt-oss-120b: F accepted_resolved/n2 P accepted_resolved/n2 pulled=True newcalls=65 486s
+  pulled matplotlib__matplotlib-24970 in 588s
+  pulled matplotlib__matplotlib-25311 in 598s
+[12/31] matplotlib__matplotlib-25311 gpt-oss-20b: F accepted_resolved/n1 P accepted_resolved/n1 | gpt-oss-120b: F accepted_resolved/n3 P accepted_resolved/n2 pulled=True newcalls=68 722s
+[13/31] matplotlib__matplotlib-24970 gpt-oss-20b: F accepted_resolved/n2 P accepted_resolved/n2 | gpt-oss-120b: F accepted_resolved/n1 P accepted_resolved/n1 pulled=True newcalls=69 768s
+  pulled psf__requests-6028 in 93s
+[14/31] psf__requests-6028 gpt-oss-20b: F continue/n3 P continue/n3 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=True newcalls=80 130s
+  pulled pytest-dev__pytest-10051 in 57s
+  pulled matplotlib__matplotlib-25960 in 233s
+[15/31] pytest-dev__pytest-10051 gpt-oss-20b: F continue/n3 P accepted_resolved/n2 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=True newcalls=85 166s
+  pulled pytest-dev__pytest-7521 in 34s
+[16/31] pytest-dev__pytest-7521 gpt-oss-20b: F accepted_regressed/n3 P continue/n3 | gpt-oss-120b: F accepted_resolved/n2 P continue/n3 pulled=True newcalls=92 76s
+  pulled scikit-learn__scikit-learn-12973 in 64s
+[17/31] matplotlib__matplotlib-25960 gpt-oss-20b: F continue/n3 P continue/n3 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=True newcalls=98 468s
+[18/31] scikit-learn__scikit-learn-12973 gpt-oss-20b: F continue/n3 P continue/n3 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=True newcalls=104 114s
+  pulled scikit-learn__scikit-learn-14710 in 98s
+  pulled scikit-learn__scikit-learn-14983 in 134s
+[19/31] scikit-learn__scikit-learn-14710 gpt-oss-20b: F grade_error/n2 P grade_error/n2 | gpt-oss-120b: F grade_error/n2 P grade_error/n2 pulled=True newcalls=109 1943s
+[20/31] scikit-learn__scikit-learn-14983 gpt-oss-20b: F accepted_resolved/n2 P continue/n3 | gpt-oss-120b: F accepted_resolved/n2 P accepted_resolved/n2 pulled=True newcalls=114 1958s
+  pulled sphinx-doc__sphinx-10435 in 48s
+  pulled sphinx-doc__sphinx-10614 in 53s
+[21/31] sphinx-doc__sphinx-10435 gpt-oss-20b: F continue/n3 P continue/n3 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=True newcalls=120 148s
+[22/31] sphinx-doc__sphinx-10614 gpt-oss-20b: F continue/n3 P continue/n3 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=True newcalls=124 130s
+  pulled sphinx-doc__sphinx-8459 in 42s
+  pulled sphinx-doc__sphinx-9230 in 45s
+[23/31] sphinx-doc__sphinx-8459 gpt-oss-20b: F continue/n3 P accepted_regressed/n2 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=True newcalls=132 113s
+  pulled sphinx-doc__sphinx-9258 in 8s
+[24/31] sphinx-doc__sphinx-9230 gpt-oss-20b: F accepted_resolved/n2 P accepted_resolved/n2 | gpt-oss-120b: F accepted_resolved/n3 P accepted_resolved/n2 pulled=True newcalls=136 119s
+  pulled sphinx-doc__sphinx-9698 in 10s
+[25/31] sphinx-doc__sphinx-9258 gpt-oss-20b: F api_error/n3 P continue/n3 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=True newcalls=141 44s
+  pulled sympy__sympy-13551 in 30s
+[26/31] sphinx-doc__sphinx-9698 gpt-oss-20b: F continue/n3 P continue/n3 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=True newcalls=145 78s
+  pulled sympy__sympy-15017 in 10s
+[27/31] sympy__sympy-15017 gpt-oss-20b: F continue/n3 P continue/n3 | gpt-oss-120b: F accepted_resolved/n2 P accepted_resolved/n2 pulled=True newcalls=152 40s
+[28/31] sympy__sympy-13551 gpt-oss-20b: F accepted_regressed/n2 P continue/n3 | gpt-oss-120b: F accepted_regressed/n2 P continue/n3 pulled=True newcalls=154 120s
+  pulled sympy__sympy-15875 in 12s
+  pulled sympy__sympy-23262 in 65s
+[29/31] sympy__sympy-15875 gpt-oss-20b: F accepted_resolved/n2 P accepted_resolved/n2 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=True newcalls=158 104s
+[30/31] sympy__sympy-23262 gpt-oss-20b: F accepted_resolved/n1 P accepted_resolved/n1 | gpt-oss-120b: F accepted_resolved/n2 P accepted_resolved/n2 pulled=True newcalls=162 104s
+  pulled sympy__sympy-24443 in 36s
+[31/31] sympy__sympy-24443 gpt-oss-20b: F accepted_resolved/n3 P continue/n3 | gpt-oss-120b: F continue/n3 P continue/n3 pulled=True newcalls=166 100s
+all done

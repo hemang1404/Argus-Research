@@ -1,0 +1,80 @@
+apply_plain.py -> gemini-3.8-flash {'no_blocks': 7, 'applied': 2, 'truncated_no_output': 1, 'empty_output': 1} | applied but syntax-broken: 0 
+apply_argus.py -> gemini-3.8-flash {'no_blocks': 7, 'applied': 2, 'truncated_no_output': 1, 'empty_output': 1} | max tier among applied: {1: 2} 
+49 distinct applied patches over 27 tasks; 1 to grade
+  pulled django__django-13012 in 71s
+  django__django-13012 0d725fe2ff applied=True resolved=True
+{
+ "gemini-3.1-flash-lite": {
+  "n": 30,
+  "cost_usd": 0.084,
+  "truncated": 0,
+  "mean_visible_out": 418,
+  "mean_hidden_thought": 509,
+  "plain": {
+   "statuses": {
+    "applied": 22,
+    "no_match": 7,
+    "ambiguous": 1
+   },
+   "resolved": 9
+  },
+  "argus": {
+   "statuses": {
+    "applied": 24,
+    "refused": 6
+   },
+   "resolved": 9
+  },
+  "usd_per_solve_argus": 0.0093
+ },
+ "gemini-3.5-flash-lite": {
+  "n": 30,
+  "cost_usd": 0.371,
+  "truncated": 0,
+  "mean_visible_out": 372,
+  "mean_hidden_thought": 3898,
+  "plain": {
+   "statuses": {
+    "applied": 26,
+    "empty_output": 2,
+    "no_match": 2
+   },
+   "resolved": 16
+  },
+  "argus": {
+   "statuses": {
+    "applied": 27,
+    "empty_output": 2,
+    "refused": 1
+   },
+   "resolved": 16
+  },
+  "usd_per_solve_argus": 0.0232
+ },
+ "gemini-3.8-flash": {
+  "n": 11,
+  "cost_usd": 0.6925,
+  "truncated": 8,
+  "mean_visible_out": 447,
+  "mean_hidden_thought": 15134,
+  "plain": {
+   "statuses": {
+    "no_blocks": 7,
+    "applied": 2,
+    "truncated_no_output": 1,
+    "empty_output": 1
+   },
+   "resolved": 2
+  },
+  "argus": {
+   "statuses": {
+    "no_blocks": 7,
+    "applied": 2,
+    "truncated_no_output": 1,
+    "empty_output": 1
+   },
+   "resolved": 2
+  },
+  "usd_per_solve_argus": 0.3462
+ }
+}

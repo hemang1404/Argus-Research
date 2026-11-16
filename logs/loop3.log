@@ -1,0 +1,148 @@
+17 keys; 100 tasks to run (0 done); out=C:\coding\Argus-pilot50\data\loop3; prompt_hash=56e5b02fa8ed
+[1/100] astropy__astropy-13579 P: accepted_resolved n=1 $0.0021 0s
+  pulled astropy__astropy-13033 in 1015s
+  pulled astropy__astropy-14182 in 1138s
+  pulled astropy__astropy-12907 in 1138s
+[2/100] astropy__astropy-13033 P: continue n=3 $0.0034 1352s
+[3/100] astropy__astropy-14508 P: accepted_resolved n=1 $0.0018 0s
+[4/100] astropy__astropy-14995 P: accepted_resolved n=1 $0.0015 0s
+[5/100] astropy__astropy-8872 P: accepted_regressed n=1 $0.0018 0s
+[6/100] django__django-10880 P: accepted_resolved n=1 $0.0005 0s
+[7/100] astropy__astropy-14182 P: continue n=3 $0.0047 1444s
+[8/100] django__django-11141 P: accepted_regressed n=1 $0.0009 0s
+[9/100] django__django-11790 P: accepted_resolved n=1 $0.0016 0s
+[10/100] django__django-11964 P: accepted_resolved n=1 $0.0007 0s
+[11/100] astropy__astropy-12907 P: accepted_resolved n=3 $0.0096 1453s
+[12/100] django__django-12209 P: accepted_resolved n=1 $0.0026 0s
+  pulled django__django-11087 in 178s
+  pulled django__django-12774 in 87s
+  pulled django__django-12039 in 98s
+[13/100] django__django-12039 P: accepted_resolved n=2 $0.0021 133s
+[14/100] django__django-13012 P: accepted_resolved n=1 $0.0016 0s
+[15/100] django__django-11087 P: continue n=3 $0.0039 228s
+[16/100] django__django-12774 P: continue n=3 $0.0054 130s
+[17/100] django__django-13810 P: accepted_resolved n=1 $0.0015 0s
+[18/100] django__django-13933 P: accepted_resolved n=1 $0.0013 0s
+[19/100] django__django-13406 P: continue n=3 $0.0043 6s
+[20/100] django__django-14017 P: continue n=3 $0.0038 5s
+[21/100] django__django-14238 P: accepted_resolved n=1 $0.0017 0s
+[22/100] django__django-13551 P: continue n=3 $0.0037 11s
+[23/100] django__django-14434 P: continue n=3 $0.0059 11s
+  pulled django__django-14771 in 291s
+  pulled django__django-14534 in 317s
+  pulled django__django-14034 in 322s
+[24/100] django__django-14534 P: accepted_resolved n=2 $0.0013 350s
+[25/100] django__django-14771 P: api_error n=3 $0.0042 343s
+[26/100] django__django-15161 P: continue n=3 $0.0044 4s
+[27/100] django__django-15280 P: continue n=3 $0.0060 6s
+[28/100] django__django-15315 P: continue n=3 $0.0041 6s
+[29/100] django__django-14034 P: continue n=3 $0.0046 387s
+  pulled django__django-15930 in 68s
+  pulled django__django-15128 in 90s
+  pulled django__django-15382 in 73s
+[30/100] django__django-15930 P: accepted_resolved n=2 $0.0036 103s
+[31/100] django__django-16116 P: accepted_resolved n=1 $0.0011 0s
+[32/100] django__django-16485 P: accepted_resolved n=1 $0.0025 0s
+[33/100] django__django-16595 P: accepted_resolved n=1 $0.0011 0s
+[34/100] django__django-15382 P: accepted_resolved n=2 $0.0054 115s
+[35/100] django__django-15128 P: continue n=3 $0.0070 139s
+[36/100] matplotlib__matplotlib-13989 P: continue n=3 $0.0060 13s
+[37/100] matplotlib__matplotlib-20488 P: accepted_resolved n=1 $0.0014 0s
+[38/100] matplotlib__matplotlib-20676 P: continue n=3 $0.0054 8s
+  pulled django__django-16642 in 205s
+  pulled django__django-16877 in 191s
+[39/100] django__django-16877 P: accepted_resolved n=3 $0.0076 242s
+[40/100] django__django-16642 P: continue n=3 $0.0066 251s
+  pull failed (1) matplotlib__matplotlib-24637: short read: expected 985981665 bytes but got 265588791: unexpected EOF
+  pull failed (1) matplotlib__matplotlib-23412: short read: expected 1441609100 bytes but got 699091242: unexpected EOF
+  pull failed (1) matplotlib__matplotlib-24570: short read: expected 984838157 bytes but got 146753347: unexpected EOF
+  pull failed (2) matplotlib__matplotlib-24570: short read: expected 984838157 bytes but got 1790265: unexpected EOF
+  pull failed (2) matplotlib__matplotlib-23412: short read: expected 1441609100 bytes but got 2375866: unexpected EOF
+  pull failed (2) matplotlib__matplotlib-24637: short read: expected 210296452 bytes but got 9229772: unexpected EOF
+  pull failed (3) matplotlib__matplotlib-24570: short read: expected 420170791 bytes but got 40752557: unexpected EOF
+  pull failed (3) matplotlib__matplotlib-23412: short read: expected 970314093 bytes but got 29247477: unexpected EOF
+  pull failed (3) matplotlib__matplotlib-24637: short read: expected 985981665 bytes but got 139023019: unexpected EOF
+[41/100] matplotlib__matplotlib-24570 P: image_pull_failed n=2 $0.0066 220s
+[42/100] matplotlib__matplotlib-23412 P: image_pull_failed n=2 $0.0040 436s
+[43/100] matplotlib__matplotlib-24637 P: image_pull_failed n=2 $0.0033 211s
+[44/100] matplotlib__matplotlib-24970 P: accepted_resolved n=1 $0.0018 0s
+[45/100] psf__requests-2931 P: accepted_regressed n=1 $0.0015 0s
+[46/100] psf__requests-6028 P: continue n=3 $0.0046 9s
+[47/100] pydata__xarray-3151 P: accepted_resolved n=1 $0.0016 0s
+[48/100] pydata__xarray-4094 P: accepted_resolved n=1 $0.0013 0s
+[49/100] pydata__xarray-4356 P: accepted_resolved n=1 $0.0009 0s
+[50/100] pydata__xarray-4966 P: accepted_resolved n=1 $0.0015 0s
+[51/100] pydata__xarray-6721 P: accepted_resolved n=1 $0.0013 0s
+[52/100] pylint-dev__pylint-7277 P: accepted_resolved n=1 $0.0004 0s
+  pull failed (1) matplotlib__matplotlib-25311: failed to copy: httpReadSeeker: failed open: failed to do request: Get "https://registry-1.docker.io/v2/swebench/sweb.eval.x86_64.matplotlib_1776_matp
+  pull failed (1) matplotlib__matplotlib-25960: Error response from daemon: failed to copy: httpReadSeeker: failed open: failed to do request: Get "https://registry-1.docker.io/v2/swebench/sweb.eval
+[53/100] pytest-dev__pytest-10051 P: continue n=3 $0.0042 25s
+[54/100] pytest-dev__pytest-5262 P: accepted_resolved n=1 $0.0014 0s
+[55/100] pytest-dev__pytest-5809 P: accepted_resolved n=1 $0.0004 0s
+  pulled pytest-dev__pytest-6197 in 517s
+[56/100] pytest-dev__pytest-6197 P: accepted_regressed n=2 $0.0038 562s
+[57/100] pytest-dev__pytest-7521 P: continue n=3 $0.0045 13s
+[58/100] scikit-learn__scikit-learn-10844 P: accepted_resolved n=1 $0.0014 0s
+[59/100] scikit-learn__scikit-learn-11578 P: accepted_resolved n=1 $0.0010 0s
+  pulled matplotlib__matplotlib-25311 in 846s
+  pulled scikit-learn__scikit-learn-12973 in 277s
+[60/100] scikit-learn__scikit-learn-12973 P: accepted_resolved n=2 $0.0034 355s
+[61/100] scikit-learn__scikit-learn-13496 P: accepted_resolved n=1 $0.0012 0s
+[62/100] scikit-learn__scikit-learn-14053 P: accepted_resolved n=1 $0.0014 0s
+  pulled matplotlib__matplotlib-25960 in 954s
+[63/100] matplotlib__matplotlib-25311 P: accepted_resolved n=3 $0.0055 1077s
+[64/100] scikit-learn__scikit-learn-14894 P: accepted_resolved n=1 $0.0018 0s
+[65/100] scikit-learn__scikit-learn-14983 P: api_error n=3 $0.0038 8s
+[66/100] scikit-learn__scikit-learn-25973 P: accepted_regressed n=1 $0.0013 0s
+  pulled scikit-learn__scikit-learn-14710 in 142s
+  pulled sphinx-doc__sphinx-10435 in 62s
+[67/100] sphinx-doc__sphinx-10435 P: api_error n=3 $0.0031 108s
+[68/100] sphinx-doc__sphinx-10466 P: accepted_resolved n=1 $0.0009 0s
+[69/100] matplotlib__matplotlib-25960 P: continue n=3 $0.0093 1241s
+[70/100] sphinx-doc__sphinx-11445 P: accepted_resolved n=1 $0.0008 0s
+  pulled sphinx-doc__sphinx-10614 in 75s
+[71/100] scikit-learn__scikit-learn-14710 P: accepted_resolved n=2 $0.0037 324s
+  pulled sphinx-doc__sphinx-8459 in 55s
+[72/100] sphinx-doc__sphinx-8459 P: continue n=3 $0.0044 93s
+[73/100] sphinx-doc__sphinx-10614 P: continue n=3 $0.0053 143s
+[74/100] sphinx-doc__sphinx-9281 P: accepted_resolved n=1 $0.0014 0s
+[75/100] sphinx-doc__sphinx-9658 P: accepted_resolved n=1 $0.0015 0s
+  pulled sphinx-doc__sphinx-9230 in 54s
+  pulled sphinx-doc__sphinx-9258 in 12s
+  pulled sphinx-doc__sphinx-9698 in 12s
+[76/100] sphinx-doc__sphinx-9230 P: accepted_resolved n=2 $0.0021 84s
+[77/100] sphinx-doc__sphinx-9711 P: accepted_resolved n=1 $0.0009 0s
+[78/100] sympy__sympy-11618 P: accepted_resolved n=1 $0.0018 0s
+[79/100] sympy__sympy-12481 P: accepted_resolved n=1 $0.0013 0s
+[80/100] sympy__sympy-13480 P: accepted_resolved n=1 $0.0012 0s
+[81/100] sphinx-doc__sphinx-9698 P: api_error n=3 $0.0039 44s
+[82/100] sphinx-doc__sphinx-9258 P: continue n=3 $0.0053 48s
+  pulled sympy__sympy-13551 in 78s
+  pulled sympy__sympy-14531 in 75s
+  pulled sympy__sympy-13798 in 83s
+[83/100] sympy__sympy-14531 P: continue n=3 $0.0051 108s
+[84/100] sympy__sympy-14711 P: accepted_resolved n=1 $0.0019 0s
+[85/100] sympy__sympy-13551 P: accepted_regressed n=2 $0.0044 120s
+[86/100] sympy__sympy-13798 P: accepted_resolved n=3 $0.0045 118s
+[87/100] sympy__sympy-16450 P: continue n=3 $0.0039 7s
+[88/100] sympy__sympy-16792 P: continue n=3 $0.0045 6s
+  pulled sympy__sympy-15017 in 111s
+  pulled sympy__sympy-15875 in 100s
+[89/100] sympy__sympy-15017 P: accepted_resolved n=2 $0.0018 143s
+[90/100] sympy__sympy-17655 P: accepted_resolved n=1 $0.0015 0s
+  pulled sympy__sympy-17139 in 133s
+[91/100] sympy__sympy-15875 P: api_error n=3 $0.0067 156s
+[92/100] sympy__sympy-19346 P: accepted_resolved n=1 $0.0013 0s
+  pulled sympy__sympy-18698 in 17s
+[93/100] sympy__sympy-18698 P: accepted_regressed n=3 $0.0058 78s
+[94/100] sympy__sympy-22914 P: accepted_resolved n=1 $0.0013 0s
+  pulled sympy__sympy-21596 in 55s
+  pulled sympy__sympy-23262 in 16s
+[95/100] sympy__sympy-21596 P: continue n=3 $0.0062 100s
+[96/100] sympy__sympy-24066 P: accepted_resolved n=1 $0.0017 0s
+[97/100] sympy__sympy-23262 P: accepted_resolved n=2 $0.0030 46s
+[98/100] sympy__sympy-24539 P: continue n=3 $0.0041 6s
+[99/100] sympy__sympy-17139 P: accepted_resolved n=2 $0.0030 252s
+  pulled sympy__sympy-24443 in 51s
+[100/100] sympy__sympy-24443 P: continue n=3 $0.0052 86s
+all done
