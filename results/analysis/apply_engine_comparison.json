@@ -1,0 +1,530 @@
+{
+ "gpt-oss-20b": {
+  "stats": {
+   "n": 198,
+   "old_applied": 143,
+   "old_resolved": 75,
+   "T123_applied": 141,
+   "T123_tier1": 118,
+   "T12_applied": 140,
+   "T12_tier1": 118,
+   "old_tier1": 123,
+   "T123_gained_applied": 3,
+   "T12_gained_applied": 2,
+   "T123_tier2": 22,
+   "T12_tier2": 22,
+   "old_tier2": 18,
+   "T123_tier3": 1,
+   "T123_lost_applied": 5,
+   "T123_lost_resolved": 3,
+   "T12_lost_applied": 5,
+   "T12_lost_resolved": 3,
+   "old_tier3": 2
+  },
+  "detail": [
+   [
+    "astropy__astropy-13453",
+    "T123",
+    "old refused/refused, new applied (tier 1)"
+   ],
+   [
+    "astropy__astropy-13453",
+    "T12",
+    "old refused/refused, new applied (tier 1)"
+   ],
+   [
+    "matplotlib__matplotlib-24026",
+    "T123",
+    "old refused/refused, new applied (tier 1)"
+   ],
+   [
+    "matplotlib__matplotlib-24026",
+    "T12",
+    "old refused/refused, new applied (tier 1)"
+   ],
+   [
+    "matplotlib__matplotlib-24627",
+    "T123",
+    "old refused/refused, new applied (tier 3)"
+   ],
+   [
+    "pydata__xarray-4629",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "pydata__xarray-4629",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "pytest-dev__pytest-7571",
+    "T123",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "pytest-dev__pytest-7571",
+    "T12",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "sphinx-doc__sphinx-10323",
+    "T123",
+    "old applied (tier 2, resolved=True), new refused"
+   ],
+   [
+    "sphinx-doc__sphinx-10323",
+    "T12",
+    "old applied (tier 2, resolved=True), new refused"
+   ],
+   [
+    "sympy__sympy-13031",
+    "T123",
+    "old applied (tier 1, resolved=True), new refused"
+   ],
+   [
+    "sympy__sympy-13031",
+    "T12",
+    "old applied (tier 1, resolved=True), new refused"
+   ],
+   [
+    "sympy__sympy-12489",
+    "T123",
+    "old applied (tier 1, resolved=False), new refused"
+   ],
+   [
+    "sympy__sympy-12489",
+    "T12",
+    "old applied (tier 1, resolved=False), new refused"
+   ]
+  ]
+ },
+ "gpt-oss-120b": {
+  "stats": {
+   "n": 198,
+   "old_applied": 167,
+   "old_resolved": 92,
+   "T123_applied": 165,
+   "T123_tier1": 155,
+   "T12_applied": 164,
+   "T12_tier1": 155,
+   "old_tier1": 154,
+   "T123_tier2": 9,
+   "T12_tier2": 9,
+   "old_tier2": 9,
+   "T123_gained_applied": 2,
+   "T12_gained_applied": 2,
+   "T123_lost_applied": 4,
+   "T123_lost_resolved": 2,
+   "T12_lost_applied": 5,
+   "T12_lost_resolved": 3,
+   "old_tier3": 4,
+   "T123_tier3": 1
+  },
+  "detail": [
+   [
+    "django__django-11433",
+    "T123",
+    "old refused/no_blocks, new applied (tier 1)"
+   ],
+   [
+    "django__django-11433",
+    "T12",
+    "old refused/no_blocks, new applied (tier 1)"
+   ],
+   [
+    "django__django-12419",
+    "T123",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "django__django-12419",
+    "T12",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "pydata__xarray-4629",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "pydata__xarray-4629",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "pydata__xarray-4695",
+    "T123",
+    "old refused/no_change, new applied (tier 1)"
+   ],
+   [
+    "pydata__xarray-4695",
+    "T12",
+    "old refused/no_change, new applied (tier 1)"
+   ],
+   [
+    "scikit-learn__scikit-learn-13439",
+    "T12",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "sphinx-doc__sphinx-9673",
+    "T123",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "sphinx-doc__sphinx-9673",
+    "T12",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "sympy__sympy-12489",
+    "T123",
+    "old applied (tier 1, resolved=False), new refused"
+   ],
+   [
+    "sympy__sympy-12489",
+    "T12",
+    "old applied (tier 1, resolved=False), new refused"
+   ]
+  ]
+ },
+ "gemma-4-26b-a4b-it": {
+  "stats": {
+   "n": 193,
+   "old_applied": 118,
+   "old_resolved": 63,
+   "T123_applied": 87,
+   "T123_tier1": 85,
+   "T12_applied": 86,
+   "T12_tier1": 85,
+   "old_tier1": 86,
+   "T123_lost_applied": 31,
+   "T123_lost_resolved": 8,
+   "T12_lost_applied": 32,
+   "T12_lost_resolved": 9,
+   "old_tier3": 31,
+   "T123_tier3": 1,
+   "T123_tier2": 1,
+   "T12_tier2": 1,
+   "old_tier2": 1
+  },
+  "detail": [
+   [
+    "astropy__astropy-13453",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "astropy__astropy-13453",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "astropy__astropy-14598",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "astropy__astropy-14598",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "django__django-13128",
+    "T12",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "django__django-13786",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "django__django-13786",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "django__django-14311",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "django__django-14311",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "django__django-14999",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "django__django-14999",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "django__django-15098",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "django__django-15098",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "django__django-16612",
+    "T123",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "django__django-16612",
+    "T12",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "django__django-16901",
+    "T123",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "django__django-16901",
+    "T12",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "matplotlib__matplotlib-20859",
+    "T123",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "matplotlib__matplotlib-20859",
+    "T12",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "matplotlib__matplotlib-25122",
+    "T123",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "matplotlib__matplotlib-25122",
+    "T12",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "matplotlib__matplotlib-24177",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "matplotlib__matplotlib-24177",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "matplotlib__matplotlib-25332",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "matplotlib__matplotlib-25332",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "matplotlib__matplotlib-26466",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "matplotlib__matplotlib-26466",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "mwaskom__seaborn-3069",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "mwaskom__seaborn-3069",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "pydata__xarray-4629",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "pydata__xarray-4629",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "pydata__xarray-4695",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "pydata__xarray-4695",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "pydata__xarray-7229",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "pydata__xarray-7229",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "pytest-dev__pytest-7236",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "pytest-dev__pytest-7236",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "scikit-learn__scikit-learn-13439",
+    "T123",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "scikit-learn__scikit-learn-13439",
+    "T12",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "scikit-learn__scikit-learn-25232",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "scikit-learn__scikit-learn-25232",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "sphinx-doc__sphinx-10323",
+    "T123",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "sphinx-doc__sphinx-10323",
+    "T12",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "scikit-learn__scikit-learn-26194",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "scikit-learn__scikit-learn-26194",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "sphinx-doc__sphinx-10449",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "sphinx-doc__sphinx-10449",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "sphinx-doc__sphinx-11510",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "sphinx-doc__sphinx-11510",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "sphinx-doc__sphinx-8621",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "sphinx-doc__sphinx-8621",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "sphinx-doc__sphinx-9673",
+    "T123",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "sphinx-doc__sphinx-9673",
+    "T12",
+    "old applied (tier 3, resolved=True), new refused"
+   ],
+   [
+    "sphinx-doc__sphinx-9602",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "sphinx-doc__sphinx-9602",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "sympy__sympy-13852",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "sympy__sympy-13852",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "sympy__sympy-22456",
+    "T123",
+    "old applied (tier 1, resolved=True), new refused"
+   ],
+   [
+    "sympy__sympy-22456",
+    "T12",
+    "old applied (tier 1, resolved=True), new refused"
+   ],
+   [
+    "sympy__sympy-23413",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "sympy__sympy-23413",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "sympy__sympy-24213",
+    "T123",
+    "old applied (tier 3, resolved=False), new refused"
+   ],
+   [
+    "sympy__sympy-24213",
+    "T12",
+    "old applied (tier 3, resolved=False), new refused"
+   ]
+  ]
+ }
+}

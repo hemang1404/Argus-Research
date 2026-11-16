@@ -1,0 +1,310 @@
+[
+ {
+  "item": "2-0",
+  "iid": "matplotlib__matplotlib-24637",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Overwrites gid on patch, arrow, offsetbox and all children instead of wrapping in an SVG group; mutates artists permanently and yields duplicate ids, no open_group/close_group."
+ },
+ {
+  "item": "2-1",
+  "iid": "matplotlib__matplotlib-24970",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Casts all integer input to int32 before indexing; int64/uint32 values beyond int32 range (e.g. 2**33) wrap and are mapped to wrong colours instead of over-range."
+ },
+ {
+  "item": "2-2",
+  "iid": "matplotlib__matplotlib-24970",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Downcasts integer arrays to int32 (also after float conversion); large int64/uint32 inputs wrap around, giving wrong colour indices, unlike gold's astype(int)."
+ },
+ {
+  "item": "2-3",
+  "iid": "matplotlib__matplotlib-24970",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Casts int/uint input to int32 up front; large int64 values overflow/wrap to wrong colours, a regression versus gold."
+ },
+ {
+  "item": "2-4",
+  "iid": "matplotlib__matplotlib-24970",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Converts int/uint arrays to int64 before assigning sentinel indices; avoids the overflow, equivalent to gold's astype(int)."
+ },
+ {
+  "item": "2-5",
+  "iid": "matplotlib__matplotlib-24970",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Casts non-float input to int up front, so sentinel assignment no longer overflows; same effect as gold for ints and floats unchanged."
+ },
+ {
+  "item": "2-6",
+  "iid": "matplotlib__matplotlib-25311",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "high",
+  "reason": "Drops canvas/cids on pickling, so an unpickled draggable has no canvas attribute (AttributeError in on_motion/disconnect) and is dead; gold keeps it working via property."
+ },
+ {
+  "item": "2-7",
+  "iid": "matplotlib__matplotlib-25311",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "high",
+  "reason": "__getstate__ pops canvas and cids; the unpickled DraggableBase has no canvas, breaking its use. Gold makes canvas a property."
+ },
+ {
+  "item": "2-8",
+  "iid": "matplotlib__matplotlib-25311",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "high",
+  "reason": "Unpickled draggable gets canvas=None and cids=[], so it is non-functional (callbacks not tracked, disconnect fails); gold stays functional."
+ },
+ {
+  "item": "2-9",
+  "iid": "matplotlib__matplotlib-25311",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "high",
+  "reason": "Only drops canvas on pickle, leaving no canvas attribute after unpickle; any later use of self.canvas raises AttributeError."
+ },
+ {
+  "item": "2-10",
+  "iid": "matplotlib__matplotlib-25311",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "high",
+  "reason": "Drops canvas and cids from state; unpickled draggable cannot function (no canvas), unlike gold's property approach."
+ },
+ {
+  "item": "2-11",
+  "iid": "pydata__xarray-3151",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Iterates concat_dims for monotonicity check, equivalent to gold (extra 'in concatenated' guard harmless)."
+ },
+ {
+  "item": "2-12",
+  "iid": "pydata__xarray-3151",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same as gold: loops over concat_dims; extra membership guard harmless."
+ },
+ {
+  "item": "2-13",
+  "iid": "pydata__xarray-3151",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Loops concat_dims like gold with an added None guard; equivalent behaviour."
+ },
+ {
+  "item": "2-14",
+  "iid": "pydata__xarray-3151",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Effectively identical to gold."
+ },
+ {
+  "item": "2-15",
+  "iid": "pydata__xarray-3151",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Filters to concat_dims within the original loop; equivalent to gold."
+ },
+ {
+  "item": "2-16",
+  "iid": "pydata__xarray-3151",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Restricts check to dims in concat_dims; concat dims always have coords, so equal to gold."
+ },
+ {
+  "item": "2-17",
+  "iid": "pydata__xarray-4094",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Drops the stacked-dim coord after squeeze; yields same unstacked dataset as gold's sel(drop=True) for tested and round-trip cases."
+ },
+ {
+  "item": "2-18",
+  "iid": "pydata__xarray-4094",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "drop_vars(dim, errors='ignore') after squeeze avoids the merge conflict; equivalent to gold in practice."
+ },
+ {
+  "item": "2-19",
+  "iid": "pydata__xarray-4356",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Multi-axis product of reduced shapes, same as gold's np.take(...).prod(); scalar path unchanged."
+ },
+ {
+  "item": "2-20",
+  "iid": "pydata__xarray-4356",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same computation as gold for tuple/list axes and ints."
+ },
+ {
+  "item": "2-21",
+  "iid": "pydata__xarray-4356",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same computation as gold for tuple/list axes and ints."
+ },
+ {
+  "item": "2-22",
+  "iid": "pydata__xarray-4356",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Uses np.take(mask.shape, axis).prod() for sequences, identical to gold."
+ },
+ {
+  "item": "2-23",
+  "iid": "pydata__xarray-4356",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Early-return tuple branch does result[null_mask]=fill on a numpy scalar when reducing all dims with unmet min_count (TypeError); gold uses np.where in the scalar branch."
+ },
+ {
+  "item": "2-24",
+  "iid": "pydata__xarray-4356",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "high",
+  "reason": "After handling tuple axis it falls through to mask.shape[axis] with a tuple (TypeError) for partial multi-dim reductions; scalar case also does item assignment."
+ },
+ {
+  "item": "2-25",
+  "iid": "pydata__xarray-4356",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Tuple branch returns early and assigns result[null_mask] which fails for 0-d/scalar results when min_count not met; bypasses gold's scalar branch."
+ },
+ {
+  "item": "2-26",
+  "iid": "pydata__xarray-4356",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "high",
+  "reason": "Tuple branch falls through to mask.shape[axis] with a tuple raising TypeError for multi-axis reductions leaving ndim>0; scalar results can't be item-assigned."
+ },
+ {
+  "item": "2-27",
+  "iid": "pydata__xarray-4966",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same as gold apart from comments."
+ },
+ {
+  "item": "2-28",
+  "iid": "pydata__xarray-4966",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Restructure makes signed int with _Unsigned='false' and unsigned with 'true' hit the else branch and emit a spurious SerializationWarning; gold is silent (and signed+false was silent before)."
+ },
+ {
+  "item": "2-29",
+  "iid": "pydata__xarray-4966",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Same decoding as gold; only adds a warning for unrecognised _Unsigned values on unsigned data."
+ },
+ {
+  "item": "2-30",
+  "iid": "pydata__xarray-4966",
+  "verdict": "PARTIAL",
+  "confidence": "low",
+  "reason": "Handles uint+'false' like gold, but uint with _Unsigned='true' still warns 'not integer type' where gold is silent."
+ },
+ {
+  "item": "2-31",
+  "iid": "pydata__xarray-6721",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "v.chunks is getattr(self._data,'chunks',None), so equivalent to gold without loading data."
+ },
+ {
+  "item": "2-32",
+  "iid": "pydata__xarray-6721",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Checks hasattr on v._data; equivalent to gold."
+ },
+ {
+  "item": "2-33",
+  "iid": "pydata__xarray-6721",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Identical to gold."
+ },
+ {
+  "item": "2-34",
+  "iid": "pydata__xarray-6721",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Checks v._data for chunks with harmless fallback; equivalent to gold."
+ },
+ {
+  "item": "2-35",
+  "iid": "pylint-dev__pylint-7277",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Pops sys.path[0] only if '', '.' or cwd, same as gold."
+ },
+ {
+  "item": "2-36",
+  "iid": "pylint-dev__pylint-7277",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same as gold plus empty sys.path guard."
+ },
+ {
+  "item": "2-37",
+  "iid": "pylint-dev__pylint-7277",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same as gold."
+ },
+ {
+  "item": "2-38",
+  "iid": "pylint-dev__pylint-7277",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same as gold plus empty-path guard."
+ },
+ {
+  "item": "2-39",
+  "iid": "pylint-dev__pylint-7277",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same as gold plus empty-path guard."
+ },
+ {
+  "item": "2-40",
+  "iid": "pylint-dev__pylint-7277",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "PYTHONPATH ':' handling nested inside the first-entry-removed branch; when sys.path[0] is another dir the cwd entries from PYTHONPATH are no longer stripped, unlike gold."
+ },
+ {
+  "item": "2-41",
+  "iid": "pylint-dev__pylint-7277",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "PYTHONPATH leading/trailing ':' cleanup only runs if first entry was removed; gold does it unconditionally, so cwd can remain in sys.path."
+ },
+ {
+  "item": "2-42",
+  "iid": "pytest-dev__pytest-5262",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Adds mode property stripping 'b' like gold."
+ },
+ {
+  "item": "2-43",
+  "iid": "pytest-dev__pytest-5262",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Adds mode property stripping 'b' like gold."
+ }
+]

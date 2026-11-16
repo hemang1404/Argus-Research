@@ -1,0 +1,310 @@
+[
+ {
+  "item": "1-0",
+  "iid": "django__django-13933",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Also changes the default invalid_choice message to include %(value)s (not in gold), altering user-facing text and losing translations for every ModelChoiceField."
+ },
+ {
+  "item": "1-1",
+  "iid": "django__django-13933",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Also changes the default invalid_choice message to include %(value)s (not in gold), altering user-facing text and losing translations for every ModelChoiceField."
+ },
+ {
+  "item": "1-2",
+  "iid": "django__django-13933",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Adds params={'value': original value}; same behaviour as gold (uses pre-reassignment value, equivalent in practice)."
+ },
+ {
+  "item": "1-3",
+  "iid": "django__django-13933",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Also changes the default invalid_choice message to include %(value)s (not in gold), altering user-facing text and losing translations for every ModelChoiceField."
+ },
+ {
+  "item": "1-4",
+  "iid": "django__django-14238",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "any(issubclass(subclass, c) for c in _subclasses) is equivalent to gold's issubclass(subclass, tuple)."
+ },
+ {
+  "item": "1-5",
+  "iid": "django__django-14238",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "any(issubclass(subclass, c) for c in _subclasses) is equivalent to gold's issubclass(subclass, tuple)."
+ },
+ {
+  "item": "1-6",
+  "iid": "django__django-14238",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "any(issubclass(subclass, c) for c in _subclasses) is equivalent to gold's issubclass(subclass, tuple)."
+ },
+ {
+  "item": "1-7",
+  "iid": "django__django-14238",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Explicit issubclass against BigAutoField/SmallAutoField then super(); same behaviour as gold."
+ },
+ {
+  "item": "1-8",
+  "iid": "django__django-14434",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Passes the plain table name to _index_columns so Columns.references_table works; matches gold's effect (Statement still gets Table)."
+ },
+ {
+  "item": "1-9",
+  "iid": "django__django-14771",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Forwards -X options to the child; omits gold's cpython-only guard but uses getattr on _xoptions, so only differs on non-CPython."
+ },
+ {
+  "item": "1-10",
+  "iid": "django__django-15315",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "high",
+  "reason": "Defines __hash__ as id(self) (4 duplicate copies); equal fields (same creation_counter/model, e.g. copies) get different hashes, violating the eq/hash contract; gold hashes creation_counter only."
+ },
+ {
+  "item": "1-11",
+  "iid": "django__django-15382",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Catches EmptyResultSet and substitutes constant False, so ~Exists(empty) becomes NOT False (true) and Exists(empty) false; same results as gold on normal backends."
+ },
+ {
+  "item": "1-12",
+  "iid": "django__django-15382",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Same as above using compiler.compile(Value(False)); equivalent semantic results to gold."
+ },
+ {
+  "item": "1-13",
+  "iid": "django__django-15382",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Returns 1=1/1=0 constants for empty subquery; equivalent filter semantics to gold (differs only if used as a select annotation on strict-boolean DBs)."
+ },
+ {
+  "item": "1-14",
+  "iid": "django__django-15930",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Patches Case.as_sql with a string hack replacing empty WHEN condition by 1=1; works for Case but fragile versus gold's fix inside When.as_sql."
+ },
+ {
+  "item": "1-15",
+  "iid": "django__django-15930",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Bypasses When.as_sql and does cond_params + result_params; when result is e.g. RawSQL with tuple params this raises TypeError (list + tuple), a regression."
+ },
+ {
+  "item": "1-16",
+  "iid": "django__django-16116",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Exits 1 before writing when --check and changes; extra 'return' in no-changes branch is a no-op. Matches gold."
+ },
+ {
+  "item": "1-17",
+  "iid": "django__django-16116",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Identical logic to gold."
+ },
+ {
+  "item": "1-18",
+  "iid": "django__django-16116",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Identical logic to gold."
+ },
+ {
+  "item": "1-19",
+  "iid": "django__django-16116",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same as gold; added return in no-changes branch is a no-op."
+ },
+ {
+  "item": "1-20",
+  "iid": "django__django-16485",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Clamps Context prec to >=1 so floatformat(0.00, 0) no longer raises; output same as gold's early-return path."
+ },
+ {
+  "item": "1-21",
+  "iid": "django__django-16485",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Clamps prec to >=1; avoids ValueError and yields same output as gold for zero values with p=0."
+ },
+ {
+  "item": "1-22",
+  "iid": "django__django-16485",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Clamps prec to >=1; same output as gold."
+ },
+ {
+  "item": "1-23",
+  "iid": "django__django-16485",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Clamps prec to >=1; same output as gold."
+ },
+ {
+  "item": "1-24",
+  "iid": "django__django-16595",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "AlterField followed by same-field AlterField reduces to the later op; equivalent to gold."
+ },
+ {
+  "item": "1-25",
+  "iid": "django__django-16595",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "AlterField followed by same-field AlterField reduces to the later op; equivalent to gold."
+ },
+ {
+  "item": "1-26",
+  "iid": "django__django-16595",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "AlterField followed by same-field AlterField reduces to the later op; equivalent to gold."
+ },
+ {
+  "item": "1-27",
+  "iid": "django__django-16595",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "AlterField followed by same-field AlterField reduces to the later op; equivalent to gold."
+ },
+ {
+  "item": "1-28",
+  "iid": "django__django-16595",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "AlterField followed by same-field AlterField reduces to the later op; equivalent to gold."
+ },
+ {
+  "item": "1-29",
+  "iid": "django__django-16595",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "AlterField followed by same-field AlterField reduces to the later op; equivalent to gold."
+ },
+ {
+  "item": "1-30",
+  "iid": "django__django-16595",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "AlterField followed by same-field AlterField reduces to the later op; equivalent to gold."
+ },
+ {
+  "item": "1-31",
+  "iid": "django__django-16595",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "AlterField followed by same-field AlterField reduces to the later op; equivalent to gold."
+ },
+ {
+  "item": "1-32",
+  "iid": "django__django-16642",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Adds br and compress mime types identical to gold."
+ },
+ {
+  "item": "1-33",
+  "iid": "django__django-16877",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "escapeseq filter returning [conditional_escape(o)...]; same as gold."
+ },
+ {
+  "item": "1-34",
+  "iid": "django__django-16877",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "escapeseq filter returning [conditional_escape(o)...]; same as gold; is_safe=False has no effect on list outputs."
+ },
+ {
+  "item": "1-35",
+  "iid": "django__django-16877",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "escapeseq filter returning [conditional_escape(o)...]; same as gold."
+ },
+ {
+  "item": "1-36",
+  "iid": "django__django-16877",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "escapeseq filter returning [conditional_escape(o)...]; same as gold."
+ },
+ {
+  "item": "1-37",
+  "iid": "matplotlib__matplotlib-20488",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Clamps s_vmin<=0 to eps like gold; extra non-finite/vmax clamping only affects already-invalid LogNorm cases."
+ },
+ {
+  "item": "1-38",
+  "iid": "matplotlib__matplotlib-20488",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "s_vmin<=0 -> max(s_vmin, eps) == eps; equivalent to gold."
+ },
+ {
+  "item": "1-39",
+  "iid": "matplotlib__matplotlib-20488",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Same vmin fix as gold; extra vmax clamp to eps only touches non-positive/non-finite vmax which is already invalid for LogNorm."
+ },
+ {
+  "item": "1-40",
+  "iid": "matplotlib__matplotlib-23412",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Uses _unscaled_dash_pattern in gc.set_dashes, so patch dashes are no longer scaled by linewidth (dashed patches with lw!=1 render with wrong dash lengths)."
+ },
+ {
+  "item": "1-41",
+  "iid": "matplotlib__matplotlib-24637",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Propagates gid only to patch/arrow_patch, never to the offsetbox image, so the image has no gid in SVG; gold wraps whole draw in a group with the gid."
+ },
+ {
+  "item": "1-42",
+  "iid": "matplotlib__matplotlib-24637",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Duplicate set_gid sets gid only on patch/arrow_patch; the contained image/offsetbox is not tagged and patch/arrow share the same id, unlike gold's single group."
+ },
+ {
+  "item": "1-43",
+  "iid": "matplotlib__matplotlib-24637",
+  "verdict": "PARTIAL",
+  "confidence": "medium",
+  "reason": "Copies gid onto patch, arrow, offsetbox and children (swallowing exceptions), giving duplicate SVG ids and overwriting child gids rather than a single group as gold does."
+ }
+]

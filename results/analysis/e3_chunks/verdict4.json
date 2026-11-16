@@ -1,0 +1,282 @@
+[
+ {
+  "item": "4-0",
+  "iid": "sphinx-doc__sphinx-9711",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same Version() comparison with string fallback on InvalidVersion and unknown-version handling as gold."
+ },
+ {
+  "item": "4-1",
+  "iid": "sphinx-doc__sphinx-9711",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Equivalent to gold: Version compare, InvalidVersion falls back to string compare, unknown version raises."
+ },
+ {
+  "item": "4-2",
+  "iid": "sphinx-doc__sphinx-9711",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Version compare with string fallback (broad except Exception but only InvalidVersion realistic); semantics match gold."
+ },
+ {
+  "item": "4-3",
+  "iid": "sphinx-doc__sphinx-9711",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Uses deprecated distutils LooseVersion: '1.0' required vs loaded '1.0rc1' passes (gold rejects), mixed int/str parts can TypeError, distutils gone in 3.12."
+ },
+ {
+  "item": "4-4",
+  "iid": "sympy__sympy-11618",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Zero-pads shorter point; matches gold's distance for differing dimensions."
+ },
+ {
+  "item": "4-5",
+  "iid": "sympy__sympy-11618",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Pads with zeros to common length, same result as gold."
+ },
+ {
+  "item": "4-6",
+  "iid": "sympy__sympy-11618",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Zero-pads missing coordinates, same as gold."
+ },
+ {
+  "item": "4-7",
+  "iid": "sympy__sympy-12481",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Identical to gold: only raise on duplicates when not a cycle."
+ },
+ {
+  "item": "4-8",
+  "iid": "sympy__sympy-12481",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Allows overlapping cycles; single-cycle duplicates still error (Cycle also raises in gold); composition done by existing Cycle code."
+ },
+ {
+  "item": "4-9",
+  "iid": "sympy__sympy-12481",
+  "verdict": "JUNK_EQUIV",
+  "confidence": "medium",
+  "reason": "Adds dead pre-computation of aform that is overwritten by the Cycle composition; net behaviour equals gold."
+ },
+ {
+  "item": "4-10",
+  "iid": "sympy__sympy-12481",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same behaviour as gold (dups only an error for non-cycle input)."
+ },
+ {
+  "item": "4-11",
+  "iid": "sympy__sympy-13798",
+  "verdict": "PARTIAL",
+  "confidence": "medium",
+  "reason": "Arbitrary mul_symbol accepted, but numbers-separator for custom symbols is always ' \\cdot ' (e.g. mul_symbol='*' gives '2 \\cdot 3^{x}'), gold uses the custom symbol."
+ },
+ {
+  "item": "4-12",
+  "iid": "sympy__sympy-14531",
+  "verdict": "PARTIAL",
+  "confidence": "high",
+  "reason": "Only fixes Limit and Relational; gold also fixes AppliedPredicate, ExprCondPair, Lambda, MatrixElement, Normal, Permutation, PermutationGroup, PolyRing, FracField, Uniform (sympy_integers still ignored there)."
+ },
+ {
+  "item": "4-13",
+  "iid": "sympy__sympy-14531",
+  "verdict": "PARTIAL",
+  "confidence": "high",
+  "reason": "Only Limit and Relational fixed; gold's many other printers (Lambda, MatrixElement, Normal, Uniform, etc.) left ignoring settings."
+ },
+ {
+  "item": "4-14",
+  "iid": "sympy__sympy-14531",
+  "verdict": "PARTIAL",
+  "confidence": "high",
+  "reason": "Only Limit and Relational fixed; the other printers gold fixes still bypass self._print."
+ },
+ {
+  "item": "4-15",
+  "iid": "sympy__sympy-14531",
+  "verdict": "PARTIAL",
+  "confidence": "high",
+  "reason": "Fixes Limit, Relational and Interval only; Lambda, MatrixElement, Normal, Permutation, etc. in gold still unpatched."
+ },
+ {
+  "item": "4-16",
+  "iid": "sympy__sympy-14711",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same __add__ zero shortcut as gold, plus harmless __radd__."
+ },
+ {
+  "item": "4-17",
+  "iid": "sympy__sympy-14711",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same __add__ zero shortcut as gold, plus harmless __radd__."
+ },
+ {
+  "item": "4-18",
+  "iid": "sympy__sympy-15875",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Returns None instead of False when sum of non-imaginary terms is zero with imaginary terms present; fixes the issue case, only less precise in a rare case."
+ },
+ {
+  "item": "4-19",
+  "iid": "sympy__sympy-15875",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "high",
+  "reason": "Adds imaginary terms to nz so len(nz)==len(args) returns None early: Add(1, I).is_zero (and x+I*y style sums) now None, gold/original gives False."
+ },
+ {
+  "item": "4-20",
+  "iid": "sympy__sympy-17655",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same __rmul__ delegating to __mul__."
+ },
+ {
+  "item": "4-21",
+  "iid": "sympy__sympy-17655",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "__rmul__ = __mul__, equivalent."
+ },
+ {
+  "item": "4-22",
+  "iid": "sympy__sympy-18698",
+  "verdict": "PARTIAL",
+  "confidence": "medium",
+  "reason": "Combines same-multiplicity factors only for numerator fp; denominator fq (sqf_list with frac=True) not combined, whereas gold combines in _symbolic_factor_list for both."
+ },
+ {
+  "item": "4-23",
+  "iid": "sympy__sympy-18698",
+  "verdict": "PARTIAL",
+  "confidence": "medium",
+  "reason": "Groups only fp; fq (denominator, frac=True) left uncombined unlike gold."
+ },
+ {
+  "item": "4-24",
+  "iid": "sympy__sympy-18698",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Combines adjacent same-exponent factors for both fp and fq after exponent-ordered sort; equivalent result to gold."
+ },
+ {
+  "item": "4-25",
+  "iid": "sympy__sympy-19346",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "high",
+  "reason": "_print_set lacks empty case: srepr(set()) gives '{}' which is an empty dict, gold returns 'set()'."
+ },
+ {
+  "item": "4-26",
+  "iid": "sympy__sympy-19346",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "set (incl. empty), dict and extra frozenset printers; matches gold."
+ },
+ {
+  "item": "4-27",
+  "iid": "sympy__sympy-19346",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "set with set() for empty and dict printers equal to gold."
+ },
+ {
+  "item": "4-28",
+  "iid": "sympy__sympy-19346",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Set/dict printed via _print with sorted ordering (deterministic, eval-equivalent); empty set handled; differs from gold only in element order."
+ },
+ {
+  "item": "4-29",
+  "iid": "sympy__sympy-22914",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "PythonCodePrinter._print_Min/_print_Max produce min(...)/max(...) same as gold's known-function mapping."
+ },
+ {
+  "item": "4-30",
+  "iid": "sympy__sympy-22914",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same output as gold in PythonCodePrinter."
+ },
+ {
+  "item": "4-31",
+  "iid": "sympy__sympy-22914",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same output as gold in PythonCodePrinter."
+ },
+ {
+  "item": "4-32",
+  "iid": "sympy__sympy-22914",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Same output as gold in PythonCodePrinter."
+ },
+ {
+  "item": "4-33",
+  "iid": "sympy__sympy-23262",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Single-element tuple gets trailing comma; other tuples unchanged (gold's '(,)' for empty tuple is actually worse)."
+ },
+ {
+  "item": "4-34",
+  "iid": "sympy__sympy-23262",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Single-element tuple printed with trailing comma; semantics preserved."
+ },
+ {
+  "item": "4-35",
+  "iid": "sympy__sympy-23262",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Single-element tuple trailing comma handled."
+ },
+ {
+  "item": "4-36",
+  "iid": "sympy__sympy-24066",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Function of dimensionless args returns Dimension(1), otherwise propagates dimension; returns clean 2-tuple (gold returns n+1 tuple for multi-arg), single-arg behaviour equal."
+ },
+ {
+  "item": "4-37",
+  "iid": "sympy__sympy-24443",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Maps inverse generator letters to domain generators for PermutationGroup so images are found; equivalent to gold's symbol mapping."
+ },
+ {
+  "item": "4-38",
+  "iid": "sympy__sympy-24443",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Handles inverse of generator in PermutationGroup via gens.index; same effect as gold."
+ },
+ {
+  "item": "4-39",
+  "iid": "sympy__sympy-24443",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "high",
+  "reason": "Drops mapping to domain generators so for PermutationGroup s=r[i] never in images, _image always identity and any non-homomorphic mapping passes the check."
+ }
+]

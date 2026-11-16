@@ -1,0 +1,310 @@
+[
+ {
+  "item": "0-0",
+  "iid": "astropy__astropy-14508",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Uses str(value) with E/exponent normalisation and falls back to .16G truncation; outputs match gold for normal cases (0.009125 etc.)."
+ },
+ {
+  "item": "0-1",
+  "iid": "astropy__astropy-14508",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Uses str(value) with E/exponent normalisation and falls back to .16G truncation; outputs match gold for normal cases (0.009125 etc.)."
+ },
+ {
+  "item": "0-2",
+  "iid": "astropy__astropy-14508",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Uses str(value) with E/exponent normalisation and falls back to .16G truncation; outputs match gold for normal cases (0.009125 etc.)."
+ },
+ {
+  "item": "0-3",
+  "iid": "astropy__astropy-14508",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Uses str(value) with E/exponent normalisation and falls back to .16G truncation; outputs match gold for normal cases (0.009125 etc.)."
+ },
+ {
+  "item": "0-4",
+  "iid": "astropy__astropy-14508",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Uses str(value) with E/exponent normalisation and falls back to .16G truncation; outputs match gold for normal cases (0.009125 etc.)."
+ },
+ {
+  "item": "0-5",
+  "iid": "astropy__astropy-14508",
+  "verdict": "CORRECT",
+  "confidence": "medium",
+  "reason": "Uses str(value) with E/exponent normalisation and falls back to .16G truncation; outputs match gold for normal cases (0.009125 etc.)."
+ },
+ {
+  "item": "0-6",
+  "iid": "astropy__astropy-14995",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Returns None/copy of the single present mask and handle_mask only when both exist; matches gold, and also keeps operand=None case."
+ },
+ {
+  "item": "0-7",
+  "iid": "astropy__astropy-14995",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Returns None/copy of the single present mask and handle_mask only when both exist; matches gold, and also keeps operand=None case."
+ },
+ {
+  "item": "0-8",
+  "iid": "astropy__astropy-14995",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Returns None/copy of the single present mask and handle_mask only when both exist; matches gold, and also keeps operand=None case."
+ },
+ {
+  "item": "0-9",
+  "iid": "astropy__astropy-14995",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Returns None/copy of the single present mask and handle_mask only when both exist; matches gold, and also keeps operand=None case."
+ },
+ {
+  "item": "0-10",
+  "iid": "astropy__astropy-14995",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Returns None/copy of the single present mask and handle_mask only when both exist; matches gold, and also keeps operand=None case."
+ },
+ {
+  "item": "0-11",
+  "iid": "astropy__astropy-14995",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Returns None/copy of the single present mask and handle_mask only when both exist; matches gold, and also keeps operand=None case."
+ },
+ {
+  "item": "0-12",
+  "iid": "astropy__astropy-14995",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Returns None/copy of the single present mask and handle_mask only when both exist; matches gold, and also keeps operand=None case."
+ },
+ {
+  "item": "0-13",
+  "iid": "astropy__astropy-8872",
+  "verdict": "PARTIAL",
+  "confidence": "medium",
+  "reason": "Fixes only the final cast in __new__ (float16 kept); leaves the Quantity-input branch (~line 296) still upcasting float16 Quantity to float, which gold fixes."
+ },
+ {
+  "item": "0-14",
+  "iid": "astropy__astropy-8872",
+  "verdict": "PARTIAL",
+  "confidence": "medium",
+  "reason": "Fixes only the final cast in __new__ (float16 kept); leaves the Quantity-input branch (~line 296) still upcasting float16 Quantity to float, which gold fixes."
+ },
+ {
+  "item": "0-15",
+  "iid": "astropy__astropy-8872",
+  "verdict": "PARTIAL",
+  "confidence": "medium",
+  "reason": "Fixes only the final cast in __new__ (float16 kept); leaves the Quantity-input branch (~line 296) still upcasting float16 Quantity to float, which gold fixes. Also casts bool to float whereas gold leaves bool."
+ },
+ {
+  "item": "0-16",
+  "iid": "astropy__astropy-8872",
+  "verdict": "PARTIAL",
+  "confidence": "medium",
+  "reason": "Fixes only the final cast in __new__ (float16 kept); leaves the Quantity-input branch (~line 296) still upcasting float16 Quantity to float, which gold fixes."
+ },
+ {
+  "item": "0-17",
+  "iid": "django__django-11790",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Sets widget maxlength to the same value (max_length or 254) as gold."
+ },
+ {
+  "item": "0-18",
+  "iid": "django__django-11790",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Sets widget maxlength to the same value (max_length or 254) as gold."
+ },
+ {
+  "item": "0-19",
+  "iid": "django__django-11790",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Sets widget maxlength to the same value (max_length or 254) as gold."
+ },
+ {
+  "item": "0-20",
+  "iid": "django__django-11790",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Sets widget maxlength to the same value (max_length or 254) as gold."
+ },
+ {
+  "item": "0-21",
+  "iid": "django__django-11790",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Sets widget maxlength to the same value (max_length or 254) as gold."
+ },
+ {
+  "item": "0-22",
+  "iid": "django__django-11964",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Adds Choices.__str__ returning str(value) like gold; extra TextChoices override is redundant but harmless."
+ },
+ {
+  "item": "0-23",
+  "iid": "django__django-11964",
+  "verdict": "PARTIAL",
+  "confidence": "medium",
+  "reason": "Adds __str__ only to IntegerChoices/TextChoices (with duplicated def), not Choices; classes like Constants(float, models.Choices) still stringify as enum names unlike gold."
+ },
+ {
+  "item": "0-24",
+  "iid": "django__django-11964",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Adds Choices.__str__ returning str(self.value), same as gold."
+ },
+ {
+  "item": "0-25",
+  "iid": "django__django-11964",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Adds Choices.__str__ returning str(self.value), same as gold."
+ },
+ {
+  "item": "0-26",
+  "iid": "django__django-11964",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Adds Choices.__str__ returning str(self.value), same as gold."
+ },
+ {
+  "item": "0-27",
+  "iid": "django__django-12209",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Condition uses pk_set/pk_val after the default pk was already assigned, so it is always False/True wrongly: the forced INSERT never happens; every new instance with a default pk now does UPDATE then INSERT (reverts the 3.0 single-INSERT behaviour) instead of just skipping it for raw saves."
+ },
+ {
+  "item": "0-28",
+  "iid": "django__django-12209",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "low",
+  "reason": "Forces insert only when pk was initially None; for non-raw save with explicit pk it attempts UPDATE, whereas gold still forces INSERT, and gold's raw-based rule is not implemented."
+ },
+ {
+  "item": "0-29",
+  "iid": "django__django-12209",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Condition uses pk_set/pk_val after the default pk was already assigned, so it is always False/True wrongly: the forced INSERT never happens; every new instance with a default pk now does UPDATE then INSERT (reverts the 3.0 single-INSERT behaviour) instead of just skipping it for raw saves."
+ },
+ {
+  "item": "0-30",
+  "iid": "django__django-12209",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Condition uses pk_set/pk_val after the default pk was already assigned, so it is always False/True wrongly: the forced INSERT never happens; every new instance with a default pk now does UPDATE then INSERT (reverts the 3.0 single-INSERT behaviour) instead of just skipping it for raw saves."
+ },
+ {
+  "item": "0-31",
+  "iid": "django__django-12209",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Condition uses pk_set/pk_val after the default pk was already assigned, so it is always False/True wrongly: the forced INSERT never happens; every new instance with a default pk now does UPDATE then INSERT (reverts the 3.0 single-INSERT behaviour) instead of just skipping it for raw saves."
+ },
+ {
+  "item": "0-32",
+  "iid": "django__django-12209",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Condition uses pk_set/pk_val after the default pk was already assigned, so it is always False/True wrongly: the forced INSERT never happens; every new instance with a default pk now does UPDATE then INSERT (reverts the 3.0 single-INSERT behaviour) instead of just skipping it for raw saves."
+ },
+ {
+  "item": "0-33",
+  "iid": "django__django-12209",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "medium",
+  "reason": "Condition uses pk_set/pk_val after the default pk was already assigned, so it is always False/True wrongly: the forced INSERT never happens; every new instance with a default pk now does UPDATE then INSERT (reverts the 3.0 single-INSERT behaviour) instead of just skipping it for raw saves."
+ },
+ {
+  "item": "0-34",
+  "iid": "django__django-13012",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Delegates get_group_by_cols to the wrapped expression (conditional on contains_aggregate in 0-34 is equivalent), matching gold."
+ },
+ {
+  "item": "0-35",
+  "iid": "django__django-13012",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Delegates get_group_by_cols to the wrapped expression (conditional on contains_aggregate in 0-34 is equivalent), matching gold."
+ },
+ {
+  "item": "0-36",
+  "iid": "django__django-13012",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Delegates get_group_by_cols to the wrapped expression (conditional on contains_aggregate in 0-34 is equivalent), matching gold."
+ },
+ {
+  "item": "0-37",
+  "iid": "django__django-13012",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Delegates get_group_by_cols to the wrapped expression (conditional on contains_aggregate in 0-34 is equivalent), matching gold."
+ },
+ {
+  "item": "0-38",
+  "iid": "django__django-13810",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Handler is not advanced when MiddlewareNotUsed is raised (restored or assigned late), same as gold."
+ },
+ {
+  "item": "0-39",
+  "iid": "django__django-13810",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Handler is not advanced when MiddlewareNotUsed is raised (restored or assigned late), same as gold."
+ },
+ {
+  "item": "0-40",
+  "iid": "django__django-13810",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Handler is not advanced when MiddlewareNotUsed is raised (restored or assigned late), same as gold."
+ },
+ {
+  "item": "0-41",
+  "iid": "django__django-13810",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Handler is not advanced when MiddlewareNotUsed is raised (restored or assigned late), same as gold."
+ },
+ {
+  "item": "0-42",
+  "iid": "django__django-13810",
+  "verdict": "CORRECT",
+  "confidence": "high",
+  "reason": "Handler is not advanced when MiddlewareNotUsed is raised (restored or assigned late), same as gold."
+ },
+ {
+  "item": "0-43",
+  "iid": "django__django-13933",
+  "verdict": "WRONG_OR_FRAGILE",
+  "confidence": "high",
+  "reason": "Also changes the default invalid_choice message text to '%(value)s is not one...', altering default error output and breaking translations; gold only adds params."
+ }
+]

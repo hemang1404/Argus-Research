@@ -1,0 +1,29 @@
+{
+ "n_tasks": 99,
+ "solves_per_model": {
+  "gpt-oss-20b": 35.666666666666664,
+  "gpt-oss-120b": 47
+ },
+ "observed_gap": 4,
+ "observed_gap_ci95": [
+  1.67,
+  6.67
+ ],
+ "exchangeable_null_mean": 7.95,
+ "null_2p5_97p5": [
+  6.33,
+  9.33
+ ],
+ "observed_percentile_in_null": 0.0,
+ "same_model_second_draw_gain": {
+  "gpt-oss-20b": 9,
+  "gpt-oss-120b": 9.67
+ },
+ "cross_model_minus_second_120b_draw": -5.67,
+ "cross_minus_second_ci95": [
+  -8.67,
+  -3.0
+ ],
+ "tasks_solved_by_20b_not_by_120b_in_same_draw": 4,
+ "tasks_solved_by_120b_not_by_20b_in_same_draw": 15.333333333333334
+}
