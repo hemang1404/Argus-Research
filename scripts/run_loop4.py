@@ -148,7 +148,7 @@ def call_model(body):
 
 def failure_excerpt(text, failed_names, limit=EXCERPT):
     """text of the first failing FAIL_TO_PASS test from the harness test output (heuristic: nearest section header naming the test)."""
-    text = re.sub(r"\[[0-9;]*[A-Za-z]|\[[0-9;]*m", "", text)  # strip ANSI colour codes (pytest) before locating sections
+    text = re.sub(r"\x1b\[[0-9;]*[A-Za-z]", "", text)  # strip ANSI colour codes (pytest) before locating sections
     seg = text
     a, b = text.find(">>>>> Start Test Output"), text.find(">>>>> End Test Output")
     if a != -1:

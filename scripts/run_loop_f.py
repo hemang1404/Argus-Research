@@ -166,7 +166,7 @@ def call_model(m, body, nonce=""):
 
 def failure_excerpt(text, failed_names, limit=EXCERPT):
     """text of the first failing FAIL_TO_PASS test from the harness test output (same heuristic as Revisions 5, 7, 9)."""
-    text = re.sub(r"\[[0-9;]*[A-Za-z]|\[[0-9;]*m", "", text)
+    text = re.sub(r"\x1b\[[0-9;]*[A-Za-z]", "", text)
     seg = text
     a, b = text.find(">>>>> Start Test Output"), text.find(">>>>> End Test Output")
     if a != -1:
