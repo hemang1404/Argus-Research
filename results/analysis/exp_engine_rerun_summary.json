@@ -1,0 +1,280 @@
+{
+ "sealed": {
+  "gpt-oss-20b": {
+   "original_uncorrected": {
+    "n": 198,
+    "R": 97,
+    "F": 110,
+    "diff_pts": 6.6,
+    "ci95": [
+     1.5,
+     11.6
+    ],
+    "F_only": 20,
+    "R_only": 7,
+    "mcnemar_p": 0.0192,
+    "F_cost_usd": 0.4975,
+    "F_cost_per_solve_usd": 0.00452
+   },
+   "corrected_released_engine": {
+    "n": 198,
+    "R": 97,
+    "F": 108,
+    "diff_pts": 5.6,
+    "ci95": [
+     0.5,
+     10.6
+    ],
+    "F_only": 19,
+    "R_only": 8,
+    "mcnemar_p": 0.0522,
+    "F_cost_usd": 0.4972,
+    "F_cost_per_solve_usd": 0.0046
+   },
+   "corrected_experimental_engine": {
+    "n": 198,
+    "R": 97,
+    "F": 107,
+    "diff_pts": 5.1,
+    "ci95": [
+     0.0,
+     10.1
+    ],
+    "F_only": 18,
+    "R_only": 8,
+    "mcnemar_p": 0.0755,
+    "F_cost_usd": 0.503,
+    "F_cost_per_solve_usd": 0.0047
+   },
+   "R_cost_usd": 0.5265,
+   "R_cost_per_solve_usd": 0.00543,
+   "changed_vs_old_corrected": [
+    "pytest-dev__pytest-7432"
+   ],
+   "changed_vs_old_corrected_detail": {
+    "pytest-dev__pytest-7432": {
+     "old": 1,
+     "new": 0
+    }
+   }
+  },
+  "gpt-oss-120b": {
+   "original_uncorrected": {
+    "n": 198,
+    "R": 108,
+    "F": 117,
+    "diff_pts": 4.5,
+    "ci95": [
+     0.0,
+     9.1
+    ],
+    "F_only": 15,
+    "R_only": 6,
+    "mcnemar_p": 0.0784,
+    "F_cost_usd": 0.6574,
+    "F_cost_per_solve_usd": 0.00562
+   },
+   "corrected_released_engine": {
+    "n": 198,
+    "R": 108,
+    "F": 114,
+    "diff_pts": 3.0,
+    "ci95": [
+     -1.5,
+     7.6
+    ],
+    "F_only": 13,
+    "R_only": 7,
+    "mcnemar_p": 0.2632,
+    "F_cost_usd": 0.663,
+    "F_cost_per_solve_usd": 0.00582
+   },
+   "corrected_experimental_engine": {
+    "n": 198,
+    "R": 108,
+    "F": 114,
+    "diff_pts": 3.0,
+    "ci95": [
+     -1.5,
+     7.6
+    ],
+    "F_only": 13,
+    "R_only": 7,
+    "mcnemar_p": 0.2632,
+    "F_cost_usd": 0.6647,
+    "F_cost_per_solve_usd": 0.00583
+   },
+   "R_cost_usd": 0.6304,
+   "R_cost_per_solve_usd": 0.00584,
+   "changed_vs_old_corrected": [],
+   "changed_vs_old_corrected_detail": {}
+  },
+  "loop_20b_vs_120b": {
+   "original_uncorrected": {
+    "F20": 110,
+    "F120": 117,
+    "diff_pts": -3.5,
+    "ci95": [
+     -8.6,
+     2.0
+    ],
+    "cost_per_task_20": 0.00251,
+    "cost_per_task_120": 0.00332,
+    "cost_ratio": 0.757
+   },
+   "corrected_released_engine": {
+    "F20": 108,
+    "F120": 114,
+    "diff_pts": -3.0,
+    "ci95": [
+     -8.6,
+     2.5
+    ],
+    "cost_per_task_20": 0.00251,
+    "cost_per_task_120": 0.00335,
+    "cost_ratio": 0.75
+   },
+   "corrected_experimental_engine": {
+    "F20": 107,
+    "F120": 114,
+    "diff_pts": -3.5,
+    "ci95": [
+     -9.1,
+     1.5
+    ],
+    "cost_per_task_20": 0.00254,
+    "cost_per_task_120": 0.00336,
+    "cost_ratio": 0.757
+   }
+  }
+ },
+ "dev": {
+  "gpt-oss-120b": {
+   "corrected_released_engine": {
+    "n": 100,
+    "R": 59,
+    "F_orig": 57,
+    "F": 61,
+    "P_orig": 56,
+    "P": 58,
+    "F_minus_R": [
+     2.0,
+     -4.0,
+     9.0
+    ],
+    "P_minus_F": [
+     -3.0,
+     -8.0,
+     2.0
+    ],
+    "P_minus_R": [
+     -1.0,
+     -8.0,
+     6.0
+    ],
+    "F_only": 6,
+    "R_only": 4
+   },
+   "corrected_experimental_engine": {
+    "n": 100,
+    "R": 59,
+    "F_orig": 57,
+    "F": 57,
+    "P_orig": 56,
+    "P": 60,
+    "F_minus_R": [
+     -2.0,
+     -8.0,
+     4.0
+    ],
+    "P_minus_F": [
+     3.0,
+     -2.0,
+     8.0
+    ],
+    "P_minus_R": [
+     1.0,
+     -6.0,
+     8.0
+    ],
+    "F_only": 4,
+    "R_only": 6
+   },
+   "changed_vs_old_corrected": {
+    "F": [
+     "astropy__astropy-12907",
+     "django__django-15382",
+     "matplotlib__matplotlib-23412",
+     "pytest-dev__pytest-7521"
+    ],
+    "P": [
+     "django__django-15382",
+     "matplotlib__matplotlib-23412"
+    ]
+   }
+  },
+  "gpt-oss-20b": {
+   "corrected_released_engine": {
+    "n": 100,
+    "R": 47,
+    "F_orig": 55,
+    "F": 55,
+    "P_orig": 53,
+    "P": 52,
+    "F_minus_R": [
+     8.0,
+     2.0,
+     14.0
+    ],
+    "P_minus_F": [
+     -3.0,
+     -10.0,
+     4.0
+    ],
+    "P_minus_R": [
+     5.0,
+     -1.0,
+     11.0
+    ],
+    "F_only": 9,
+    "R_only": 1
+   },
+   "corrected_experimental_engine": {
+    "n": 100,
+    "R": 47,
+    "F_orig": 55,
+    "F": 56,
+    "P_orig": 53,
+    "P": 52,
+    "F_minus_R": [
+     9.0,
+     3.0,
+     15.0
+    ],
+    "P_minus_F": [
+     -4.0,
+     -11.0,
+     3.0
+    ],
+    "P_minus_R": [
+     5.0,
+     -1.0,
+     11.0
+    ],
+    "F_only": 10,
+    "R_only": 1
+   },
+   "changed_vs_old_corrected": {
+    "F": [
+     "pytest-dev__pytest-7521"
+    ],
+    "P": []
+   }
+  }
+ },
+ "notes": [
+  "Sealed 'corrected_released_engine' is the earlier rerun in data/blind_fix; 'corrected_experimental_engine' replays the same chains with 0.2.0b1.",
+  "Tasks outside the rerun scope keep their original F result (their feedback text never changed).",
+  "Costs use list prices on stored token counts; Redraw cost is from the original runs."
+ ]
+}

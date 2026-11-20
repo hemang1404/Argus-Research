@@ -1,0 +1,85 @@
+engine 0.2.0b1 at C:\Users\dell\AppData\Local\Temp\exp_b1; chains 230 (sealed 51 tasks x2, dev 32 tasks x4); 6364 cached calls; prompt_hash=56e5b02fa8ed
+round 1: 204/230 chains complete, new model calls this round 0, patches to grade 26 in 19 tasks, 204s
+grading 26 patches over 19 images (one pull per task)
+  pulled astropy__astropy-13453 in 147s
+graded astropy__astropy-13453 4a7158c59e resolved= False applied= False
+  pulled pydata__xarray-4629 in 269s
+graded pydata__xarray-4629 0ec55d888c resolved= True applied= True
+  pulled sphinx-doc__sphinx-11510 in 195s
+graded sphinx-doc__sphinx-11510 f4b7adfb7e resolved= False applied= True
+graded sphinx-doc__sphinx-11510 f58777e612 resolved= False applied= True
+  pulled matplotlib__matplotlib-26208 in 451s
+  pulled sphinx-doc__sphinx-8056 in 89s
+graded sphinx-doc__sphinx-8056 290ce5bf87 resolved= False applied= True
+  pulled sympy__sympy-12489 in 77s
+graded matplotlib__matplotlib-26208 8e34abf348 resolved= False applied= True
+graded sympy__sympy-12489 df513d3b6f resolved= False applied= False
+  pulled sympy__sympy-13615 in 120s
+  pulled sympy__sympy-13974 in 137s
+graded sympy__sympy-13974 6126a696f0 resolved= False applied= True
+graded sympy__sympy-13615 f32e3d626e resolved= False applied= True
+  pulled astropy__astropy-12907 in 224s
+  pulled django__django-13012 in 197s
+graded django__django-13012 554267a436 resolved= True applied= True
+graded astropy__astropy-12907 519c887c3b resolved= False applied= True
+  pulled django__django-15128 in 82s
+graded django__django-15128 2a4d416700 resolved= False applied= True
+graded astropy__astropy-12907 9f515e195e resolved= True applied= True
+  pulled django__django-15382 in 124s
+graded django__django-15382 c6b050974b resolved= False applied= True
+graded django__django-15382 1e46c8324d resolved= False applied= True
+  pulled psf__requests-6028 in 153s
+graded psf__requests-6028 b2e35afc4f resolved= False applied= True
+graded psf__requests-6028 1e90a4f4dd resolved= False applied= True
+graded psf__requests-6028 f8c47197e7 resolved= False applied= True
+  pulled pytest-dev__pytest-10051 in 116s
+  pulled matplotlib__matplotlib-23412 in 513s
+graded pytest-dev__pytest-10051 02b86b2d8b resolved= False applied= True
+graded matplotlib__matplotlib-23412 8e9c63d5fa resolved= True applied= True
+  pulled scikit-learn__scikit-learn-14710 in 310s
+  pulled scikit-learn__scikit-learn-14983 in 321s
+graded scikit-learn__scikit-learn-14983 39147926f6 resolved= False applied= True
+  pulled sphinx-doc__sphinx-10614 in 111s
+graded sphinx-doc__sphinx-10614 3fb20c57ef resolved= False applied= True
+  pulled sphinx-doc__sphinx-9698 in 98s
+graded sphinx-doc__sphinx-9698 9a9b969a4e resolved= False applied= True
+graded scikit-learn__scikit-learn-14710 4510613ba6 resolved= False applied= True
+graded scikit-learn__scikit-learn-14710 741422e18b resolved= False applied= True
+graded scikit-learn__scikit-learn-14710 494d061728 resolved= False applied= True
+round 2: 225/230 chains complete, new model calls this round 6, patches to grade 5 in 4 tasks, 53s
+grading 5 patches over 4 images (one pull per task)
+  pulled astropy__astropy-13453 in 158s
+graded astropy__astropy-13453 4a7158c59e resolved= False applied= False
+  pulled astropy__astropy-12907 in 196s
+  pulled django__django-15382 in 77s
+graded astropy__astropy-12907 f5cbb76ed2 resolved= False applied= True
+graded django__django-15382 7b6008f985 resolved= False applied= True
+graded django__django-15382 5f9494aa80 resolved= True applied= True
+  pulled scikit-learn__scikit-learn-14710 in 116s
+graded scikit-learn__scikit-learn-14710 12ec0d6629 resolved= False applied= True
+round 3: 229/230 chains complete, new model calls this round 0, patches to grade 1 in 1 tasks, 8s
+grading 1 patches over 1 images (one pull per task)
+  pulled astropy__astropy-13453 in 67s
+graded astropy__astropy-13453 4a7158c59e resolved= False applied= False
+round 4: 229/230 chains complete, new model calls this round 0, patches to grade 1 in 1 tasks, 0s
+grading 1 patches over 1 images (one pull per task)
+  pulled astropy__astropy-13453 in 65s
+graded astropy__astropy-13453 4a7158c59e resolved= False applied= False
+round 5: 229/230 chains complete, new model calls this round 0, patches to grade 1 in 1 tasks, 0s
+grading 1 patches over 1 images (one pull per task)
+  pulled astropy__astropy-13453 in 69s
+graded astropy__astropy-13453 4a7158c59e resolved= False applied= False
+round 6: 229/230 chains complete, new model calls this round 0, patches to grade 1 in 1 tasks, 0s
+grading 1 patches over 1 images (one pull per task)
+  pulled astropy__astropy-13453 in 73s
+graded astropy__astropy-13453 4a7158c59e resolved= False applied= False
+round 7: 229/230 chains complete, new model calls this round 0, patches to grade 1 in 1 tasks, 0s
+grading 1 patches over 1 images (one pull per task)
+  pulled astropy__astropy-13453 in 75s
+graded astropy__astropy-13453 4a7158c59e resolved= False applied= False
+round 8: 229/230 chains complete, new model calls this round 0, patches to grade 1 in 1 tasks, 0s
+grading 1 patches over 1 images (one pull per task)
+  pulled astropy__astropy-13453 in 89s
+graded astropy__astropy-13453 4a7158c59e resolved= False applied= False
+finished after rounds: 229/230 chains complete; total new model calls 6
+wrote trajectories to C:\coding\Argus-pilot50\data\exp_engine_rerun
