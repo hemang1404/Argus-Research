@@ -1,0 +1,502 @@
+{
+ "seed": 20261113,
+ "resamples": 5000,
+ "prices_per_million": {
+  "gpt-oss-20b": [
+   0.075,
+   0.3
+  ],
+  "gpt-oss-120b": [
+   0.15,
+   0.6
+  ],
+  "gemma-4-26b-a4b-it": [
+   0.09,
+   0.3
+  ]
+ },
+ "n_tasks": 198,
+ "cost_validation": {
+  "gpt-oss-20b R": {
+   "paper_total": 0.5265,
+   "paper_per_solve": 0.00543,
+   "computed_total": 0.5265,
+   "computed_per_solve": 0.00543,
+   "matches": true
+  },
+  "gpt-oss-20b F": {
+   "paper_total": 0.4975,
+   "paper_per_solve": 0.00452,
+   "computed_total": 0.4975,
+   "computed_per_solve": 0.00452,
+   "matches": true
+  },
+  "gpt-oss-120b R": {
+   "paper_total": 0.6304,
+   "paper_per_solve": 0.00584,
+   "computed_total": 0.6304,
+   "computed_per_solve": 0.00584,
+   "matches": true
+  },
+  "gpt-oss-120b F": {
+   "paper_total": 0.6574,
+   "paper_per_solve": 0.00562,
+   "computed_total": 0.6574,
+   "computed_per_solve": 0.00562,
+   "matches": true
+  },
+  "gpt-oss-20b F corrected": {
+   "paper_total": 0.4972,
+   "paper_per_solve": 0.0046,
+   "computed_total": 0.4972,
+   "computed_per_solve": 0.0046,
+   "matches": true
+  },
+  "gpt-oss-120b F corrected": {
+   "paper_total": 0.663,
+   "paper_per_solve": 0.00582,
+   "computed_total": 0.663,
+   "computed_per_solve": 0.00582,
+   "matches": true
+  },
+  "gemma-4-26b-a4b-it R": {
+   "paper_total": 0.6889,
+   "paper_per_solve": 0.00861,
+   "computed_total": 0.6889,
+   "computed_per_solve": 0.00861,
+   "matches": true
+  },
+  "gemma-4-26b-a4b-it F": {
+   "paper_total": 0.6057,
+   "paper_per_solve": 0.00739,
+   "computed_total": 0.6057,
+   "computed_per_solve": 0.00739,
+   "matches": true
+  }
+ },
+ "arms": {
+  "experimental|gpt-oss-20b R": {
+   "model": "gpt-oss-20b",
+   "arm": "gpt-oss-20b R",
+   "n": 198,
+   "solved": 97,
+   "solved_pct": 49.0,
+   "total_cost": 0.5265,
+   "cost_per_task": 0.00266,
+   "cost_per_solved": 0.00543,
+   "attempts_missing_tokens": 0,
+   "tasks_needing_new_draw": 0
+  },
+  "experimental|gpt-oss-20b F": {
+   "model": "gpt-oss-20b",
+   "arm": "gpt-oss-20b F",
+   "n": 198,
+   "solved": 110,
+   "solved_pct": 55.6,
+   "total_cost": 0.4975,
+   "cost_per_task": 0.00251,
+   "cost_per_solved": 0.00452,
+   "attempts_missing_tokens": 4,
+   "tasks_needing_new_draw": 0
+  },
+  "experimental|gpt-oss-20b F corrected": {
+   "model": "gpt-oss-20b",
+   "arm": "gpt-oss-20b F corrected",
+   "n": 198,
+   "solved": 108,
+   "solved_pct": 54.5,
+   "total_cost": 0.4972,
+   "cost_per_task": 0.00251,
+   "cost_per_solved": 0.0046,
+   "attempts_missing_tokens": 3,
+   "tasks_needing_new_draw": 0
+  },
+  "experimental|gpt-oss-120b R": {
+   "model": "gpt-oss-120b",
+   "arm": "gpt-oss-120b R",
+   "n": 198,
+   "solved": 108,
+   "solved_pct": 54.5,
+   "total_cost": 0.6304,
+   "cost_per_task": 0.00318,
+   "cost_per_solved": 0.00584,
+   "attempts_missing_tokens": 0,
+   "tasks_needing_new_draw": 0
+  },
+  "experimental|gpt-oss-120b F": {
+   "model": "gpt-oss-120b",
+   "arm": "gpt-oss-120b F",
+   "n": 198,
+   "solved": 117,
+   "solved_pct": 59.1,
+   "total_cost": 0.6574,
+   "cost_per_task": 0.00332,
+   "cost_per_solved": 0.00562,
+   "attempts_missing_tokens": 0,
+   "tasks_needing_new_draw": 0
+  },
+  "experimental|gpt-oss-120b F corrected": {
+   "model": "gpt-oss-120b",
+   "arm": "gpt-oss-120b F corrected",
+   "n": 198,
+   "solved": 114,
+   "solved_pct": 57.6,
+   "total_cost": 0.663,
+   "cost_per_task": 0.00335,
+   "cost_per_solved": 0.00582,
+   "attempts_missing_tokens": 0,
+   "tasks_needing_new_draw": 0
+  },
+  "experimental|gemma-4-26b-a4b-it R": {
+   "model": "gemma-4-26b-a4b-it",
+   "arm": "gemma-4-26b-a4b-it R",
+   "n": 198,
+   "solved": 80,
+   "solved_pct": 40.4,
+   "total_cost": 0.6889,
+   "cost_per_task": 0.00348,
+   "cost_per_solved": 0.00861,
+   "attempts_missing_tokens": 8,
+   "tasks_needing_new_draw": 0
+  },
+  "experimental|gemma-4-26b-a4b-it F": {
+   "model": "gemma-4-26b-a4b-it",
+   "arm": "gemma-4-26b-a4b-it F",
+   "n": 198,
+   "solved": 82,
+   "solved_pct": 41.4,
+   "total_cost": 0.6057,
+   "cost_per_task": 0.00306,
+   "cost_per_solved": 0.00739,
+   "attempts_missing_tokens": 19,
+   "tasks_needing_new_draw": 0
+  },
+  "released|gpt-oss-20b R": {
+   "model": "gpt-oss-20b",
+   "arm": "gpt-oss-20b R",
+   "n": 198,
+   "solved": 100,
+   "solved_pct": 50.5,
+   "total_cost": 0.5262,
+   "cost_per_task": 0.00266,
+   "cost_per_solved": 0.00526,
+   "attempts_missing_tokens": 0,
+   "tasks_needing_new_draw": 1
+  },
+  "released|gpt-oss-20b F": {
+   "model": "gpt-oss-20b",
+   "arm": "gpt-oss-20b F",
+   "n": 198,
+   "solved": 110,
+   "solved_pct": 55.6,
+   "total_cost": 0.4953,
+   "cost_per_task": 0.0025,
+   "cost_per_solved": 0.0045,
+   "attempts_missing_tokens": 4,
+   "tasks_needing_new_draw": 7
+  },
+  "released|gpt-oss-20b F corrected": {
+   "model": "gpt-oss-20b",
+   "arm": "gpt-oss-20b F corrected",
+   "n": 198,
+   "solved": 110,
+   "solved_pct": 55.6,
+   "total_cost": 0.495,
+   "cost_per_task": 0.0025,
+   "cost_per_solved": 0.0045,
+   "attempts_missing_tokens": 3,
+   "tasks_needing_new_draw": 5
+  },
+  "released|gpt-oss-120b R": {
+   "model": "gpt-oss-120b",
+   "arm": "gpt-oss-120b R",
+   "n": 198,
+   "solved": 107,
+   "solved_pct": 54.0,
+   "total_cost": 0.6292,
+   "cost_per_task": 0.00318,
+   "cost_per_solved": 0.00588,
+   "attempts_missing_tokens": 0,
+   "tasks_needing_new_draw": 2
+  },
+  "released|gpt-oss-120b F": {
+   "model": "gpt-oss-120b",
+   "arm": "gpt-oss-120b F",
+   "n": 198,
+   "solved": 116,
+   "solved_pct": 58.6,
+   "total_cost": 0.6574,
+   "cost_per_task": 0.00332,
+   "cost_per_solved": 0.00567,
+   "attempts_missing_tokens": 0,
+   "tasks_needing_new_draw": 2
+  },
+  "released|gpt-oss-120b F corrected": {
+   "model": "gpt-oss-120b",
+   "arm": "gpt-oss-120b F corrected",
+   "n": 198,
+   "solved": 114,
+   "solved_pct": 57.6,
+   "total_cost": 0.663,
+   "cost_per_task": 0.00335,
+   "cost_per_solved": 0.00582,
+   "attempts_missing_tokens": 0,
+   "tasks_needing_new_draw": 1
+  },
+  "released|gemma-4-26b-a4b-it R": {
+   "model": "gemma-4-26b-a4b-it",
+   "arm": "gemma-4-26b-a4b-it R",
+   "n": 198,
+   "solved": 71,
+   "solved_pct": 35.9,
+   "total_cost": 0.6889,
+   "cost_per_task": 0.00348,
+   "cost_per_solved": 0.0097,
+   "attempts_missing_tokens": 8,
+   "tasks_needing_new_draw": 15
+  },
+  "released|gemma-4-26b-a4b-it F": {
+   "model": "gemma-4-26b-a4b-it",
+   "arm": "gemma-4-26b-a4b-it F",
+   "n": 198,
+   "solved": 70,
+   "solved_pct": 35.4,
+   "total_cost": 0.6057,
+   "cost_per_task": 0.00306,
+   "cost_per_solved": 0.00865,
+   "attempts_missing_tokens": 19,
+   "tasks_needing_new_draw": 31
+  }
+ },
+ "comparisons": {
+  "experimental": {
+   "gpt-oss-20b F-R": {
+    "n": 198,
+    "a_solved": 110,
+    "b_solved": 97,
+    "diff_pts": 6.6,
+    "ci95": [
+     1.5,
+     11.6
+    ],
+    "a_only": 20,
+    "b_only": 7,
+    "mcnemar_p": 0.0192
+   },
+   "gpt-oss-20b corrected F - R": {
+    "n": 198,
+    "a_solved": 108,
+    "b_solved": 97,
+    "diff_pts": 5.6,
+    "ci95": [
+     0.5,
+     10.6
+    ],
+    "a_only": 19,
+    "b_only": 8,
+    "mcnemar_p": 0.0522
+   },
+   "gpt-oss-120b F-R": {
+    "n": 198,
+    "a_solved": 117,
+    "b_solved": 108,
+    "diff_pts": 4.5,
+    "ci95": [
+     0.0,
+     9.1
+    ],
+    "a_only": 15,
+    "b_only": 6,
+    "mcnemar_p": 0.0784
+   },
+   "gpt-oss-120b corrected F - R": {
+    "n": 198,
+    "a_solved": 114,
+    "b_solved": 108,
+    "diff_pts": 3.0,
+    "ci95": [
+     -1.5,
+     7.6
+    ],
+    "a_only": 13,
+    "b_only": 7,
+    "mcnemar_p": 0.2632
+   },
+   "gemma-4-26b-a4b-it F-R": {
+    "n": 198,
+    "a_solved": 82,
+    "b_solved": 80,
+    "diff_pts": 1.0,
+    "ci95": [
+     -3.5,
+     5.6
+    ],
+    "a_only": 11,
+    "b_only": 9,
+    "mcnemar_p": 0.8238
+   },
+   "20B F loop - 120B F loop (original)": {
+    "n": 198,
+    "a_solved": 110,
+    "b_solved": 117,
+    "diff_pts": -3.5,
+    "ci95": [
+     -8.6,
+     2.0
+    ],
+    "a_only": 11,
+    "b_only": 18,
+    "mcnemar_p": 0.2649
+   },
+   "20B F loop - 120B F loop (corrected)": {
+    "n": 198,
+    "a_solved": 108,
+    "b_solved": 114,
+    "diff_pts": -3.0,
+    "ci95": [
+     -8.6,
+     2.5
+    ],
+    "a_only": 12,
+    "b_only": 18,
+    "mcnemar_p": 0.3616
+   },
+   "20B F loop - 120B one attempt (original)": {
+    "n": 198,
+    "a_solved": 110,
+    "b_solved": 92,
+    "diff_pts": 9.1,
+    "ci95": [
+     3.0,
+     15.7
+    ],
+    "a_only": 29,
+    "b_only": 11,
+    "mcnemar_p": 0.0064
+   },
+   "cost per task, 20B F vs 120B F (original)": {
+    "cost_per_task_20b": 0.00251,
+    "cost_per_task_120b": 0.00332,
+    "lower_by_pct": 24.4
+   }
+  },
+  "released": {
+   "gpt-oss-20b F-R": {
+    "n": 198,
+    "a_solved": 110,
+    "b_solved": 100,
+    "diff_pts": 5.1,
+    "ci95": [
+     0.5,
+     10.1
+    ],
+    "a_only": 17,
+    "b_only": 7,
+    "mcnemar_p": 0.0639
+   },
+   "gpt-oss-20b corrected F - R": {
+    "n": 198,
+    "a_solved": 110,
+    "b_solved": 100,
+    "diff_pts": 5.1,
+    "ci95": [
+     0.5,
+     10.1
+    ],
+    "a_only": 17,
+    "b_only": 7,
+    "mcnemar_p": 0.0639
+   },
+   "gpt-oss-120b F-R": {
+    "n": 198,
+    "a_solved": 116,
+    "b_solved": 107,
+    "diff_pts": 4.5,
+    "ci95": [
+     0.0,
+     9.1
+    ],
+    "a_only": 15,
+    "b_only": 6,
+    "mcnemar_p": 0.0784
+   },
+   "gpt-oss-120b corrected F - R": {
+    "n": 198,
+    "a_solved": 114,
+    "b_solved": 107,
+    "diff_pts": 3.5,
+    "ci95": [
+     -1.0,
+     8.1
+    ],
+    "a_only": 14,
+    "b_only": 7,
+    "mcnemar_p": 0.1892
+   },
+   "gemma-4-26b-a4b-it F-R": {
+    "n": 198,
+    "a_solved": 70,
+    "b_solved": 71,
+    "diff_pts": -0.5,
+    "ci95": [
+     -4.5,
+     3.5
+    ],
+    "a_only": 8,
+    "b_only": 9,
+    "mcnemar_p": 1.0
+   },
+   "20B F loop - 120B F loop (original)": {
+    "n": 198,
+    "a_solved": 110,
+    "b_solved": 116,
+    "diff_pts": -3.0,
+    "ci95": [
+     -8.1,
+     2.0
+    ],
+    "a_only": 10,
+    "b_only": 16,
+    "mcnemar_p": 0.3269
+   },
+   "20B F loop - 120B F loop (corrected)": {
+    "n": 198,
+    "a_solved": 110,
+    "b_solved": 114,
+    "diff_pts": -2.0,
+    "ci95": [
+     -7.1,
+     3.0
+    ],
+    "a_only": 12,
+    "b_only": 16,
+    "mcnemar_p": 0.5716
+   },
+   "20B F loop - 120B one attempt (original)": {
+    "n": 198,
+    "a_solved": 110,
+    "b_solved": 90,
+    "diff_pts": 10.1,
+    "ci95": [
+     4.5,
+     16.2
+    ],
+    "a_only": 29,
+    "b_only": 9,
+    "mcnemar_p": 0.0017
+   },
+   "cost per task, 20B F vs 120B F (original)": {
+    "cost_per_task_20b": 0.0025,
+    "cost_per_task_120b": 0.00332,
+    "lower_by_pct": 24.7
+   }
+  }
+ },
+ "notes": [
+  "Intervals: task-level bootstrap, 5,000 resamples, seed 20261113 (the seed convention of scripts/analyze_blind.py).",
+  "Released-engine counts are lower bounds (stored attempts only). Intervals on released counts treat the lower-bound outcomes as fixed.",
+  "Feedback attempts 2 and 3 were written from feedback produced under the experimental engine; where an earlier outcome changed, the replay is approximate.",
+  "Gemma list price $0.09/$0.30 per million tokens (the run itself cost $0 on a free tier)."
+ ],
+ "cost_validation_all_match": true
+}
