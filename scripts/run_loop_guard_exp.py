@@ -48,9 +48,11 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 
-TRAP_RETRY_MESSAGE = (
+TRAP_RETRY_TEMPLATE = (
+    "\n\n## Note on Previous Attempt (aborted)\n"
     "Repetition loop detected: your previous response repeated itself and was aborted early. "
-    "Respond again with ONE concise SEARCH/REPLACE block (2-6 lines of context) and no commentary."
+    "Output ONE concise SEARCH/REPLACE block for `{target_file}` copying exact lines from the code shown above "
+    "and no commentary. Do not echo placeholder text like <path>."
 )
 
 
@@ -126,7 +128,20 @@ def _load_completed_ids(out_path: Path) -> set[str]:
 def _parse_search_replace_count(text: str) -> int:
     from argus.patch.parser import PatchParser
 
-    return len(PatchParser.parse(text or ""))
+    placeholders = (
+        "<exact lines copied",
+        "<the replacement lines>",
+        "[exact lines from file",
+        "[new replacement lines]",
+    )
+    blocks = PatchParser.parse(text or "")
+    real = [
+        b
+        for b in blocks
+        if (b.file_path or "").strip() != "<path>"
+        and not any(ph in (b.search_text or "") or ph in (b.replace_text or "") for ph in placeholders)
+    ]
+    return len(real)
 
 
 class _OpenAIRunner:
@@ -375,7 +390,13 @@ def run_task_arm(
     if arm == "loop_kill_retry" and r1["finish"] == "loop_aborted":
         retry_used = True
         eff_temp = max(temperature, retry_temp)
-        retry_messages = messages + [{"role": "user", "content": TRAP_RETRY_MESSAGE}]
+        note = TRAP_RETRY_TEMPLATE.format(target_file=task.get("target_file") or "the target file")
+        if messages and messages[-1].get("role") == "user":
+            retry_messages = messages[:-1] + [
+                {"role": "user", "content": messages[-1]["content"] + note}
+            ]
+        else:
+            retry_messages = messages + [{"role": "user", "content": note.strip()}]
         r2 = runner.generate(retry_messages, temperature=eff_temp, loop_guard=True)
         attempts.append(
             {
