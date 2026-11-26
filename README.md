@@ -3,7 +3,7 @@
 Research folder for: why small models (gpt-oss-20b) fail at single-file repo repair, what Argus recovers, and what Argus should change.
 Kept separate from the product repo (`C:\coding\Argus`) on purpose.
 
-Start with `PILOT50_PROTOCOL.md` (see "Revision 2" at the top).
+Start with `PILOT50_PROTOCOL.md` (see "Revision 2" at the top), or `LOCAL_EXPERIMENTS_PROTOCOL.md` for local/open-weight Colab & Kaggle runs (`scripts/run_loop_guard_exp.py`).
 
 ## Layout
 

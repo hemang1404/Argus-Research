@@ -169,8 +169,32 @@ class _OpenAIRunner:
             reasoning_effort=reasoning_effort,
         )
         self.adapter = OpenAICompatibleAdapter(cfg)
+        self.base_url = base_url.rstrip("/")
+        self.api_key = api_key
         self.model = model
         self.max_tokens = max_tokens
+
+    def preflight_check(self) -> None:
+        """Fail fast if the OpenAI-compatible server is not reachable before iterating tasks."""
+        import urllib.error
+        import urllib.request
+
+        url = f"{self.base_url}/models"
+        headers = {"Authorization": f"Bearer {self.api_key}"} if self.api_key else {}
+        req = urllib.request.Request(url, headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                if resp.status >= 400:
+                    raise RuntimeError(f"Model server health check returned HTTP {resp.status} at {url}")
+        except urllib.error.HTTPError as exc:
+            # Some servers return 401/404 on /models even when /chat/completions is live; only fail on 5xx
+            if exc.code >= 500:
+                raise RuntimeError(f"Model server returned HTTP {exc.code} at {url}") from exc
+        except Exception as exc:
+            raise RuntimeError(
+                f"Cannot reach OpenAI-compatible server at {url}: {exc}. "
+                "Start Ollama (11434) or llama-server (8000) before running Experiment 1."
+            ) from exc
 
     def generate(
         self,
@@ -417,6 +441,11 @@ def run_task_arm(
     total_comp = sum(a["completion_tokens"] for a in attempts)
     total_secs = round(sum(a["duration_s"] for a in attempts), 2)
     final_blocks = attempts[-1]["n_blocks"]
+    aborted_contents = []
+    if r1["finish"] == "loop_aborted":
+        aborted_contents.append({"attempt": 1, "reason": r1["loop_guard_reason"], "content": r1["content"]})
+    if retry_used and final["finish"] == "loop_aborted":
+        aborted_contents.append({"attempt": 2, "reason": final["loop_guard_reason"], "content": final["content"]})
 
     return {
         "iid": task["iid"],
@@ -433,6 +462,7 @@ def run_task_arm(
         "duration_s": total_secs,
         "loop_aborts": loop_aborts,
         "loop_guard_reason": final["loop_guard_reason"],
+        "aborted_contents": aborted_contents,
         "attempts": len(attempts),
         "retry_used": retry_used,
         "retry_rescued_blocks": bool(retry_used and final_blocks > 0),
@@ -519,6 +549,30 @@ def summarize_paired(base_path: Path, treat_path: Path) -> Dict[str, Any]:
     }
 
 
+def inspect_aborts(path: Path) -> None:
+    """Print every loop-aborted generation trace so false aborts can be audited manually."""
+    found = 0
+    for ln in path.read_text(encoding="utf-8", errors="replace").splitlines():
+        if not ln.strip():
+            continue
+        r = json.loads(ln)
+        if (r.get("loop_aborts") or 0) == 0 and r.get("finish") != "loop_aborted":
+            continue
+        found += 1
+        print(f"=== {r.get('iid')} | arm={r.get('arm')} | finish={r.get('finish')} | aborts={r.get('loop_aborts')} ===")
+        ab_list = r.get("aborted_contents") or []
+        if ab_list:
+            for item in ab_list:
+                txt = item.get("content") or ""
+                print(f"  [attempt {item.get('attempt')} reason={item.get('reason')} chars={len(txt)}]")
+                print(txt[-600:])
+        else:
+            txt = r.get("content") or ""
+            print(f"  [reason={r.get('loop_guard_reason')} chars={len(txt)}]")
+            print(txt[-600:])
+    print(f"Total aborted tasks in {path}: {found}")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="Experiment 1 (Loop Kill-Switch + Trap-Aware Retry) for Argus-Research.")
     ap.add_argument("--argus-repo", help="Path to cloned hemang1404/Argus repo (if argus is not pip-installed).")
@@ -529,7 +583,12 @@ def main() -> None:
     ap.add_argument("--quant", choices=["none", "nf4"], default="none", help="Optional 4-bit NF4 load for --backend hf.")
     ap.add_argument("--enable-thinking", action="store_true", help="Enable model thinking template for --backend hf.")
     ap.add_argument("--reasoning-effort", default=None)
-    ap.add_argument("--arms", nargs="+", choices=["baseline", "loop_kill", "loop_kill_retry"], default=["baseline", "loop_kill_retry"])
+    ap.add_argument(
+        "--arms",
+        nargs="+",
+        choices=["baseline", "loop_kill", "loop_kill_retry"],
+        default=["baseline", "loop_kill", "loop_kill_retry"],
+    )
     ap.add_argument("--prompts", nargs="*", default=[], help="Explicit prompt JSONL paths (default: data/qwen_probe/prompts*.jsonl).")
     ap.add_argument("--ids-file", default="", help="Optional JSON file with {'ids': [...]} to filter task order/subset.")
     ap.add_argument("--non-django", action="store_true", help="Skip django__django tasks.")
@@ -540,9 +599,14 @@ def main() -> None:
     ap.add_argument("--max-tokens", type=int, default=4096)
     ap.add_argument("--timeout", type=float, default=180.0)
     ap.add_argument("--summarize", nargs=2, metavar=("BASELINE_JSONL", "TREATMENT_JSONL"))
+    ap.add_argument("--inspect-aborts", metavar="JSONL", help="Print aborted generations for manual false-abort review.")
     args = ap.parse_args()
 
     _setup_argus_imports(args.argus_repo)
+
+    if args.inspect_aborts:
+        inspect_aborts(Path(args.inspect_aborts))
+        return
 
     if args.summarize:
         print(json.dumps(summarize_paired(Path(args.summarize[0]), Path(args.summarize[1])), indent=2))
@@ -569,6 +633,7 @@ def main() -> None:
             timeout_s=args.timeout,
             reasoning_effort=args.reasoning_effort,
         )
+        runner.preflight_check()
     else:
         runner = _HFRunner(
             model_id=args.model,
